@@ -5,6 +5,7 @@
 //	Change By: CC Cruisie
 //  Change Log:
 //	1-16-2018 - Correct Script Path for CR
+//  1-31-2018 - Added SCFramework support - CC Klein
 //
 //  ADD THIS INTO THE MISSION FOLDER, NEXT TO MISSION.SQM
 //
@@ -21,6 +22,9 @@ _EndSplashScreen = {
 /////////////////////////////////////
 //////////LAAT C Monitor/////////////
 [] execVM "scripts\LAATCMonitor.sqf";
+/////////////////////////////////////
+//////////SCFramework////////////////
+[] execVM "scripts\SCFramework\Init_SCFramework.SQF";
 /////////////////////////////////////
 ///////// Infatry Loadouts /////////
 // loadOutbox = Variable Name - A box/object - must have object down to work
