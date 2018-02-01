@@ -15,7 +15,7 @@ BDC_SCFramework_ClientRetainVehOwnership = true; // If true, when player exits a
 BDC_SCFramework_DetailedLogging = false; // If enabled, logging will occur from every eventhandler and function called (Used primarily for testing and initial setup) (default: false)
 BDC_SCFramework_ServerFPSReport_KeyCodes = [0x3B,"F1"]; // Array of two values: [(raw dikCode),"Press x Key for Server FPS Report"] - Example: [0x3B,"F1"]
 BDC_SCFramework_ServerFPSReport_AdminUIDList = [ // List of player UID's for admins in string form (used only for the Server FPS Report)
-	"76561198033061067","76561197980091303","76561198063946636","76561198006790310","76561198065200898","76561198128186617","76561197998298758","76561198068431012","76561198002887102"
+	"76561198033061067","76561197980091303","76561198063946636","76561198006790310","76561198065200898","76561198128186617","76561197998298758","76561198068431012","76561198002887102","76561198011054575"
 	];
 BDC_SCFramework_ServerFPSReport_ModulesNames = [ // Short Names/Acronyms (in string format) of AI modules the server and each successive headless client control, starting from 1 (used purely for display purposes in the ServerFPSReport and relates to specificAITable only)
 	// Order goes: Server,HC1,HC2,HC3,HC4,HC5 -- If using no SpecificAITable, then set all 6 to be blank to prevent a display error, ex: "","","","","",""
