@@ -38,7 +38,7 @@ for name in mission_files:
         mkpath(tmp_dir)
         copy_tree(src_dir, tmp_dir)
         copy_tree(script_files, tmp_dir)
-        subprocess.call([pbo_tool, "-P",tmp_dir])
+        subprocess.call([pbo_tool, "-PN",tmp_dir])
 
 #Get list of tmp dir after being populated		
 pbo_files = listDir(tmp_file)
