@@ -236,7 +236,7 @@ _MonitorPlayerAircraft = {
 					// Remove attached object if it's popping up in our nearestObjects scan - Also remove any that are in the excluded list - Remove dead objects as well
 				if (count _nearestObjects > 0) then {
 					{
-						if ((_Vehicle == _x) || _VehViVCargo == _x || (typeOf _x in co18_BDC_LAATCMonitor_ExcludedObjects) || (!alive _x)) then {
+						if ((_Vehicle == _x) || _VehViVCargo == _x || (typeOf _x in co18_BDC_LAATCMonitor_ExcludedObjects) || (!alive _x) || (_x == player)) then {
 							_nearestObjects = _nearestObjects - [_x];
 						};
 							// Empty crew only?
@@ -256,7 +256,7 @@ _MonitorPlayerAircraft = {
 				if (count _nearestObjects > 0) then {
 					co18_BDC_r_player_nearestViVObject = _nearestObjects select 0;
 					_TypeNO = typeOf co18_BDC_r_player_nearestViVObject;
-					if ((co18_BDC_r_player_nearestViVObject != _VehViVCargo) && (co18_BDC_r_player_nearestViVObject isKindOf "Car" || co18_BDC_r_player_nearestViVObject isKindOf "Tank" || co18_BDC_r_player_nearestViVObject isKindOf "ReammoBox" || co18_BDC_r_player_nearestViVObject isKindOf "ReammoBox_F" || co18_BDC_r_player_nearestViVObject isKindOf "Slingload_base_F" || (co18_BDC_r_player_nearestViVObject isKindOf "Air" && co18_BDC_LAATCMonitor_IncludeAircraft)) && (_vSpeed <= 15) && (_vAlt >= co18_BDC_LAATCMonitor_MinimumLoadAlt)) then {
+					if ((co18_BDC_r_player_nearestViVObject != _VehViVCargo) && (co18_BDC_r_player_nearestViVObject isKindOf "StaticCannon" || co18_BDC_r_player_nearestViVObject isKindOf "Car" || co18_BDC_r_player_nearestViVObject isKindOf "Tank" || co18_BDC_r_player_nearestViVObject isKindOf "ReammoBox" || co18_BDC_r_player_nearestViVObject isKindOf "ReammoBox_F" || co18_BDC_r_player_nearestViVObject isKindOf "Slingload_base_F" || (co18_BDC_r_player_nearestViVObject isKindOf "Air" && co18_BDC_LAATCMonitor_IncludeAircraft)) && (_vSpeed <= 15) && (_vAlt >= co18_BDC_LAATCMonitor_MinimumLoadAlt)) then {
 						_Txt = getText (configFile >> "CfgVehicles" >> _TypeNO >> "displayName");
 						_FStr = format["Load %1",_Txt];
 						if (co18_BDC_r_player_LoadViVCargo < 0) then {
