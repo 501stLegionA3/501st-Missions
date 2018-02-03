@@ -37,6 +37,10 @@ co18_BDC_LAATCMonitor_SpecificDetachPoints = [ // List of specific objects that 
 	[["Slingload_base_F","Slingload_01_Base_F"],[0,0,-1.5]], // Cargo containers - lower a bit
 	[["swop_LAAT","swop_LAATmk2","swop_LAATmk2_104","swop_LAATmk2_74","swop_LAATmk2_ARC","swop_LAATmk2_spec"],[0,0,-5.25]] // LAAT gunships
 ];
+co18_BDC_LAATCMonitor_SpecificParachuteAttachPoints = [ // Specific attach points of unloaded object to parachute per classname
+	[["Republic_ATTE"],1.25], // Array structure: [["Classname1","Classname2",etc],-2] // Where classnames1 and 2 will attach themselves to the parachute at 2 meters above 0,0,0 relative to the chute itself
+	[["swop_LAAT","swop_LAATmk2","swop_LAATmk2_104","swop_LAATmk2_74","swop_LAATmk2_ARC","swop_LAATmk2_spec"],3.75] // LAAT gunships
+];
 co18_BDC_LAATCMonitor_MinimumLoadAlt = 4; // default: 4
 co18_BDC_LAATCMonitor_MinimumDropAlt = 5.5; // default: 5.5 to 6 - Set to 5m as absolute minimum lowest due to larger objects such as the AT-TE to prevent collisions
 
@@ -47,23 +51,26 @@ co18_BDC_LAATCMonitor_AttachCargoParachuteFunc = {
 	sleep 3.5;
 	_Chute = createVehicle ["B_Parachute_02_F", (getPos _Object), [], 0, "FLY"];
 	_Chute setPos (getPos _Object);
+	_Chute setDir (getDir _Object);
 	_Chute allowDamage false;
 	_ZPos = -0.65;
-	if (_Object isKindOf "LandVehicle" || _Object isKindOf "Air") then {
-		_ZPos = -1.5;
+	_isCrate = (_Object isKindOf "Slingload_base_F" || _Object isKindOf "ReammoBox_F" || _Object isKindOf "ReammoBox");
+	if (!_isCrate) then {
+		_ZPos = 1.65; // Attach object to chute higher than chute's 0,0,0 to help prevent collision with ground when landing - default attach point for larger objects
 	};
-	_Object attachTo [_Chute,[0,0,_ZPos]];
-	_Object allowDamage false;
-	_RunLoop = true;
-	while {_RunLoop} do {
-		if (!alive _Chute) then {
-			_Object setPos [(getPos _Object select 0),(getPos _Object select 1), 0.15];
-			_Object allowDamage true;
-			_RunLoop = false;
-			diag_log format["(LAAT/C Monitor) AttachCargoParachuteFunc - Parachute deleted. Setting Object %1 %2 on the ground.",_Object,typeOf _Object];
+	_Type = typeOf _Object; 
+	_FoundSpecific = false;
+	{
+		_Array = _x;
+		_VTypes = _Array select 0;
+		_AttachZ = _Array select 1;
+		if (_Type in _VTypes && !_FoundSpecific) then {
+			_ZPos = _AttachZ;
+			_FoundSpecific = true;
+			diag_log format["(LAAT/C Monitor) Found custom attach point for parachute: %1",_ZPos];
 		};
-		sleep 0.25;
-	};
+	} forEach co18_BDC_LAATCMonitor_SpecificParachuteAttachPoints;
+	_Object attachTo [_Chute,[0,0,_ZPos]];
 };
 
 // Server-side EH to manage parachuting
@@ -232,22 +239,24 @@ _MonitorPlayerAircraft = {
 					// Search for nearestObjects to load cargo
 				_ScanPoint = _Vehicle modelToWorld co18_BDC_LAATCMonitor_SearchPoint;
 				_nearestObjects = [];
-				_nearestObjects = nearestObjects [_ScanPoint, ["LandVehicle","Slingload_base_F","ReammoBox_F","ReammoBox","StaticWeapon","StaticCannon","StaticMGWeapon","Air"], co18_BDC_LAATCMonitor_ScanRange];
-					// Remove attached object if it's popping up in our nearestObjects scan - Also remove any that are in the excluded list - Remove dead objects as well
-				if (count _nearestObjects > 0) then {
-					{
-						if ((_Vehicle == _x) || _VehViVCargo == _x || (typeOf _x in co18_BDC_LAATCMonitor_ExcludedObjects) || (!alive _x) || (_x == player)) then {
-							_nearestObjects = _nearestObjects - [_x];
-						};
-							// Empty crew only?
-						if (co18_BDC_LAATCMonitor_ForceEmptyCrewOnly && (count (crew _x) > 0)) then {
-							_nearestObjects = _nearestObjects - [_x];
-						};
-							// Exclude any non-specified aircraft
-						if ((_x isKindOf "Air" && !co18_BDC_LAATCMonitor_IncludeAircraft) || (_x isKindOf "Air" && !(typeOf _x in co18_BDC_LAATCMonitor_IncludeAircraftObjects))) then {
-							_nearestObjects = _nearestObjects - [_x];
-						};
-					} forEach _nearestObjects;
+				if (isNull _VehViVCargo) then {
+					_nearestObjects = nearestObjects [_ScanPoint, ["LandVehicle","Slingload_base_F","ReammoBox_F","ReammoBox","StaticWeapon","StaticCannon","StaticMGWeapon","Air"], co18_BDC_LAATCMonitor_ScanRange];
+						// Remove attached object if it's popping up in our nearestObjects scan - Also remove any that are in the excluded list - Remove dead objects as well
+					if (count _nearestObjects > 0) then {
+						{
+							if ((_Vehicle == _x) || _VehViVCargo == _x || (typeOf _x in co18_BDC_LAATCMonitor_ExcludedObjects) || (!alive _x) || (_x == player)) then {
+								_nearestObjects = _nearestObjects - [_x];
+							};
+								// Empty crew only?
+							if (co18_BDC_LAATCMonitor_ForceEmptyCrewOnly && (count (crew _x) > 0)) then {
+								_nearestObjects = _nearestObjects - [_x];
+							};
+								// Exclude any non-specified aircraft
+							if ((_x isKindOf "Air" && !co18_BDC_LAATCMonitor_IncludeAircraft) || (_x isKindOf "Air" && !(typeOf _x in co18_BDC_LAATCMonitor_IncludeAircraftObjects))) then {
+								_nearestObjects = _nearestObjects - [_x];
+							};
+						} forEach _nearestObjects;
+					};
 				};
 				if (count _nearestObjects == 0) then {
 					player removeAction co18_BDC_r_player_LoadViVCargo;
@@ -256,7 +265,7 @@ _MonitorPlayerAircraft = {
 				if (count _nearestObjects > 0) then {
 					co18_BDC_r_player_nearestViVObject = _nearestObjects select 0;
 					_TypeNO = typeOf co18_BDC_r_player_nearestViVObject;
-					if ((co18_BDC_r_player_nearestViVObject != _VehViVCargo) && (co18_BDC_r_player_nearestViVObject isKindOf "StaticCannon" || co18_BDC_r_player_nearestViVObject isKindOf "Car" || co18_BDC_r_player_nearestViVObject isKindOf "Tank" || co18_BDC_r_player_nearestViVObject isKindOf "ReammoBox" || co18_BDC_r_player_nearestViVObject isKindOf "ReammoBox_F" || co18_BDC_r_player_nearestViVObject isKindOf "Slingload_base_F" || (co18_BDC_r_player_nearestViVObject isKindOf "Air" && co18_BDC_LAATCMonitor_IncludeAircraft)) && (_vSpeed <= 15) && (_vAlt >= co18_BDC_LAATCMonitor_MinimumLoadAlt)) then {
+					if ((co18_BDC_r_player_nearestViVObject != _VehViVCargo) && (co18_BDC_r_player_nearestViVObject isKindOf "StaticCannon" || co18_BDC_r_player_nearestViVObject isKindOf "StaticMGWeapon" || co18_BDC_r_player_nearestViVObject isKindOf "Car" || co18_BDC_r_player_nearestViVObject isKindOf "Tank" || co18_BDC_r_player_nearestViVObject isKindOf "ReammoBox" || co18_BDC_r_player_nearestViVObject isKindOf "ReammoBox_F" || co18_BDC_r_player_nearestViVObject isKindOf "Slingload_base_F" || (co18_BDC_r_player_nearestViVObject isKindOf "Air" && co18_BDC_LAATCMonitor_IncludeAircraft)) && (_vSpeed <= 15) && (_vAlt >= co18_BDC_LAATCMonitor_MinimumLoadAlt)) then {
 						_Txt = getText (configFile >> "CfgVehicles" >> _TypeNO >> "displayName");
 						_FStr = format["Load %1",_Txt];
 						if (co18_BDC_r_player_LoadViVCargo < 0) then {
