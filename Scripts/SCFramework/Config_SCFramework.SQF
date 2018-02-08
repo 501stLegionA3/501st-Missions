@@ -24,8 +24,8 @@ BDC_SCFramework_ServerFPSReport_ModulesNames = [ // Short Names/Acronyms (in str
 	];
 BDC_SCFramework_HCOffloading_Enable = true; // Master enable/disable flag for having the server automatically offload AI groups (either automatically or specifically) to headless client(s)
 BDC_SCFramework_HCOffloading_StartDelay = 120; // Start delay in seconds before starting (to allow all HC's to connect and collect ID's) (default: 60)
-BDC_SCFramework_HCOffloading_Frequency = 5; // Timer, in seconds, that server checks allGroups for possible offloading (default: 5)
-BDC_SCFramework_HCOffloading_GroupTimerMinimum = 10; // Timer in seconds that a group must exist prior to any offloading occurring (default: 5 - to allow for unit "painting", loadouts, and skill-set scripts to finish) 
+BDC_SCFramework_HCOffloading_Frequency = 30; // Timer, in seconds, that server checks allGroups for possible offloading (default: 5)
+BDC_SCFramework_HCOffloading_GroupTimerMinimum = 180; // Timer in seconds that a group must exist prior to any offloading occurring (default: 5 - to allow for unit "painting", loadouts, and skill-set scripts to finish) 
 BDC_SCFramework_HCOffloading_SpecificAITable_Enable = true; // Enable/disable pre-configured AI groups to move to specific headless clients per AITable below
 BDC_SCFramework_HCOffloading_SpecificAITable = [ // List of Specific AI groups (flagged by specific variables) that offload to specific headless clients (by number; not by name) - (group MUST be spawned in by Fnc_SCFramework_CreateGroup)
 	// ["ModuleName (txt field for RPT log reference)","Specific boolean variable name attached to Group during creation",HeadlessClientID assigned by SCFramework (1-5)]
@@ -33,7 +33,7 @@ BDC_SCFramework_HCOffloading_SpecificAITable = [ // List of Specific AI groups (
 	//["HQ AI","HQAI",1], // Theoretical AI at HQ, created by Fnc_SCFramework_CreateGroup, with variable "HQAI" attached to flag all related groups, transferred to HC #1
 	];
 BDC_SCFramework_HCOffloading_AutomaticOffloading_Enable = true; // Enable/disable automatic offloading, irrespective of specific configured groups, to be offloaded to headless clients - Note: Automatic offloading occurs AFTER specific offloading has run
-BDC_SCFramework_HCOffloading_AutomaticOffLoading_TransferZeusOperatorAI_Enable = false; // Enable/disable the automatic, timed transfer of Zeus-spawned in AI groups (player-side, locally owned AI that are NOT part of the player group) ownership to server and putting them into the HC offloading pool (default: true)
+BDC_SCFramework_HCOffloading_AutomaticOffLoading_TransferZeusOperatorAI_Enable = true; // Enable/disable the automatic, timed transfer of Zeus-spawned in AI groups (player-side, locally owned AI that are NOT part of the player group) ownership to server and putting them into the HC offloading pool (default: true)
 BDC_SCFramework_HCOffloading_AutomaticOffLoading_TransferZeusOperatorAI_Frequency = 180; // Number of seconds client-side monitor checks for locally-owned AI (presumably spawned by Zeus Op) (default: 60 to 300 to allow time for waypoints and the like to be made)
 BDC_SCFramework_HCOffloading_AutomaticOffLoading_TransferZeusOperatorAI_FlagOffloadedGroups = true; // If enabled, any initially-local, Zeus-owned groups (presumably spawned by Zeus Op) can only be automatically transferred to server once; if forcibly moved back to a Zeus op, they will be flagged unable to be automatically offloaded again, therefore will have to be moved manually to the server via addon
 BDC_SCFramework_HCOffloading_AutomaticOffloading_MaxAIPerHeadlessClient = 100; // Target number of maximum AI we want on each headless client (when this number is met or slightly exceeded, routine seeks to offloading AI to next HC in the list) (there is no default for this; this must be tested for performance on each setup although I recommend 100 to start)
