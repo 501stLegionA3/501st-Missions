@@ -1,4 +1,4 @@
-comment "Varialbe Decs";
+comment "Variable Decs";
 
 _this  setvariable ["Speed",200,true];
 _this  setvariable ["turnon",true,true];
