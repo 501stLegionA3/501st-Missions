@@ -4,6 +4,7 @@ weaponsList=[
 ["4Rnd_LG_Jian","missiles_Jian",8,[-1,0]],
 ["2Rnd_Missile_AA_04_F","Missile_AA_04_Plane_CAS_01_F",10,[-1,0]],
 ["magazine_Missile_rim116_x21","weapon_rim116Launcher",1,[-1,0]],
+["magazine_Missile_rim116_x21","weapon_rim116Launcher",2,[0]],
 ["SmokeLauncherMag","SmokeLauncher",10,[-1,0]],
 ["300Rnd_CMFlare_Chaff_Magazine","CMFlareLauncher",10,[-1,0]],
 ["400Rnd_Pomehi_Mag","PomehiLauncherXT",10,[-1,0]],
@@ -41,11 +42,11 @@ _this addWeaponTurret[itemWeap, [itemSeat select _k]];
 
 
 comment "gets health";
-_this  addAction ["<t color='#0000FF'>Damage Report</t>",
+_this  addAction ["<t color='#00FF00'>Damage Report</t>",
 {
 
 
-hint parseText format["<t color='#A668C2'> Damage status is :%1</t>",((1-(damage _this select 0))*100)];
+hint parseText format["<t color='#0099FF'> Damage status is :%1</t>",((1-(damage (_this select 0)))*100)];
 
 },[1],0,false,true,""," driver  _target == _this"];
 
