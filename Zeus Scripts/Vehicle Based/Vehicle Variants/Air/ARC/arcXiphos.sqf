@@ -1,10 +1,9 @@
 weaponsList=[
-["2Rnd_Missile_AA_04_F","Missile_AA_04_Plane_CAS_01_F",20,[-1,0,1]],
 ["magazine_Missile_rim116_x21","weapon_rim116Launcher",4,[-1,0,1]],
 ["4Rnd_LG_Jian","missiles_Jian",4,[-1,0,1]],
 ["Laserbatteries","Laserdesignator_pilotCamera",1,[-1,0,1]],
 ["400Rnd_Pomehi_Mag","PomehiLauncherXT",10,[-1,0,1]],
-["10Rnd_FAST_Cannon_TIE","Cannon_TIE_FAST",100,[-1,0,1]],
+["10Rnd_FAST_Cannon_TIE","Cannon_TIE_FAST",100,[1]],
 ["SmokeLauncherMag","SmokeLauncher",10,[-1,0,1]],
 ["300Rnd_CMFlare_Chaff_Magazine","CMFlareLauncher",10,[-1,0,1]]
 ];
@@ -41,30 +40,6 @@ moveOut _user ;
 },[1],0,false,true,"User12"];
 
 
-_this addEventHandler ["GetIn",{
-(vehicle (_this select 0)) setVehicleLock "LOCKED";
-(vehicle (_this select 0)) vehicleChat "LOCKED";
-}];
-
-_this  addAction ["<t color='#FF0000'>LOCK--------U14</t>",
-{
-
-
-(vehicle (_this select 0)) setVehicleLock "LOCKED";
-(vehicle (_this select 0)) vehicleChat "LOCKED";
-
-
-},[1],0,false,true,"User14"," driver  _target == _this"];
-
-
-_this  addAction ["<t color='#00FF00'>UNLOCK--------U15</t>",
-{
-
-
-(vehicle (_this select 0)) setVehicleLock "UNLOCKED";
-(vehicle (_this select 0)) vehicleChat "UNLOCKED";
-
-},[1],0,false,true,"User15"];
 
 
 comment "Increment Throttle";
