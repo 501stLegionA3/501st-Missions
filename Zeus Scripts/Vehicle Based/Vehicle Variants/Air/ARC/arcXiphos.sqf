@@ -1,6 +1,7 @@
 weaponsList=[
-["magazine_Missile_rim116_x21","weapon_rim116Launcher",4,[-1,0,1]],
-["4Rnd_LG_Jian","missiles_Jian",4,[-1,0,1]],
+["magazine_Missile_rim116_x21","weapon_rim116Launcher",2,[-1,0,1]],
+["4Rnd_LG_Jian","missiles_Jian",1,[-1,0,1]],
+["ConMisarc_mag","conmis_arc",1,[-1]],
 ["Laserbatteries","Laserdesignator_pilotCamera",1,[-1,0,1]],
 ["400Rnd_Pomehi_Mag","PomehiLauncherXT",10,[-1,0,1]],
 ["10Rnd_FAST_Cannon_TIE","Cannon_TIE_FAST",100,[1]],
