@@ -1,12 +1,12 @@
 weaponsList=[
-["magazine_Missile_rim116_x21","weapon_rim116Launcher",2,[-1,0,1]],
-["4Rnd_LG_Jian","missiles_Jian",1,[-1,0,1]],
-["ConMisarc_mag","conmis_arc",1,[-1]],
-["Laserbatteries","Laserdesignator_pilotCamera",1,[-1,0,1]],
-["400Rnd_Pomehi_Mag","PomehiLauncherXT",10,[-1,0,1]],
-["10Rnd_FAST_Cannon_TIE","Cannon_TIE_FAST",100,[1]],
-["SmokeLauncherMag","SmokeLauncher",10,[-1,0,1]],
-["300Rnd_CMFlare_Chaff_Magazine","CMFlareLauncher",10,[-1,0,1]]
+["magazine_Missile_rim116_x21","weapon_rim116Launcher",2,[-1,0,1],21],
+["4Rnd_LG_Jian","missiles_Jian",1,[-1,0,1],4],
+["ConMisarc_mag","conmis_arc",1,[-1],8],
+["Laserbatteries","Laserdesignator_pilotCamera",1,[-1,0,1],1],
+["400Rnd_Pomehi_Mag","PomehiLauncherXT",10,[-1,0,1],400],
+["10Rnd_FAST_Cannon_TIE","Cannon_TIE_FAST",100,[1],10],
+["SmokeLauncherMag","SmokeLauncher",10,[-1,0,1],2],
+["300Rnd_CMFlare_Chaff_Magazine","CMFlareLauncher",10,[-1,0,1],300]
 ];
 
 for [{_i=0}, {_i<(count weaponsList)}, {_i=_i+1}] do
@@ -16,13 +16,14 @@ itemWeap= (itemList select 1);
 itemMag= (itemList select 0);
 itemCount= (itemList select 2);
 itemSeat= (itemList select 3);
+ammoCount=(itemList select 4);
 
 for [{_j=0}, {_j<itemCount}, {_j=_j+1}] do
 {
 
 for  [{_k=0}, {_k<(count itemSeat)}, {_k=_k+1}] do
 {
-_this addMagazineTurret [itemMag ,[itemSeat select _k]];  
+_this addMagazineTurret [itemMag ,[itemSeat select _k],ammoCount];  
 _this addWeaponTurret[itemWeap, [itemSeat select _k]];
 };
 };
