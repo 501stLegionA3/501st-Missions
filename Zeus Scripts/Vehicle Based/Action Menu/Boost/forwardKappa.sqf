@@ -26,7 +26,7 @@ hint parseText format["<t color='#FF69B4'>Speed set to:%1 Kmph</t>",((_this sele
 comment "Engage";
 _this  addAction ["<t color='#00FF00'>Engage C.R.U.I.S.I.E Control System -------- U18</t>",
 {
-(_this select 0) setobjecttextureglobal [1,"optre_vehicles\pelican\data\PelicanExterior_Black_CO.paa"];
+
 (_this select 0) setvariable ["turnon",true,true];
 hint parseText "<t color='#00FF00'>ENGAGING C.R.U.I.S.I.E Control System</t>";
 while { (alive (_this select 0)) AND (((_this select 0) getvariable "turnon"))} do
@@ -48,16 +48,7 @@ if ((speed (_this select 0)) < ((_this select 0) getVariable "Speed")) then {
  ]
  };
 
-if ((speed (_this select 0)) > ((_this select 0) getVariable "Speed")) then { 
-_Coef_mul=-1*_Coef_mul;
-((_this select 0)) setVelocity 
-[
-(velocity ((_this select 0)) select 0)+((vectordir ((_this select 0))) select 0)*_Coef_mul,
-(velocity ((_this select 0)) select 1)+((vectordir ((_this select 0))) select 1)*_Coef_mul,
-(velocity ((_this select 0)) select 2)+((vectordir ((_this select 0))) select 2)*_Coef_mul
-]
 
-};
 
 
 if (_Multiplier < _Max_Multiplier) then {_Multiplier = _Multiplier + 0.1*(15*_sleep_time_acceleration_loop)};
