@@ -6,6 +6,7 @@
 // 
 // Change Log:
 // 1-16-2018: Comment Out therma+
+// 2-27-2018: Fixed the Helmet
 //
 ///////////////////////////////////////////////////////////////
 ///////////// /\/ ( ) T E S ///////////////////////////////////
@@ -53,7 +54,7 @@ player forceAddUniform "SWOP_Clonetrooper_F_CombatUniform";
 //player addItemToUniform "ACE_tourniquet";
 //for "_i" from 1 to 2 do {player addItemToUniform "SWOP_termDet_G";};
 player addVest "SWOP_Clonetrooper_armor";
-player addHeadgear "SWOP_Clonetcadet_helmet";
+player addHeadgear "SWOP_Clonetrooper_helmet";
 player addGoggles "SWOP_Clones_HUD";
 
 //comment "Add weapons";
