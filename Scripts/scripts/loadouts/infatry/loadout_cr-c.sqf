@@ -6,11 +6,12 @@
 // 
 // Change Log:
 // 1-16-2018: Comment Out therma+
+// 2-27-2018: Fixed name of loadout
 //
 ///////////////////////////////////////////////////////////////
 ///////////// /\/ ( ) T E S ///////////////////////////////////
 // Place this code in the init.sqf.
-// nameofbox addAction ["Clone Recruit-Canadate Loadout", "scripts\loadouts\infatry\loadout_cr-c.sqf"];
+// nameofbox addAction ["Clone Cadet Loadout", "scripts\loadouts\infatry\loadout_cr-c.sqf"];
 //
 // Place this code in the init field of selected unit:
 // this disableai "move"; nop = [this] execVM "scripts\loadouts\infatry\loadout_cr-c.sqf";
