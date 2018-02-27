@@ -6,6 +6,7 @@
 //  Change Log:
 //	1-16-2018 - Correct Script Path for CR
 //  1-31-2018 - Added SCFramework support - CC Klein
+//  2-27-2018 - Fixed name of Cadet Loadout - CS Peterson
 //
 //  ADD THIS INTO THE MISSION FOLDER, NEXT TO MISSION.SQM
 //
@@ -29,7 +30,7 @@ _EndSplashScreen = {
 ///////// Infatry Loadouts /////////
 // loadOutbox = Variable Name - A box/object - must have object down to work
 loadOutbox addAction ["Clone Recruit Loadout", "scripts\loadouts\infatry\loadout_cr.sqf"];
-loadOutbox addAction ["Clone Recruit-Canadate Loadout", "scripts\loadouts\infatry\loadout_cr-c.sqf"];
+loadOutbox addAction ["Clone Cadet Loadout", "scripts\loadouts\infatry\loadout_cr-c.sqf"];
 loadOutbox addAction ["Clone Trooper Loadout", "scripts\loadouts\infatry\loadout_ct.sqf"];
 loadOutbox addAction ["Clone Senior Trooper Loadout", "scripts\loadouts\infatry\loadout_sr-ct.sqf"];
 loadOutbox addAction ["Clone Corporal Loadout", "scripts\loadouts\infatry\loadout_cp.sqf"];
