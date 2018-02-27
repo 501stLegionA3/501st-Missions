@@ -1,6 +1,6 @@
 
  _this setvariable ["Unit","swop_LAAT",false];
- _this setvariable ["height",1,flase];
+ _this setvariable ["height",1,false];
  
  _this setvariable ["launchPad",pad_middle,true];
  
