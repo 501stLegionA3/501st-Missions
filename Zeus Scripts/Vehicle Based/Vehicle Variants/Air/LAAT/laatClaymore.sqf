@@ -2,7 +2,7 @@ weaponsList=[
 ["1000Rnd_Laser_Cannon_LAAT","Cannon_LAAT",2,[-1],1000],
 ["4Rnd_LG_Jian","missiles_Jian",8,[-1],4],
 ["magazine_Missile_rim116_x21","weapon_rim116Launcher",1,[0],21],
-["magazine_Missile_rim116_x21","weapon_rim116Launcher",1,[-1],4],
+["magazine_Missile_rim116_x21","weapon_rim116Launcher",1,[-1],8],
 ["SmokeLauncherMag","SmokeLauncher",10,[-1,0],2],
 ["300Rnd_CMFlare_Chaff_Magazine","CMFlareLauncher",10,[-1,0],300],
 ["400Rnd_Pomehi_Mag","PomehiLauncherXT",10,[-1,0],400],
