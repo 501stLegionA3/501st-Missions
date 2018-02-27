@@ -1,7 +1,7 @@
 This Readme file was created by CC Klein 
 In this document describes the automated build process for the 501st
 funoperation mission templates as far as creating the pbo's and inserting
-any scripts into the missions with minimal human error introduced.
+any scripts into the missions with minimal human error introduced
 
 -------------------------------------------------------------------
 Directory Structure
