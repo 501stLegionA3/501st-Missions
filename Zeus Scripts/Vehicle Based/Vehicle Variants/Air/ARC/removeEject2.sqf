@@ -37,11 +37,8 @@ _user moveInTurret [ (vehicle(_this)),[1]];
 _this  addAction ["<t color='#FF00FF'>GET OUT OF VIC------------- U11</t>",
 {
 
-
-
 params["_this","_user"];
 moveOut _user ;
-
 },[1],0,false,true,"User12"];
 
 
