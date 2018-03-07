@@ -1,45 +1,57 @@
-weaponsList=[
-["magazine_Missile_rim116_x21","weapon_rim116Launcher",2,[-1,0,1],21],
-["4Rnd_LG_Jian","missiles_Jian",1,[-1,0,1],4],
-["ConMisarc_mag","conmis_arc",1,[-1],8],
-["Laserbatteries","Laserdesignator_pilotCamera",1,[-1,0,1],1],
-["400Rnd_Pomehi_Mag","PomehiLauncherXT",10,[-1,0,1],400],
-["10Rnd_FAST_Cannon_TIE","Cannon_TIE_FAST",100,[1],10],
-["SmokeLauncherMag","SmokeLauncher",10,[-1,0,1],2],
-["300Rnd_CMFlare_Chaff_Magazine","CMFlareLauncher",10,[-1,0,1],300]
+comment "data for weapons";
+weaponData=[
+["weapon_rim116Launcher","magazine_Missile_rim116_x21",[[-1,21,2]]],
+["missiles_Jian","4Rnd_LG_Jian",[[-1,4,1]]],
+["conmis_arc","ConMisarc_mag",[[-1,8,2]]],
+["SmokeLauncher","SmokeLauncherMag",[[-1,2,20]]],
+["CMFlareLauncher","300Rnd_CMFlare_Chaff_Magazine",[[-1,300,10]]],
+["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,400,10]]],
+["Laserdesignator_pilotCamera","Laserbatteries",[[-1,1,1]]]
 ];
 
-for [{_i=0}, {_i<(count weaponsList)}, {_i=_i+1}] do
-{
-itemList = (weaponsList select _i);
-itemWeap= (itemList select 1);
-itemMag= (itemList select 0);
-itemCount= (itemList select 2);
-itemSeat= (itemList select 3);
-ammoCount=(itemList select 4);
 
-for [{_j=0}, {_j<itemCount}, {_j=_j+1}] do
+
+comment "For each weapon";
+for [{_i=0}, {_i<(count weaponData)}, {_i=_i+1}] do
+{
+itemList=weaponData select _i;
+itemWeapon=itemList select 0;
+itemMagType=itemList select 1;
+itemSeats=itemList select 2;
+
+
+comment "for each seat";
+for [{_j=0}, {_j<(count itemSeats)}, {_j=_j+1}] do
 {
 
-for  [{_k=0}, {_k<(count itemSeat)}, {_k=_k+1}] do
+seatData=itemSeats select _j;
+seatIndex=seatData select 0;
+seatAmmoPerMag=seatData select 1;
+seatMags=seatData select 2;
+
+_this  addWeaponTurret[itemWeapon, [seatIndex]];
+comment "adds mags";
+for [{_k=0}, {_k<(seatMags)}, {_k=_k+1}] do
 {
-_this addMagazineTurret [itemMag ,[itemSeat select _k],ammoCount];  
-_this addWeaponTurret[itemWeap, [itemSeat select _k]];
+_this  addMagazineTurret [itemMagType ,[seatIndex],seatAmmoPerMag];
+
 };
-};
+
+
 
 };
 
 
-_this  addAction ["<t color='#FFFF00'>GET OUT OF VIC------------- U11</t>",
+};
+
+comment "gets health";
+_this   addAction ["<t color='#00FF00'>Damage Report</t>",
 {
 
-(vehicle (_this select 0)) setVehicleLock "UNLOCKED";
-(vehicle (_this select 0)) vehicleChat "UNLOCKED";
 
-params["_this","_user"];
-moveOut _user ;
-},[1],0,false,true,"User12"];
+hint parseText format["<t color='#0099FF'> Damage status is :%1</t>",((1-(damage (_this  select 0)))*100)];
+
+},[1],0,false,true,""," driver  _target == _this "];
 
 
 
@@ -49,14 +61,11 @@ _this  addAction ["<t color='#0000FF'>Increment Throttle--------U16</t>",
 {
 (_this select 0) setAirplaneThrottle ((airplaneThrottle (_this select 0))+.01);
 
-},[1],0,false,true,"User16"];
+},[1],0,false,true,"User16","driver  _target == _this"];
 
 comment "Decrement Throttle";
 _this  addAction ["<t color='#FF0000'>Decrement Throttle--------U17</t>",
 {
 (_this select 0) setAirplaneThrottle ((airplaneThrottle (_this select 0))-0.01);	
 
-},[1],0,false,true,"User17"];
-
-
-
+},[1],0,false,true,"User17","driver  _target == _this"];

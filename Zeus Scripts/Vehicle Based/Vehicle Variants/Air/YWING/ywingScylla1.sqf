@@ -1,66 +1,74 @@
-weaponsList=[
-["500Rnd_Cannon_ARCback","Cannon_ARCback",20,[-1,0]],
-["c7_airedblaster_mag","c7_airedblaster",20,[-1,0]],
-["2Rnd_Missile_AA_04_F","Missile_AA_04_Plane_CAS_01_F",3,[-1,0]],
-["2Rnd_Missile_AA_04_F","Missile_AA_04_Plane_CAS_01_F",3,[0]],
-["magazine_Missile_rim116_x21","weapon_rim116Launcher",1,[-1,0]],
-["4Rnd_LG_Jian","missiles_Jian",14,[-1,0]],
-["Mg7_proton_torpedo","Mg7_proton_torpedo_launcher",10,[-1,0]],
-["PylonMissile_1Rnd_BombCluster_01_F","BombCluster_01_F",10,[-1,0]],
-["4Rnd_Bomb_04_F","Bomb_04_Plane_CAS_01_F",10,[-1,0]],
-["Laserbatteries","Laserdesignator_pilotCamera",1,[-1,0]],
-["400Rnd_Pomehi_Mag","PomehiLauncherXT",10,[-1,0]]
+comment "data for weapons";
+weaponData=[
+["ProtonBombW","ProtonBombM",[[-1,8,3]]],
+["ProtonBombWCLUSTER","ProtonBombMCluster",[[-1,8,6]]],
+["Mg7_proton_torpedo_launcher","Mg7_proton_torpedo",[[-1,8,6]]],
+["missiles_Jian","4Rnd_LG_Jian",[[-1,4,3]]],
+["Bomb_04_Plane_CAS_01_F","4Rnd_Bomb_04_F",[[-1,4,1]]],
+["BombCluster_01_F","PylonMissile_1Rnd_BombCluster_01_F",[[-1,4,2]]],
+["weapon_rim116Launcher","magazine_Missile_rim116_x21",[[-1,4,1]]],
+["SmokeLauncher","SmokeLauncherMag",[[-1,2,20]]],
+["CMFlareLauncher","300Rnd_CMFlare_Chaff_Magazine",[[-1,300,10]]],
+["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,400,10]]],
+["Laserdesignator_pilotCamera","Laserbatteries",[[-1,1,1]]]
 ];
- 
-for [{_i=0}, {_i<5}, {_i=_i+1}] do
-{
-_this removeMagazineTurret ["ProtonBombM" ,[-1]];  
-_this removeWeaponTurret["ProtonBombW", [-1]];
 
-_this removeMagazineTurret ["ProtonBombMCluster" ,[-1]];  
-_this removeWeaponTurret["ProtonBombWCLUSTER", [-1]];
-};
- 
- 
-for [{_i=0}, {_i<(count weaponsList)}, {_i=_i+1}] do
-{
-itemList = (weaponsList select _i);
-itemWeap= (itemList select 1);
-itemMag= (itemList select 0);
-itemCount= (itemList select 2);
-itemSeat= (itemList select 3);
 
-for [{_j=0}, {_j<itemCount}, {_j=_j+1}] do
+
+comment "For each weapon";
+for [{_i=0}, {_i<(count weaponData)}, {_i=_i+1}] do
+{
+itemList=weaponData select _i;
+itemWeapon=itemList select 0;
+itemMagType=itemList select 1;
+itemSeats=itemList select 2;
+
+
+comment "for each seat";
+for [{_j=0}, {_j<(count itemSeats)}, {_j=_j+1}] do
 {
 
-for  [{_k=0}, {_k<(count itemSeat)}, {_k=_k+1}] do
+seatData=itemSeats select _j;
+seatIndex=seatData select 0;
+seatAmmoPerMag=seatData select 1;
+seatMags=seatData select 2;
+
+_this  addWeaponTurret[itemWeapon, [seatIndex]];
+comment "adds mags";
+for [{_k=0}, {_k<(seatMags)}, {_k=_k+1}] do
 {
-_this addMagazineTurret [itemMag ,[itemSeat select _k]];  
-_this addWeaponTurret[itemWeap, [itemSeat select _k]];
-};
-};
+_this  addMagazineTurret [itemMagType ,[seatIndex],seatAmmoPerMag];
 
 };
+
+
+
+};
+
+
+};
+
+comment "gets health";
+_this   addAction ["<t color='#00FF00'>Damage Report</t>",
+{
+
+
+hint parseText format["<t color='#0099FF'> Damage status is :%1</t>",((1-(damage (_this  select 0)))*100)];
+
+},[1],0,false,true,""," driver  _target == _this "];
 
 
 
 comment "Increment Throttle";
-_this  addAction ["<t color='#0000FF'>Increment Throttle</t>",
+_this  addAction ["<t color='#0000FF'>Increment Throttle--------U16</t>",
 {
 (_this select 0) setAirplaneThrottle ((airplaneThrottle (_this select 0))+.01);
 
-},[1],0,false,true,"User16"," driver  _target == _this"];
-
+},[1],0,false,true,"User16","driver  _target == _this"];
 
 comment "Decrement Throttle";
-_this  addAction ["<t color='#FF0000'>Decrement Throttle</t>",
+_this  addAction ["<t color='#FF0000'>Decrement Throttle--------U17</t>",
 {
 (_this select 0) setAirplaneThrottle ((airplaneThrottle (_this select 0))-0.01);	
 
-},[1],0,false,true,"User17"," driver  _target == _this"];
-
-
-
-
-
-
+},[1],0,false,true,"User17","driver  _target == _this"];
