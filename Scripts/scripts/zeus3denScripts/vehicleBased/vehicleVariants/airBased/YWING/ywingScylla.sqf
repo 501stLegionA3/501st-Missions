@@ -56,12 +56,12 @@ scylla={
 	};
 
 
-	/*
+	
 	// function as file
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
-	{[_this select 0] execVM "file path";}
+	{[_this select 0] execVM "vehicleBased\actionMenu\Smoke\YWING\ywingSmokeTip.sqf";}
 	,[1],0,false,true,"User13"," driver  _target == _this"];
-	*/
+	
 
 	comment "gets health";
 	_vic   addAction ["<t color='#00FF00'>Damage Report</t>",
