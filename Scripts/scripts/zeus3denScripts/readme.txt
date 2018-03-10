@@ -1,6 +1,8 @@
+last update 3/10/2018 3:13 pm est by namenai
+
 Here is the file path of various scripts,if its not listed here then its probably 1)scripts being prepped or 2) we forgot :P
 
-/////////////////NOTE THESE FILE PATHS ARE ALL RELAVTIVE TO THE MAIN INIT.SQF FILE///////////////////////////////
+/////////////////NOTE THESE FILE PATHS ARE ALL RELAVTIVE TO THE MAIN INIT.SQF FILE////////////////////////////////
 
 
 
