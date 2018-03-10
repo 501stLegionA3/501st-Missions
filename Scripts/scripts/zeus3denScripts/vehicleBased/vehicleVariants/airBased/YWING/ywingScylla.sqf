@@ -14,8 +14,6 @@ scylla={
 		["Bomb_04_Plane_CAS_01_F","4Rnd_Bomb_04_F",[[-1,4,1]]],
 		["BombCluster_01_F","PylonMissile_1Rnd_BombCluster_01_F",[[-1,4,2]]],
 		["weapon_rim116Launcher","magazine_Missile_rim116_x21",[[-1,4,1]]],
-		["SmokeLauncher","SmokeLauncherMag",[[-1,2,20]]],
-		["CMFlareLauncher","300Rnd_CMFlare_Chaff_Magazine",[[-1,300,10]]],
 		["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,400,10]]],
 		["Laserdesignator_pilotCamera","Laserbatteries",[[-1,1,1]]]
 		];

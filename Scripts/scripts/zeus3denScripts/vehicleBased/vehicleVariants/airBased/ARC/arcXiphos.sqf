@@ -11,8 +11,6 @@ xiphosI={
 		["weapon_rim116Launcher","magazine_Missile_rim116_x21",[[-1,21,2]]],
 		["missiles_Jian","4Rnd_LG_Jian",[[-1,4,1]]],
 		["conmis_arc","ConMisarc_mag",[[-1,8,2]]],
-		["SmokeLauncher","SmokeLauncherMag",[[-1,2,20]]],
-		["CMFlareLauncher","300Rnd_CMFlare_Chaff_Magazine",[[-1,300,10]]],
 		["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,400,10]]],
 		["Laserdesignator_pilotCamera","Laserbatteries",[[-1,1,1]]]
 		];
