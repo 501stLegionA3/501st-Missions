@@ -86,6 +86,10 @@ laatClaymoreIV={
 	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTip.sqf";}
 	,[1],0,false,true,"User13"," driver  _target == _this"];
 	
+	//for some reason laats dont show CM's,this is hopefully to get them to show
+	_vic addWeaponTurret["PomehiLauncherXT", [-1]];
+	_vic addMagazineTurret ["400Rnd_Pomehi_Mag" ,[-1],400];
+	
 };
 
 ["swop_LAAT", "init",laatClaymoreIV, true, [], true] call CBA_fnc_addClassEventHandler; 
