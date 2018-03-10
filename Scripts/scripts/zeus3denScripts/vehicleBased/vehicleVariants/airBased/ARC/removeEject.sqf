@@ -1,5 +1,8 @@
-removeEjectARC={
+
 	params["_vic"];
+	
+	if (!local _vic) exitWith {};
+	
 	_vic setVehicleLock "LOCKED";
 
 
@@ -68,6 +71,6 @@ removeEjectARC={
 
 	},[1],0,false,true,"User15"];
 
-};
 
-["swop_arc_t", "init",removeEjectARC, true, [], true] call CBA_fnc_addClassEventHandler; 
+
+//["swop_arc_t", "init",removeEjectARC, true, [], true] call CBA_fnc_addClassEventHandler; 

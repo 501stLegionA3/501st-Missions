@@ -3,6 +3,10 @@
 laatClaymoreIV={
     params ["_vic"];
 
+	if (!local _vic) exitWith {};
+	
+
+	
 	comment "data for weapons";
 	comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 	weaponData=[
@@ -72,6 +76,16 @@ laatClaymoreIV={
 	hint parseText format["<t color='#0099FF'> Hull Integrity is :%1%2</t>",((1-(damage (_this  select 0)))*100),"%"];
 
 	},[1],0,false,true,""," driver  _target == _this "];
+	
+	
+
+	
+	// function as file
+	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
+	{[_this select 0] execVM "vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTip.sqf";}
+	,[1],0,false,true,"User13"," driver  _target == _this"];
+	
 };
 
 ["swop_LAAT", "init",laatClaymoreIV, true, [], true] call CBA_fnc_addClassEventHandler; 
+

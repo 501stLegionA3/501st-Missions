@@ -1,6 +1,8 @@
 scylla={
 	params["_vic"];
 
+	if (!local _vic) exitWith {};
+	
 	comment "data for weapons";
 	comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 	weaponData=[
@@ -54,7 +56,12 @@ scylla={
 	};
 
 
-
+	/*
+	// function as file
+	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
+	{[_this select 0] execVM "file path";}
+	,[1],0,false,true,"User13"," driver  _target == _this"];
+	*/
 
 	comment "gets health";
 	_vic   addAction ["<t color='#00FF00'>Damage Report</t>",
@@ -81,4 +88,4 @@ scylla={
 	},[1],0,false,true,"User17","driver  _target == _this"];
 };
 
-["swop_ywclone", "init",scylla, true, [], true] call CBA_fnc_addClassEventHandler; 
+["swop_ywclones", "init",scylla, true, [], true] call CBA_fnc_addClassEventHandler; 

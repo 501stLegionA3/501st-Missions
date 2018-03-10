@@ -1,6 +1,9 @@
 xiphosI={
 	params["_vic"];
 
+	
+	if (!local _vic) exitWith {};
+	
 	comment "data for weapons";
 	comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 	weaponData=[
@@ -49,7 +52,12 @@ xiphosI={
 
 	};
 
-
+	
+	// function as file
+	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
+	{[_this select 0] execVM "vehicleBased\actionMenu\Smoke\ARC\arcSmokeTipRB.sqf";}
+	,[1],0,false,true,"User13"," driver  _target == _this"];
+	
 
 
 	comment "gets health";
@@ -78,6 +86,15 @@ xiphosI={
 	(_this select 0) setAirplaneThrottle ((airplaneThrottle (_this select 0))-0.01);	
 
 	},[1],0,false,true,"User17","driver  _target == _this"];
+	
+	
+	
+	[_vic] execVm "vehicleBased\vehicleVariants\airBased\ARC\removeEject.sqf";
+
+	
+	
+	
+	
 };
 
 ["swop_arc_t", "init",xiphosI, true, [], true] call CBA_fnc_addClassEventHandler; 
