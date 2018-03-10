@@ -1,7 +1,7 @@
 scylla={
 	params["_vic"];
 
-	if (!local _vic) exitWith {};
+	
 	
 	comment "data for weapons";
 	comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";

@@ -1,7 +1,7 @@
 
 	params["_vic"];
 	
-	if (!local _vic) exitWith {};
+	
 	
 	_vic setVehicleLock "LOCKED";
 

@@ -1,4 +1,4 @@
- if (!isServer) exitWith {};
+
 
 laatClaymoreIV={
     params ["_vic"];
