@@ -8,5 +8,9 @@
 	
 //y-wing weapons
 	[] execVM "vehicleBased\vehicleVariants\airBased\YWING\ywingScylla.sqf";
+	
+//b2 reconfig
+	[] execVM "aiBased\factionBased\opfor\cis\b2\b2Reconfig.sqf";
+
 
 
