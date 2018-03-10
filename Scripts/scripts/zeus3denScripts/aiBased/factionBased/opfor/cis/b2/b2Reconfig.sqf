@@ -1,4 +1,7 @@
 b2ForceWalk={
+
+if (!local _vic) exitWith {};
+
  params ["_obj"];
 _obj forceWalk true;
 };
