@@ -2,7 +2,7 @@ xiphosI={
 	params["_vic"];
 
 	
-	if (!(_this getVariable ["namReconfigured", false])) then 
+	if (!(_vic getVariable ["namReconfigured", false])) then 
 	{
 	
 		comment "data for weapons";
