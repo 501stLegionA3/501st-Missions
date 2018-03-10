@@ -15,6 +15,7 @@ laatClaymoreIV={
 		["missiles_Jian","4Rnd_LG_Jian",[[-1,10,8],[0,1,1]]],
 		["weapon_rim116Launcher","magazine_Missile_rim116_x21",[[-1,8,1],[0,21,1]]],
 		["Cannon_TIE_FAST","10Rnd_FAST_Cannon_TIE",[[1,10,100],[2,10,100]]],
+		["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,600,10]]],
 		["Laserdesignator_pilotCamera","Laserbatteries",[[-1,1,1]]]
 		];
 
