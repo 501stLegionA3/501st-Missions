@@ -82,7 +82,7 @@ laatClaymoreIV={
 	
 	// function as file
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
-	{[_this select 0] execVM "vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTip.sqf";}
+	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTip.sqf";}
 	,[1],0,false,true,"User13"," driver  _target == _this"];
 	
 };
