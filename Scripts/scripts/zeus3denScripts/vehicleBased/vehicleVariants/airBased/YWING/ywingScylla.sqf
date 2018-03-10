@@ -1,8 +1,8 @@
 scylla={
 	params["_vic"];
 
-	if (!(_vic getVariable ["namReconfigured", false])) then 
-	{
+	//if (!(_vic getVariable ["namReconfigured", false])) then 
+	//{
 	
 		comment "data for weapons";
 		comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
@@ -56,9 +56,9 @@ scylla={
 
 		};
 		
-		_vic setVariable ["namReconfigured", true, true];
-	}
-	else {};
+	//	_vic setVariable ["namReconfigured", true, true];
+//	}
+//	else {};
 
 	
 	// function as file

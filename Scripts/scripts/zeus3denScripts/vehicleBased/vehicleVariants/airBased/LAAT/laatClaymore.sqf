@@ -3,8 +3,8 @@
 laatClaymoreIV={
     params ["_vic"];
 
-	if (!(_vic getVariable ["namReconfigured", false])) then 
-	{
+	//if (!(_vic getVariable ["namReconfigured", false])) then 
+	//{
 	
 
 		
@@ -65,10 +65,10 @@ laatClaymoreIV={
 
 
 		};
-		_vic setVariable ["namReconfigured", true, true];
+	//	_vic setVariable ["namReconfigured", true, true];
 
-	}
-	else {};
+	//}
+//	else {};
 
 
 	comment "gets health";
