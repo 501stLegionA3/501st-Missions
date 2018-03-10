@@ -1,11 +1,13 @@
+params ["_vic"];
+
 comment "Variable Decs";
 
-_this  setvariable ["Speed",200,true];
-_this  setvariable ["turnon",true,true];
+_vic  setvariable ["Speed",200,true];
+_vic  setvariable ["turnon",true,true];
 
 
 comment "Increment Speed";
-_this  addAction ["<t color='#A668C2'>Increment Cap by 10</t>",
+_vic  addAction ["<t color='#A668C2'>Increment Cap by 10</t>",
 {
 (_this select 0)  setvariable ["Speed",(((_this select 0) getVariable "Speed")+10),true];
 hint parseText format["<t color='#A668C2'> Cap set to:%1 Kmph</t>",((_this select 0) getVariable "Speed")];
@@ -14,7 +16,7 @@ hint parseText format["<t color='#A668C2'> Cap set to:%1 Kmph</t>",((_this selec
 
 
 comment "Decrement Speed";
-_this  addAction ["<t color='#FF69B4'>Decrement Cap by 10</t>",
+_vic  addAction ["<t color='#FF69B4'>Decrement Cap by 10</t>",
 {
 (_this select 0)  setvariable ["Speed",(((_this select 0) getVariable "Speed")-10),true];
 hint parseText format["<t color='#FF69B4'>Cap set to:%1 Kmph</t>",((_this select 0) getVariable "Speed")];
@@ -24,7 +26,7 @@ hint parseText format["<t color='#FF69B4'>Cap set to:%1 Kmph</t>",((_this select
 
 
 comment "Engage";
-_this  addAction ["<t color='#00FF00'>Engage Matter Stopper</t>",
+_vic  addAction ["<t color='#00FF00'>Engage Matter Stopper</t>",
 {
 
 (_this select 0) setvariable ["turnon",true,true];
@@ -60,7 +62,7 @@ turnon=false;
 
 
 comment "Disenage";
-_this  addAction ["<t color='#FFA500'>Disengage Matter Stopper</t>",
+_vic  addAction ["<t color='#FFA500'>Disengage Matter Stopper</t>",
 {
 (_this select 0) setvariable ["turnon",false,true];
 hint parseText "<t color='#FFA500'>DISENGAGING</t>";
