@@ -1,4 +1,4 @@
-xiphosII={
+claymoreI={
 	params["_vic"];
 
 	
@@ -56,9 +56,8 @@ xiphosII={
 	
 	// function as file
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
-	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\ARC\arcSmokeTip.sqf";}
+	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTip.sqf";}
 	,[1],0,false,true,"User13"," driver  _target == _this"];
-	
 
 
 	comment "gets health";
@@ -73,25 +72,6 @@ xiphosII={
 
 
 
-	comment "Increment Throttle";
-	_vic  addAction ["<t color='#0000FF'>Increment Throttle--------U16</t>",
-	{
-	(_this select 0) setAirplaneThrottle ((airplaneThrottle (_this select 0))+.01);
-
-	},[1],0,false,true,"User16","driver  _target == _this"];
-
-
-	comment "Decrement Throttle";
-	_vic  addAction ["<t color='#FF0000'>Decrement Throttle--------U17</t>",
-	{
-	(_this select 0) setAirplaneThrottle ((airplaneThrottle (_this select 0))-0.01);	
-
-	},[1],0,false,true,"User17","driver  _target == _this"];
-	
-	
-	
-	[_vic] execVm "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\ARC\removeEject.sqf";
-
 	
 	
 	
@@ -99,4 +79,4 @@ xiphosII={
 };
 
 
-["swop_LAAT", "init",xiphosII, true, [], true] call CBA_fnc_addClassEventHandler; 
+["swop_LAAT", "init",claymoreI, true, [], true] call CBA_fnc_addClassEventHandler; 
