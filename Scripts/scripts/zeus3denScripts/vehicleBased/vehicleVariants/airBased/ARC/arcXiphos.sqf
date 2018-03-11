@@ -99,3 +99,4 @@ xiphosI={
 };
 
 ["swop_arc_t", "init",xiphosI, true, [], true] call CBA_fnc_addClassEventHandler; 
+["swop_LAAT", "init",xiphosI, true, [], true] call CBA_fnc_addClassEventHandler; 

@@ -93,5 +93,5 @@ laatClaymoreIV={
 	
 };
 
-["swop_LAAT", "init",laatClaymoreIV, true, [], true] call CBA_fnc_addClassEventHandler; 
+//["swop_LAAT", "init",laatClaymoreIV, true, [], true] call CBA_fnc_addClassEventHandler; 
 
