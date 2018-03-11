@@ -1,4 +1,4 @@
-xiphosI={
+xiphosII={
 	params["_vic"];
 
 	
@@ -99,4 +99,4 @@ xiphosI={
 };
 
 
-["swop_LAAT", "init",xiphosI, true, [], true] call CBA_fnc_addClassEventHandler; 
+["swop_LAAT", "init",xiphosII, true, [], true] call CBA_fnc_addClassEventHandler; 
