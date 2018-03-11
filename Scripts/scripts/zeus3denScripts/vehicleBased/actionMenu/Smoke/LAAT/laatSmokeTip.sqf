@@ -16,7 +16,7 @@
 	{
 		_namLeftSmoke="smokeshellYellow";
 		_namRightSmoke="SmokeShellblue";
-		namSmokePath="vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTipYwB.sqf";
+		
 	}
 	else
 	{
@@ -24,7 +24,7 @@
 		{
 			_namLeftSmoke="smokeshell";
 			_namRightSmoke="SmokeShellblue";
-			namSmokePath="vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTipWB.sqf";
+			
 		}
 		else
 		{
@@ -32,7 +32,7 @@
 			{
 				_namLeftSmoke="smokeshellYellow";
 				_namRightSmoke="SmokeShellblue";
-				namSmokePath="vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTipYwB.sqf";
+				
 			}
 			else
 			{
@@ -40,7 +40,7 @@
 				{
 					_namLeftSmoke="smokeshellYellow";
 					_namRightSmoke="SmokeShellblue";
-					namSmokePath="vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTipYwB.sqf"; 
+					
 				}
 				else
 				{
@@ -48,7 +48,7 @@
 					{
 						_namLeftSmoke="smokeshellred";
 						_namRightSmoke="SmokeShellblue";
-						namSmokePath="vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTipRB.sqf";
+						
 					}
 					else
 					{
@@ -56,7 +56,7 @@
 						{
 							_namLeftSmoke="smokeshellblue";
 							_namRightSmoke="SmokeShellblue";
-							namSmokePath="vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTipBB.sqf"; 
+							
 						}
 						else
 						{

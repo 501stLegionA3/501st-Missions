@@ -48,11 +48,12 @@ laatClaymoreIV={
 				seatAmmoPerMag=seatData select 1;
 				seatMags=seatData select 2;
 
-				_vic addWeaponTurret[itemWeapon, [seatIndex]];
+			
 				
 				comment "adds mags";
 				for [{_k=0}, {_k<(seatMags)}, {_k=_k+1}] do
 				{
+					_vic addWeaponTurret[itemWeapon, [seatIndex]];
 					_vic addMagazineTurret [itemMagType ,[seatIndex],seatAmmoPerMag];
 
 				};
