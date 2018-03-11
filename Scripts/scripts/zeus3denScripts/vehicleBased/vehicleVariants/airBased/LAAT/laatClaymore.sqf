@@ -2,8 +2,7 @@ claymoreI={
 	params["_vic"];
 
 	
-	//if (!(_vic getVariable ["namReconfigured", false])) then 
-	//{
+	
 	
 		comment "data for weapons";
 		comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
@@ -15,7 +14,12 @@ claymoreI={
 		["Laserdesignator_pilotCamera","Laserbatteries",[[-1,1,1]]]
 		];
 
-
+		comment "remove torpedos";
+		for [{_i=0}, {_i<2}, {_i=_i+1}] do
+		{
+			_vic removeMagazineTurret ["laat_proton_torpedo" ,[-1]];  
+			_vic removeWeaponTurret["laat_proton_torpedo_launcher", [-1]];
+		};
 
 		comment "For each weapon";
 		for [{_i=0}, {_i<(count weaponData)}, {_i=_i+1}] do
@@ -50,11 +54,9 @@ claymoreI={
 
 
 		};
-	//	_vic setVariable ["namReconfigured", true, true];
-//	}
-//	else {};
+
 	
-	// function as file
+	// function as file add the wing tip smoke for laat
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
 	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTip.sqf";}
 	,[1],0,false,true,"User13"," driver  _target == _this"];
