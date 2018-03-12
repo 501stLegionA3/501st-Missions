@@ -65,3 +65,6 @@ medicsLObox addAction ["Clone Medic Loadout", "scripts\loadouts\medical\loadout_
 
 ///////// RTO Loadouts /////////
 // rtoLObox = Variable Name - A box/object - must have object down to work
+
+//calls namenai's init.sqf,refer to its readme for its purpose
+[] execVM "scripts\zeus3denScripts\namenaisInit.sqf";
