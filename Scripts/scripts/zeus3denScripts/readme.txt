@@ -1,8 +1,8 @@
-last update 3/10/2018 3:13 pm est by namenai
+last update 3/12/2018 2:12 pm est by namenai
 
 Here is the file path of various scripts,if its not listed here then its probably 1)scripts being prepped or 2) we forgot :P
 
-/////////////////NOTE THESE FILE PATHS ARE ALL RELAVTIVE TO THE MAIN INIT.SQF FILE////////////////////////////////
+/////////////////NOTE THESE FILE PATHS ARE/HAVE TO BE RELAVTIVE TO THE MAIN INIT.SQF FILE////////////////////////////////
 
 
 
@@ -16,7 +16,7 @@ Here is the file path of various scripts,if its not listed here then its probabl
 */
 ///////////////         END KEY              ////////////////////
 
-//To run namenaiInit do/add the following
+//To run namenaiInit do/add the following to the main init.sqf
 [] execVM "scripts\zeus3denScripts\namenaisInit.sqf";
 
 
@@ -48,7 +48,6 @@ Here is the file path of various scripts,if its not listed here then its probabl
 			[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\YWING\ywingSmokeTip.sqf";
 	
 	//Vehicle Action Menu Based
-		
 		//kappa-cruisie boost ---F
 			[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\forwardKappa.sqf";
 			[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\reverseKappa.sqf";
@@ -81,7 +80,7 @@ Here is the file path of various scripts,if its not listed here then its probabl
 	//FactionBased
 		//OPFOR Based
 			//CIS
-				//b2 reconfig,no need to worry as it will auto apply---H
+				//b2 reconfig,forces b2's to walk--H
 					[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b2\b2Reconfig.sqf";
 		//BLUFOR Based
 		
