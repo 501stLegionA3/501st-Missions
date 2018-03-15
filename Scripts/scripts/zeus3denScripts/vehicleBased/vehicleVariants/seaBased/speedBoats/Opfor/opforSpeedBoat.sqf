@@ -7,7 +7,7 @@ namStarWarsSpeedBoatOpfor={
 		weaponData=[
 		["Cannon_EWEBSWBFgun","1000Rnd_Laser_Cannon_EWEBSWBF",[[1,1000,2]]],
 		["Cannon_UWINGback","500Rnd_Cannon_UWINGback",[[0,500,2]]],
-		["SmokeLauncher","SmokeLauncherMag",[[-1,2,20]]],
+		["SmokeLauncher","SmokeLauncherMag",[[-1,2,20]]]
 		];
 
 
@@ -62,4 +62,4 @@ namStarWarsSpeedBoatOpfor={
 
 
 
-["O_Boat_Armed_01_hmg_F", "init",namStarWarsSpeedBoatBlufor, true, [], true] call CBA_fnc_addClassEventHandler; 
+["O_Boat_Armed_01_hmg_F", "init",namStarWarsSpeedBoatOpfor, true, [], true] call CBA_fnc_addClassEventHandler; 

@@ -7,7 +7,7 @@ namStarWarsSpeedBoatBlufor={
 		weaponData=[
 		["Cannon_Portableun","1000Rnd_Laser_Cannon_EWEBSWBF_REP",[[1,1000,2]]],
 		["Cannon_UWINGback","500Rnd_Cannon_UWINGback",[[0,500,2]]],
-		["SmokeLauncher","SmokeLauncherMag",[[-1,2,20]]],
+		["SmokeLauncher","SmokeLauncherMag",[[-1,2,20]]]
 		];
 
 
