@@ -1,4 +1,4 @@
-last update 3/12/2018 2:12 pm est by namenai
+last update 3/15/2018 3:24 pm est by namenai
 
 Here is the file path of various scripts,if its not listed here then its probably 1)scripts being prepped or 2) we forgot :P
 
@@ -22,31 +22,39 @@ Here is the file path of various scripts,if its not listed here then its probabl
 
 
 //Vehicle scripts
-	//weapon
-		//laat weapon,no need to worry as it will auto apply ---H
-			[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\LAAT\laatClaymore.sqf";
+	//vehicleVariants
+		//airBased
+			//laat weapon,no need to worry as it will auto apply ---H
+				[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\LAAT\laatClaymore.sqf";
+				
+			//arc-170 weapon,no need to worry as it will auto apply ---H
+				[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\ARC\arcXiphos.sqf";
+				
+			//arc-170 prevent ejection,note this is tied into the arc-170 weapon script ---X
+				[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\ARC\removeEject.sqf";
+				
+			//y-wing weapons,no need to worry as it will auto apply ---H
+				[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\YWING\ywingScylla.sqf";
 			
-		//arc-170 weapon,no need to worry as it will auto apply ---H
-			[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\ARC\arcXiphos.sqf";
-			
-		//arc-170 prevent ejection,note this is tied into the arc-170 weapon script ---X
-			[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\ARC\removeEject.sqf";
-			
-		//y-wing weapons,no need to worry as it will auto apply ---H
-			[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\YWING\ywingScylla.sqf";
-			
-	//supporting vehicle scripts
-		//arc-170 wing tip smoke,tied to arc weapon ---X
-			[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\ARC\arcSmokeTipPrB.sqf";
-			[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\ARC\arcSmokeTipRB.sqf";
-			[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\ARC\arcSmokeTipWB.sqf";
+		//supporting vehicle scripts,under vehicleBased/actionMenu based
+			//arc-170 wing tip smoke,tied to arc weapon ---X
+				[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\ARC\arcSmokeTipPrB.sqf";
+				[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\ARC\arcSmokeTipRB.sqf";
+				[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\ARC\arcSmokeTipWB.sqf";
 
-		//laat wing tip smoke ,tied to laat weapon ---X
-			[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTip.sqf";
+			//laat wing tip smoke ,tied to laat weapon ---X
+				[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTip.sqf";
 
-		//Y-wing thruster tip smoke ,tied to y-wing weapon ---X
-			[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\YWING\ywingSmokeTip.sqf";
-	
+			//Y-wing thruster tip smoke ,tied to y-wing weapon ---X
+				[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\YWING\ywingSmokeTip.sqf";
+		//seaBased
+			//speedBoats
+				//Blufor
+					//Blufor Speedboat,adds republic eweb for rear and u-wing gunner gun for main cannon ---H
+					[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\seaBased\speedBoats\Blufor\bluforSpeedBoat.sqf";
+				//Opfor
+					//Opfor Speedboat,adds imperial eweb for rear and u-wing gunner gun for main cannon ---H
+					[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\seaBased\speedBoats\Opfor\opforSpeedBoat.sqf";
 	//Vehicle Action Menu Based
 		//kappa-cruisie boost ---F
 			[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\forwardKappa.sqf";

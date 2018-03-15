@@ -1,4 +1,4 @@
-//last update 3/12/2018 2:12 pm est by namenai
+//last update 3/15/2018 3:23 pm est by namenai
 
 
 //laat weapons,adds weapons and wingtip smoke
@@ -13,5 +13,9 @@
 //b2 reconfig,forces b2's to walk
 	[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b2\b2Reconfig.sqf";
 
+//Blufor Speedboat,adds republic eweb for rear and u-wing gunner gun for main cannon
+	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\seaBased\speedBoats\Blufor\bluforSpeedBoat.sqf";
 
+//Opfor Speedboat,adds imperial eweb for rear and u-wing gunner gun for main cannon
+	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\seaBased\speedBoats\Opfor\opforSpeedBoat.sqf";
 
