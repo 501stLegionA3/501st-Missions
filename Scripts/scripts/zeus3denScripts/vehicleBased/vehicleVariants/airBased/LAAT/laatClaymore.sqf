@@ -8,7 +8,7 @@ claymoreI={
 		comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 		weaponData=[
 		["Cannon_LAAT","1000Rnd_Laser_Cannon_LAAT",[[-1,1000,2]]],
-		["missiles_Jian","4Rnd_LG_Jian",[[-1,10,8],[0,1,1]]],
+		["missiles_Jian","4Rnd_LG_Jian",[[-1,10,8],[0,4,1]]],
 		["weapon_rim116Launcher","magazine_Missile_rim116_x21",[[-1,8,1],[0,21,1]]],
 		["SmokeLauncher","SmokeLauncherMag",[[-1,2,20]]],
 		["CMFlareLauncher","300Rnd_CMFlare_Chaff_Magazine",[[-1,300,10]]],
