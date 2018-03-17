@@ -1,4 +1,4 @@
-last update 3/15/2018 3:24 pm est by namenai
+last update 3/17/2018 1:25 pm est by namenai
 
 Here is the file path of various scripts,if its not listed here then its probably 1)scripts being prepped or 2) we forgot :P
 
@@ -17,6 +17,7 @@ Here is the file path of various scripts,if its not listed here then its probabl
 ///////////////         END KEY              ////////////////////
 
 //To run namenaiInit do/add the following to the main init.sqf
+//Or if you want to not have all the bells and whistles  just put // infront of the below line if its in init.sqf, or remove it
 [] execVM "scripts\zeus3denScripts\namenaisInit.sqf";
 
 
