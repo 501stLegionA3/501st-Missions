@@ -58,7 +58,7 @@
 	atte_drive addItemCargoGlobal ["ACE_plasmaIV_500", 40];
 	atte_drive addItemCargoGlobal ["ACE_packingBandage", 20];
 	atte_drive addItemCargoGlobal ["SW_SquadShield_Mag", 4];
-	atte_drive addItemCargoGlobal ["B_UavTerminal", 1];
+	atte_drive addItemCargoGlobal ["B_UavTerminal", 5];
 
 //spawns a at-te on the dropturrets pos
 	atte_body  = "Republic_ATTE" createVehicle (position _dropTurret);
@@ -70,7 +70,7 @@
 // Set the name and attach it to the Stomper;
 	atte_mens attachTo [ATTE_DRIVE,[0,-4.2,2.2]];
 // make it invisible;	
-	//(atte_mens) setobjecttextureglobal [0,""]; 
+	(atte_mens) setobjecttextureglobal [0,""]; 
 // make it invulnerable remove the ammo 
 	atte_mens allowDamage false;
 	atte_mens setvehicleammo 0;
@@ -83,7 +83,7 @@
 // Set the name and attach it to the Stomper;
 	atte_mens2 attachTo [ATTE_DRIVE,[0,1.9,2.2]];
 // make it invisible;	
-	//(atte_mens2) setobjecttextureglobal [0,""]; 
+	(atte_mens2) setobjecttextureglobal [0,""]; 
 // "make it invulnerable remove the ammo and turn the lights and engine on";
 	atte_mens2 allowDamage false;
 	atte_mens2 setvehicleammo 0;

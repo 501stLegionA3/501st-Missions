@@ -16,6 +16,6 @@ rexiAtteTypeSelector={
 	
 	};//end typeSelector
 	
-	["sw_dropturretobject", "init",rexiAtteTypeSelector, true, [], true] call CBA_fnc_addClassEventHandler; 
+	["B_UGV_01_F", "init",rexiAtteTypeSelector, true, [], true] call CBA_fnc_addClassEventHandler; 
 
 	
