@@ -79,7 +79,7 @@ rexiAtteBase={
 				{ 	
 					_x setDammage 1; 
 				} forEach _namAtteObjArray;
-				_rexiUnit setVariable ["atteObjectsOnIt",[],true];
+				
 			}	
 			else 
 			{  
