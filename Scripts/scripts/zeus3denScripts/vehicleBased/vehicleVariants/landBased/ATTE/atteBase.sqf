@@ -68,28 +68,7 @@ rexiAtteBase={
 			case(""):{_rexiOldDamage = damage _rexiUnit;};
 			default{};
 		};
-		rexiReturn = _rexiOldDamage + ((_rexiPassedDamage - _rexiOldDamage) / _rexiDmgScaleFactor);
-		//_rexiReturn = _rexiOldDamage + ((_rexiPassedDamage ) / _rexiDmgScaleFactor);
-		if((_rexiReturn+_rexiOldDamage)>1) then 
-		{
-			
-			_namAtteObjArray=_rexiUnit getVariable "atteObjectsOnIt";
-			if((count  _namAtteObjArray)>0) then 
-			{
-				{ 	
-					_x setDammage 1; 
-				} forEach _namAtteObjArray;
-				
-			}	
-			else 
-			{  
-			
-			};
-		}
-		else 
-		{  
-			
-		};
+		_rexiReturn = _rexiOldDamage + ((_rexiPassedDamage - _rexiOldDamage) / _rexiDmgScaleFactor);
 		_rexiReturn
 	}];
 
