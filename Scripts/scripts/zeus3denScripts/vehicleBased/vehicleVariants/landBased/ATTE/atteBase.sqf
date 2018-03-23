@@ -76,8 +76,24 @@ rexiAtteBase={
 };//end at-te Base
 
 
+//Add repair ability to turrets and makes it so that they cant die 100%,just disabled
+UAVT={
+	params["_vic"];
+	comment "ADDS REPAIR";
+	
+	_vic addAction ["<t color='#47FF1A'>Repair</t>",
+	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repair.sqf";}];		   
+	   
+	
+	_vic addEventHandler ["HandleDamage", { 
+      _damage = _this select 2; 
+           if ( (_this select 1 == "") and (_damage > 0.9999) ) then { _damage = 0.9999 }; 
+       _damage; 
+       }];
+	};
 
-
+	
+["B_HMG_01_A_F", "init",UAVT, true, [], true] call CBA_fnc_addClassEventHandler; 
 
 ["Republic_ATTE", "init",rexiAtteBase, true, [], true] call CBA_fnc_addClassEventHandler; 
 
