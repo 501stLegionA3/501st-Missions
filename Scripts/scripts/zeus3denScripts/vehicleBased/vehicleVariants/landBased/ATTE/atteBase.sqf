@@ -63,7 +63,7 @@ rexiAtteBase={
 		_rexiSelection = _this select 1;
 		_rexiPassedDamage = _this select 2;
 		_rexiOldDamage = 0;
-		_rexiDmgScaleFactor=6;
+		_rexiDmgScaleFactor=5;
 		switch(_rexiSelection)do{
 			case(""):{_rexiOldDamage = damage _rexiUnit;};
 			default{};
