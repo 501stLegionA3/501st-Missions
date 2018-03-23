@@ -56,6 +56,14 @@ Here is the file path of various scripts,if its not listed here then its probabl
 				//Opfor
 					//Opfor Speedboat,adds imperial eweb for rear and u-wing gunner gun for main cannon ---H
 					[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\seaBased\speedBoats\Opfor\opforSpeedBoat.sqf";
+		//landBased
+			//AT-TE
+				//AT-TE Base,applies armor and repair additions ---H
+					[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\ATTE\atteBase.sqf";
+				//AT-TE Trident Class, tied to file below ---X
+					[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\ATTE\atteTypeSelector.sqf";
+				//AT-TE Type Selector, runs the Trident Class file above ---H  	
+					[] execVM "C:\Users\Nafis\Documents\GitHub\501st-Missions\Scripts\scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\ATTE"
 	//Vehicle Action Menu Based
 		//kappa-cruisie boost ---F
 			[] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\forwardKappa.sqf";
