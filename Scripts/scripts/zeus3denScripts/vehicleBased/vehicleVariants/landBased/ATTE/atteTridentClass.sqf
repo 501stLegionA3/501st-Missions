@@ -1,5 +1,6 @@
 //ye ole drop turret on which all stands
-	_dropTurret=_this select 0;
+	params["_vic"];
+	_dropTurret=_vic;
 	atte_drive = "B_UGV_01_rcws_F" createVehicle (position _dropTurret);
 
 //sleep 1;

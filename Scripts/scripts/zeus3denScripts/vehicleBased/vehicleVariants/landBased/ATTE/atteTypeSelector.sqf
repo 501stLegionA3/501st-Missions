@@ -6,7 +6,7 @@ rexiAtteTypeSelector={
 	_vic  addAction ["<t color='#47FF1A'>All Terrain Tactical Enforcer</t>",                
 	{
 	compspawner = _this select 0;
-    [] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\ATTE\atteTridentClass.sqf";
+    [compspawner] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\ATTE\atteTridentClass.sqf";
 	}];
 	
 	
