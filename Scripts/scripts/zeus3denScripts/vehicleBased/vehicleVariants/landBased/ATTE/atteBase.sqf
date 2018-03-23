@@ -81,13 +81,21 @@ UAVT={
 	params["_vic"];
 	comment "ADDS REPAIR";
 	
-	_vic addAction ["<t color='#47FF1A'>Repair</t>",
+	_vic addAction ["<t color='#47FF1A'>Repair Turret</t>",
 	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repair.sqf";}];		   
 	   
 	
 	_vic addEventHandler ["HandleDamage", { 
       _damage = _this select 2; 
-           if ( (_this select 1 == "") and (_damage > 0.9999) ) then { _damage = 0.9999 }; 
+           if ( (_this select 1 == "") and (_damage > 0.9999) ) then 
+		   { 
+			_damage = 0.9999; 
+		   }
+		   else
+		   {
+		   
+		   
+		   };
        _damage; 
        }];
 	};
