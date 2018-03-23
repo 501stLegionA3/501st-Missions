@@ -68,21 +68,27 @@ rexiAtteBase={
 			case(""):{_rexiOldDamage = damage _rexiUnit;};
 			default{};
 		};
-		//_rexiReturn = _rexiOldDamage + ((_rexiPassedDamage - _rexiOldDamage) / _rexiDmgScaleFactor);
-		_rexiReturn = _rexiOldDamage + ((_rexiPassedDamage ) / _rexiDmgScaleFactor);
+		rexiReturn = _rexiOldDamage + ((_rexiPassedDamage - _rexiOldDamage) / _rexiDmgScaleFactor);
+		//_rexiReturn = _rexiOldDamage + ((_rexiPassedDamage ) / _rexiDmgScaleFactor);
 		if((_rexiReturn+_rexiOldDamage)>1) then 
 		{
-			hint format["dead %1",time];
-			_namAtteObjArray=_rexiUnit getVariable "atteObjectsOnIt";
-			{ 
-				[west, "HQ"] sideChat format["%1 is dead %2",_x,time];
-				_x setDammage 1; 
-			} forEach _namAtteObjArray;
 			
+			_namAtteObjArray=_rexiUnit getVariable "atteObjectsOnIt";
+			if((count  _namAtteObjArray)>0) then 
+			{
+				{ 	
+					_x setDammage 1; 
+				} forEach _namAtteObjArray;
+				_rexiUnit setVariable ["atteObjectsOnIt",[],true];
+			}	
+			else 
+			{  
+			
+			};
 		}
 		else 
 		{  
-			hint format["not dead lolollol %1",time];
+			
 		};
 		_rexiReturn
 	}];

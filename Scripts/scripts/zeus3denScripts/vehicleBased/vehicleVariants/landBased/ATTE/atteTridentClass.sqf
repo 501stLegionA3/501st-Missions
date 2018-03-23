@@ -134,6 +134,6 @@
 	atte_gun3 setdir 180;
 	atte_gun3 allowCrewInImmobile true;
 //Stores the varible names of all objects
-	atte_body setVariable ["atteObjectsOnIt", [atte_drive,atte_mens,atte_mens2,atte_com,atte_gun1,atte_gun2,atte_gun3],true];
+	atte_body setVariable ["atteObjectsOnIt", [atte_drive,atte_com,atte_gun1,atte_gun2,atte_gun3],true];
 //deleted the drop turret	
 	deleteVehicle _dropTurret;
