@@ -69,7 +69,7 @@
 // Set the name and attach it to the Stomper;
 	atte_mens attachTo [ATTE_DRIVE,[0,-4.2,2.2]];
 // make it invisible;	
-	(atte_mens) setobjecttextureglobal [0,""]; 
+	//(atte_mens) setobjecttextureglobal [0,""]; 
 // make it invulnerable remove the ammo 
 	atte_mens allowDamage false;
 	atte_mens setvehicleammo 0;
@@ -80,9 +80,9 @@
 // crewITT,purpose allows uav driver to sit there;	
 	atte_mens2 = "O_SWOP_HoverTa_2" createVehicle (position _dropTurret);
 // Set the name and attach it to the Stomper;
-	ATTE_MENS2 attachTo [ATTE_DRIVE,[0,1.9,2.2]];
+	atte_mens2 attachTo [ATTE_DRIVE,[0,1.9,2.2]];
 // make it invisible;	
-	(atte_mens2) setobjecttextureglobal [0,""]; 
+	//(atte_mens2) setobjecttextureglobal [0,""]; 
 // "make it invulnerable remove the ammo and turn the lights and engine on";
 	atte_mens2 allowDamage false;
 	atte_mens2 setvehicleammo 0;
