@@ -16,7 +16,7 @@ rexiAtteTypeSelector={
 	
 	};//end typeSelector
 	
-	["B_UGV_01_F", "init",rexiAtteTypeSelector, true, [], true] call CBA_fnc_addClassEventHandler; 
+	["swclonerecondroid", "init",rexiAtteTypeSelector, true, [], true] call CBA_fnc_addClassEventHandler; 
 	
 	["sw_dropturretobject", "init",rexiAtteTypeSelector, true, [], true] call CBA_fnc_addClassEventHandler; 
 	

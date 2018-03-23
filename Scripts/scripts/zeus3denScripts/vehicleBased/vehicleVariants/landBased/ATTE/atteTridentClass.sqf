@@ -1,6 +1,8 @@
 //ye ole drop turret on which all stands
 	params["_vic"];
+//The object that has the action menu to deploy this at-te
 	_dropTurret=_vic;
+//The stomper that makes at-te move	
 	atte_drive = "B_UGV_01_rcws_F" createVehicle (position _dropTurret);
 
 //sleep 1;
@@ -96,7 +98,7 @@
 // "remote desig,commanders laz dezer";	
 	atte_com = "B_Static_Designator_01_F" createVehicle (position _dropTurret);
 // Set the name and attach it to the Stomper;
-	ATTE_com attachTo [ATTE_DRIVE,[0,0.9,6.8]]; 
+	atte_com attachTo [ATTE_DRIVE,[0,0.9,6.8]]; 
 	atte_com allowDamage false;
 	createVehicleCrew atte_com; 
 	[atte_com, true] remoteExec ["hideObjectglobal", 0];
@@ -131,6 +133,7 @@
 	createVehicleCrew ATTE_gun3;
 	atte_gun3 setdir 180;
 	atte_gun3 allowCrewInImmobile true;
-
+//Stores the varible names of all objects
+	atte_body setVariable ["atteObjectsOnIt", [atte_drive,atte_mens,atte_mens2,atte_com,atte_gun1,atte_gun2,atte_gun3],true];
 //deleted the drop turret	
 	deleteVehicle _dropTurret;
