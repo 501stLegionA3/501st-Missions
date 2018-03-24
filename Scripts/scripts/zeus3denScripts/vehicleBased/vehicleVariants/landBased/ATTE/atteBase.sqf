@@ -87,9 +87,9 @@ UAVT={
 	
 	_vic addEventHandler ["HandleDamage", { 
       _damage = _this select 2; 
-           if ( (_this select 1 == "") and (_damage > 0.9999) ) then 
+           if ( (_this select 1 == "") and (_damage > 0.75) ) then 
 		   { 
-			_damage = 0.9999; 
+			_damage = 0.75; 
 		   }
 		   else
 		   {
