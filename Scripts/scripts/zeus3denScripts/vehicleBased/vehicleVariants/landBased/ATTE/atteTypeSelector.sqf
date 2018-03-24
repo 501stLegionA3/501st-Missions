@@ -18,5 +18,5 @@ rexiAtteTypeSelector={
 	
 	["swclonerecondroid", "init",rexiAtteTypeSelector, true, [], true] call CBA_fnc_addClassEventHandler; 
 	
-	["VR_3DSelector_01_default_F", "init",rexiAtteTypeSelector, true, [], true] call CBA_fnc_addClassEventHandler; 
+	["B_Soldier_VR_F", "init",rexiAtteTypeSelector, true, [], true] call CBA_fnc_addClassEventHandler; 
 	
