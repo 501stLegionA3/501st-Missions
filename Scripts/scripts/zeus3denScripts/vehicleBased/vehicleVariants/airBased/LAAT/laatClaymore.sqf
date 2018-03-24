@@ -59,7 +59,7 @@ claymoreI={
 		};//end weapon additon
 		
 		//removes torpedos
-		_vic removeWeaponTurret["laat_proton_torpedo_launcher", [-1]];
+		//_vic removeWeaponTurret["laat_proton_torpedo_launcher", [-1]];
 		
 
 	
