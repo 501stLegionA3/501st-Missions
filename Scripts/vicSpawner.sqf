@@ -1,3 +1,5 @@
+try
+{
 pads=[
 [pad_middle,1],
 [pad_left,1],
@@ -79,3 +81,10 @@ for [{_i=0}, {_i<(count pads)}, {_i=_i+1}] do
         unitPad="";
         unitPadHeight="";
         }];
+}
+catch
+{
+	hint ("Vicspawner is broken, badger Namenai to fix it.");
+}
+
+//added try catch suck it namenai
