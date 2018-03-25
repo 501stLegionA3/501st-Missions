@@ -3,7 +3,7 @@ namZeusPanelHermes={
 	params["_objToPlacePanelsOn"];
 	
 	//makes him handcuffed
-	([_objToPlacePanelsOn,true] call ace_captives_fnc_setHandcuffed) 
+	([_objToPlacePanelsOn,true] call ace_captives_fnc_setHandcuffed);
 	
 	 removeGoggles _objToPlacePanelsOn;
 	_objToPlacePanelsOn AddUniform "SWOP_CloneOf_red_F_CombatUniform";
