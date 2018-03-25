@@ -10,7 +10,7 @@
 
 	// Global Configuration Vars
 co18_BDC_LAATCMonitor_AirCargoTypes = ["swop_LAAT_cargo"]; // default: "swop_LAAT_cargo" contingent on classname change
-co18_BDC_LAATCMonitor_ExcludedObjects = []; // List of any classnames of objects we do NOT want to be able to pick up
+co18_BDC_LAATCMonitor_ExcludedObjects = ["B_HMG_01_A_F","O_SWOP_HoverTa_2","O_SWOP_HoverTr_2"]; // List of any classnames of objects we do NOT want to be able to pick up
 co18_BDC_LAATCMonitor_ReverseObjects = ["SW_AV7"]; // Object to load in 180* direction
 co18_BDC_LAATCMonitor_IncludeAircraft = true; // If true, parent class 'Air' will be included in scan search and loading functionality (default: false)
 co18_BDC_LAATCMonitor_IncludeAircraftObjects = [ // List of aircraft classes (by object classname) that will be able to be loaded (if other air are not in this list, they will be automatically excluded)
@@ -26,6 +26,7 @@ co18_BDC_LAATCMonitor_SpecificAttachPoints = [ // List of specific object classe
 	[["Republic_ATTE"],[0,-1.65,-7.75]], // Republic AT-TE turret tank monstrosity
 	[["SW_FIELDGUN"],[0,-2.5,-6.75]], // Republic large turret - move it back a bit so the main turret isn't sticking thru the cockpit
 	[["SW_AV7"],[0,-4,-9]], // AV7
+	[["B_UGV_01_rcws_F"],[0,-3.65,-6.75]], // ATTE Composition
 	[["O_JM_TX130r_1","O_JM_TX130m1r_1","O_JM_TX130m2r_1","O_JM_TX130_1","O_JM_TX130m1_1","O_JM_TX130m2_1"],[0,0,-4.0]], // Sabre tanks raised up due to short body
 	[["Slingload_base_F","Slingload_01_Base_F"],[0,-3,-1.5]], // Cargo containers - move back and up
 	[["swop_LAAT","swop_LAATmk2","swop_LAATmk2_104","swop_LAATmk2_74","swop_LAATmk2_ARC","swop_LAATmk2_spec"],[0,0,-4.35]] // LAAT gunships

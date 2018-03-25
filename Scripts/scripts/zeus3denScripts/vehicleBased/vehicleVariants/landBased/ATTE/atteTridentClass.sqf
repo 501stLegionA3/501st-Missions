@@ -15,19 +15,22 @@
 	};
 // remove cargo space of uav;
 	[atte_drive, -1] call ace_cargo_fnc_setSpace;
-
+ 
 
 // damage the wheels of uav to set top speed: gives 3 speeds slow forward = 10km forward = 20km fast forward = 29km;
 	{atte_drive setHitPointDamage[_x,0.90]} forEach ["HitLF2Wheel","HitRF2Wheel"];
 	{atte_drive setHitPointDamage[_x,0.90]} forEach ["HitLFWheel","HitRFWheel"];
 	{atte_drive setHitPointDamage[_x,0.90]} forEach ["HitLmWheel","HitRmWheel"];
 	
-	//dmgs wheels
-	for [{_i=20}, {_i<(25)}, {_i=_i+1}] do
-	{
-		atte_drive setHitIndex [_i, 1]; 
-	};
+	//dmgs lights
+	atte_drive setHitIndex [20, 1];
+	atte_drive setHitIndex [21, 1];
+	atte_drive setHitIndex [22, 1];
+	atte_drive setHitIndex [23, 1];
+	atte_drive setHitIndex [24, 1];	
 	
+//cant take dmg the stomper	
+	atte_drive allowDamage false;  	
 	atte_drive lockTurret [[1], true];
 
 // Remove the stompers weapons and add in smoke launcher and laser desig;
@@ -43,23 +46,23 @@
 	atte_drive addWeaponTurret  ["Laserdesignator_mounted",[0]];  
 	atte_drive addMagazineTurret ["Laserbatteries",[0]]; 
 	
-//cant take dmg the stomper	
-	atte_drive allowDamage false;                                                                                                         
+                                                                                                      
 
 // create the infantry cargo;
 	clearMagazineCargoGlobal atte_drive;
-	atte_drive addMagazineCargoGlobal ["SWOP_DC15ABlasterRifle_Low_Mag", 20];// is 40 possible?
+	atte_drive addMagazineCargoGlobal ["SWOP_DC15ABlasterRifle_Low_Mag", 40];
 	atte_drive addMagazineCargoGlobal ["SWOP_DC15ABlasterRifle_Full_Mag", 10];
 	atte_drive addMagazineCargoGlobal ["SWOP_DC15ABlasterRifle_Mag", 20];
-	atte_drive addMagazineCargoGlobal ["SWOP_DC15_Mag", 3];//carbines ammo right?
+	atte_drive addMagazineCargoGlobal ["SWOP_DC15_Mag", 10];
 	
 	clearItemCargoGlobal atte_drive;
 	atte_drive addItemCargoGlobal ["ACE_elasticBandage", 40];
 	atte_drive addItemCargoGlobal ["ACE_quikclot", 40];
-	atte_drive addItemCargoGlobal ["ACE_epinephrine", 10];//add morphine?
+	atte_drive addItemCargoGlobal ["ACE_morphine", 15];
+	atte_drive addItemCargoGlobal ["ACE_epinephrine", 15];
 	atte_drive addItemCargoGlobal ["ACE_plasmaIV_500", 40];
 	atte_drive addItemCargoGlobal ["ACE_packingBandage", 20];
-	atte_drive addItemCargoGlobal ["SW_SquadShield_Mag", 4];
+	atte_drive addItemCargoGlobal ["SW_SquadShield_Mag", 3];
 	atte_drive addItemCargoGlobal ["B_UavTerminal", 5];
 
 //spawns a at-te on the dropturrets pos

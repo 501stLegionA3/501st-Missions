@@ -2,35 +2,6 @@
 //Now this file is called in the init.sqf. Thus whenever the the atteTypeSelector is executed and the at-te from there is spawned,this is ran
 
 
-//Function that makes at-te gun do more dmg
-rexiAtteBulMux={
-	
-	
-	_rexiUnit = (_this select 0); 
-	_rexiProjType = _this select 4; 
-	_rexiProjectile = _this select 6; 
-	_rexiUp = vectorUp _rexiProjectile; 
-	_rexiProjPos = getPosASL _rexiProjectile; 
-	_RexiDist=1; 
-	for "_i" from 1 to 4 do { 
-			 
-	_rexiO = _rexiProjType createVehicle _rexiProjPos; 
-	_rexiO setPosASL [ 
-	(_rexiProjPos select 0) + ((vectorDir _rexiUnit) select 0)*(_RexiDist), 
-	(_rexiProjPos select 1) + ((vectorDir _rexiUnit) select 1)*(_RexiDist), 
-	(_rexiProjPos select 2) + ((vectorDir _rexiUnit) select 2)*(_RexiDist) 
-	 ]; 
-	_rexiO setVectorDirAndUp[(vectorDir _rexiUnit),_rexiUp]; 
-	_rexiO setVelocity velocity _rexiProjectile; 
-	}; 
-	
-
-};//end at-te bul mux
-
-
-
-
-
 
 //general script
 rexiAtteBase={
@@ -41,11 +12,10 @@ rexiAtteBase={
 	//adds the ability to check how much dmg the at-te has taken
 	_vic addAction ["<t color='#00FF00'>Hull Damage Report</t>",
 	{
-
-
 		hint parseText format["<t color='#0099FF'> Hull Integrity is :%1%2</t>",((1-(damage (_this  select 0)))*100),"%"];
 
-	},[1],0,false,true,""," commander  _target == _this "];
+	}];
+	
 	
 	
 	_vic removeAllEventHandlers "Fired";
@@ -71,6 +41,15 @@ rexiAtteBase={
 		_rexiReturn = _rexiOldDamage + ((_rexiPassedDamage - _rexiOldDamage) / _rexiDmgScaleFactor);
 		_rexiReturn
 	}];
+	
+	//Removes the standard weapon and replaces it with a 120mm cannon
+	_vic removeWeaponTurret ["Cannon_ATTE", [0]];
+	_vic addWeaponTurret ["cannon_120mm", [0]];
+	
+	for [{_i=0}, {_i<(5)}, {_i=_i+1}] do
+	{
+		_vic addMagazineTurret ["32Rnd_120mm_APFSDS_shells_Tracer_Green" ,[0]];
+	};
 
 
 };//end at-te Base
@@ -82,7 +61,7 @@ UAVT={
 	comment "ADDS REPAIR";
 	
 	_vic addAction ["<t color='#47FF1A'>Repair Turret</t>",
-	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repair.sqf";}];		   
+	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repairTo65.sqf";}];		   
 	   
 	
 	_vic addEventHandler ["HandleDamage", { 
@@ -105,4 +84,3 @@ UAVT={
 
 ["Republic_ATTE", "init",rexiAtteBase, true, [], true] call CBA_fnc_addClassEventHandler; 
 
-["Republic_ATTE", "fired",rexiAtteBulMux] call CBA_fnc_addClassEventHandler;
