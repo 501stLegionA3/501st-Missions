@@ -1,7 +1,8 @@
-//last update 3/25/2018 11:18 pm est by namenai
+//last update 3/25/2018 11:50 pm est by namenai
 
 //global variables that are used
 	[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
+
 
 //laat weapons,adds weapons and wingtip smoke
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\LAAT\laatClaymore.sqf";
@@ -27,6 +28,8 @@
 //AT-TE Type Selector that spawns in the at-te class type
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\ATTE\atteTypeSelector.sqf";
 
+//AAT weapons
+	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\AAT\aatMohawkClassBase.sqf";
 	
 	
 
