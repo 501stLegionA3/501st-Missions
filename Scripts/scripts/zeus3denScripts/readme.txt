@@ -1,4 +1,4 @@
-last update 3/25/2018 3:04 PM  est by namenai
+last update 3/25/2018 4:40 PM  est by namenai
 
 Here is the file path of various scripts,if its not listed here then its probably 1)scripts being prepped or 2) we forgot :P
 
@@ -26,6 +26,9 @@ Here is the file path of various scripts,if its not listed here then its probabl
 //Or if you want to not have all the bells and whistles  just put // infront of the below line if its in init.sqf, or remove it
 [] execVM "scripts\zeus3denScripts\namenaisInit.sqf";
 
+
+//---------------------DECOMMISSIONED--------------------------
+/*
 //Global Variables
 	//This is the global variable file ---G---S
 		[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
@@ -40,6 +43,10 @@ Here is the file path of various scripts,if its not listed here then its probabl
 //globalFncAndVarPanel 	
 			//To allow zeus ease of changing variables for a mission as getters and setters are too hard for them ,sad bois
 			[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanel.sqf";
+			
+*/
+//---------------------END DECOMMISSIONED--------------------------
+			
 //Vehicle Based
 	//vehicleVariants
 		//airBased
@@ -85,6 +92,10 @@ Here is the file path of various scripts,if its not listed here then its probabl
 			//AAT
 				//Note this is a one off type script,turn it on via the global functions when u want it,turn it off when u dont
 					[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\AAT\aatMohawkClassBase.sqf"
+				//adds eweb to aat
+					[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\AAT\aatAddEweb.sqf"
+				//removes eweb to aat
+					[] execVm "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\AAT\aatRemoveEweb.sqf"
 					
 	//Vehicle Action Menu Based
 		//kappa-cruisie boost ---F
