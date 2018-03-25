@@ -1,4 +1,4 @@
-
+/* decommissioned due to difficulty of public variables
 namZeusPanelHermes={
 	params["_objToPlacePanelsOn"];
 	
@@ -35,7 +35,7 @@ namZeusPanelHermes={
 
 
 ["B_Protagonist_VR_F", "init",namZeusPanelHermes, true, [], true] call CBA_fnc_addClassEventHandler; 
-
+*/
 
 
 

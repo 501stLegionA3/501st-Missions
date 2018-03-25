@@ -1,7 +1,7 @@
 //last update 3/25/2018 3:04 pm est by namenai
 
-//global variables that are used
-	[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
+//global variables that are used----------------------- decommissioned due to public variables being too hard-------------------- 
+	//[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
 //Allow zeus to change global variables
 	[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanel.sqf";
 

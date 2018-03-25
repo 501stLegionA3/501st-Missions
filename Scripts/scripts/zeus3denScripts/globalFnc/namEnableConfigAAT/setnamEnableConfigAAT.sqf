@@ -1,3 +1,4 @@
+/* decommissioned due to difficulty of public variables
 try
 {
 
@@ -8,3 +9,4 @@ catch
 {
 	hint ("possible wrong or no parameter sent, badger Namenai to fix it.");
 };
+*/

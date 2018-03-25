@@ -73,7 +73,7 @@
 // ITT for troop transport;	
 	atte_mens = "O_SWOP_HoverTa_2" createVehicle (position _dropTurret);
 // Set the name and attach it to the Stomper;
-	atte_mens attachTo [ATTE_DRIVE,[0,-4.2,2.2]];
+	atte_mens attachTo [ATTE_DRIVE,[0,-4.2,1.9]];
 // make it invisible;	
 	(atte_mens) setobjecttextureglobal [0,""]; 
 // make it invulnerable remove the ammo 
@@ -86,7 +86,7 @@
 // crewITT,purpose allows uav driver to sit there;	
 	atte_mens2 = "O_SWOP_HoverTa_2" createVehicle (position _dropTurret);
 // Set the name and attach it to the Stomper;
-	atte_mens2 attachTo [ATTE_DRIVE,[0,1.9,2.2]];
+	atte_mens2 attachTo [ATTE_DRIVE,[0,1.9,1.9]];
 // make it invisible;	
 	(atte_mens2) setobjecttextureglobal [0,""]; 
 // "make it invulnerable remove the ammo and turn the lights and engine on";
@@ -95,7 +95,7 @@
 	atte_mens2 engineOn true;
 	atte_mens2 setPilotLight true;
 	atte_mens2 lockDriver true;
-	[atte_mens2, 9] call ace_cargo_fnc_setSpace;
+	[atte_mens2, -1] call ace_cargo_fnc_setSpace;
 
 
 // "remote desig,commanders laz dezer";	
@@ -115,7 +115,7 @@
 	ATTE_gun1 addMagazineTurret ["1000Rnd_Laser_Cannon_LAAT",[0]];    
 	createVehicleCrew ATTE_gun1;
 	atte_gun1 allowCrewInImmobile true;
-	
+	([atte_gun1 ,true] call ace_captives_fnc_setHandcuffed
 	
 //turrets that fire the laat cannons 2
 	atte_gun2 = "B_HMG_01_A_F" createVehicle (position _dropTurret);
@@ -125,7 +125,7 @@
 	atte_gun2 addMagazineTurret ["1000Rnd_Laser_Cannon_LAAT",[0]];  
 	createVehicleCrew ATTE_gun2;
 	atte_gun2 allowCrewInImmobile true;
-
+	([atte_gun2 ,true] call ace_captives_fnc_setHandcuffed
 	   
 //turrets that fire the laat cannons 3
 	atte_gun3 = "B_HMG_01_A_F" createVehicle (position _dropTurret);
@@ -134,6 +134,7 @@
 	atte_gun3 addWeaponTurret ["Cannon_LAAT",[0]]; 
 	atte_gun3 addMagazineTurret ["1000Rnd_Laser_Cannon_LAAT",[0]]; 
 	createVehicleCrew ATTE_gun3;
+	([atte_gun3 ,true] call ace_captives_fnc_setHandcuffed) 
 	atte_gun3 setdir 180;
 	atte_gun3 allowCrewInImmobile true;
 //Stores the varible names of all objects
