@@ -1,4 +1,4 @@
-last update 3/17/2018 1:25 pm est by namenai
+last update 3/25/2018 11:44 AM  est by namenai
 
 Here is the file path of various scripts,if its not listed here then its probably 1)scripts being prepped or 2) we forgot :P
 
@@ -12,6 +12,12 @@ Here is the file path of various scripts,if its not listed here then its probabl
 ---X means tied to a ---H, no need to really apply it.
 ---F free script,meaning you can either use in 3den or zeus if you need it.
 
+---S means this variable has setters
+---G means this variable has getters
+
+---P This function must have a parameter
+
+---EXP has exception handling
 
 */
 ///////////////         END KEY              ////////////////////
@@ -20,9 +26,18 @@ Here is the file path of various scripts,if its not listed here then its probabl
 //Or if you want to not have all the bells and whistles  just put // infront of the below line if its in init.sqf, or remove it
 [] execVM "scripts\zeus3denScripts\namenaisInit.sqf";
 
+//Global Variables
+	//This is the global variable file ---G---S
+		[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
+		
+//Global Functions
+	//namEnableConfigAAT 
+		//getter ---EXP
+			[] execVM "scripts\zeus3denScripts\globalFnc\namEnableConfigAAT\getnamEnableConfigAAT.sqf";
+		//setter ---P ---EXP
+			[] execVM "scripts\zeus3denScripts\globalFnc\namEnableConfigAAT\setnamEnableConfigAAT.sqf";
 
-
-//Vehicle scripts
+//Vehicle Based
 	//vehicleVariants
 		//airBased
 			//laat weapon,no need to worry as it will auto apply ---H

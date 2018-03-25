@@ -1,5 +1,7 @@
-//last update 3/15/2018 3:23 pm est by namenai
+//last update 3/25/2018 11:18 pm est by namenai
 
+//global variables that are used
+	[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
 
 //laat weapons,adds weapons and wingtip smoke
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\LAAT\laatClaymore.sqf";
