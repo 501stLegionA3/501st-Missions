@@ -1,8 +1,9 @@
-//last update 3/25/2018 11:50 pm est by namenai
+//last update 3/25/2018 1:19 pm est by namenai
 
 //global variables that are used
 	[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
-
+//Allow zeus to change global variables
+	[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanel.sqf";
 
 //laat weapons,adds weapons and wingtip smoke
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\LAAT\laatClaymore.sqf";
