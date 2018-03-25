@@ -1,6 +1,7 @@
 try
 {
-namEnableConfigAAT;
+namEnableConfigAAT
+hint format["%1",namEnableConfigAAT];
 }
 catch
 {
