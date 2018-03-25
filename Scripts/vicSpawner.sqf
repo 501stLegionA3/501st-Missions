@@ -87,4 +87,5 @@ catch
 	hint ("Vicspawner is broken, badger Namenai to fix it.");
 }
 
-//added try catch suck it namenai
+//added try catch suck it namenai, okaie
+//why not do we still have to use this script,why dont we remove it from all missions :(
