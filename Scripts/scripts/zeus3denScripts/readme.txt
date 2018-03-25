@@ -1,4 +1,4 @@
-last update 3/25/2018 1:19 PM  est by namenai
+last update 3/25/2018 3:04 PM  est by namenai
 
 Here is the file path of various scripts,if its not listed here then its probably 1)scripts being prepped or 2) we forgot :P
 
@@ -124,7 +124,8 @@ Here is the file path of various scripts,if its not listed here then its probabl
 		//BLUFOR Based
 		
 		//INDEPENDENT Based
-		
+            //Adds random star wars uniforms to the AAF vr entity soldier ---H
+				[] execVM "scripts\zeus3denScripts\aiBased\factionBased\independent\AAF\RandomSWCIV.sqf"; 	
 		//CIVILLIAN Based
 		
 		

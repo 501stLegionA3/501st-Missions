@@ -1,4 +1,4 @@
-//last update 3/25/2018 1:19 pm est by namenai
+//last update 3/25/2018 3:04 pm est by namenai
 
 //global variables that are used
 	[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
@@ -32,5 +32,7 @@
 //AAT weapons
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\AAT\aatMohawkClassBase.sqf";
 	
+//Adds random star wars uniforms to the AAF vr entity soldier ---H
+    [] execVM "scripts\zeus3denScripts\aiBased\factionBased\independent\AAF\RandomSWCIV.sqf"; 	
 	
 
