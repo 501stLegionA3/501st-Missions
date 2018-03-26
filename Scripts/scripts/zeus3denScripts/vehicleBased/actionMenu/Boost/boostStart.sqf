@@ -4,15 +4,17 @@ try
 
 
 
-	hint "ENGAGING FORWARD THRUSTERS";
+
 	if(speed _vic >= _namMinSpeed) then 
 	{
+		_vic setvariable ["OPTRE_Thruster_EngagedStatus",true,true];
+		hint "ENGAGING FORWARD THRUSTERS";
 		while {((_vic getvariable ["OPTRE_Thruster_EngagedStatus",false]) AND (alive _vic))} do
 		{
 			if (speed _vic <= 600) then {
 				_vel = velocity _vic;
 				_dir = direction _vic;
-				_speed = _namAccel;//10
+				_speed = abs(_namAccel);//10
 				
 				/* optre boost logic
 				_vic setVelocity [

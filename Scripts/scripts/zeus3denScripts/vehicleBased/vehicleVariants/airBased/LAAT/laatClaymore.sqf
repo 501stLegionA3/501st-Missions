@@ -79,18 +79,19 @@ claymoreI={
 
 	},[1],0,false,true,""," driver  _target == _this "];
 
-	
+	//by default boost is off
+	_vic setvariable ["OPTRE_Thruster_EngagedStatus",false,true];
 	
 	//adds action to engage boost
 	_vic  addAction ["<t color='#00FF00'>Engage C.R.U.I.S.I.E Control System -------- U18</t>",
 	{
-		[_this select 0,620,10,20] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStart.sqf";
+		[_this select 0,620,10,50] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStart.sqf";
 	},[1],0,false,true,"User18"," driver  _target == _this"];
 	
 	//adds action to disengage boost
 	_vic  addAction ["<t color='#FFA500'>Disengage C.R.U.I.S.I.E Control System -------- U19</t>",
 	{
-		[_this select 0,80,20] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStop.sqf";
+		[_this select 0,80,10] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStop.sqf";
 	},[1],0,false,true,"User19"," driver  _target == _this"];
 	
 };
