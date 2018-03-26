@@ -1,4 +1,4 @@
-//last update 3/25/2018 3:04 pm est by namenai
+//last update 3/26/2018 3:27 pm est by namenai
 
 //global variables that are used----------------------- decommissioned due to public variables being too hard-------------------- 
 	//[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
@@ -34,5 +34,8 @@
 	
 //Adds random star wars uniforms to the AAF vr entity soldier ---H
     [] execVM "scripts\zeus3denScripts\aiBased\factionBased\independent\AAF\RandomSWCIV.sqf"; 	
+	
+//Hermes Panel
+	[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanel.sqf";
 	
 

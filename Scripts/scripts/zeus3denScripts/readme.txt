@@ -1,4 +1,4 @@
-last update 3/26/2018 2:05 PM  est by namenai
+last update 3/26/2018 3:26 PM  est by namenai
 
 Here is the file path of various scripts,if its not listed here then its probably 1)scripts being prepped or 2) we forgot :P
 
@@ -40,7 +40,9 @@ Here is the file path of various scripts,if its not listed here then its probabl
 		//setter ---P ---EXP
 			[] execVM "scripts\zeus3denScripts\globalFnc\namEnableConfigAAT\setnamEnableConfigAAT.sqf";
 
-
+//globalFncAndVarPanel 	
+			//To allow zeus ease of changing variables for a mission as getters and setters are too hard for them ,sad bois
+			[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanel.sqf";
 			
 */
 //---------------------END DECOMMISSIONED--------------------------
@@ -107,6 +109,9 @@ Here is the file path of various scripts,if its not listed here then its probabl
 			//zeus use,note dont use both,working on fixing so that both can be used
 			[_this] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\forwardKappa.sqf";
 			[_this] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\reverseKappa.sqf";
+		//Optre-f18 hybrid boost
+			["_vic","_namMaxSpeed","_namMinSpeed","_namAccel"] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStart.sqf";
+			["_vic","_namMinSpeed","_namDeAccel"] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStop.sqf";
 
 
 			

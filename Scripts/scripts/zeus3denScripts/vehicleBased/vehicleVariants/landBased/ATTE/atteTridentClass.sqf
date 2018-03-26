@@ -115,7 +115,7 @@
 	ATTE_gun1 addMagazineTurret ["1000Rnd_Laser_Cannon_LAAT",[0]];    
 	createVehicleCrew ATTE_gun1;
 	atte_gun1 allowCrewInImmobile true;
-	([atte_gun1 ,true] call ace_captives_fnc_setHandcuffed
+	([atte_gun1 ,true] call ace_captives_fnc_setHandcuffed)
 	
 //turrets that fire the laat cannons 2
 	atte_gun2 = "B_HMG_01_A_F" createVehicle (position _dropTurret);
