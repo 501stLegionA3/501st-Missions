@@ -5,7 +5,7 @@ namVultureBase=
 	comment "data for weapons";
 	comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 	weaponData=[
-	["energy_torpedo_w","energy_torpedo_mag",[[-1,8,1]]],
+	["energy_torpedo_w","energy_torpedo_mag",[[-1,8,8]]],
 	["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,400,10]]]
 	];
 
@@ -46,7 +46,5 @@ namVultureBase=
 	};//end weapon additon
 
 };
-
-
 
 ["swop_vulture", "init",namVultureBase, true, [], true] call CBA_fnc_addClassEventHandler; 
