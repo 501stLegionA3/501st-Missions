@@ -47,7 +47,7 @@ Here is the file path of various scripts,if its not listed here then its probabl
 */
 //---------------------END DECOMMISSIONED--------------------------
 			
-//Vehicle Based
+//Vehicle Based---Any Changes to the vehicle it self,not crew 
 	//vehicleVariants
 		//airBased
 			//laat weapon,no need to worry as it will auto apply ---H
@@ -112,7 +112,7 @@ Here is the file path of various scripts,if its not listed here then its probabl
 
 
 			
-//Played Based	
+//Played Based---Any Changes onto players
 	//Aviation Based
 		//pilot kill detector ---F
 			[] execVM "scripts\zeus3denScripts\playerBased\aviation\pilotBased\pilotProtectorBoxEH.sqf";
@@ -126,7 +126,7 @@ Here is the file path of various scripts,if its not listed here then its probabl
 
 	
 	
-//AI Based
+//AI Based---Changes to NPC or things that will mostly not be players
 	//FactionBased
 		//OPFOR Based
 			//CIS
