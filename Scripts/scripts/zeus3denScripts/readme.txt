@@ -1,4 +1,4 @@
-last update 3/25/2018 4:40 PM  est by namenai
+last update 3/26/2018 2:05 PM  est by namenai
 
 Here is the file path of various scripts,if its not listed here then its probably 1)scripts being prepped or 2) we forgot :P
 
@@ -40,9 +40,7 @@ Here is the file path of various scripts,if its not listed here then its probabl
 		//setter ---P ---EXP
 			[] execVM "scripts\zeus3denScripts\globalFnc\namEnableConfigAAT\setnamEnableConfigAAT.sqf";
 
-//globalFncAndVarPanel 	
-			//To allow zeus ease of changing variables for a mission as getters and setters are too hard for them ,sad bois
-			[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanel.sqf";
+
 			
 */
 //---------------------END DECOMMISSIONED--------------------------
