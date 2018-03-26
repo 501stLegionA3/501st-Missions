@@ -1,4 +1,4 @@
-last update 3/26/2018 3:26 PM  est by namenai
+last update 3/26/2018 4:40 PM  est by namenai
 
 Here is the file path of various scripts,if its not listed here then its probably 1)scripts being prepped or 2) we forgot :P
 
@@ -61,6 +61,9 @@ Here is the file path of various scripts,if its not listed here then its probabl
 				
 			//y-wing weapons,no need to worry as it will auto apply ---H
 				[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\YWING\ywingScylla.sqf";
+			
+			//VULTURE,weapons
+				[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\VULTURE\vultureBase.sqf";
 			
 		//supporting vehicle scripts,under vehicleBased/actionMenu based
 			//arc-170 wing tip smoke,tied to arc weapon ---X
