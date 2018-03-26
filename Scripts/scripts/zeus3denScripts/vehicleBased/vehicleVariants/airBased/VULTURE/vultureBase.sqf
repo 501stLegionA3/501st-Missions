@@ -1,4 +1,5 @@
-namVultureBase={
+namVultureBase=
+{
 	params["_vic"];
 	
 	comment "data for weapons";
@@ -11,7 +12,7 @@ namVultureBase={
 
 
 	comment "For each weapon";
-	for [{_i=0}, {_i<(count weaponData)}, {_i=_i+1}] do
+	for [{ _i=0 }, { _i<(count weaponData)}, {_i=_i+1}] do
 	{
 		itemList=weaponData select _i;
 		itemWeapon=itemList select 0;
@@ -20,7 +21,7 @@ namVultureBase={
 
 
 		comment "for each seat";
-		for [{_j=0}, {_j<(count itemSeats)}, {_j=_j+1}] do
+		for [{ _j=0}, { _j<(count itemSeats)}, {_j=_j+1}] do
 		{
 
 			seatData=itemSeats select _j;
@@ -44,7 +45,7 @@ namVultureBase={
 
 	};//end weapon additon
 
-}
+};
 
 
 
