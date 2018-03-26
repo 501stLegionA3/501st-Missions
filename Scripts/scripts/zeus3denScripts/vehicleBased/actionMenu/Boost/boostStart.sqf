@@ -7,7 +7,7 @@ try
 	hint "ENGAGING FORWARD THRUSTERS";
 	if(speed _vic >= _namMinSpeed) then 
 	{
-		while {((_pelican getvariable ["OPTRE_Thruster_EngagedStatus",false]) AND (alive _vic))} do
+		while {((_vic getvariable ["OPTRE_Thruster_EngagedStatus",false]) AND (alive _vic))} do
 		{
 			if (speed _vic <= 600) then {
 				_vel = velocity _vic;
