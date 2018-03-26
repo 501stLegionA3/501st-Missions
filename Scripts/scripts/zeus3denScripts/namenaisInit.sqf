@@ -2,7 +2,8 @@
 
 //global variables that are used----------------------- decommissioned due to public variables being too hard-------------------- 
 	//[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
-//Allow zeus to change global variables
+	
+//Allow zeus to change global variables-also Hermes Panel
 	[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanel.sqf";
 
 //laat weapons,adds weapons and wingtip smoke
@@ -33,10 +34,7 @@
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\AAT\aatMohawkClassBase.sqf";
 	
 //Adds random star wars uniforms to the AAF vr entity soldier ---H
-    [] execVM "scripts\zeus3denScripts\aiBased\factionBased\independent\AAF\RandomSWCIV.sqf"; 	
-	
-//Hermes Panel
-	[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanel.sqf";
+    [] execVM "scripts\zeus3denScripts\aiBased\factionBased\independent\AAF\RandomSWCIV.sqf"; 
 
 //Vulture droid weapons
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\VULTURE\vultureBase.sqf";
