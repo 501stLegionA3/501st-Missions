@@ -2,7 +2,7 @@
 rexiAttMohawk=
 	{
 		params["_vic"];
-		_namAATConfigChance=.5;
+		
 		
 		
 		
