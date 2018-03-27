@@ -1,5 +1,6 @@
 // Zeus control panel by Nam and Rexi
-namZeusPanelHermes={
+namZeusPanelHermes=
+{
 	params["_objToPlacePanelsOn"];
 	
 	//makes him handcuffed
@@ -29,67 +30,70 @@ namZeusPanelHermes={
 	//Removes AAT's AI Coxial turrets 
 	_objToPlacePanelsOn  addAction ["<t color='#47FF1A'>Remove AAT AI Coxial Turret </t>",                
 	{
-    {
-    if ((typeOf _x) in ["O_SWOP_AAT_1"]) then {
-            
-	_x removeWeaponTurret ["Cannon_EWEBSWBFgun", [0]];
-	for [{_i=0}, {_i<3}, {_i=_i+1}] do
-	{
-	_x removeMagazineTurret ["1000Rnd_Laser_Cannon_EWEBSWBF" ,[0]];
+		{
+		if ((typeOf _x) in ["O_SWOP_AAT_1"]) then {
+				
+		_x removeWeaponTurret ["Cannon_EWEBSWBFgun", [0]];
+		for [{_i=0}, {_i<3}, {_i=_i+1}] do
+		{
+		_x removeMagazineTurret ["1000Rnd_Laser_Cannon_EWEBSWBF" ,[0]];
 
-	};
-         
-        };
-    } forEach vehicles;
-	
-	hintSilent "Existing AATs have had Coaxial turret removed";
+		};
+			 
+			};
+		} forEach vehicles;
+		
+		hintSilent "Existing AATs have had Coaxial turret removed";
 	
 	}];//end
 
 	//Makes spawned AAT's Blue and gray
 	_objToPlacePanelsOn  addAction ["<t color='#47FF1A'>Make Spawned AAT's Blue Variant</t>",                
 	{
-	  {
-    if ((typeOf _x) in ["O_SWOP_AAT_1"]) then {
-    _x setobjecttextureglobal [1,"awing\t_awing_03_cw.paa"];
-	_x setobjecttextureglobal [0,"awing\t_awing_03_cw.paa"]; 
-         
-        };
-    } forEach vehicles;
-	hintSilent format["Existing AAT's have had Colours changed to Blue"];
+		{
+			if ((typeOf _x) in ["O_SWOP_AAT_1"]) then
+			{
+				_x setobjecttextureglobal [1,"awing\t_awing_03_cw.paa"];
+				_x setobjecttextureglobal [0,"awing\t_awing_03_cw.paa"]; 
+				 
+			};
+		} forEach vehicles;
+		hintSilent format["Existing AAT's have had Colours changed to Blue"];
 	}];//end
 		
 	//Seriously buffs the Homing Spider Droids with Titan AA missles and Rebel Laser Gun removes standard guns
 	_objToPlacePanelsOn _this  addAction ["<t color='#47FF1A'>Add AA Missles + better gun to Spider Droids </t>",                
-{
-    {
-    if ((typeOf _x) in ["SpiderOG"]) then {
-    _x removeWeaponTurret ["missiles_titan", [0]];
-	for [{_i=0}, {_i<5}, {_i=_i+1}] do
 	{
-	_x removeMagazineTurret ["4Rnd_Titan_long_missiles" ,[0]];
-	};
-    _x removeWeaponTurret ["Cannon_Antana", [0]];
-	for [{_i=0}, {_i<3}, {_i=_i+1}] do
-	{
-	_x removeMagazineTurret ["1000Rnd_Laser_Cannon_Antana" ,[0]];
-	}; 
-	_x removeweapon "Cannon_Spiderdroidog9"
-	
-	_x addWeaponTurret ["missiles_titan", [0]];
-	for [{_i=0}, {_i<5}, {_i=_i+1}] do
-	{
-	_x addMagazineTurret ["4Rnd_Titan_long_missiles" ,[0]];
-	};
-     	_x addWeaponTurret ["Cannon_Antana", [0]];
-	for [{_i=0}, {_i<3}, {_i=_i+1}] do
-	{
-	_x addMagazineTurret ["1000Rnd_Laser_Cannon_Antana" ,[0]];
-	};    
+		{
+			if ((typeOf _x) in ["SpiderOG"]) then 
+			{
+				_x removeWeaponTurret ["missiles_titan", [0]];
+				for [{_i=0}, {_i<5}, {_i=_i+1}] do
+				{
+					_x removeMagazineTurret ["4Rnd_Titan_long_missiles" ,[0]];
+				};
+				_x removeWeaponTurret ["Cannon_Antana", [0]];
+				for [{_i=0}, {_i<3}, {_i=_i+1}] do
+				{
+					_x removeMagazineTurret ["1000Rnd_Laser_Cannon_Antana" ,[0]];
+				}; 
+					
+				_x removeweapon "Cannon_Spiderdroidog9"
+				
+				_x addWeaponTurret ["missiles_titan", [0]];
+				for [{_i=0}, {_i<5}, {_i=_i+1}] do
+				{
+					_x addMagazineTurret ["4Rnd_Titan_long_missiles" ,[0]];
+				};
+					_x addWeaponTurret ["Cannon_Antana", [0]];
+				for [{_i=0}, {_i<3}, {_i=_i+1}] do
+				{
+					_x addMagazineTurret ["1000Rnd_Laser_Cannon_Antana" ,[0]];
+				};    
 
-			
-        };
-    } forEach vehicles;
+					
+			};
+		} forEach vehicles;
 	}];//end
 
 
