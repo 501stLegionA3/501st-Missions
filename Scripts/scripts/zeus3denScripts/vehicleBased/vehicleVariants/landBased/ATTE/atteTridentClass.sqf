@@ -115,7 +115,7 @@
 	ATTE_gun1 addMagazineTurret ["1000Rnd_Laser_Cannon_LAAT",[0]];    
 	createVehicleCrew ATTE_gun1;
 	atte_gun1 allowCrewInImmobile true;
-	([atte_gun1 ,true] call ace_captives_fnc_setHandcuffed)
+	atte_gun1 disableAI "target";
 	
 //turrets that fire the laat cannons 2
 	atte_gun2 = "B_HMG_01_A_F" createVehicle (position _dropTurret);
@@ -125,8 +125,8 @@
 	atte_gun2 addMagazineTurret ["1000Rnd_Laser_Cannon_LAAT",[0]];  
 	createVehicleCrew ATTE_gun2;
 	atte_gun2 allowCrewInImmobile true;
-	([atte_gun2 ,true] call ace_captives_fnc_setHandcuffed
-	   
+	atte_gun2 disableAI "target";
+	
 //turrets that fire the laat cannons 3
 	atte_gun3 = "B_HMG_01_A_F" createVehicle (position _dropTurret);
 	ATTE_gun3 attachTo [ATTE_drive,[-0.75,-7.8,3.733]];  
@@ -134,7 +134,7 @@
 	atte_gun3 addWeaponTurret ["Cannon_LAAT",[0]]; 
 	atte_gun3 addMagazineTurret ["1000Rnd_Laser_Cannon_LAAT",[0]]; 
 	createVehicleCrew ATTE_gun3;
-	([atte_gun3 ,true] call ace_captives_fnc_setHandcuffed) 
+	atte_gun3 disableAI "target";
 	atte_gun3 setdir 180;
 	atte_gun3 allowCrewInImmobile true;
 //Stores the varible names of all objects
