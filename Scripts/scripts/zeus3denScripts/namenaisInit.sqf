@@ -6,6 +6,9 @@
 //Allow zeus to change global variables-also Hermes Panel
 	[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanel.sqf";
 
+//Hades Panel
+	[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanelHades.sqf";
+
 //laat weapons,adds weapons and wingtip smoke
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\LAAT\laatClaymore.sqf";
 
@@ -39,4 +42,11 @@
 //Vulture droid weapons
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\VULTURE\vultureBase.sqf";
 	
+//Add's flares to simulate plasma Mortars NATO and CSAT
+	[] execVM  "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landbased\Mortar\mortars.sqf";
 
+//Sabre adds weapons and smokes and damage reports
+	[] execVM  "scripts\zeus3denScripts\vehicleBased\vehicleVariants\Landbased\sabres\Sabres.sqf";
+
+//barc allows barcs to be loaded into vehicles with a cargo space 4 or greater
+	[] execVM  "scripts\zeus3denScripts\vehicleBased\vehicleVariants\Landbased\barc\barc.sqf";

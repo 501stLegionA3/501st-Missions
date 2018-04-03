@@ -2,7 +2,7 @@ claymoreI={
 	params["_vic"];
 	
 		//for Ai
-		_vic limitSpeed 190;
+		_vic limitSpeed 220;
 	
 	
 		comment "data for weapons";
