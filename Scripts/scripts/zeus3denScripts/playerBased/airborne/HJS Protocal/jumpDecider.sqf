@@ -1,7 +1,7 @@
-Params["personToApply"];
+
 
 	
-		_namUnit=personToApply;
+		_namUnit=_this select 0;
 		_namThisJumpData=_namUnit getVariable["jumpArray",[]];
 		_result=false;
 		
