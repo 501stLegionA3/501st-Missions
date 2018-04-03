@@ -1,4 +1,4 @@
-/*
+
 (_this select 0) addEventHandler ["InventoryOpened", {
 	
 	namUnit=(_this select 0);
@@ -19,4 +19,7 @@
 }];
 
 
-*/
+(_this select 0) addMPEventHandler ["MPRespawn", {
+namUnit=(_this select 0);
+namUnit setVariable ["namJumpPackConfig", false, true];
+}];
