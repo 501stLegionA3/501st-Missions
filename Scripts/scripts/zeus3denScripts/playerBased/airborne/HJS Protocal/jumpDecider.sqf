@@ -1,13 +1,13 @@
-//Params["personToApply"];
-personToApply=_this select 0;
-	personToApply  addAction ["<t color='#886600'>forward jump--------U13</t>",
-	{
+Params["namUnit"];
+
+	
 		_namUnit=_this select 0;
 		_namThisJumpData=_namUnit getVariable["jumpArray",[]];
+		_result=false;
 		
 		if((count _namThisJumpData) ==0) then 
 		{
-			exit;
+			_namThisJumpData=[false,0,0,5,2];
 		};
 		
 		
@@ -51,25 +51,10 @@ personToApply=_this select 0;
 
 			
 
-			if(!_C || {!_A && {_B}}) then 
+			if(!_C || {!_A && {_B}}) then //true if u can jump
 			{
-				_namSpeed=20;
-				_namSpeedUp=5;
-				
-				comment "initiate jump";
-				(_namUnit) setVelocity 
-				[
-				((vectordir (_namUnit)) select 0)*_namSpeed,
-				((vectordir (_namUnit)) select 1)*_namSpeed,
-				(velocity (_namUnit) select 2)+_namSpeedUp
-				];
-				
-				comment "update variables";
-				_namIsJumping=true;
-				_namLastJumpTime=time;
-				_namJumpCounter=_namJumpCounter+1;
-				
-				_namUnit setVariable ["jumpArray", [_namIsJumping,_namLastJumpTime,_namJumpCounter,_namJumpCooldownTime,_namMaxJump],true];
+				_result=true;
+				_result
 
 			}
 			else
@@ -77,15 +62,16 @@ personToApply=_this select 0;
 
 				hint parseText  format["Can not boost. <t color='#40e0d0'>Cooldown done in</t> <t color='#FF0000'>%1</t>",(_namJumpCooldownTime-(time-_namLastJumpTime))];
 				
-				if(!_C && _B) then 
+				if(_B || {(_namJumpCooldownTime-(time-_namLastJumpTime))<0}) then 
 				{	
 					_namJumpCounter=0;
 					_namUnit setVariable ["jumpArray", [_namIsJumping,_namLastJumpTime,_namJumpCounter,_namJumpCooldownTime,_namMaxJump],true];
 				};
+				_result=false;
 			};
 
 
-
+		_result//return value
 
 
 
@@ -93,8 +79,7 @@ personToApply=_this select 0;
 
 
 
-	}
-	,[1],0,false,true,"User13"," driver  _target == _this"];
+
 
 
 

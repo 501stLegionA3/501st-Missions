@@ -1,4 +1,4 @@
-last update 3/29/2018 4:40 PM  est by Rexi
+last update 4/3/2018 5:45 PM  est by Rexi
 
 Here is the file path of various scripts,if its not listed here then its probably 1)scripts being prepped or 2) we forgot :P
 
@@ -160,11 +160,13 @@ Here is the file path of various scripts,if its not listed here then its probabl
 		//HJS Protcal(AKA Custom JumpPack Script) (HJS means Horseborne Jump Script) parameter namUnit is the unit that is gona get it
 			//Ran in initPlayerLocal.sqf which is ran client side whenever someone joins. Only adds the script to them once and when they open inventory and if they have the right jetpack ---H
 				[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpAssinger.sqf";
-			//Called by assinger adds the forward jump and decides if that person can ---X ^
+			//Called by assinger adds the short jump  ---X ^
+				[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpShort.sqf";
+			//Called by assinger adds the long jump  ---X ^^	
+				[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpLong.sqf";
+			//Called by the jumps, decides if the person can jump ---X 
 				[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpDecider.sqf";
-			//Called by assinger adds the vertica jump and decides if that person can ---X ^^	
-				[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpDeciderUp.sqf";
-			//Called by assinger adds the logic to prevent dmg on landing ---X ^^^	
+			//Called by assinger adds the logic to prevent dmg on landing ---X ^^^^	
 				[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpHandler.sqf";
 				
 	

@@ -69,5 +69,5 @@ personToApply=_this select 0;
 
 	
 
-		_returnDmg
+		
 	}];
