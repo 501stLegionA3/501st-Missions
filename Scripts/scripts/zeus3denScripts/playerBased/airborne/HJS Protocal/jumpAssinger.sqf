@@ -16,15 +16,15 @@ personToApply setVariable ["jumpArray", jumpData,true];
 _namShortJumpDistY=5;//in meters
 _namShortJumpDistX=10;//in meters
 
-_namShortJumpVeloY;//meters/second
-_namShortJumpVeloX;//meters/second
+_namShortJumpVeloY=1;//meters/second
+_namShortJumpVeloX=1;//meters/second
 
 
 _namLongJumpDistY=20;//in meters
 _namLongJumpDistX=40;//in meters
 
-_namLongJumpVeloY;//meters/second
-_namLongJumpVeloX;//meters/second
+_namLongJumpVeloY=1;//meters/second
+_namLongJumpVeloX=1;//meters/second
 
 
 

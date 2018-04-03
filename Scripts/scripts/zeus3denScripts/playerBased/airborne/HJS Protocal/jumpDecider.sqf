@@ -1,4 +1,4 @@
-Params["namUnit"];
+
 
 	
 		_namUnit=_this select 0;
