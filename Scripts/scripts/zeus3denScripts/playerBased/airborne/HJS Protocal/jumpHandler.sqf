@@ -47,7 +47,7 @@ personToApply=_this select 0;
 						if((abs speed _namUnitSpawn)<1) then
 						{
 							_namIsJumpingSpawn=false;
-							[west, "HQ"] sideChat format["%1 speed is %2",time,(_namThisJumpDataSpawn select 2)];
+							
 						
 							_namUnitSpawn setVariable ["jumpArray", [_namIsJumpingSpawn,(_namThisJumpDataSpawn select 1),(_namThisJumpDataSpawn select 2),(_namThisJumpDataSpawn select 3),(_namThisJumpDataSpawn select 4)],true];
 

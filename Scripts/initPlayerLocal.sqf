@@ -13,7 +13,7 @@
 		[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpHandler.sqf";
 		namUnit setVariable ["namJumpPackConfig", true, true];
 
-		hint parseText  format["<t color='#40e0d0'>Namenai's Horseborne JumpScript Protocal has been initiated.(HJS Protocal)</t> <img image='scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\horseborneImage.jpg' <img size='10' />"];
+		hint parseText  format["<t color='#40e0d0'>Namenai's Horseborne JumpScript Protocal has been initiated.(HJS Protocal) at time %1 </t> <img image='scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\horseborneImage.jpg' <img size='10' />",time];
 	};
 	
 }];
