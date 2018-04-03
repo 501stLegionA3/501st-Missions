@@ -30,12 +30,12 @@ _namLongJumpVeloX=1;//meters/second
 
 
 //Short calculations
-_namShortJumpVeloY=sqrt(_2*-9.8*_namShortJumpDistY);
+_namShortJumpVeloY=sqrt(-2*-9.8*_namShortJumpDistY);
 _tShort=(-_namShortJumpDistY)/(-9.8);
 _namShortJumpVeloX=_namShortJumpDistX/(2*_tShort);
 
 //Long calculations
-_namLongJumpVeloY=sqrt(_2*-9.8*_namLongJumpDistY);
+_namLongJumpVeloY=sqrt(-2*-9.8*_namLongJumpDistY);
 _tLong=(-_namLongJumpDistY)/(-9.8);
 _namLongJumpVeloX=_namLongJumpDistX/(2*_tLong);
 
