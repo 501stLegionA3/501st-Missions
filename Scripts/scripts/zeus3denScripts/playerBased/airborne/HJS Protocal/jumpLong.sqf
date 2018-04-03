@@ -5,7 +5,7 @@ personToApply=_this select 0;
 		_namUnit=_this select 0;
 		_resultIfJump=[_this select 0] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpDecider.sqf";
 		
-		if(_resultIfJump) then
+		if([_namUnit] call _resultIfJump) then
 		{
 			_namJumpPhysicsArray=_namUnit getVariable["jumpPhysicsArray",[[5,5],[20,40]]];
 		
