@@ -59,8 +59,8 @@ personToApply=_this select 0;
 				comment "initiate jump";
 				(_namUnit) setVelocity 
 				[
-				(velocity (_namUnit) select 0)+((vectordir (_namUnit)) select 0)*_namSpeed,
-				(velocity (_namUnit) select 1)+((vectordir (_namUnit)) select 1)*_namSpeed,
+				((vectordir (_namUnit)) select 0)*_namSpeed,
+				((vectordir (_namUnit)) select 1)*_namSpeed,
 				(velocity (_namUnit) select 2)+_namSpeedUp
 				];
 				
