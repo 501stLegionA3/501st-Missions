@@ -28,10 +28,10 @@ namUnit setVariable ["namJumpPackConfig", false, true];
 //delets body on death
 Player addEventHandler ["GetInMan", {
 _x addMPEventHandler ["MPkilled",{deleteVehicle (_this select 0);}];
-hintSilent "fix applied";
+
 }];
 	
 Player addEventHandler ["GetOutMan", {
 _x removeAllMPEventHandlers "MPKILLED";
-hintSilent "fixremoved";
+
 }];
