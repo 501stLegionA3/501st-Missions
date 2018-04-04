@@ -11,15 +11,15 @@ personToApply=_this select 0;
 		if(_namIsJumping && {isTouchingGround _namUnit} ) then
 		{		
 			
-			
+			_namResult=0;
 			_null = _this spawn
 			{
 				_namUnitSpawn=_this select 0;
 				_namJumpDataSpawn=_namUnitSpawn getVariable["jumpArray",[false,0,0,5,2]];
-				[west, "HQ"] sideChat format["%1 v1",time];
-				hint format["%1",time];
-				sleep 0.05;
-				[west, "HQ"] sideChat format["%1 v2 killable",time];
+				
+				
+				sleep 0.5;
+				
 				_namUnitSpawn setVariable ["jumpArray", [false,(_namJumpDataSpawn select 1),(_namJumpDataSpawn select 2),(_namJumpDataSpawn select 3),(_namJumpDataSpawn select 4)],true];
 				
 				
@@ -34,7 +34,7 @@ personToApply=_this select 0;
 		_namResult=_this call ACE_medical_fnc_handleDamage;
 		};
 		
-		[west, "HQ"] sideChat format["dmg %1 %2",_namResult,time];
+		
 		_namResult
 		
 	}];

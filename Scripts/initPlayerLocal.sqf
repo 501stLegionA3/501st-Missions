@@ -1,4 +1,4 @@
-/*
+
 (_this select 0) addEventHandler ["InventoryOpened", {
 	
 	namUnit=(_this select 0);
@@ -10,6 +10,7 @@
 		[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpAssinger.sqf";
 		[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpShort.sqf";
 		[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpLong.sqf";
+		[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpVertical.sqf";
 		[namUnit] execVM "scripts\zeus3denScripts\playerBased\airborne\HJS Protocal\jumpHandler.sqf";
 		namUnit setVariable ["namJumpPackConfig", true, true];
 
@@ -23,7 +24,7 @@
 namUnit=(_this select 0);
 namUnit setVariable ["namJumpPackConfig", false, true];
 }];
-*/
+
 
 //delets body on death
 Player addEventHandler ["GetInMan", {

@@ -1,6 +1,6 @@
 //Params["personToApply"];
 personToApply=_this select 0;
-	personToApply  addAction ["<t color='#FF0000'>Short Jump--------U13</t>",
+	personToApply  addAction ["<t color='#0000FF'>Vertical Jump--------U15</t>",
 	{
 		_namUnit=_this select 0;
 		
@@ -35,8 +35,8 @@ personToApply=_this select 0;
 			
 			_namJumpPhysicsArray=_namUnit getVariable["jumpPhysicsArray",[[5,5],[20,40],[1,40]]];
 		
-			_namSpeed=(_namJumpPhysicsArray select 0) select 0;
-			_namSpeedUp=(_namJumpPhysicsArray select 0) select 1;
+			_namSpeed=(_namJumpPhysicsArray select 2) select 0;
+			_namSpeedUp=(_namJumpPhysicsArray select 2) select 1;
 			
 			comment "initiate jump";
 			(_namUnit) setVelocity 
@@ -51,14 +51,14 @@ personToApply=_this select 0;
 			
 			
 			//variables are (isJumping),(last jump time),(jump counter),(cooldown),(max consecutive jumps)
-			_namUnit setVariable ["jumpArray", [true,time,(_namThisJumpData select 2)+1,_namThisJumpData select 3,_namThisJumpData select 4],true];
+			_namUnit setVariable ["jumpArray", [true,time,(_namThisJumpData select 2)+.75,_namThisJumpData select 3,_namThisJumpData select 4],true];
 		
 		};
 
 
 
 	}
-	,[1],0,false,true,"User13"," driver  _target == _this"];
+	,[1],0,false,true,"User15"," driver  _target == _this"];
 
 
 
