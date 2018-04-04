@@ -1,6 +1,6 @@
 //Params["personToApply"];
 personToApply=_this select 0;
-	personToApply  addAction ["<t color='#886600'>Short Jump--------U13</t>",
+	personToApply  addAction ["<t color='#FF66FF'>Short Jump--------U13</t>",
 	{
 		_namUnit=_this select 0;
 		_namThisJumpData=_namUnit getVariable["jumpArray",[]];
