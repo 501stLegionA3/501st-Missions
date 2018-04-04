@@ -21,7 +21,7 @@ _namShortJumpVeloX=1;//meters/second
 
 
 _namLongJumpDistY=20;//in meters
-_namLongJumpDistX=40;//in meters
+_namLongJumpDistX=47;//in meters
 
 _namLongJumpVeloY=1;//meters/second
 _namLongJumpVeloX=1;//meters/second
