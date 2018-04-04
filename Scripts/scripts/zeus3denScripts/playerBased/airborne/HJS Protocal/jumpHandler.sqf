@@ -1,74 +1,40 @@
-//Params["personToApply"];
+
 personToApply=_this select 0;
 	personToApply addEventHandler ["HandleDamage",
 	{
-		_returnDmg=_this select 2;
 		_namUnit=_this select 0;
-	
-		_namThisJumpData=_namUnit getVariable["jumpArray",[]];
+		_namJumpData=_namUnit getVariable["jumpArray",[false,0,0,5,2]];
+		_namIsJumping=(_namJumpData)select 0;
+		_namResult=0;
+		_namIsToggling=_namUnit getVariable["isTogglingJumpEH",true];
 		
-		comment "is Jumping-0
-		last jump time-1
-		jump counter-2
-		cooldown-3
-		max consecutive jumps-4
-		C || (!A and B)";
-		
-		_namIsJumping=_namThisJumpData select 0;
-		_namLastJumpTime=_namThisJumpData select 1;
-		_namJumpCounter=_namThisJumpData select 2;
-		_namJumpCooldownTime=_namThisJumpData select 3;
-		_namMaxJump=_namThisJumpData select 4;
-
-		
-		if(((count _namThisJumpData)!=0) && {_namIsJumping}) then 
-		{
-			_returnDmg=0;
-
-			if(isTouchingGround _namUnit) then
-			{
+		if(_namIsJumping && {isTouchingGround _namUnit} ) then
+		{		
 			
-
-				_null = _this spawn
-				{
-
-
-					_namUnitSpawn=(_this select 0);
-
-
-					_namThisJumpDataSpawn= _namUnitSpawn getVariable["jumpArray",[]];
-
-
-
-					for [{_i=0}, {_i<10}, {_i=_i+1}] do
-					{
-						sleep 0.01;
-
-						if((abs speed _namUnitSpawn)<1) then
-						{
-							_namIsJumpingSpawn=false;
-							
-						
-							_namUnitSpawn setVariable ["jumpArray", [_namIsJumpingSpawn,(_namThisJumpDataSpawn select 1),(_namThisJumpDataSpawn select 2),(_namThisJumpDataSpawn select 3),(_namThisJumpDataSpawn select 4)],true];
-
-							
-							_i=11;
-						};
-					};
-
-					
-
-
-				};
-
-
+			
+			_null = _this spawn
+			{
+				_namUnitSpawn=_this select 0;
+				_namJumpDataSpawn=_namUnitSpawn getVariable["jumpArray",[false,0,0,5,2]];
+				[west, "HQ"] sideChat format["%1 v1",time];
+				hint format["%1",time];
+				sleep 0.05;
+				[west, "HQ"] sideChat format["%1 v2 killable",time];
+				_namUnitSpawn setVariable ["jumpArray", [false,(_namJumpDataSpawn select 1),(_namJumpDataSpawn select 2),(_namJumpDataSpawn select 3),(_namJumpDataSpawn select 4)],true];
+				
+				
+				
 			};
-			_returnDmg
-
+			_namResult=0;
+		
+		}
+		else
+		{
+		
+		_namResult=_this call ACE_medical_fnc_handleDamage;
 		};
-
-
-	_returnDmg
-
+		
+		[west, "HQ"] sideChat format["dmg %1 %2",_namResult,time];
+		_namResult
 		
 	}];
