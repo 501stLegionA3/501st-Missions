@@ -1,4 +1,4 @@
-
+/*
 (_this select 0) addEventHandler ["InventoryOpened", {
 	
 	namUnit=(_this select 0);
@@ -24,7 +24,7 @@
 namUnit=(_this select 0);
 namUnit setVariable ["namJumpPackConfig", false, true];
 }];
-
+*/
 
 //delets body on death
 Player addEventHandler ["GetInMan", {
