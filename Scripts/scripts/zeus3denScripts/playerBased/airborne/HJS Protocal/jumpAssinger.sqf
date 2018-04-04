@@ -2,7 +2,7 @@
 //params["personToApply"];
 personToApply=_this select 0;
 personToApply removeAllEventHandlers "HandleDamage";
-removeAllActions personToApply;
+
 
 comment "is Jumping-0
 		last jump time-1
