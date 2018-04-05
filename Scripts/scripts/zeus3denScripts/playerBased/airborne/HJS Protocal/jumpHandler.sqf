@@ -18,10 +18,17 @@ personToApply=_this select 0;
 				_namJumpDataSpawn=_namUnitSpawn getVariable["jumpArray",[false,0,0,5,2]];
 				
 				
-				sleep 0.5;
+				sleep 0.25;
+				if(_namJumpDataSpawn select 0) then//added measures to ensure u dont die/knock out
+				{
+						_namUnitSpawn setVariable ["jumpArray", [true,(_namJumpDataSpawn select 1),(_namJumpDataSpawn select 2),(_namJumpDataSpawn select 3),(_namJumpDataSpawn select 4)],true];
+						
+				}
+				else
+				{
 				
-				_namUnitSpawn setVariable ["jumpArray", [false,(_namJumpDataSpawn select 1),(_namJumpDataSpawn select 2),(_namJumpDataSpawn select 3),(_namJumpDataSpawn select 4)],true];
-				
+					_namUnitSpawn setVariable ["jumpArray", [false,(_namJumpDataSpawn select 1),(_namJumpDataSpawn select 2),(_namJumpDataSpawn select 3),(_namJumpDataSpawn select 4)],true];
+				};
 				
 				
 			};
@@ -30,8 +37,16 @@ personToApply=_this select 0;
 		}
 		else
 		{
+			if(!(isTouchingGround _namUnit)) then//if ur not touching ground then ur still flying
+			{
+				_namUnitSpawn setVariable ["jumpArray", [true,(_namJumpDataSpawn select 1),(_namJumpDataSpawn select 2),(_namJumpDataSpawn select 3),(_namJumpDataSpawn select 4)],true];
+				_namResult=0;
+			}
+			else
+			{
+				_namResult=_this call ACE_medical_fnc_handleDamage;
+			};
 		
-		_namResult=_this call ACE_medical_fnc_handleDamage;
 		};
 		
 		

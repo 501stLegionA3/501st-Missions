@@ -51,7 +51,7 @@ personToApply=_this select 0;
 			
 			
 			//variables are (isJumping),(last jump time),(jump counter),(cooldown),(max consecutive jumps)
-			_namUnit setVariable ["jumpArray", [true,time,(_namThisJumpData select 2)+.75,_namThisJumpData select 3,_namThisJumpData select 4],true];
+			_namUnit setVariable ["jumpArray", [true,time,(_namThisJumpData select 2)+1,_namThisJumpData select 3,_namThisJumpData select 4],true];
 		
 		};
 
