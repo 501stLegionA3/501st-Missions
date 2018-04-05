@@ -23,7 +23,7 @@ personToApply=_this select 0;
 				{
 						_namUnitSpawn setVariable ["jumpArray", [true,(_namJumpDataSpawn select 1),(_namJumpDataSpawn select 2),(_namJumpDataSpawn select 3),(_namJumpDataSpawn select 4)],true];
 						
-				}
+				}		
 				else
 				{
 				
