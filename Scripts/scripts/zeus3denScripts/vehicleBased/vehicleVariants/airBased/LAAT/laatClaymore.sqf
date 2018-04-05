@@ -94,6 +94,81 @@ claymoreI={
 		[_this select 0,80,5] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStop.sqf";
 	},[1],0,false,true,"User19"," driver  _target == _this"];
 	
+	
+	_vic addEventHandler ["HandleDamage",
+	{
+	
+	
+		if(((_this select 0) getVariable["isCrashing",false]) || {(damage (_this select 0))>=.7}) then
+		{
+			_namResultingDmg=0;
+			
+		
+	
+		};
+		_namUnit=_this select 0;
+		_namDmg=_this select 2;
+		_namCurrentDmg=damage _namUnit;//0 if health 1 if dead
+		_namResultingDmg=_namDmg/2;
+		
+	
+		if((_namCurrentDmg+_namDmg)>.7) then
+		{
+			_namUnit allowDamage false;
+			_namUnit setFuel 0;
+			_namUnit setDamage .7;
+			_namUnit vehicleChat format["MAYDAY MAYDAY MAYDAY THIS IS %1 GOING DOWN OVER GRID %2 BRRRRRRR*****BRRRRR ****BRRRRR",(name (driver _namUnit)),(mapGridPosition _namUnit)];
+
+			_namResultingDmg=0;
+			_namIsCrashing=((_namUnit) getVariable["isCrashing",false]); 
+
+			if(!_namIsCrashing) then
+			{
+				_null = _this spawn 
+				{	
+					_namUnitSpawn=_this select 0;
+					[west, "HQ"] sideChat format["fire made %1",time];
+					_namLaatFirePosArray=[[6,-2.5,-1],[-6,-2.5,-1], [1.5,-5,2.5], [-1.5,-5,2.5],[0,3,0],[0,6,-.5],[0,0,-2]];
+					
+					
+					_namLaatFireObj=[];
+					
+					for "_i" from 0 to 1 do
+					{
+						_fire = "test_EmptyObjectForFireBig" createVehicle position (_namUnitSpawn);
+						_fire attachTo [_namUnitSpawn,(selectRandom _namLaatFirePosArray)];
+						_namLaatFireObj=_namLaatFireObj+[_fire];
+					};//makes two fires or watever much, and then stores them in the array while also randomly palcing on laat
+					
+					
+					
+
+					
+					sleep 50;
+					{ 
+						deleteVehicle _x;
+						_namLaatFireObj=[];
+					} forEach _namLaatFireObj;//delets all of them
+					
+					
+					
+				};
+			};
+			_namUnit setVariable ["isCrashing", true,true];
+		}
+		else
+		{
+			_namResultingDmg=_namDmg/2;
+		
+		
+		};
+		
+		
+		
+		
+		
+	}];
+	
 };
 
 
