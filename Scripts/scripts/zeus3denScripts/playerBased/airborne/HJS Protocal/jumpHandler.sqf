@@ -45,6 +45,7 @@ personToApply=_this select 0;
 			else
 			{
 				_namResult=_this call ACE_medical_fnc_handleDamage;
+				_namUnit setVariable ["jumpArray", [false,(_namJumpData select 1),(_namJumpData select 2),(_namJumpData select 3),(_namJumpData select 4)],true];
 			};
 		
 		};
