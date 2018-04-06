@@ -10,7 +10,7 @@ personToApply=_this select 0;
 		
 		if(_namIsJumping && {isTouchingGround _namUnit} ) then
 		{		
-			
+			[west, "HQ"] sideChat format["isJumping-- %1 and istouchingGround -->%2 --time %3",_namIsJumping,(isTouchingGround _namUnit),time];
 			_namResult=0;
 			_null = _this spawn
 			{
@@ -39,7 +39,7 @@ personToApply=_this select 0;
 		{
 			if(!(isTouchingGround _namUnit)) then//if ur not touching ground then ur still flying
 			{
-				_namUnitSpawn setVariable ["jumpArray", [true,(_namJumpDataSpawn select 1),(_namJumpDataSpawn select 2),(_namJumpDataSpawn select 3),(_namJumpDataSpawn select 4)],true];
+				//_namUnitSpawn setVariable ["jumpArray", [true,(_namJumpDataSpawn select 1),(_namJumpDataSpawn select 2),(_namJumpDataSpawn select 3),(_namJumpDataSpawn select 4)],true];
 				_namResult=0;
 			}
 			else

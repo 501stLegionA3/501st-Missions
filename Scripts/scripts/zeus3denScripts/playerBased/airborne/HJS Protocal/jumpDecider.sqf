@@ -33,7 +33,7 @@
 	comment "true if u just 'double jumped'";
 	_C=_namJumpCounter>=_namMaxJump;
 	
-	[west, "HQ"] sideChat format["jumpdata %1 %2",_namThisJumpData,time];
+	
 	
 	if((count _namThisJumpData) !=0) then
 	{
