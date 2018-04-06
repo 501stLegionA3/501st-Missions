@@ -19,7 +19,7 @@ personToApply=_this select 0;
 				
 				
 				sleep 0.25;
-				if(_namJumpDataSpawn select 0) then//added measures to ensure u dont die/knock out
+				if((_namJumpDataSpawn select 0) && !(isTouchingGround _namUnitSpawn )) then//added measures to ensure u dont die/knock out
 				{
 						_namUnitSpawn setVariable ["jumpArray", [true,(_namJumpDataSpawn select 1),(_namJumpDataSpawn select 2),(_namJumpDataSpawn select 3),(_namJumpDataSpawn select 4)],true];
 						
