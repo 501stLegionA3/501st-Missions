@@ -133,12 +133,12 @@ Here is the file path of various scripts,if its not listed here then its probabl
 			[_this] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\forwardKappa.sqf";
 			[_this] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\reverseKappa.sqf";
 			
-		//Optre-f18 hybrid boost
+		//Optre-f18 hybrid boost ---F
 			["_vic","_namMaxSpeed","_namMinSpeed","_namAccel"] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStart.sqf";
 			["_vic","_namMinSpeed","_namDeAccel"] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStop.sqf";
 					
 		//Repair 
-			//Repair script ---X & Auto applied to AT-TE's and Sabre Tanks
+			//Repair script & Auto applied to AT-TE's and Sabre Tanks ---X 
 			[] execVM "Scripts\scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repair.sqf";	
 			//Add the below to a vehicle to add repair option this should be used for things like turrets that can't be repaired via standard arma/ace. Consumes Toolkits for each repair. (Repairs to a max of 65%) ---F
 			_this addAction ["<t color='#00FF00'>Hull Damage Report</t>",{	hint parseText format["<t color='#0099FF'> Hull Integrity is :%1%2</t>",((1-(damage (_this  select 0)))*100),"%"];},[1],0,false,true,""," commander  _target == _this "];

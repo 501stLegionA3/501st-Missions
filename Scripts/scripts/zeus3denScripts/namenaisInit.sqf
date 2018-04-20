@@ -36,7 +36,7 @@
 //AAT weapons
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\AAT\aatMohawkClassBase.sqf";
 	
-//Adds random star wars uniforms to the AAF vr entity soldier ---H
+//Adds random star wars uniforms to the AAF vr entity soldier 
     [] execVM "scripts\zeus3denScripts\aiBased\factionBased\independent\AAF\RandomSWCIV.sqf"; 
 
 //Vulture droid weapons
