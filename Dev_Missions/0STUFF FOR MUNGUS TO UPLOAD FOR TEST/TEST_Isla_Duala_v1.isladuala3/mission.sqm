@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=5;
+		nextID=9;
 	};
 	class Camera
 	{
-		pos[]={8699.1436,45.214924,4668.0557};
+		pos[]={8721.6523,76.982712,4651.0024};
 		dir[]={-0.51730394,-0.63533455,0.57345676};
 		up[]={-0.42557791,0.7722162,0.47177565};
 		aside[]={0.74256676,2.7990609e-007,0.66985244};
@@ -530,6 +530,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -561,25 +580,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -1313,7 +1313,7 @@ class Mission
 					};
 					id=5;
 					type="SWOP_501_a";
-					atlOffset=0.0089511871;
+					atlOffset=0.0089521408;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1510,7 +1510,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -2986,7 +2986,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -4707,7 +4707,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -5912,7 +5912,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -6617,7 +6617,7 @@ class Mission
 					};
 					id=28;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=-0.026353836;
+					atlOffset=-0.02635479;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7495,7 +7495,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -8700,7 +8700,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -10352,7 +10352,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -11557,7 +11557,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -13210,7 +13210,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -14416,7 +14416,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -15319,7 +15319,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -17040,7 +17040,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -18245,7 +18245,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -19828,7 +19828,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -19963,7 +19963,7 @@ class Mission
 					};
 					id=85;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=-0.01243782;
+					atlOffset=-0.012436867;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20441,7 +20441,7 @@ class Mission
 					};
 					id=87;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=-0.015937805;
+					atlOffset=-0.015936852;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20964,7 +20964,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -22616,7 +22616,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -23752,7 +23752,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -24527,7 +24527,7 @@ class Mission
 					};
 					id=105;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=-0.0041618347;
+					atlOffset=-0.0041627884;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -25405,7 +25405,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -26611,7 +26611,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -27510,7 +27510,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -29231,7 +29231,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -29366,7 +29366,7 @@ class Mission
 					};
 					id=126;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=-0.019807816;
+					atlOffset=-0.019806862;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30436,7 +30436,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -32088,7 +32088,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -32223,7 +32223,7 @@ class Mission
 					};
 					id=138;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=-0.013219833;
+					atlOffset=-0.013220787;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -33293,7 +33293,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -34945,7 +34945,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -36075,13 +36075,13 @@ class Mission
 					};
 					id=154;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=-0.018283844;
+					atlOffset=-0.018284798;
 					class CustomAttributes
 					{
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -37665,7 +37665,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -38871,7 +38871,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -39382,7 +39382,7 @@ class Mission
 					};
 					id=171;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=0.021179199;
+					atlOffset=0.021180153;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -39987,7 +39987,7 @@ class Mission
 					};
 					id=176;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=0.02000618;
+					atlOffset=0.020007133;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -40229,7 +40229,7 @@ class Mission
 					};
 					id=178;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=0.019903183;
+					atlOffset=0.019904137;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -40471,7 +40471,7 @@ class Mission
 					};
 					id=180;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=0.02239418;
+					atlOffset=0.022395134;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -42044,7 +42044,7 @@ class Mission
 					};
 					id=193;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=0.030567169;
+					atlOffset=0.030566216;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -44911,7 +44911,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -45165,7 +45165,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -45433,7 +45433,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -45687,7 +45687,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -45941,7 +45941,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -46195,7 +46195,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -46449,7 +46449,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -46703,7 +46703,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -46957,7 +46957,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -47211,7 +47211,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -47379,7 +47379,7 @@ class Mission
 			};
 			id=228;
 			type="SWOP_Land_crate_scarifB";
-			atlOffset=0.064272881;
+			atlOffset=0.064271927;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47451,7 +47451,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8659.4258,11.098708,4682.0044};
-				angles[]={-0,5.3874202,0};
+				angles[]={0,5.3874202,0};
 			};
 			side="Empty";
 			flags=4;
@@ -47469,7 +47469,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8671.5293,10.977068,4711.583};
-				angles[]={-0,0.67314351,0};
+				angles[]={0,0.67314351,0};
 			};
 			side="Empty";
 			flags=4;
@@ -47510,7 +47510,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8667.0801,10.964664,4706.2959};
-				angles[]={-0,0.67314351,0};
+				angles[]={0,0.67314351,0};
 			};
 			side="Empty";
 			flags=4;
@@ -47551,7 +47551,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8674.1738,10.953831,4714.7158};
-				angles[]={-0,0.67314351,0};
+				angles[]={0,0.67314351,0};
 			};
 			side="Empty";
 			flags=4;
@@ -47592,7 +47592,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8677.3125,10.930582,4718.7217};
-				angles[]={-0,0.67314351,0};
+				angles[]={0,0.67314351,0};
 			};
 			side="Empty";
 			flags=4;
@@ -47762,7 +47762,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -48016,7 +48016,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -48270,7 +48270,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -48524,7 +48524,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -48778,7 +48778,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -49032,7 +49032,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -49286,7 +49286,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -49540,7 +49540,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -49831,7 +49831,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -50088,7 +50088,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -50492,7 +50492,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -50882,7 +50882,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -51272,7 +51272,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -51662,7 +51662,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -52065,7 +52065,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -52455,7 +52455,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -52853,7 +52853,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -53243,7 +53243,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -53645,7 +53645,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -54035,7 +54035,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -54424,7 +54424,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -54813,7 +54813,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -55215,7 +55215,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -55604,7 +55604,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -55994,7 +55994,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -56384,7 +56384,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -56892,7 +56892,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -57282,7 +57282,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -57686,7 +57686,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -58095,7 +58095,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -58459,7 +58459,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -58827,7 +58827,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -59195,7 +59195,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -60567,7 +60567,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -60991,7 +60991,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -61473,7 +61473,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -62395,7 +62395,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -63520,7 +63520,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -65330,7 +65330,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -65743,7 +65743,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -66665,7 +66665,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -67790,7 +67790,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -69600,7 +69600,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -70013,7 +70013,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -70941,7 +70941,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -72066,7 +72066,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -73876,7 +73876,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75094,7 +75094,7 @@ class Mission
 						class Attribute2
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75284,7 +75284,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75469,7 +75469,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75590,7 +75590,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75711,7 +75711,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75832,7 +75832,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75953,7 +75953,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -76065,7 +76065,7 @@ class Mission
 			};
 			id=351;
 			type="ModuleCurator_F";
-			atlOffset=0.90214729;
+			atlOffset=0.90214825;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -77621,7 +77621,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8750.7695,10.26,4736.8594};
-						angles[]={-0,3.1241393,0};
+						angles[]={0,3.1241393,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77638,7 +77638,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8762.3896,10.788761,4750.5098};
-						angles[]={-0,6.2657318,0};
+						angles[]={0,6.2657318,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77691,7 +77691,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8764.3613,10.785877,4738.71};
-						angles[]={-0,4.712389,6.2791886};
+						angles[]={0,4.712389,6.2791886};
 					};
 					side="Empty";
 					flags=4;
@@ -77709,7 +77709,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8764.3604,10.512946,4738.71};
-						angles[]={-0,1.5707964,6.2791886};
+						angles[]={0,1.5707964,6.2791886};
 					};
 					side="Empty";
 					flags=4;
@@ -77727,7 +77727,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8762.0996,11.877902,4733.8306};
-						angles[]={-0,4.7298422,6.2791886};
+						angles[]={0,4.7298422,6.2791886};
 					};
 					side="Empty";
 					flags=4;
@@ -77744,7 +77744,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8738.1387,10.903197,4748.9697};
-						angles[]={-0,4.5727625,0};
+						angles[]={0,4.5727625,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77761,7 +77761,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8762.3496,10.788761,4752.5693};
-						angles[]={-0,3.6829065e-006,0};
+						angles[]={0,3.6829065e-006,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77778,7 +77778,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8736.249,11.612888,4743.9097};
-						angles[]={-0,3.1416101,0};
+						angles[]={0,3.1416101,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77795,7 +77795,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8737.9795,10.867035,4735.8096};
-						angles[]={-0,3.1590459,0};
+						angles[]={0,3.1590459,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77812,7 +77812,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8736.2295,11.612888,4741.2295};
-						angles[]={-0,3.1415751,0};
+						angles[]={0,3.1415751,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77861,7 +77861,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8736.2598,11.612888,4746.6997};
-						angles[]={-0,3.1416101,0};
+						angles[]={0,3.1416101,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77878,7 +77878,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8736.2295,11.612888,4738.5396};
-						angles[]={-0,3.1416101,0};
+						angles[]={0,3.1416101,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77895,7 +77895,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8738.0488,10.867035,4733.7695};
-						angles[]={-0,4.6949358,0};
+						angles[]={0,4.6949358,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77912,7 +77912,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8762.4189,10.788761,4754.4395};
-						angles[]={-0,6.2657318,0};
+						angles[]={0,6.2657318,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77929,7 +77929,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8764.2998,10.788761,4752.5};
-						angles[]={-0,6.2657495,0};
+						angles[]={0,6.2657495,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77946,7 +77946,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8738.1895,10.867035,4752.7896};
-						angles[]={-0,1.6057029,0};
+						angles[]={0,1.6057029,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77963,7 +77963,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8765.1133,11.309005,4733.7397};
-						angles[]={-0,4.7473831,6.2791886};
+						angles[]={0,4.7473831,6.2791886};
 					};
 					side="Empty";
 					flags=4;
@@ -77980,7 +77980,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8766.3799,10.788761,4750.6094};
-						angles[]={-0,6.2657142,0};
+						angles[]={0,6.2657142,0};
 					};
 					side="Empty";
 					flags=4;
@@ -77997,7 +77997,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8762.3896,10.807785,4755.7695};
-						angles[]={-0,6.2657495,0};
+						angles[]={0,6.2657495,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78014,7 +78014,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8738.1104,10.867998,4731.8696};
-						angles[]={-0,3.0717795,0};
+						angles[]={0,3.0717795,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78031,7 +78031,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8735.96,11.584311,4751.2695};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78064,7 +78064,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8738.1895,10.807785,4730.5498};
-						angles[]={-0,3.1591332,0};
+						angles[]={0,3.1591332,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78081,7 +78081,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8735.8096,11.584311,4733.6699};
-						angles[]={-0,4.712389,0};
+						angles[]={0,4.712389,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78098,7 +78098,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8766.4189,10.788761,4752.5195};
-						angles[]={-0,3.9904508e-006,0};
+						angles[]={0,3.9904508e-006,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78133,7 +78133,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8768.7451,11.43503,4738.5601};
-						angles[]={-0,1.5882496,6.2791886};
+						angles[]={0,1.5882496,6.2791886};
 					};
 					side="Empty";
 					flags=4;
@@ -78151,7 +78151,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8733.1299,11.47,4745.8198};
-						angles[]={-0,1.5882496,0};
+						angles[]={0,1.5882496,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78168,7 +78168,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8766.0576,10.287686,4731.73};
-						angles[]={-0,3.4557519,6.2791886};
+						angles[]={0,3.4557519,6.2791886};
 					};
 					side="Empty";
 					flags=4;
@@ -78186,7 +78186,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8764.7695,10.682675,4756.0098};
-						angles[]={-0,4.6421742,0};
+						angles[]={0,4.6421742,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78203,7 +78203,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8733.1602,11.47,4737.3999};
-						angles[]={-0,1.5882496,0};
+						angles[]={0,1.5882496,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78220,7 +78220,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8766.3594,10.788761,4754.4897};
-						angles[]={-0,6.2657318,0};
+						angles[]={0,6.2657318,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78237,7 +78237,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8764.3389,10.682675,4756.7998};
-						angles[]={-0,4.6421742,0};
+						angles[]={0,4.6421742,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78254,7 +78254,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8745,10.807785,4761.0498};
-						angles[]={-0,4.6949182,0};
+						angles[]={0,4.6949182,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78287,7 +78287,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8743.7891,10.867035,4760.6895};
-						angles[]={-0,3.0368729,0};
+						angles[]={0,3.0368729,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78304,7 +78304,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8762.1699,10.311916,4758.9199};
-						angles[]={-0,2.7925267,0};
+						angles[]={0,2.7925267,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78321,7 +78321,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8766.5039,11.454055,4730.8589};
-						angles[]={-0,1.5707684,6.2791886};
+						angles[]={0,1.5707684,6.2791886};
 					};
 					side="Empty";
 					flags=4;
@@ -78338,7 +78338,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8765.7393,10.682675,4756.0596};
-						angles[]={-0,4.6421742,0};
+						angles[]={0,4.6421742,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78355,7 +78355,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8765.1895,10.682675,4756.8398};
-						angles[]={-0,4.6421742,0};
+						angles[]={0,4.6421742,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78390,7 +78390,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8759.3096,10.682675,4761.0498};
-						angles[]={-0,4.7996554,0};
+						angles[]={0,4.7996554,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78407,7 +78407,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8731.4395,11.015067,4745.71};
-						angles[]={-0,4.6949358,0};
+						angles[]={0,4.6949358,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78424,7 +78424,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8745.9893,10.903197,4723.6592};
-						angles[]={-0,1.5533431,0};
+						angles[]={0,1.5533431,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78458,7 +78458,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8770.791,10.963291,4738.5498};
-						angles[]={-0,4.6949358,6.2681909};
+						angles[]={0,4.6949358,6.2681909};
 					};
 					side="Empty";
 					flags=4;
@@ -78492,7 +78492,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8760.1992,10.682675,4761.0293};
-						angles[]={-0,4.7996554,0};
+						angles[]={0,4.7996554,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78509,7 +78509,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8764.8594,10.682675,4757.8496};
-						angles[]={-0,4.6421742,0};
+						angles[]={0,4.6421742,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78526,7 +78526,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8758.9199,10.682675,4761.6299};
-						angles[]={-0,4.7996554,0};
+						angles[]={0,4.7996554,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78560,7 +78560,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8765.9395,10.682675,4756.8398};
-						angles[]={-0,4.6944995,0};
+						angles[]={0,4.6944995,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78577,7 +78577,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8731.5996,11.015067,4737.5498};
-						angles[]={-0,4.6949358,0};
+						angles[]={0,4.6949358,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78594,7 +78594,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8766.7197,10.682675,4756.0796};
-						angles[]={-0,4.6421742,0};
+						angles[]={0,4.6421742,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78611,7 +78611,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8760.9297,10.682675,4760.8994};
-						angles[]={-0,4.7996554,0};
+						angles[]={0,4.7996554,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78628,7 +78628,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8760.5352,10.82143,4724.6597};
-						angles[]={-0,6.2656622,6.2731905};
+						angles[]={0,6.2656622,6.2731905};
 					};
 					side="Empty";
 					flags=4;
@@ -78645,7 +78645,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8759.8096,10.682675,4761.5898};
-						angles[]={-0,4.7996554,0};
+						angles[]={0,4.7996554,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78678,7 +78678,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8764.6797,10.682675,4758.6997};
-						angles[]={-0,4.6421742,0};
+						angles[]={0,4.6421742,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78695,7 +78695,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8765.7197,10.682675,4757.7998};
-						angles[]={-0,4.6421742,0};
+						angles[]={0,4.6421742,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78712,7 +78712,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8760.7197,10.682675,4761.5};
-						angles[]={-0,4.7996554,0};
+						angles[]={0,4.7996554,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78729,7 +78729,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8766.6592,10.682675,4756.96};
-						angles[]={-0,4.6421742,0};
+						angles[]={0,4.6421742,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78756,6 +78756,7 @@ class Mission
 					};
 					id=439;
 					type="Land_WaterTank_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item68
 				{
@@ -78763,7 +78764,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8736.4893,10.903197,4757.8691};
-						angles[]={-0,2.3561945,0};
+						angles[]={0,2.3561945,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78797,7 +78798,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8737.7598,10.867998,4759.1997};
-						angles[]={-0,2.3212879,0};
+						angles[]={0,2.3212879,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78814,7 +78815,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8739.5996,10.903197,4760.6094};
-						angles[]={-0,4.7647491,0};
+						angles[]={0,4.7647491,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78831,7 +78832,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8763.6367,10.908585,4725.8096};
-						angles[]={-0,0.76795185,6.2731905};
+						angles[]={0,0.76795185,6.2731905};
 					};
 					side="Empty";
 					flags=4;
@@ -78848,7 +78849,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8733.1699,11.47,4754.0298};
-						angles[]={-0,1.5882496,0};
+						angles[]={0,1.5882496,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78865,7 +78866,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8765.3896,10.682675,4758.6299};
-						angles[]={-0,4.6421742,0};
+						angles[]={0,4.6421742,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78882,7 +78883,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8761.3691,10.682675,4761.5293};
-						angles[]={-0,4.7996554,0};
+						angles[]={0,4.7996554,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78899,7 +78900,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8741.9492,10.903197,4723.6396};
-						angles[]={-0,3.1066861,0};
+						angles[]={0,3.1066861,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78916,7 +78917,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8768.7998,11.47,4755.0601};
-						angles[]={-0,1.5882496,0};
+						angles[]={0,1.5882496,0};
 					};
 					side="Empty";
 					flags=4;
@@ -78949,7 +78950,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8760.1953,10.824824,4723.5};
-						angles[]={-0,6.2656622,6.2731905};
+						angles[]={0,6.2656622,6.2731905};
 					};
 					side="Empty";
 					flags=4;
@@ -78982,7 +78983,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8762.5264,10.919687,4724.6797};
-						angles[]={-0,0.76794142,6.2731905};
+						angles[]={0,0.76794142,6.2731905};
 					};
 					side="Empty";
 					flags=4;
@@ -78999,7 +79000,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8768.7949,11.434833,4730.5698};
-						angles[]={-0,1.5882496,6.2791886};
+						angles[]={0,1.5882496,6.2791886};
 					};
 					side="Empty";
 					flags=4;
@@ -79017,7 +79018,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8766.6689,10.682675,4758.0693};
-						angles[]={-0,4.6421742,0};
+						angles[]={0,4.6421742,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79050,7 +79051,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8761.4453,10.812324,4723.6196};
-						angles[]={-0,6.2656622,6.2731905};
+						angles[]={0,6.2656622,6.2731905};
 					};
 					side="Empty";
 					flags=4;
@@ -79067,7 +79068,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8733.1699,11.47,4729.54};
-						angles[]={-0,1.5882496,0};
+						angles[]={0,1.5882496,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79084,7 +79085,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8739.4531,10.903197,4723.7764};
-						angles[]={-0,0.5855335,0};
+						angles[]={0,0.5855335,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79101,7 +79102,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8737.9443,10.903197,4724.7822};
-						angles[]={-0,0.5855335,0};
+						angles[]={0,0.5855335,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79118,7 +79119,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8736.4668,10.867035,4725.7476};
-						angles[]={-0,0.4184933,0};
+						angles[]={0,0.4184933,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79135,7 +79136,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8731.3389,11.015067,4753.96};
-						angles[]={-0,4.6949358,0};
+						angles[]={0,4.6949358,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79168,7 +79169,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8770.5391,11.008117,4754.96};
-						angles[]={-0,4.6949358,6.2701883};
+						angles[]={0,4.6949358,6.2701883};
 					};
 					side="Empty";
 					flags=4;
@@ -79202,7 +79203,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8765.459,11.47,4760.9805};
-						angles[]={-0,0.61086524,0};
+						angles[]={0,0.61086524,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79219,7 +79220,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8736.2793,11.47,4760.5796};
-						angles[]={-0,2.3911011,0};
+						angles[]={0,2.3911011,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79272,7 +79273,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8731.5391,11.015067,4729.3896};
-						angles[]={-0,4.6949358,0};
+						angles[]={0,4.6949358,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79289,7 +79290,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8740.2998,11.043978,4764.5996};
-						angles[]={-0,6.2657318,0};
+						angles[]={0,6.2657318,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79306,7 +79307,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8736.2402,11.47,4723.3979};
-						angles[]={-0,3.8048177,0};
+						angles[]={0,3.8048177,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79323,7 +79324,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8767.4297,11.015067,4761.4917};
-						angles[]={-0,0.62831855,0};
+						angles[]={0,0.62831855,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79340,7 +79341,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8734.4385,11.015067,4761.1235};
-						angles[]={-0,5.5501471,0};
+						angles[]={0,5.5501471,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79357,7 +79358,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8767.6055,10.939048,4723.4341};
-						angles[]={-0,5.5501471,6.2731905};
+						angles[]={0,5.5501471,6.2731905};
 					};
 					side="Empty";
 					flags=4;
@@ -79375,7 +79376,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8762.3271,11.020745,4719.9097};
-						angles[]={-0,3.1241393,6.2731905};
+						angles[]={0,3.1241393,6.2731905};
 					};
 					side="Empty";
 					flags=4;
@@ -79424,7 +79425,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8734.6494,11.015067,4722.6919};
-						angles[]={-0,0.62831855,0};
+						angles[]={0,0.62831855,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79475,7 +79476,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8764.1094,10.679312,4767.0493};
-						angles[]={-0,5.4454274,0};
+						angles[]={0,5.4454274,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79492,7 +79493,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8746.71,11.015067,4770.3096};
-						angles[]={-0,6.2657318,0};
+						angles[]={0,6.2657318,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79509,7 +79510,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8754.9902,11.015067,4770.48};
-						angles[]={-0,6.2657318,0};
+						angles[]={0,6.2657318,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79526,7 +79527,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8737.3154,10.679312,4767.1523};
-						angles[]={-0,0.59341192,0};
+						angles[]={0,0.59341192,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79543,7 +79544,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8762.1934,10.679312,4768.9028};
-						angles[]={-0,2.2863812,0};
+						angles[]={0,2.2863812,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79560,7 +79561,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8755.4629,10.993226,4714.73};
-						angles[]={-0,6.2657318,6.2791886};
+						angles[]={0,6.2657318,6.2791886};
 					};
 					side="Empty";
 					flags=4;
@@ -79578,7 +79579,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8747.1699,11.015067,4714.5596};
-						angles[]={-0,6.2657318,0};
+						angles[]={0,6.2657318,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79595,7 +79596,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8738.2803,10.679312,4717.3008};
-						angles[]={-0,2.1642082,0};
+						angles[]={0,2.1642082,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79612,7 +79613,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8738.9209,10.679312,4769.2783};
-						angles[]={-0,3.7524579,0};
+						angles[]={0,3.7524579,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79629,7 +79630,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8764.1309,10.679312,4768.9678};
-						angles[]={-0,3.8746309,0};
+						angles[]={0,3.8746309,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79646,7 +79647,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8740.4365,10.679312,4715.7256};
-						angles[]={-0,5.2883477,0};
+						angles[]={0,5.2883477,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79663,7 +79664,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8737.0107,10.679312,4769.0815};
-						angles[]={-0,2.1816616,0};
+						angles[]={0,2.1816616,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79680,7 +79681,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8766.0459,10.618865,4716.957};
-						angles[]={-0,3.8746309,6.2731905};
+						angles[]={0,3.8746309,6.2731905};
 					};
 					side="Empty";
 					flags=4;
@@ -79698,7 +79699,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8738.5166,10.679312,4715.3916};
-						angles[]={-0,0.59341192,0};
+						angles[]={0,0.59341192,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79715,7 +79716,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8765.3867,11.015067,4769.9053};
-						angles[]={-0,0.87266463,0};
+						angles[]={0,0.87266463,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79750,7 +79751,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8735.7959,11.015067,4769.9321};
-						angles[]={-0,5.3930674,0};
+						angles[]={0,5.3930674,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79767,7 +79768,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8766.082,10.61851,4715.0181};
-						angles[]={-0,5.4628806,6.2731905};
+						angles[]={0,5.4628806,6.2731905};
 					};
 					side="Empty";
 					flags=4;
@@ -79785,7 +79786,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8737.71,11.015067,4714.1519};
-						angles[]={-0,0.62831855,0};
+						angles[]={0,0.62831855,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79863,7 +79864,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8611.4854,11.055528,4669.2295};
-						angles[]={-0,4.7002587,0};
+						angles[]={0,4.7002587,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79880,7 +79881,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8611.6152,10.679312,4673.5796};
-						angles[]={-0,3.135484,0};
+						angles[]={0,3.135484,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79913,7 +79914,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8604.1152,10.679312,4667.3198};
-						angles[]={-0,0.6921103,0};
+						angles[]={0,0.6921103,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79930,7 +79931,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8612.9756,10.679312,4672.1797};
-						angles[]={-0,4.7170143,0};
+						angles[]={0,4.7170143,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79947,7 +79948,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8603.6748,10.679312,4676.0195};
-						angles[]={-0,5.4803338,0};
+						angles[]={0,5.4803338,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79964,7 +79965,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8601.8848,10.679312,4669.1895};
-						angles[]={-0,0.6921103,0};
+						angles[]={0,0.6921103,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79981,7 +79982,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8601.7646,10.679312,4674.0298};
-						angles[]={-0,5.4803338,0};
+						angles[]={0,5.4803338,0};
 					};
 					side="Empty";
 					flags=4;
@@ -79998,7 +79999,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8600.7852,10.679312,4671.5596};
-						angles[]={-0,4.6932077,0};
+						angles[]={0,4.6932077,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80015,7 +80016,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8611.7441,11.015067,4666.0698};
-						angles[]={-0,5.560514,0};
+						angles[]={0,5.560514,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80032,7 +80033,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8614.7852,11.015067,4672.1499};
-						angles[]={-0,4.7006083,0};
+						angles[]={0,4.7006083,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80049,7 +80050,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8601.9854,11.015067,4666.0596};
-						angles[]={-0,0.6374414,0};
+						angles[]={0,0.6374414,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80066,7 +80067,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8611.4854,11.015067,4677.9795};
-						angles[]={-0,0.6374414,0};
+						angles[]={0,0.6374414,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80083,7 +80084,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8601.8145,11.015067,4677.6196};
-						angles[]={-0,5.560514,0};
+						angles[]={0,5.560514,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80100,7 +80101,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8598.9346,11.015067,4671.7598};
-						angles[]={-0,4.7006083,0};
+						angles[]={0,4.7006083,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80117,7 +80118,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8606.9658,11.015067,4659.6699};
-						angles[]={-0,6.2771988,0};
+						angles[]={0,6.2771988,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80134,7 +80135,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8606.3252,11.015067,4683.4097};
-						angles[]={-0,6.2771988,0};
+						angles[]={0,6.2771988,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80161,7 +80162,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8645.1367,10.999001,4628.1587};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80178,7 +80179,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8640.3877,10.677311,4617.2837};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80211,7 +80212,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8643.0127,10.677311,4617.2837};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80228,7 +80229,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8641.6377,11.328506,4622.9087};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80238,6 +80239,7 @@ class Mission
 					};
 					id=528;
 					type="Land_BagBunker_01_small_green_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item5
 				{
@@ -80261,7 +80263,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8645.8877,10.962106,4621.2837};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80278,7 +80280,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8638.5117,10.962106,4617.4087};
-						angles[]={-0,3.6651914,0};
+						angles[]={0,3.6651914,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80295,7 +80297,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8643.2627,11.47,4628.7837};
-						angles[]={-0,4.712389,0};
+						angles[]={0,4.712389,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80329,7 +80331,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8649.7578,10.682675,4620.5063};
-						angles[]={-0,4.9784641,0};
+						angles[]={0,4.9784641,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80346,7 +80348,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8656.4229,10.682675,4623.8301};
-						angles[]={-0,6.2825222,0};
+						angles[]={0,6.2825222,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80363,7 +80365,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8650.6045,10.682675,4626.3096};
-						angles[]={-0,0.0011683914,0};
+						angles[]={0,0.0011683914,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80380,7 +80382,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8649.0117,10.682675,4624.2837};
-						angles[]={-0,6.2825222,0};
+						angles[]={0,6.2825222,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80414,7 +80416,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8648.2803,11.47,4632.3247};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80447,7 +80449,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8656.6367,11.47,4617.1587};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80464,7 +80466,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8661.6367,11.47,4620.4087};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80513,7 +80515,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8656.0117,11.221971,4622.5337};
-						angles[]={-0,4.712389,0};
+						angles[]={0,4.712389,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80546,7 +80548,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8650.7627,11.058342,4624.2837};
-						angles[]={-0,3.9269907,0};
+						angles[]={0,3.9269907,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80563,7 +80565,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8658.3516,10.63567,4629.9097};
-						angles[]={-0,6.0812683,0};
+						angles[]={0,6.0812683,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80580,7 +80582,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8651.7627,11.000514,4620.7837};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80597,7 +80599,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8661.7617,11.47,4628.6582};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80689,7 +80691,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8713.46,11.47,4664.5688};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80706,7 +80708,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8718.46,11.47,4653.5688};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80739,7 +80741,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8713.335,11.47,4656.9438};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80773,7 +80775,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8716.46,11.47,4677.5688};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80790,7 +80792,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8713.46,11.47,4672.5688};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80856,7 +80858,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8736.709,10.568439,4656.6797};
+						position[]={8736.709,10.568438,4656.6797};
 						angles[]={6.2491999,1.5707964,0};
 					};
 					side="Empty";
@@ -80867,7 +80869,7 @@ class Mission
 					};
 					id=658;
 					type="Land_BagFence_01_corner_green_F";
-					atlOffset=0.00023460388;
+					atlOffset=0.00023269653;
 				};
 				class Item15
 				{
@@ -80893,7 +80895,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8731.46,10.677311,4662.9438};
-						angles[]={-0,2.3841895e-007,0};
+						angles[]={0,2.3841895e-007,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80944,7 +80946,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8729.46,11.47,4658.5688};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80961,7 +80963,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8726.46,11.47,4653.5688};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80978,7 +80980,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8740.46,11.47,4663.5688};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="Empty";
 					flags=4;
@@ -80995,7 +80997,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8727.459,11.221971,4664.9438};
-						angles[]={-0,4.712389,0};
+						angles[]={0,4.712389,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81045,7 +81047,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8731.71,10.677311,4673.3188};
-						angles[]={-0,4.712389,0};
+						angles[]={0,4.712389,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81062,7 +81064,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8725.46,10.677311,4668.5688};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81096,7 +81098,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8727.585,11.000514,4675.8188};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81113,7 +81115,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8729.21,11.000514,4665.3188};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81146,7 +81148,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8731.835,11.058342,4670.9438};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81163,7 +81165,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8740.46,11.47,4677.5688};
-						angles[]={-0,5.9604567e-008,0};
+						angles[]={0,5.9604567e-008,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81180,7 +81182,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8745.71,11.47,4674.3188};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81197,7 +81199,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8732.46,11.47,4677.5688};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81214,7 +81216,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8745.46,11.47,4666.5688};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81231,7 +81233,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8737.21,11.47,4668.3188};
-						angles[]={-0,1.5707964,0};
+						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81296,7 +81298,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8724.335,10.60819,4672.8188};
-						angles[]={-0,2.8797932,0};
+						angles[]={0,2.8797932,0};
 					};
 					side="Empty";
 					flags=4;
