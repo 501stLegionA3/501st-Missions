@@ -8,18 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=3190;
+		nextID=3191;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
 	};
 	class LayerIndexProvider
 	{
-		nextID=57;
+		nextID=71;
 	};
 	class Camera
 	{
-		pos[]={2580.9385,80.1931,6105.5195};
-		dir[]={-0.55381167,-0.50061399,0.66552448};
-		up[]={-0.3202588,0.86558598,0.38486046};
-		aside[]={0.76876611,8.7410444e-007,0.63971734};
+		pos[]={2566.9988,52.066681,6122.1826};
+		dir[]={-0.52561814,-0.67430854,0.51892072};
+		up[]={-0.47986916,0.73837864,0.4737547};
+		aside[]={0.70264614,2.0004809e-006,0.71170795};
 	};
 };
 binarizationWanted=0;
@@ -127,13 +131,14 @@ addons[]=
 	"SW_FIELDGUNS_AV7",
 	"ATTE_SWOP",
 	"SWOP_AAT",
-	"SWOP_MTT"
+	"SWOP_MTT",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=78;
+		items=79;
 		class Item0
 		{
 			className="A3_Structures_F_EPA";
@@ -634,6 +639,13 @@ class AddonsMetaData
 			name="SWOP_MTT";
 			author="SWOP";
 		};
+		class Item78
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=5608206;
@@ -653,6 +665,25 @@ class CustomAttributes
 	{
 		name="Multiplayer";
 		class Attribute0
+		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -688,25 +719,6 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute1
-		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
 		nAttributes=2;
 	};
 	class Category1
@@ -739,7 +751,7 @@ class Mission
 	assetType="Free";
 	class Intel
 	{
-		briefingName="Tibrin_1PLT";
+		briefingName="Tibrin_2PLT";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
@@ -761,7 +773,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=331;
+		items=332;
 		class Item0
 		{
 			dataType="Layer";
@@ -92768,7 +92780,7 @@ class Mission
 					};
 					id=3154;
 					type="SWOP_Clonetrooper_a";
-					atlOffset=0.080396652;
+					atlOffset=0.080395699;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -99219,6 +99231,7 @@ class Mission
 					};
 					id=3172;
 					type="SWOP_Clonetrooper_a";
+					atlOffset=-9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -101718,7 +101731,6 @@ class Mission
 					};
 					id=3183;
 					type="SWOP_501_Appo";
-					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -101911,6 +101923,7 @@ class Mission
 					};
 					id=3184;
 					type="SWOP_501_Appo";
+					atlOffset=-9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -102103,7 +102116,7 @@ class Mission
 					};
 					id=3185;
 					type="SWOP_501_Appo";
-					atlOffset=0.0018882751;
+					atlOffset=0.0018873215;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -102595,7 +102608,6 @@ class Mission
 			{
 			};
 			id=3182;
-			atlOffset=9.5367432e-007;
 		};
 		class Item329
 		{
@@ -102780,6 +102792,15 @@ class Mission
 				};
 				nAttributes=4;
 			};
+		};
+		class Item331
+		{
+			dataType="Marker";
+			position[]={2528.166,13.424,6166.2739};
+			name="respawn_west";
+			type="Empty";
+			id=3190;
+			atlOffset=-0.00016784668;
 		};
 	};
 	class Connections
