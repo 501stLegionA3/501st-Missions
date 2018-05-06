@@ -1,4 +1,5 @@
 //remove map and gps from players
+//Created by Rexi
 	{
 	_x unassignItem "ItemMap";
 	_x unassignItem "ItemGPS";

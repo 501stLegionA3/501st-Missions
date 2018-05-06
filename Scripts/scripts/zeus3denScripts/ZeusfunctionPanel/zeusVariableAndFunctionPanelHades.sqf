@@ -8,7 +8,7 @@ namZeusPanelHades={
 	
 		removeGoggles _objToPlacePanelsOn;
 		_objToPlacePanelsOn AddUniform  "SWOP_Reb_f_cape_kaleesh_CombatUniform";
-
+		_objToPlacePanelsOn allowdamage false;
 
 	//Hermes Control Panel
 		_objToPlacePanelsOn addAction ["<t color='#A020F0'> Hades Control Panel</t>", 

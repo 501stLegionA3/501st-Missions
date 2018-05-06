@@ -1,9 +1,11 @@
+//At-TE components 
+//Created by Rexi
 //ye ole drop turret on which all stands
 	params["_vic"];
 //The object that has the action menu to deploy this at-te
 	_dropTurret=_vic;
 //The stomper that makes at-te move	
-	atte_drive = "B_UGV_01_rcws_F" createVehicle (position _dropTurret);
+	atte_drive = "B_UGV_01_rcws_F" createVehicle (getPosASL _dropTurret);
 
 //sleep 1;
 // create the ai crew to allow you to control the uav;
@@ -18,9 +20,10 @@
  
 
 // damage the wheels of uav to set top speed: gives 3 speeds slow forward = 10km forward = 20km fast forward = 29km;
-	{atte_drive setHitPointDamage[_x,0.90]} forEach ["HitLF2Wheel","HitRF2Wheel"];
-	{atte_drive setHitPointDamage[_x,0.90]} forEach ["HitLFWheel","HitRFWheel"];
-	{atte_drive setHitPointDamage[_x,0.90]} forEach ["HitLmWheel","HitRmWheel"];
+	{atte_drive setHitPointDamage[_x,0.90]} forEach ["HitLF2Wheel","HitRFWheel","HitRF2Wheel"];
+	{atte_drive  setHitPointDamage[_x,0.89]} forEach ["HitLFWheel"];
+
+	
 	
 	//dmgs lights
 	atte_drive setHitIndex [20, 1];
@@ -66,12 +69,12 @@
 	atte_drive addItemCargoGlobal ["B_UavTerminal", 5];
 
 //spawns a at-te on the dropturrets pos
-	atte_body  = "Republic_ATTE" createVehicle (position _dropTurret);
+	atte_body  = "Republic_ATTE" createVehicle (getPosASL _dropTurret);
 	atte_body attachTo [atte_drive,[0,-0.5,-2]]; 
 
 	
 // ITT for troop transport;	
-	atte_mens = "O_SWOP_HoverTa_2" createVehicle (position _dropTurret);
+	atte_mens = "O_SWOP_HoverTa_2" createVehicle (getPosASL _dropTurret);
 // Set the name and attach it to the Stomper;
 	atte_mens attachTo [ATTE_DRIVE,[0,-4.2,1.9]];
 // make it invisible;	
@@ -84,7 +87,7 @@
 
 
 // crewITT,purpose allows uav driver to sit there;	
-	atte_mens2 = "O_SWOP_HoverTa_2" createVehicle (position _dropTurret);
+	atte_mens2 = "O_SWOP_HoverTa_2" createVehicle (getPosASL _dropTurret);
 // Set the name and attach it to the Stomper;
 	atte_mens2 attachTo [ATTE_DRIVE,[0,1.9,1.9]];
 // make it invisible;	
@@ -99,16 +102,16 @@
 
 
 // "remote desig,commanders laz dezer";	
-	atte_com = "B_Static_Designator_01_F" createVehicle (position _dropTurret);
+	atte_com = "swclonerecondroid" createVehicle (getPosASL _dropTurret);
 // Set the name and attach it to the Stomper;
-	atte_com attachTo [ATTE_DRIVE,[0,0.9,6.8]]; 
+	atte_com attachTo [ATTE_DRIVE,[0,0.9,8.8]]; 
 	atte_com allowDamage false;
 	createVehicleCrew atte_com; 
 	[atte_com, true] remoteExec ["hideObjectglobal", 0];
 
 
 //turrets that fire the laat cannons 1
-	atte_gun1 = "B_HMG_01_A_F" createVehicle (position _dropTurret);
+	atte_gun1 = "B_HMG_01_A_F" createVehicle (getPosASL _dropTurret);
 	ATTE_gun1 attachTo [ATTE_drive,[1.25,3.92,3.55]]; 
 	ATTE_gun1 removeWeapon "HMG_static"; 
 	ATTE_gun1 addWeaponTurret ["Cannon_LAAT",[0]]; 
@@ -118,7 +121,7 @@
 	atte_gun1 disableAI "target";
 	
 //turrets that fire the laat cannons 2
-	atte_gun2 = "B_HMG_01_A_F" createVehicle (position _dropTurret);
+	atte_gun2 = "B_HMG_01_A_F" createVehicle (getPosASL _dropTurret);
 	ATTE_gun2 attachTo [ATTE_drive,[-1.05,3.92,3.54]]; 
 	atte_gun2 removeWeapon "HMG_static";  
 	atte_gun2 addWeaponTurret ["Cannon_LAAT",[0]]; ;  
@@ -128,7 +131,7 @@
 	atte_gun2 disableAI "target";
 	
 //turrets that fire the laat cannons 3
-	atte_gun3 = "B_HMG_01_A_F" createVehicle (position _dropTurret);
+	atte_gun3 = "B_HMG_01_A_F" createVehicle (getPosASL _dropTurret);
 	ATTE_gun3 attachTo [ATTE_drive,[-0.75,-7.8,3.733]];  
 	atte_gun3 removeWeapon "HMG_static";  
 	atte_gun3 addWeaponTurret ["Cannon_LAAT",[0]]; 

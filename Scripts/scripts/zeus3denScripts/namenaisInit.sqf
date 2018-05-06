@@ -1,13 +1,13 @@
-//last update 3/26/2018 4:40 pm est by namenai
+//last update 20/4/2018 4:40 pm est by Rexi
 
 //global variables that are used----------------------- decommissioned due to public variables being too hard-------------------- 
 	//[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
 	
 //Allow zeus to change global variables-also Hermes Panel
-	[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanel.sqf";
+	[] execVM "scripts\zeus3denScripts\ZeusfunctionPanel\zeusVariableAndFunctionPanel.sqf";
 
-//Hades Panel
-	[] execVM "scripts\zeus3denScripts\globalFncAndVarPanel\zeusVariableAndFunctionPanelHades.sqf";
+//Hades Panel - Currently decommissioned
+	//[] execVM "scripts\zeus3denScripts\ZeusfunctionPanel\zeusVariableAndFunctionPanelHades.sqf";
 
 //laat weapons,adds weapons and wingtip smoke
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\LAAT\laatClaymore.sqf";
@@ -36,9 +36,6 @@
 //AAT weapons
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\AAT\aatMohawkClassBase.sqf";
 	
-//Adds random star wars uniforms to the AAF vr entity soldier 
-    [] execVM "scripts\zeus3denScripts\aiBased\factionBased\independent\AAF\RandomSWCIV.sqf"; 
-
 //Vulture droid weapons
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\VULTURE\vultureBase.sqf";
 	
@@ -50,3 +47,51 @@
 
 //barc allows barcs to be loaded into vehicles with a cargo space 4 or greater
 	[] execVM  "scripts\zeus3denScripts\vehicleBased\vehicleVariants\Landbased\barc\barc.sqf";
+
+//Eulers Spec Ops droids
+	[] execVM  "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\spec_ops\spec_ops.sqf";	
+	
+//adds deploy option to mtt
+	[] execVM  "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\MTT\mttdeploy.sqf";	
+	
+//adds  Make B1 ats have better launchers
+	[] execVM  "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b1\b1at_at.sqf";		
+
+//adds  Make B1 Heavy have better weapons
+	[] execVM  "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b1\b1heavy.sqf";		
+
+//adds  Make  Magma Droids Stronger
+	[] execVM  "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\Magma\Magma.sqf";		
+	
+//adds advanced sling loading
+	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\fn_advancedSlingLoadingInit.sqf";
+	
+//Star Wars Civilian Spawner
+	[] execVM "scripts\zeus3denScripts\aiBased\factionBased\Civilian\RandomSWCIV.sqf";
+	
+//Resupply Boxes
+	[] execVM "scripts\zeus3denScripts\playerBased\Items\Resupply_boxes.sqf";
+	
+//Warden ammo and fuel system	
+	[] execVM "scripts\zeus3denScripts\playerBased\aviation\wardenBased\wardenAmmoBox.sqf";
+
+//Tri Droid
+	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\TRIDROID\tri_droid.sqf";
+	
+//V-Wing
+	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\VWing\vwingarrow.sqf";
+	
+//Hailfire Droid
+	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\Hailfire\HailfireBallista.sqf";
+		
+//Hailfire Droid	
+		[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b1\b1sniper.sqf";
+		
+//Droideka spawny script
+	[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\Droideka\Droideka.sqf";	
+	
+//Dwarf Spider Droid spawny script
+	[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\DSD\DSD.sqf";	
+		
+//HMP Gunship
+	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\HMP\hmp.sqf";

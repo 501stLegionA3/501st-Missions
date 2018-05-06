@@ -1,3 +1,5 @@
+//Allows barc speeders to be loaded in vehicles with cargo size larger than 4 
+//Created by Rexi
 barc={
 	params["_vic"];
 	comment "gets health";

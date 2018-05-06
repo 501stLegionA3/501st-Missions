@@ -8,9 +8,10 @@ xiphosI={
 		comment "data for weapons";
 		comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 		weaponData=[
-		["weapon_rim116Launcher","magazine_Missile_rim116_x21",[[-1,21,2]]],
+		["weapon_rim116Launcher","magazine_Missile_rim116_x21",[[-1,16,1]]],
 		["missiles_Jian","4Rnd_LG_Jian",[[-1,4,1]]],
 		["conmis_arc","ConMisarc_mag",[[-1,8,2]]],
+		["GBU12BombLauncher","2Rnd_GBU12_LGB",[[-1,2,1]]],
 		["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,400,10]]],
 		["Laserdesignator_pilotCamera","Laserbatteries",[[-1,1,1]]]
 		];

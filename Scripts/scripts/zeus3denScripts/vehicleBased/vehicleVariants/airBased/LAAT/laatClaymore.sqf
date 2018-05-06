@@ -14,16 +14,14 @@ claymoreI={
 		["SmokeLauncher","SmokeLauncherMag",[[-1,2,20]]],
 		["CMFlareLauncher","300Rnd_CMFlare_Chaff_Magazine",[[-1,300,10]]],
 		["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,400,10]]],
-		["Cannon_TIE_FAST","10Rnd_FAST_Cannon_TIE",[[1,10,100],[2,10,100]]],
+		["Cannon_Vwing","1000Rnd_Cannon_Vwing",[[1,2000,2],[2,2000,2]]],
 		["Laserdesignator_pilotCamera","Laserbatteries",[[-1,1,1]]]
 		];
 
-	/*	comment "remove torpedos";
-		for [{_i=0}, {_i<2}, {_i=_i+1}] do
-		{
-			_vic removeMagazineTurret ["laat_proton_torpedo" ,[-1]];  
-			_vic removeWeaponTurret["laat_proton_torpedo_launcher", [-1]];
-		};*/
+		comment "remove unused weapons";
+		_vic removeWeaponTurret[ "Cannon_LAAT_Turret1", [1]];
+		_vic removeWeaponTurret[ "Cannon_LAAT_Turret2", [2]];
+	
 
 		comment "For each weapon";
 		for [{_i=0}, {_i<(count weaponData)}, {_i=_i+1}] do
