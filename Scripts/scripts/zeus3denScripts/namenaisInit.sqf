@@ -1,16 +1,25 @@
 //last update 20/4/2018 4:40 pm est by Rexi
 
+_root="scripts\zeus3denScripts";
+_zeusFncPanel="\ZeusfunctionPanel";
+_zeusVarNFncPanel="\zeusVariableAndFunctionPanel.sqf";
+
+_vehicleBased="\vehicleBased";
+_vehicleVariant="\vehicleVariants";
+_airBased="\airBased";
+_laat="\LAAT\laatClaymore.sqf";
+
 //global variables that are used----------------------- decommissioned due to public variables being too hard-------------------- 
 	//[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
 	
 //Allow zeus to change global variables-also Hermes Panel
-	[] execVM "scripts\zeus3denScripts\ZeusfunctionPanel\zeusVariableAndFunctionPanel.sqf";
+	[] execVM (_root+_zeusFncPanel+_zeusVarNFncPanel);
 
 //Hades Panel - Currently decommissioned
 	//[] execVM "scripts\zeus3denScripts\ZeusfunctionPanel\zeusVariableAndFunctionPanelHades.sqf";
 
 //laat weapons,adds weapons and wingtip smoke
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\LAAT\laatClaymore.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_laat);
 
 //arc-170 weapon,adds weapons,wingtip smoke and ejection prevention
 	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\ARC\arcXiphos.sqf";
