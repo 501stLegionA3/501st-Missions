@@ -3,20 +3,27 @@
 //Factorizations
 
 	//Locations
-		_aiBased="\aiBased";
-		_airBased="\airBased";
+		_arc170="\arc170";
+		_actionBased="\action_menu";
+		_aiBased="\ai_based";
+		_airBased="\air_based";
 		_aviation="\aviation";
-		_factionBased="\factionBased";
-		_landBased="\landBased";
+		_boost="\boost";
+		_factionBased="\faction_based";
+		_laat="\laat";
+		_landBased="\land_based";
 		_item="\Items";
-		_playerBased="\playerBased";
+		_pilotBased="\pilot_based";
+		_playerBased="\played_based";
+		_repair="\repair";
 		_root="scripts\zeus3denScripts";
-		_seaBased="\seaBased";
-		_speedBoat="\speedBoats";
-		_vehicleBased="\vehicleBased";
-		_vehicleVariant="\vehicleVariants";
-		_wardenBased="\wardenBased";
-		_zeusFncPanel="\ZeusfunctionPanel";
+		_seaBased="\sea_based";
+		_smoke="\smoke";
+		_vehicleBased="\vehicle_based";
+		_vehicleVariant="\vehicle_variants";
+		_wardenBased="\warden_based";
+		ywing="\ywing";
+		_zeusFncPanel="\zeus_function_panel";
 
 	//Objects
 		_aat="\AAT\aatMohawkClassBase.sqf";
@@ -27,19 +34,20 @@
 		_b1Heavy="\b1\b1heavy.sqf";
 		_b1Sniper="\b1\b1sniper.sqf";
 		_b2="\b2\b2Reconfig.sqf";
-		_barc="barc\barc.sqf";
+		_barc="\BARC\barc.sqf";
 		_bluforSpeedboat="\bluforSpeedBoat.sqf";
-		_droideka="\Droideka\Droideka.sqf";
-		_dwarfSpiderDroid="\DSD\DSD.sqf";
+		_droideka="\droideka\droideka.sqf";
+		_dwarfSpiderDroid="\dwarf_spider_droid\dwarf_spider_droid.sqf";
 		_hailfire="\Hailfire\HailfireBallista.sqf";
 		_hmp="\HMP\hmp.sqf";
 		_laat="\LAAT\laatClaymore.sqf";
-		_magnaDroid="\Magma\Magma.sqf";
+		_magnaDroid="\magna\magna.sqf";
 		_mortar="\Mortar\mortars.sqf";
 		_mtt="\MTT\mttdeploy.sqf";
 		_opforSpeedboat="\opforSpeedBoat.sqf";
 		_sabre="\sabres\Sabres.sqf";
 		_specOpDroid="\spec_ops\spec_ops.sqf";
+		_speedBoat="\speed_boats";
 		_triDroid="\TRIDROID\tri_droid.sqf";
 		_vWing="\VWing\vwingarrow.sqf";
 		_vulture="\VULTURE\vultureBase.sqf";
@@ -49,17 +57,86 @@
 		//Sides
 			_blufor="\blufor";
 			_opfor="\opfor";
-			_civ="\Civilian";
+			_civ="\civilian";
 
 		//Unit Factions
 			_cis="\cis";
 
 	//Scripts and functions
+		_arcSmokeNorm="\arc_smoke_tip.sqf";
+		_arcSmokePurBlu="\arc_smoke_tip_pur_blu.sqf";
+		_arcSmokeRedBlu="\arc_smoke_tip_red_blu.sqf";
+		_arcSmokeWhiteBlu="\arc_smoke_tip_white_blu.sqf";
 		_advSlingLoad="\fn_advancedSlingLoadingInit.sqf";
+		_laatSmoke="\laat_smoke_tip.sqf";
 		_resupplyBox="\Resupply_boxes.sqf";
+		_repair65="repair_to_65.sqf";
+		_repairMore="repair_to_more.sqf";
 		_rngCiv="\RandomSWCIV.sqf";
 		_wardenAmmoBox="\wardenAmmoBox.sqf";
+		_ywingSmoke="\ywing_smoke_tip.sqf";
 		_zeusVarNFncPanel="\zeusVariableAndFunctionPanel.sqf";
+
+//These are here so that the file path can be accessed outside of this script, the variables are tied to the mission itself
+	//Locations
+		missionNamespace setVariable ["_actionBased",_actionBased];
+		missionNamespace setVariable ["_aiBased",_aiBased];
+		missionNamespace setVariable ["_airBased",_airBased];
+		missionNamespace setVariable ["_aviation",_aviation];
+		missionNamespace setVariable ["_factionBased",_factionBased];
+		missionNamespace setVariable ["_landBased",_landBased];
+		missionNamespace setVariable ["_item",_item];
+		missionNamespace setVariable ["_pilotBased",_pilotBased];
+		missionNamespace setVariable ["_playerBased",_playerBased];
+		missionNamespace setVariable ["_root",_root];
+		missionNamespace setVariable ["_seaBased",_seaBased];
+		missionNamespace setVariable ["_vehicleBased",_vehicleBased];
+		missionNamespace setVariable ["_vehicleVariant",_vehicleVariant];
+		missionNamespace setVariable ["_wardenBased",_wardenBased];
+		missionNamespace setVariable ["_zeusFncPanel",_zeusFncPanel];
+
+	//Objects
+		missionNamespace setVariable ["_aat",_aat];
+		missionNamespace setVariable ["_arc170",_arc170];
+		missionNamespace setVariable ["_atteBase",_atteBase];
+		missionNamespace setVariable ["_atteType",_atteType];
+		missionNamespace setVariable ["_b1AT",_b1AT];
+		missionNamespace setVariable ["_b1Heavy",_b1Heavy];
+		missionNamespace setVariable ["_b1Sniper",_b1Sniper];
+		missionNamespace setVariable ["_b2",_b2];
+		missionNamespace setVariable ["_barc",_barc];
+		missionNamespace setVariable ["_bluforSpeedboat",_bluforSpeedboat];
+		missionNamespace setVariable ["_droideka",_droideka];
+		missionNamespace setVariable ["_dwarfSpiderDroid",_dwarfSpiderDroid];
+		missionNamespace setVariable ["_hailfire",_hailfire];
+		missionNamespace setVariable ["_hmp",_hmp];
+		missionNamespace setVariable ["_laat",_laat];
+		missionNamespace setVariable ["_magnaDroid",_magnaDroid];
+		missionNamespace setVariable ["_mortar",_mortar];
+		missionNamespace setVariable ["_mtt",_mtt];
+		missionNamespace setVariable ["_opforSpeedboat",_opforSpeedboat];
+		missionNamespace setVariable ["_sabre",_sabre];
+		missionNamespace setVariable ["_specOpDroid",_specOpDroid];
+		missionNamespace setVariable ["_speedBoat",_speedBoat];
+		missionNamespace setVariable ["_triDroid",_triDroid];
+		missionNamespace setVariable ["_vWing",_vWing];
+		missionNamespace setVariable ["_vulture",_vulture];
+		missionNamespace setVariable ["_ywing",_ywing];
+
+	//Sides
+		missionNamespace setVariable ["_blufor",_blufor];
+		missionNamespace setVariable ["_opfor",_opfor];
+		missionNamespace setVariable ["_civ",_civ];
+
+	//Unit factions
+		missionNamespace setVariable ["_cis",_cis];
+
+	//Scripts and functions
+		missionNamespace setVariable ["_advSlingLoad",_advSlingLoad];
+		missionNamespace setVariable ["_resupplyBox",_resupplyBox];
+		missionNamespace setVariable ["_rngCiv",_rngCiv];
+		missionNamespace setVariable ["_wardenAmmoBox",_wardenAmmoBox];
+		missionNamespace setVariable ["_zeusVarNFncPanel",_zeusVarNFncPanel];
 
 
 _checkSumVariable=0;
@@ -67,11 +144,14 @@ _checkSumCounter=1;
 
 //global variables that are used----------------------- decommissioned due to public variables being too hard-------------------- 
 	//[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
-	
+try {	
 //Allow zeus to change global variables-also Hermes Panel
 	[] execVM (_root+_zeusFncPanel+_zeusVarNFncPanel);
 	_checkSumVariable=_checkSumVariable+_checkSumCounter;
 	_checkSumCounter=_checkSumCounter+1;
+}
+catch {
+}
 //Hades Panel - Currently decommissioned
 	//[] execVM "scripts\zeus3denScripts\ZeusfunctionPanel\zeusVariableAndFunctionPanelHades.sqf";
 
