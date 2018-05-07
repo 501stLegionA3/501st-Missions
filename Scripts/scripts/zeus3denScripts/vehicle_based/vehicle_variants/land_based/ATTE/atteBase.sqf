@@ -23,7 +23,7 @@ rexiAtteBase={
 	//ads repair function
 	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
 	{
-		[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repairTomore.sqf";
+		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
 	}];	
 
 	//handles reducing dmg taken by at-te
@@ -61,7 +61,9 @@ UAVT={
 	comment "ADDS REPAIR";
 	
 	_vic addAction ["<t color='#47FF1A'>Repair Turret</t>",
-	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repairTo65.sqf";}];		   
+	{
+		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repair65",""]));
+	}];		   
 	   
 	
 	_vic addEventHandler ["HandleDamage", { 

@@ -18,7 +18,8 @@ mttv1={
 	_vic   addAction ["<t color='#00FF00'>DEPLOY THE DROIDS</t>",
 	{
 	mttpos = _this select 0;
-    [] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\Landbased\mtt\mtt.sqf";
+
+    [] execVM ((missionNamespace getVariable ["_landBasedQuick",""])+(missionNamespace getVariable ["_mttPath",""])+(missionNamespace getVariable ["_mttFnc",""]));
 	removeAllActions mttpos;
 	},[1],0,false,true,""," commander  _target == _this "];
 		

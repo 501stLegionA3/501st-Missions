@@ -10,8 +10,10 @@ Sabre={
 
 	},[1],0,false,true,""," commander  _target == _this "];
 	
-		_vic  addAction ["<t color='#FC6F07'>Repair</t>",
-	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repairTomore.sqf";}];
+	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
+	{
+		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
+	}];
 	
 	comment "add in weapons and ammo";
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[-1]];
@@ -53,8 +55,11 @@ SSabre={
 	},[1],0,false,true,""," commander  _target == _this "];
 	
 	
-		_vic  addAction ["<t color='#FC6F07'>Repair</t>",
-	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repairTomore.sqf";}];
+	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
+	{
+		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
+	}];
+
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[0]];
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[0]];
 	_vic addMagazineTurret ["1000Rnd_Laser_Cannon_EWEBSWBF_REP",[0]]; 
@@ -89,9 +94,11 @@ Sabrec={
 
 	},[1],0,false,true,""," commander  _target == _this "];
 	
-		_vic  addAction ["<t color='#FC6F07'>Repair</t>",
-	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repairTomore.sqf";}];
-	
+	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
+	{
+		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
+	}];
+
 	comment "add in weapons and ammo";
 	_vic addWeapon "Cannon_Portableun";  
 	_vic removeWeapon "SWOP_DC15ABlasterRifle";
@@ -132,8 +139,10 @@ IMPSabre={
 
 	},[1],0,false,true,""," commander  _target == _this "];
 	
-		_vic  addAction ["<t color='#FC6F07'>Repair</t>",
-	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repairTomore.sqf";}];
+	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
+	{
+		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
+	}];
 	
 	comment "add in weapons and ammo";
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[-1]];
@@ -211,8 +220,10 @@ IMPSabrec={
 
 	},[1],0,false,true,""," commander  _target == _this "];
 	
-		_vic  addAction ["<t color='#FC6F07'>Repair</t>",
-	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repairTomore.sqf";}];
+	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
+	{
+		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
+	}];
 	
 	comment "add in weapons and ammo";
 	_vic addWeapon "Cannon_Portableun";  
@@ -238,11 +249,3 @@ IMPSabrec={
 	};
 
 [ "O_JM_TX130m1_1", "init",IMPsabrec, true, [], true] call CBA_fnc_addClassEventHandler; 
-
-
-
-
-
-
-
-

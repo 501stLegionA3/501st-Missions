@@ -5,7 +5,7 @@ rexiAtteTypeSelector={
     _vic  addAction ["<t color='#47FF1A'>All Terrain Tactical Enforcer</t>",                
     {
     compspawner = _this select 0;
-    [compspawner] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\ATTE\atteTridentClass.sqf";
+    [compspawner] execVM ((missionNamespace getVariable ["_vehicleVariantQuick",""])+(missionNamespace getVariable ["_landBased",""])+(missionNamespace getVariable ["_attePath",""])+(missionNamespace getVariable ["_atteTridentClassFnc",""]));
     }];
     _vic addUniform "SWOP_CloneOf_B_F_CombatUniform";
     _vic addheadgear "SWOP_cloneofficer_capb";
@@ -14,6 +14,9 @@ rexiAtteTypeSelector={
     };//end typeSelector
     
     ["B_Soldier_VR_F", "init",rexiAtteTypeSelector, true, [], true] call CBA_fnc_addClassEventHandler; 
+
+
+
 	
 
 

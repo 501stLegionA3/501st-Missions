@@ -61,10 +61,11 @@ claymoreI={
 		//_vic removeWeaponTurret["laat_proton_torpedo_launcher", [-1]];
 		
 
-	
 	// function as file add the wing tip smoke for laat
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
-	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Smoke\LAAT\laatSmokeTip.sqf";}
+	{
+		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_smoke",""])+(missionNamespace getVariable ["_laatpath",""])+(missionNamespace getVariable ["_laatSmoke",""]));
+	}
 	,[1],0,false,true,"User13"," driver  _target == _this"];
 
 
@@ -72,14 +73,15 @@ claymoreI={
 	_vic   addAction ["<t color='#00FF00'>Damage Report</t>",
 	{
 
-
-	hint parseText format["<t color='#0099FF'> Hull Integrity is :%1%2</t>",((1-(damage (_this  select 0)))*100),"%"];
+		hint parseText format["<t color='#0099FF'> Hull Integrity is :%1%2</t>",((1-(damage (_this  select 0)))*100),"%"];
 
 	},[1],0,false,true,""," driver  _target == _this "];
 
 	//by default boost is off
-	_vic setvariable ["OPTRE_Thruster_EngagedStatus",false,true];
+	//_vic setvariable ["OPTRE_Thruster_EngagedStatus",false,true];
 	
+
+	/*
 	//adds action to engage boost
 	_vic  addAction ["<t color='#00FF00'>Engage C.R.U.I.S.I.E Control System -------- U18</t>",
 	{
@@ -91,7 +93,24 @@ claymoreI={
 	{
 		[_this select 0,80,5] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStop.sqf";
 	},[1],0,false,true,"User19"," driver  _target == _this"];
+	*/
+
+	//boost on
+	_vic  addAction ["",
+	{
+		(_this select 0) execVM (missionNamespace getVariable ["_swopBoostOn",""]);
+
+		//(_this select 0) setMass 119533*3;
+	},[1],0,false,true,"User19"," driver  _target == _this"];
 	
+	//boost off
+	_vic  addAction ["",
+	{
+		
+		(_this select 0) execVM (missionNamespace getVariable ["_swopBoostOff",""]);
+		//(_this select 0) setMass 119533;
+	},[1],0,false,true,"User20"," driver  _target == _this"];
+
 	
 	_vic addEventHandler ["HandleDamage",
 	{

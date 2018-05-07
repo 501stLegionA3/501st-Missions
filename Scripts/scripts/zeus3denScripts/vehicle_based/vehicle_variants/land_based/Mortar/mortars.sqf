@@ -5,7 +5,8 @@
 	
 	_vic addEventHandler ["Fired",{private ["_al_flare"]; 
 
-	_al_flare = _this select 6;[[[_al_flare],"scripts\zeus3denScripts\vehicleBased\vehicleVariants\landbased\Mortar\Opfor\Flare_opfor.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+	_strFlareOpforPath=((missionNamespace getVariable ["_mortarPathQuick",""])+(missionNamespace getVariable ["_opfor",""])+(missionNamespace getVariable ["_flare_opfor",""]));
+	_al_flare = _this select 6;[[[_al_flare],_strFlareOpforPath],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
 	}];		
 
@@ -23,7 +24,8 @@
 	
 	_vic addEventHandler ["Fired",{private ["_al_flare"]; 
 
-	_al_flare = _this select 6;[[[_al_flare],"scripts\zeus3denScripts\vehicleBased\vehicleVariants\landbased\Mortar\Bluefor\Flare_bluefor.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+	_strFlareBluforPath=((missionNamespace getVariable ["_mortarPathQuick",""])+(missionNamespace getVariable ["_blufor",""])+(missionNamespace getVariable ["_flare_blufor",""]));
+	_al_flare = _this select 6;[[[_al_flare],_strFlareBluforPath],true,true] spawn BIS_fnc_MP;
 
 	}];		
  
