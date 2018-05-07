@@ -1,4 +1,4 @@
-/*
+/* Nam's Jetpack script is disabled until seperate testing can be completed. 
 (_this select 0) addEventHandler ["InventoryOpened", {
 	
 	namUnit=(_this select 0);
@@ -26,6 +26,7 @@ namUnit setVariable ["namJumpPackConfig", false, true];
 }];
 */
 
+
 //delets body on death
 Player addEventHandler ["GetInMan", {
 _x addMPEventHandler ["MPkilled",{deleteVehicle (_this select 0);}];
@@ -36,3 +37,5 @@ Player addEventHandler ["GetOutMan", {
 _x removeAllMPEventHandlers "MPKILLED";
 
 }];
+
+

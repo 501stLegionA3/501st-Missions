@@ -1,4 +1,5 @@
 //remove thermal
+//Created by Rexi
 	
 	{  
    	_items = assigneditems _x;  

@@ -1,4 +1,5 @@
  //Buffs the spider droids AI,AT and AA ability only works on spawned Spiders
+ //Created by Rexi 
 	{
     if ((typeOf _x) in ["SpiderOG"]) then {
 	_x removeweapon "Cannon_Spiderdroidog9";

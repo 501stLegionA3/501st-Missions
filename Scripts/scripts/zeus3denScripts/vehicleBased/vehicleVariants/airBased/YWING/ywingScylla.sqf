@@ -1,24 +1,26 @@
 scylla={
 	params["_vic"];
 
-	//if (!(_vic getVariable ["namReconfigured", false])) then 
-	//{
-	
+
 		comment "data for weapons";
 		comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 		weaponData=[
-		["ProtonBombW","ProtonBombM",[[-1,8,3]]],
-		["ProtonBombWCLUSTER","ProtonBombMCluster",[[-1,8,6]]],
+		["OPTRE_bomblauncher_1000lb","OPTRE_12Rnd_1000lb_bomb",[[-1,12,2]]],
+		["missiles_SCALPEL","6Rnd_LG_scalpel",[[-1,6,2]]],
 		["Mg7_proton_torpedo_launcher","Mg7_proton_torpedo",[[-1,8,6]]],
 		["missiles_Jian","4Rnd_LG_Jian",[[-1,4,3]]],
-		["Bomb_04_Plane_CAS_01_F","4Rnd_Bomb_04_F",[[-1,4,1]]],
-		["BombCluster_01_F","PylonMissile_1Rnd_BombCluster_01_F",[[-1,4,2]]],
+		["Bomb_04_Plane_CAS_01_F","4Rnd_Bomb_04_F",[[-1,4,2]]],
 		["weapon_rim116Launcher","magazine_Missile_rim116_x21",[[-1,4,1]]],
 		["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,400,10]]],
-		["Laserdesignator_pilotCamera","Laserbatteries",[[-1,1,1]]]
+		["Cannon_SDS","1000Rnd_Cannon_SDS",[[0,1000,4]]],
+		["Laserdesignator_pilotCamera","Laserbatteries",[[-1,1,1]]],
+		["BombCluster_01_F","PylonMissile_1Rnd_BombCluster_01_F",[[-1,2,4]]]
 		];
 
-
+		_vic removeWeaponTurret ["ProtonBombW", [-1]]; 
+		_vic removeWeaponTurret ["ProtonBombWCLUSTER", [-1]]; 
+		_vic removeWeaponTurret ["c7_airedblaster", [-1]]; 
+	
 
 		comment "For each weapon";
 		for [{_i=0}, {_i<(count weaponData)}, {_i=_i+1}] do

@@ -1,6 +1,6 @@
 //----------
 //Now this file is called in the init.sqf. Thus whenever the the atteTypeSelector is executed and the at-te from there is spawned,this is ran
-
+//Created by Rexi
 
 
 //general script
@@ -23,7 +23,7 @@ rexiAtteBase={
 	//ads repair function
 	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
 	{
-		[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repairTo65.sqf";
+		[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repairTomore.sqf";
 	}];	
 
 	//handles reducing dmg taken by at-te
@@ -45,7 +45,7 @@ rexiAtteBase={
 	//Removes the standard weapon and replaces it with a 120mm cannon
 	_vic removeWeaponTurret ["Cannon_ATTE", [0]];
 	_vic addWeaponTurret ["cannon_120mm", [0]];
-	
+	_vic addWeaponTurret ["autocannon_35mm", [0]];
 	for [{_i=0}, {_i<(5)}, {_i=_i+1}] do
 	{
 		_vic addMagazineTurret ["32Rnd_120mm_APFSDS_shells_Tracer_Green" ,[0]];

@@ -1,3 +1,4 @@
+//created by Namenai
 b2ForceWalk={
 
 if (!local _vic) exitWith {};

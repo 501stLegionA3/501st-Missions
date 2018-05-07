@@ -1,4 +1,5 @@
 //remove NVGS from troopers
+//Created by Rexi
 	{
 	_x unassignItem "swop_nvchipclean"; 
 	_x unassignItem "SWOP_NVChip"; 
