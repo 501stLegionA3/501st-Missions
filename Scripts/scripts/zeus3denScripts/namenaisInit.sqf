@@ -8,6 +8,58 @@ _vehicleBased="\vehicleBased";
 _vehicleVariant="\vehicleVariants";
 _airBased="\airBased";
 _laat="\LAAT\laatClaymore.sqf";
+_arc170="\ARC\arcXiphos.sqf";
+_ywing="\YWING\ywingScylla.sqf";
+
+_aiBased="\aiBased\";
+_factionBased="\factionBased";
+_opfor="\opfor";
+_cis="\cis";
+_b2="\b2\b2Reconfig.sqf";
+
+_seaBased="\seaBased";
+_speedBoat="\speedBoats"
+_blufor="\blufor";
+_bluforSpeedboat="\bluforSpeedBoat.sqf";
+_opforSpeedboat="\opforSpeedBoat.sqf";
+
+_landBased="\landBased";
+_atteBase="\ATTE\atteBase.sqf";
+_atteType="\ATTE\atteTypeSelector.sqf";
+
+_aat="\AAT\aatMohawkClassBase.sqf";
+_vulture="\VULTURE\vultureBase.sqf";
+_mortar="\Mortar\mortars.sqf";
+_sabre="\sabres\Sabres.sqf";
+_barc="barc\barc.sqf";
+
+_specOpDroid="\spec_ops\spec_ops.sqf";
+
+_mtt="\MTT\mttdeploy.sqf";
+_b1AT="\b1\b1at_at.sqf";
+_b1Heavy="\b1\b1heavy.sqf";
+_magnaDroid="\Magma\Magma.sqf";
+_advSlingLoad="\fn_advancedSlingLoadingInit.sqf";
+
+_civ="\Civilian";
+_rngCiv="\RandomSWCIV.sqf";
+
+_playerBased="\playerBased";
+_item="\Items";
+_resupplyBox="\Resupply_boxes.sqf";
+
+_aviation="\aviation";
+_wardenBased="\wardenBased";
+
+_wardenAmmoBox="\wardenAmmoBox.sqf";
+
+_triDroid="\TRIDROID\tri_droid.sqf";
+_vWing="\VWing\vwingarrow.sqf";
+_hailfire="\Hailfire\HailfireBallista.sqf";
+_b1Sniper="\b1\b1sniper.sqf";
+_droideka="\Droideka\Droideka.sqf";
+_dwarfSpiderDroid="\DSD\DSD.sqf";
+_hmp="\HMP\hmp.sqf";
 
 //global variables that are used----------------------- decommissioned due to public variables being too hard-------------------- 
 	//[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
@@ -22,85 +74,85 @@ _laat="\LAAT\laatClaymore.sqf";
 	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_laat);
 
 //arc-170 weapon,adds weapons,wingtip smoke and ejection prevention
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\ARC\arcXiphos.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_arc170);
 	
 //y-wing weapons,adds weapons and wingtip smoke
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\YWING\ywingScylla.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_ywing);
 	
 //b2 reconfig,forces b2's to walk
-	[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b2\b2Reconfig.sqf";
+	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_b2);
 
 //Blufor Speedboat,adds republic eweb for rear and u-wing gunner gun for main cannon
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\seaBased\speedBoats\Blufor\bluforSpeedBoat.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_seaBased+_speedBoat+_blufor+_bluforSpeedboat);
 
 //Opfor Speedboat,adds imperial eweb for rear and u-wing gunner gun for main cannon
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\seaBased\speedBoats\Opfor\opforSpeedBoat.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_seaBased+_speedBoat+_opfor+_opforSpeedboat);
 	
 //AT-TE Base scripts,the armor and repair
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\ATTE\atteBase.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_atteBase);
 	
 //AT-TE Type Selector that spawns in the at-te class type
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\ATTE\atteTypeSelector.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_atteType);
 
 //AAT weapons
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\AAT\aatMohawkClassBase.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_aat);
 	
 //Vulture droid weapons
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\VULTURE\vultureBase.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_vulture);
 	
 //Add's flares to simulate plasma Mortars NATO and CSAT
-	[] execVM  "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landbased\Mortar\mortars.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_mortar);
 
 //Sabre adds weapons and smokes and damage reports
-	[] execVM  "scripts\zeus3denScripts\vehicleBased\vehicleVariants\Landbased\sabres\Sabres.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_sabre);
 
 //barc allows barcs to be loaded into vehicles with a cargo space 4 or greater
-	[] execVM  "scripts\zeus3denScripts\vehicleBased\vehicleVariants\Landbased\barc\barc.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_barc);
 
 //Eulers Spec Ops droids
-	[] execVM  "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\spec_ops\spec_ops.sqf";	
+	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_specOpDroid);	
 	
 //adds deploy option to mtt
-	[] execVM  "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\MTT\mttdeploy.sqf";	
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_mtt);
 	
 //adds  Make B1 ats have better launchers
-	[] execVM  "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b1\b1at_at.sqf";		
+	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_b1AT);
 
 //adds  Make B1 Heavy have better weapons
-	[] execVM  "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b1\b1heavy.sqf";		
+	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_b1Heavy);	
 
 //adds  Make  Magma Droids Stronger
-	[] execVM  "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\Magma\Magma.sqf";		
+	[] execVM  (_root+_aiBased+_factionBased+_opfor+_cis+_magnaDroid);	
 	
 //adds advanced sling loading
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\fn_advancedSlingLoadingInit.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_advSlingLoad);
 	
 //Star Wars Civilian Spawner
-	[] execVM "scripts\zeus3denScripts\aiBased\factionBased\Civilian\RandomSWCIV.sqf";
+	[] execVM (_root+_aiBased+_factionBased+_civ+_rngCiv);
 	
 //Resupply Boxes
-	[] execVM "scripts\zeus3denScripts\playerBased\Items\Resupply_boxes.sqf";
+	[] execVM (_root+_playerBased+_item+_resupplyBox);
 	
 //Warden ammo and fuel system	
-	[] execVM "scripts\zeus3denScripts\playerBased\aviation\wardenBased\wardenAmmoBox.sqf";
+	[] execVM (_root+_playerBased+_aviation+_wardenBased+_wardenAmmoBox);
 
 //Tri Droid
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\TRIDROID\tri_droid.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_triDroid);
 	
 //V-Wing
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\VWing\vwingarrow.sqf";
+	[] execVM(_root+_vehicleBased+_vehicleVariant+_airBased+_vWing);
 	
 //Hailfire Droid
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\Hailfire\HailfireBallista.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_hailfire);
 		
-//Hailfire Droid	
-		[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b1\b1sniper.sqf";
+//Sniper Droid	
+	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_b1Sniper);
 		
 //Droideka spawny script
-	[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\Droideka\Droideka.sqf";	
+	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_droideka);	
 	
 //Dwarf Spider Droid spawny script
-	[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\DSD\DSD.sqf";	
+	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_dwarfSpiderDroid);
 		
 //HMP Gunship
-	[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\airBased\HMP\hmp.sqf";
+	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_hmp);
