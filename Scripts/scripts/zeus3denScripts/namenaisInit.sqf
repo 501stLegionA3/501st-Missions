@@ -4,316 +4,316 @@
 
 	//Locations
 		_aatPath="\aat";
-		missionNamespace setVariable ["_aatPath",_aatPath,true];
+		publicVariable _aatPath;
 
 		_actionBased="\action_menu";
-		missionNamespace setVariable ["_actionBased",_actionBased,true];
+		publicVariable _actionBased;
 
 		_aiBased="\ai_based";
-		missionNamespace setVariable ["_aiBased",_aiBased,true];
+		publicVariable _aiBased;
 
 		_airBased="\air_based";
-		missionNamespace setVariable ["_airBased",_airBased,true];
+		publicVariable _airBased;
 
 		_arc170Path="\arc170";
-		missionNamespace setVariable ["_arc170Path",_arc170Path,true];
+		publicVariable _arc170Path;
 
 		_attePath="\atte";
-		missionNamespace setVariable ["_attePath",_attePath,true];
+		publicVariable _attePath;
 
 		_aviation="\aviation";
-		missionNamespace setVariable ["_aviation",_aviation,true];
+		publicVariable _aviation;
 
 		_b1Path="\b1";
-		missionNamespace setVariable ["_b1Path",_b1Path,true];
+		publicVariable _b1Path;
 
 		_b2Path="\b2";
-		missionNamespace setVariable ["_b2Path",_b2Path,true];
+		publicVariable _b2Path;
 
 		_barcPath="\barc";
-		missionNamespace setVariable ["_barcPath",_barcPath,true];
+		publicVariable _barcPath;
 
 		_boost="\boost";
-		missionNamespace setVariable ["_boost",_boost,true];
+		publicVariable _boost;
 
 		_droidekaPath="\droideka";
-		missionNamespace setVariable ["_droidekaPath",_droidekaPath,true];
+		publicVariable _droidekaPath;
 
 		_dwarfSpiderDroidPath="\dwarf_spider_droid";
-		missionNamespace setVariable ["_dwarfSpiderDroidPath",_dwarfSpiderDroidPath,true];
+		publicVariable _dwarfSpiderDroidPath;
 
 		_factionBased="\faction_based";
-		missionNamespace setVariable ["_factionBased",_factionBased,true];
+		publicVariable _factionBased;
 
 		_hailfirePath="\hailfire";
-		missionNamespace setVariable ["_hailfirePath",_hailfirePath,true];
+		publicVariable _hailfirePath;
 
 		_hmpPath="\hmp";
-		missionNamespace setVariable ["_hmpPath",_hmpPath,true];
+		publicVariable _hmpPath;
 
 		_homingSpiderDroidPath="\homing_spider_droid";
-		missionNamespace setVariable ["_homingSpiderDroidPath",_homingSpiderDroidPath,true];
+		publicVariable _homingSpiderDroidPath;
 
 		_laatpath="\laat";
-		missionNamespace setVariable ["_laatpath",_laatpath,true];
+		publicVariable _laatpath;
 
 		_landBased="\land_based";
-		missionNamespace setVariable ["_landBased",_landBased,true];
+		publicVariable _landBased;
 
 		_item="\Items";
-		missionNamespace setVariable ["_item",_item,true];
+		publicVariable _item;
 
 		_magnaPath="\magna";
-		missionNamespace setVariable ["_magnaPath",_magnaPath,true];
+		publicVariable _magnaPath;
 
 		_mortarPath="\mortar";
-		missionNamespace setVariable ["_mortarPath",_mortarPath,true];
+		publicVariable _mortarPath;
 
 		_mttPath="\mtt";
-		missionNamespace setVariable ["_mttPath",_mttPath,true];
+		publicVariable _mttPath;
 
 		_pilotBased="\pilot_based";
-		missionNamespace setVariable ["_pilotBased",_pilotBased,true];
+		publicVariable _pilotBased;
 
 		_playerBased="\played_based";
-		missionNamespace setVariable ["_playerBased",_playerBased,true];
+		publicVariable _playerBased;
 
 		_praetorianPath="\praetorian";
-		missionNamespace setVariable ["_praetorianPath",_praetorianPath,true];
+		publicVariable _praetorianPath;
 
 		_repair="\repair";
-		missionNamespace setVariable ["_repair",_repair,true];
+		publicVariable _repair;
 
 		_root="scripts\zeus3denScripts";
-		missionNamespace setVariable ["_root",_root,true];
+		publicVariable _root;
 
 		_sabrePath="\sabre";
-		missionNamespace setVariable ["_sabrePath",_sabrePath,true];
+		publicVariable _sabrePath;
 
 		_seaBased="\sea_based";
-		missionNamespace setVariable ["_seaBased",_seaBased,true];
+		publicVariable _seaBased;
 
 		_smoke="\smoke";
-		missionNamespace setVariable ["_smoke",_smoke,true];
+		publicVariable _smoke;
 
 		_specOpDroidPath="\spec_ops";
-		missionNamespace setVariable ["_specOpDroidPath",_specOpDroidPath,true];
+		publicVariable _specOpDroidPath;
 
 		_speedBoat="\speed_boats"; 		
-		missionNamespace setVariable ["_speedBoat",_speedBoat,true];
+		publicVariable _speedBoat;
 
 		_tridroidPath="\tridroid";
-		missionNamespace setVariable ["_tridroidPath",_tridroidPath,true];
+		publicVariable _tridroidPath;
 
 		_vehicleBased="\vehicle_based";
-		missionNamespace setVariable ["_vehicleBased",_vehicleBased,true];
+		publicVariable _vehicleBased
 
 		_vehicleVariant="\vehicle_variants";
-		missionNamespace setVariable ["_vehicleVariant",_vehicleVariant,true];
+		publicVariable _vehicleVariant;
 
 		_vulturePath="\vulture";
-		missionNamespace setVariable ["_vulturePath",_vulturePath,true];
+		publicVariable _vulturePath;
 
 		_vwingPath="\vwing";
-		missionNamespace setVariable ["_vwingPath",_vwingPath,true];
+		publicVariable _vwingPath;
 
 		_wardenBased="\warden_based";
-		missionNamespace setVariable ["_wardenBased",_wardenBased,true];
+		publicVariable _wardenBased;
 
 		_ywingPath="\ywing";
-		missionNamespace setVariable ["_ywingPath",_ywingPath,true];
+		publicVariable _ywingPath;
 
 		_zeusFncPanel="\zeus_function_panel";
-		missionNamespace setVariable ["_zeusFncPanel",_zeusFncPanel,true];
+		publicVariable _zeusFncPanel;
 
 
 	//Objects
 		_aat=_aatPath+"\aatMohawkClassBase.sqf"; 		
-		missionNamespace setVariable ["_aat",_aat,true];
+		publicVariable _aat;
 
 		_arc170=_arc170Path+"\arcXiphos.sqf"; 		
-		missionNamespace setVariable ["_arc170",_arc170,true];
+		publicVariable _arc170;
 
 		_atteBase=_attePath+"\atteBase.sqf"; 		
-		missionNamespace setVariable ["_atteBase",_atteBase,true];
+		publicVariable _atteBase;
 
 		_atteType=_attePath+"\atteTypeSelector.sqf"; 		
-		missionNamespace setVariable ["_atteType",_atteType,true];
+		publicVariable _atteType;
 
 		_b1AT=_b1Path+"\b1at_at.sqf"; 		
-		missionNamespace setVariable ["_b1AT",_b1AT,true];
+		publicVariable _b1AT;
 
 		_b1Heavy=_b1Path+"\b1heavy.sqf"; 		
-		missionNamespace setVariable ["_b1Heavy",_b1Heavy,true];
+		publicVariable _b1Heavy;
 
 		_b1Sniper=_b1Path+"\b1sniper.sqf"; 		
-		missionNamespace setVariable ["_b1Sniper",_b1Sniper,true];
+		publicVariable _b1Sniper;
 
 		_b2=_b2Path+"\b2Reconfig.sqf"; 		
-		missionNamespace setVariable ["_b2",_b2,true];
+		publicVariable _b2;
 
 		_barc=_barcPath+"\barc.sqf"; 		
-		missionNamespace setVariable ["_barc",_barc,true];
+		publicVariable _barc;
 
 		_bluforSpeedboat="\bluforSpeedBoat.sqf"; 		
-		missionNamespace setVariable ["_bluforSpeedboat",_bluforSpeedboat,true];
+		publicVariable _bluforSpeedboat;
 
 		_droideka=_droidekaPath+"\droideka.sqf"; 		
-		missionNamespace setVariable ["_droideka",_droideka,true];
+		publicVariable _droideka;
 
 		_dwarfSpiderDroid=_dwarfSpiderDroidPath+"\dwarf_spider_droid.sqf"; 		
-		missionNamespace setVariable ["_dwarfSpiderDroid",_dwarfSpiderDroid,true];
+		publicVariable _dwarfSpiderDroid;
 
 		_hailfire=_hailfirePath+"\HailfireBallista.sqf"; 		
-		missionNamespace setVariable ["_hailfire",_hailfire,true];
+		publicVariable _hailfire;
 
 		_hmp=_hmpPath+"\hmp.sqf"; 		
-		missionNamespace setVariable ["_hmp",_hmp,true];
+		publicVariable _hmp;
 
 		_laat=_laatpath+"\laatClaymore.sqf"; 		
-		missionNamespace setVariable ["_laat",_laat,true];
+		publicVariable _laat;
 
 		_magnaDroid=_magnaPath+"\magna.sqf"; 		
-		missionNamespace setVariable ["_magnaDroid",_magnaDroid,true];
+		publicVariable _magnaDroid;
 
 		_mortar=_mortarPath+"\mortars.sqf"; 		
-		missionNamespace setVariable ["_mortar",_mortar,true];
+		publicVariable _mortar;
 
 		_mtt=_mttPath+"\mttdeploy.sqf"; 		
-		missionNamespace setVariable ["_mtt",_mtt,true];
+		publicVariable _mtt;
 
 		_opforSpeedboat="\opforSpeedBoat.sqf"; 		
-		missionNamespace setVariable ["_opforSpeedboat",_opforSpeedboat,true];
+		publicVariable _opforSpeedboat;
 
 		_sabre=_sabrePath+"\Sabres.sqf"; 		
-		missionNamespace setVariable ["_sabre",_sabre,true];
+		publicVariable _sabre;
 
 		_specOpDroid=_specOpDroidPath+"\spec_ops.sqf"; 		
-		missionNamespace setVariable ["_specOpDroid",_specOpDroid,true];
+		publicVariable _specOpDroid;
 
 		_triDroid=_tridroidPath+"\tri_droid.sqf"; 		
-		missionNamespace setVariable ["_triDroid",_triDroid,true];
+		publicVariable _triDroid;
 
 		_vWing=_vwingPath+"\vwingarrow.sqf"; 		
-		missionNamespace setVariable ["_vWing",_vWing,true];
+		publicVariable _vWing;
 
 		_vulture=_vulturePath+"\vultureBase.sqf"; 		
-		missionNamespace setVariable ["_vulture",_vulture,true];
+		publicVariable _vulture;
 
 		_ywing=_ywingPath+"\ywingScylla.sqf"; 		
-		missionNamespace setVariable ["_ywing",_ywing,true];
+		publicVariable _ywing;
  
 	//Factions
 		//Sides
 			_blufor="\blufor"; 		
-			missionNamespace setVariable ["_blufor",_blufor,true];
+			publicVariable _blufor;
 
 			_opfor="\opfor"; 		
-			missionNamespace setVariable ["_opfor",_opfor,true];
+			publicVariable _opfor;
 
 			_civ="\civilian"; 		
-			missionNamespace setVariable ["_civ",_civ,true];
+			publicVariable _civ;
 
 		//Unit Factions
 			_cis="\cis";
-			missionNamespace setVariable ["_cis",_cis,true];
+			publicVariable _cis;
 
 	//Scripts and functions
 		_arcSmokeNorm="\arc_smoke_tip.sqf";
-		missionNamespace setVariable ["_arcSmokeNorm",_arcSmokeNorm,true];
+		publicVariable _arcSmokeNorm;
 
 		_arcSmokePurBlu="\arc_smoke_tip_pur_blu.sqf";
-		missionNamespace setVariable ["_arcSmokePurBlu",_arcSmokePurBlu,true];
+		publicVariable _arcSmokePurBlu;
 
 		_arcSmokeRedBlu="\arc_smoke_tip_red_blu.sqf";
-		missionNamespace setVariable ["_arcSmokeRedBlu",_arcSmokeRedBlu,true];
+		publicVariable _arcSmokeRedBlu;
 
 		_arcSmokeWhiteBlu="\arc_smoke_tip_white_blu.sqf";
-		missionNamespace setVariable ["_arcSmokeWhiteBlu",_arcSmokeWhiteBlu,true];
+		publicVariable _arcSmokeWhiteBlu;
 
 		_advSlingLoad="\fn_advancedSlingLoadingInit.sqf";
-		missionNamespace setVariable ["_advSlingLoad",_advSlingLoad,true];
+		publicVariable _advSlingLoad;
 
 		_atteTridentClassFnc="\atteTridentClass.sqf";
-		missionNamespace setVariable ["_atteTridentClassFnc",_atteTridentClassFnc,true];
+		publicVariable _atteTridentClassFnc;
 
 		_droidekaDriver="\droideka_driver.sqf";
-		missionNamespace setVariable ["_droidekaDriver",_droidekaDriver,true];
+		publicVariable _droidekaDriver;
 
 		_dwarfDriver="\dwarf_spider_droid_driver.sqf";
-		missionNamespace setVariable ["_dwarfDriver",_dwarfDriver,true];
+		publicVariable _dwarfDriver;
 
 		_flare_blufor="\flare_blufor.sqf";
-		missionNamespace setVariable ["_flare_blufor",_flare_blufor,true];
+		publicVariable _flare_blufor;
 
 		_flare_opfor="\flare_opfor.sqf";
-		missionNamespace setVariable ["_flare_opfor",_flare_opfor,true];
+		publicVariable _flare_opfor;
 
 		_laatSmoke="\laat_smoke_tip.sqf";
-		missionNamespace setVariable ["_laatSmoke",_laatSmoke,true];
+		publicVariable _laatSmoke;
 
 		_mttFnc="\_mtt.sqf";
-		missionNamespace setVariable ["_mttFnc",_mttFnc,true];
+		publicVariable _mttFnc;
 
 		_repair65="repair_to_65.sqf";
-		missionNamespace setVariable ["_repair65",_repair65,true];
+		publicVariable _repair65;
 
 		_repairMore="repair_to_more.sqf";
-		missionNamespace setVariable ["_repairMore",_repairMore,true];
+		publicVariable _repairMore;
 
 		_removeEject="\removeEject.sqf";
-		missionNamespace setVariable ["_removeEject",_removeEject,true];
+		publicVariable _removeEject;
 
 		_resupplyBox="\Resupply_boxes.sqf";
-		missionNamespace setVariable ["_resupplyBox",_resupplyBox,true];
+		publicVariable _resupplyBox;
 
 		_rngCiv="\RandomSWCIV.sqf";
-		missionNamespace setVariable ["_rngCiv",_rngCiv,true];
+		publicVariable _rngCiv;
 
 		_wardenAmmoBox="\wardenAmmoBox.sqf";
-		missionNamespace setVariable ["_wardenAmmoBox",_wardenAmmoBox,true];
+		publicVariable _wardenAmmoBox;
 
 		_ywingSmoke="\ywing_smoke_tip.sqf";
-		missionNamespace setVariable ["_ywingSmoke",_ywingSmoke,true];
+		publicVariable _ywingSmoke;
 
 		_zeusVarNFncPanel="\zeusVariableAndFunctionPanel.sqf";
-		missionNamespace setVariable ["_zeusVarNFncPanel",_zeusVarNFncPanel,true];
+		publicVariable _zeusVarNFncPanel;
 
 	//swop functions
 		_swopBoostOn="\LAAT\initTE.sqf";
-		missionNamespace setVariable ["_swopBoostOn",_swopBoostOn,true];
+		publicVariable _swopBoostOn;
 
 		_swopBoostOff="\LAAT\initTD.sqf";
-		missionNamespace setVariable ["_swopBoostOff",_swopBoostOff,true];
+		publicVariable _swopBoostOff;
 
 //Quick strings for commonly used paths
 
 	_vehicleBasedQuick=_root+_vehicleBased;
-	missionNamespace setVariable ["_vehicleBasedQuick",_vehicleBasedQuick,true];
+	publicVariable _vehicleBasedQuick;
 
 	_vehicleVariantQuick=_vehicleBasedQuick+_vehicleVariant;
-	missionNamespace setVariable ["_vehicleVariantQuick",_vehicleVariantQuick,true];
+	publicVariable _vehicleVariantQuick;
 
 	_actionBasedQuick=_vehicleBasedQuick+_actionBased;
-	missionNamespace setVariable ["_actionBasedQuick",_actionBasedQuick,true];
+	publicVariable _actionBasedQuick;
 
 	_airBasedQuick=_vehicleVariantQuick+_airBased;
-	missionNamespace setVariable ["_airBasedQuick",_airBasedQuick,true];
+	publicVariable _airBasedQuick;
 
 	_landBasedQuick=_vehicleVariantQuick+_landBased;
-	missionNamespace setVariable ["_landBasedQuick",_landBasedQuick,true];
+	publicVariable _landBasedQuick;
 
 	_mortarPathQuick=_landBasedQuick+_mortarPath;
-	missionNamespace setVariable ["_mortarPathQuick",_mortarPathQuick,true];
+	publicVariable _mortarPathQuick;
 
 	_aiBasedQuick=_root+_aiBased;
-	missionNamespace setVariable ["_aiBasedQuick",_aiBasedQuick,true];
+	publicVariable _aiBasedQuick;
 
 	_factionBasedQuick=_aiBasedQuick+_factionBased;
-	missionNamespace setVariable ["_factionBasedQuick",_factionBasedQuick,true];
+	publicVariable _factionBasedQuick;
 
 	_cisQuick=_factionBasedQuick+_opfor+_cis;
-	missionNamespace setVariable ["_cisQuick",_cisQuick,true];
+	publicVariable _cisQuick;
 
 
 //Check sum used to check if all the exec have ran
@@ -478,5 +478,5 @@ catch {
 	_checkSumVariable=_checkSumVariable+_checkSumCounter;
 	_checkSumCounter=_checkSumCounter+1;	
 
-	missionNamespace setVariable ["checkSum",_checkSumVariable,true];
-	missionNamespace setVariable ["checkSumCounter",_checkSumCounter,true];
+	publicVariable checkSum",_checkSumVariable,true];
+	publicVariable checkSumCounter",_checkSumCounter,true];

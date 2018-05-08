@@ -12,7 +12,7 @@ Sabre={
 	
 	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
 	{
-		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
+		[_this select 0] execVM (_actionBasedQuick+_repair+_repairMore);
 	}];
 	
 	comment "add in weapons and ammo";
@@ -57,7 +57,7 @@ SSabre={
 	
 	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
 	{
-		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
+		[_this select 0] execVM (_actionBasedQuick+_repair+_repairMore);
 	}];
 
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[0]];
@@ -96,7 +96,7 @@ Sabrec={
 	
 	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
 	{
-		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
+		[_this select 0] execVM (_actionBasedQuick+_repair+_repairMore);
 	}];
 
 	comment "add in weapons and ammo";
@@ -141,7 +141,7 @@ IMPSabre={
 	
 	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
 	{
-		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
+		[_this select 0] execVM (_actionBasedQuick+_repair+_repairMore);
 	}];
 	
 	comment "add in weapons and ammo";
@@ -185,7 +185,9 @@ IMPSSabre={
 	
 	
 		_vic  addAction ["<t color='#FC6F07'>Repair</t>",
-	{[_this select 0] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Repair\repairTomore.sqf";}];
+	{
+		[_this select 0] execVM (_actionBasedQuick+_repair+_repairMore);
+	}];
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[0]];
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[0]];
 	_vic addMagazineTurret ["1000Rnd_Laser_Cannon_EWEBSWBF_REP",[0]]; 
@@ -222,7 +224,7 @@ IMPSabrec={
 	
 	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
 	{
-		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
+		[_this select 0] execVM (_actionBasedQuick+_repair+_repairMore);
 	}];
 	
 	comment "add in weapons and ammo";

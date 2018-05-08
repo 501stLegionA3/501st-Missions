@@ -5,7 +5,7 @@ rexiAtteTypeSelector={
     _vic  addAction ["<t color='#47FF1A'>All Terrain Tactical Enforcer</t>",                
     {
     compspawner = _this select 0;
-    [compspawner] execVM ((missionNamespace getVariable ["_vehicleVariantQuick",""])+(missionNamespace getVariable ["_landBased",""])+(missionNamespace getVariable ["_attePath",""])+(missionNamespace getVariable ["_atteTridentClassFnc",""]));
+    [compspawner] execVM (_vehicleVariantQuick+_landBased+_attePath+_atteTridentClassFnc);
     }];
     _vic addUniform "SWOP_CloneOf_B_F_CombatUniform";
     _vic addheadgear "SWOP_cloneofficer_capb";

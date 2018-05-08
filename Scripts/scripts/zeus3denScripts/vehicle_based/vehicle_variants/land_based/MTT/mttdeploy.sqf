@@ -19,7 +19,7 @@ mttv1={
 	{
 	mttpos = _this select 0;
 
-    [] execVM ((missionNamespace getVariable ["_landBasedQuick",""])+(missionNamespace getVariable ["_mttPath",""])+(missionNamespace getVariable ["_mttFnc",""]));
+    [] execVM (_landBasedQuick+_mttPath+_mttFnc);
 	removeAllActions mttpos;
 	},[1],0,false,true,""," commander  _target == _this "];
 		

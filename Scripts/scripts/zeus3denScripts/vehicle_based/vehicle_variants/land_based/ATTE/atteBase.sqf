@@ -23,7 +23,7 @@ rexiAtteBase={
 	//ads repair function
 	_vic  addAction ["<t color='#FC6F07'>Repair</t>",
 	{
-		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repairMore",""]));
+		[_this select 0] execVM (_actionBasedQuick+_repair+_repairMore);
 	}];	
 
 	//handles reducing dmg taken by at-te
@@ -62,7 +62,7 @@ UAVT={
 	
 	_vic addAction ["<t color='#47FF1A'>Repair Turret</t>",
 	{
-		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_repair",""])+(missionNamespace getVariable ["_repair65",""]));
+		[_this select 0] execVM (_actionBasedQuick+_repair+_repair65);
 	}];		   
 	   
 	

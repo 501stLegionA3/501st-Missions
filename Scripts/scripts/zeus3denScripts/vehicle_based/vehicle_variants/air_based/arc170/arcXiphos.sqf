@@ -59,7 +59,7 @@ xiphosI={
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
 	{
 
-		[_this select 0] execVM ((missionNamespace getVariable ["_actionBasedQuick",""])+(missionNamespace getVariable ["_smoke",""])+(missionNamespace getVariable ["_arc170Path",""])+(missionNamespace getVariable ["_arcSmokeNorm",""]));
+		[_this select 0] execVM (_actionBasedQuick+_smoke+_arc170Path+_arcSmokeNorm);
 	}
 	,[1],0,false,true,"User13"," driver  _target == _this"];
 	
@@ -94,7 +94,7 @@ xiphosI={
 	
 	
 	
-	[_vic] execVm ((missionNamespace getVariable ["_airBasedQuick",""])+(missionNamespace getVariable ["_arc170",""])+(missionNamespace getVariable ["_removeEject",""]));
+	[_vic] execVm (_airBasedQuick+_arc170+_removeEject);
 
 	
 	

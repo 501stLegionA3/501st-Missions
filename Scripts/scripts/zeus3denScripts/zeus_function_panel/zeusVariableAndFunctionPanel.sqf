@@ -39,8 +39,9 @@ namZeusPanelHermes={
 	//Removes AAT's AI Coxial turrets 
 		_user  addAction ["<t color='#47FF1A'>Remove AAT AI Coxial Turret </t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\AAT\aat_coxial_r.sqf";
+		[] execVM ((missionNamespace getVariable ["_landBasedQuick",""])+(missionNamespace getVariable ["_aatPath",""])+"\aat_coxial_r.sqf");
 		},[1],0,false,true,"","_target == _this"];//end
+	
 
 	
 	//Makes spawned AAT's Blue and gray
