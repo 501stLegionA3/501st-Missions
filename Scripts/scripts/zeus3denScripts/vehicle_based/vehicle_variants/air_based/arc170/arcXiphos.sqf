@@ -15,7 +15,7 @@ xiphosI={
 		["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,400,10]]],
 		["Laserdesignator_pilotCamera","Laserbatteries",[[-1,1,1]]]
 		];
-
+		_vic setVariable["weaponData",weaponData];
 
 
 		comment "For each weapon";

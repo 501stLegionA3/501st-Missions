@@ -106,7 +106,7 @@
 		publicVariable _tridroidPath;
 
 		_vehicleBased="\vehicle_based";
-		publicVariable _vehicleBased
+		publicVariable _vehicleBased;
 
 		_vehicleVariant="\vehicle_variants";
 		publicVariable _vehicleVariant;
@@ -167,6 +167,9 @@
 		_hailfire=_hailfirePath+"\HailfireBallista.sqf"; 		
 		publicVariable _hailfire;
 
+		_homing_spider_droid="\spiderdroid_buff.sqf";
+		publicVariable _homing_spider_droid;
+
 		_hmp=_hmpPath+"\hmp.sqf"; 		
 		publicVariable _hmp;
 
@@ -184,6 +187,9 @@
 
 		_opforSpeedboat="\opforSpeedBoat.sqf"; 		
 		publicVariable _opforSpeedboat;
+
+		_praetorian="\Praetorian.sqf";
+		publicVariable _praetorian;
 
 		_sabre=_sabrePath+"\Sabres.sqf"; 		
 		publicVariable _sabre;
@@ -219,6 +225,12 @@
 			publicVariable _cis;
 
 	//Scripts and functions
+		_aatCoax="\aat_coxial_r.sqf";
+		publicVariable _aatCoax;
+
+		_aatRetext="\aat_retext_b.sqf";
+		publicVariable _aatRetext;
+
 		_arcSmokeNorm="\arc_smoke_tip.sqf";
 		publicVariable _arcSmokeNorm;
 
@@ -231,89 +243,122 @@
 		_arcSmokeWhiteBlu="\arc_smoke_tip_white_blu.sqf";
 		publicVariable _arcSmokeWhiteBlu;
 
+		_addMapGPS="\Map_GPS_A.sqf";
+		publicVariable _addMapGPS;
+
+		_addThermal="\Thermal_A.sqf";
+		publicVariable _addThermal;
+
 		_advSlingLoad="\fn_advancedSlingLoadingInit.sqf";
 		publicVariable _advSlingLoad;
 
 		_atteTridentClassFnc="\atteTridentClass.sqf";
 		publicVariable _atteTridentClassFnc;
 
+		_b1AA="\b1at_aa.sqf";
+		publicVariable _b1at;
+
+		_b1Forest="\b1_forest.sqf";
+		publicVariable _b1Forest;
+
+		_b1Snow="\b1_snow.sqf";
+		publicVariable _b1Snow;
+
 		_droidekaDriver="\droideka_driver.sqf";
-		publicVariable _droidekaDriver;
+		publicVariable _droidekaDriver";
 
 		_dwarfDriver="\dwarf_spider_droid_driver.sqf";
-		publicVariable _dwarfDriver;
+		publicVariable "_dwarfDriver";
 
 		_flare_blufor="\flare_blufor.sqf";
-		publicVariable _flare_blufor;
+		publicVariable "_flare_blufor";
 
 		_flare_opfor="\flare_opfor.sqf";
-		publicVariable _flare_opfor;
+		publicVariable "_flare_opfor";
 
 		_laatSmoke="\laat_smoke_tip.sqf";
-		publicVariable _laatSmoke;
+		publicVariable "_laatSmoke";
 
 		_mttFnc="\_mtt.sqf";
-		publicVariable _mttFnc;
+		publicVariable "_mttFnc";
 
 		_repair65="repair_to_65.sqf";
-		publicVariable _repair65;
+		publicVariable "_repair65";
 
 		_repairMore="repair_to_more.sqf";
-		publicVariable _repairMore;
+		publicVariable "_repairMore";
 
 		_removeEject="\removeEject.sqf";
-		publicVariable _removeEject;
+		publicVariable "_removeEject";
+
+		_removeMapGPS="\Map_GPS_R.sqf";
+		publicVariable "_removeMapGPS";
+
+		_removeNVG="\NVG_R.sqf";
+		publicVariable "_removeNVG";
+
+		_removeThermal="\Thermal_R.sqf";
+		publicVariable "_removeThermal";
 
 		_resupplyBox="\Resupply_boxes.sqf";
-		publicVariable _resupplyBox;
+		publicVariable "_resupplyBox";
 
 		_rngCiv="\RandomSWCIV.sqf";
-		publicVariable _rngCiv;
+		publicVariable "_rngCiv";
 
 		_wardenAmmoBox="\wardenAmmoBox.sqf";
-		publicVariable _wardenAmmoBox;
+		publicVariable "_wardenAmmoBox";
 
 		_ywingSmoke="\ywing_smoke_tip.sqf";
-		publicVariable _ywingSmoke;
+		publicVariable "_ywingSmoke";
 
 		_zeusVarNFncPanel="\zeusVariableAndFunctionPanel.sqf";
-		publicVariable _zeusVarNFncPanel;
+		publicVariable "_zeusVarNFncPanel";
 
 	//swop functions
 		_swopBoostOn="\LAAT\initTE.sqf";
-		publicVariable _swopBoostOn;
+		publicVariable "_swopBoostOn";
 
 		_swopBoostOff="\LAAT\initTD.sqf";
-		publicVariable _swopBoostOff;
+		publicVariable "_swopBoostOff";
 
 //Quick strings for commonly used paths
 
 	_vehicleBasedQuick=_root+_vehicleBased;
-	publicVariable _vehicleBasedQuick;
+	publicVariable "_vehicleBasedQuick";
 
 	_vehicleVariantQuick=_vehicleBasedQuick+_vehicleVariant;
-	publicVariable _vehicleVariantQuick;
+	publicVariable "_vehicleVariantQuick";
 
 	_actionBasedQuick=_vehicleBasedQuick+_actionBased;
-	publicVariable _actionBasedQuick;
+	publicVariable "_actionBasedQuick";
 
 	_airBasedQuick=_vehicleVariantQuick+_airBased;
-	publicVariable _airBasedQuick;
+	publicVariable "_airBasedQuick";
 
 	_landBasedQuick=_vehicleVariantQuick+_landBased;
-	publicVariable _landBasedQuick;
+	publicVariable "_landBasedQuick";
 
 	_mortarPathQuick=_landBasedQuick+_mortarPath;
-	publicVariable _mortarPathQuick;
+	publicVariable "_mortarPathQuick";
 
 	_aiBasedQuick=_root+_aiBased;
-	publicVariable _aiBasedQuick;
+	publicVariable "_aiBasedQuick";
 
 	_factionBasedQuick=_aiBasedQuick+_factionBased;
-	publicVariable _factionBasedQuick;
+	publicVariable "_factionBasedQuick";
 
 	_cisQuick=_factionBasedQuick+_opfor+_cis;
-	publicVariable _cisQuick;
+	publicVariable "_cisQuick";
+
+	_b1Quick=_cisQuick+_b1Path;
+	publicVariable "_b1Quick";
+
+	_playedBasedQuick=_root+_playerBased;
+	publicVariable "_playedBasedQuick";
+
+	_playedBasedItemsQuick=_playedBasedQuick+_item;
+	publicVariable "_playedBasedItemsQuick";
 
 
 //Check sum used to check if all the exec have ran
@@ -478,5 +523,5 @@ catch {
 	_checkSumVariable=_checkSumVariable+_checkSumCounter;
 	_checkSumCounter=_checkSumCounter+1;	
 
-	publicVariable checkSum",_checkSumVariable,true];
-	publicVariable checkSumCounter",_checkSumCounter,true];
+	publicVariable "checkSum"
+	publicVariable "checkSumCounter"''

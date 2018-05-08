@@ -39,7 +39,7 @@ namZeusPanelHermes={
 	//Removes AAT's AI Coxial turrets 
 		_user  addAction ["<t color='#47FF1A'>Remove AAT AI Coxial Turret </t>",                
 		{
-		[] execVM ((missionNamespace getVariable ["_landBasedQuick",""])+(missionNamespace getVariable ["_aatPath",""])+"\aat_coxial_r.sqf");
+		[] execVM (_landBasedQuick+_aatPath+_aatCoax);
 		},[1],0,false,true,"","_target == _this"];//end
 	
 
@@ -47,20 +47,20 @@ namZeusPanelHermes={
 	//Makes spawned AAT's Blue and gray
 		_user  addAction ["<t color='#073BFC'>Make Spawned AAT's Blue Variant</t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\AAT\aat_retext_b.sqf";
+		[] execVM(_landBasedQuick+_aatPath+_aatRetext);
 		},[1],0,false,true,"","_target == _this"];//end
 		
 	
 	//Converts Praetorian to star wars
 		_user addAction ["<t color='#47FF1A'>Converts Praetorian to star wars (CIS Colours)</t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\Praetorian\Praetorian.sqf";
+		[] execVM (_landBasedQuick+_praetorianPath+_praetorian);
 		},[1],0,false,true,"","_target == _this"];//end
 		
 	//Seriously buffs the Homing Spider Droids with Titan AA missles and Rebel Laser Gun removes standard guns
 		_user addAction ["<t color='#47FF1A'>Add AA Missles + better gun to Spider Droids </t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\vehicleBased\vehicleVariants\landBased\HSD\spiderdroid_buff.sqf";
+		[] execVM (_landBasedQuick+_homingSpiderDroidPath+_homing_spider_droid);
 		},[1],0,false,true,"","_target == _this"];//end
 
 	//Spacer
@@ -72,14 +72,14 @@ namZeusPanelHermes={
 	//Switch camo droids to Snow
 		_user  addAction ["<t color='#FFFFFF'>Switch B1 CAMO droids to Snow Camo</t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b1\b1_snow.sqf";	
+		[] execVM (_b1Quick+_b1Snow);	
 		},[1],0,false,true,"","_target == _this"];//end
 
 		
 	//Switch camo droids to Forest
 		_user  addAction ["<t color='#1E8E00'>Switch B1 CAMO droids to Forest Camo</t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b1\b1_forest.sqf";	
+		[] execVM (_b1Quick+_b1Forest);	
 		},[1],0,false,true,"","_target == _this"];//end
 
 	
@@ -87,7 +87,7 @@ namZeusPanelHermes={
 	//Switch B1 Secondary to AA
 		_user  addAction ["<t color='#073BFC'>Switch B1 Secondary to AA</t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\aiBased\factionBased\opfor\cis\b1\b1at_aa.sqf";	
+		[] execVM (_b1Quick+_b1AA);	
 		},[1],0,false,true,"","_target == _this"];//end
 /*   - Disabled for debugging
 	//Activate Phantom Protocol
@@ -104,31 +104,31 @@ namZeusPanelHermes={
 	//Removes Thermals from players
 		_user  addAction ["<t color='#D1021E'>Removes Thermals from players</t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\playerBased\Items\Thermal_R.sqf";
+		[] execVM (_playedBasedItemsQuick+_removeThermal);
 		},[1],0,false,true,"","_target == _this"];//end
 	
 	//Adds Thermals back to players
 		_user  addAction ["<t color='#0BD102'>Adds Thermals back to players</t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\playerBased\Items\Thermal_A.sqf";
+		[] execVM (_playedBasedItemsQuick+_addThermal);
 		},[1],0,false,true,"","_target == _this"];//end
 		
 	//Removes maps and GPS' from players
 		_user  addAction ["<t color='#D1021E'>Removes maps and gps' from players</t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\playerBased\Items\Map_GPS_R.sqf";
+		[] execVM (_playedBasedItemsQuick+_removeMapGPS);
 		},[1],0,false,true,"","_target == _this"];//end	
 	
 	//Adds maps and GPS' back to players
 		_user  addAction ["<t color='#0BD102'>Add maps and gps' back to players</t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\playerBased\Items\Map_GPS_A.sqf";
+		[] execVM (_playedBasedItemsQuick+_addMapGPS;)
 		},[1],0,false,true,"","_target == _this"];//end	
 	
 	//remove NVGS from troopers
 		_user  addAction ["<t color='#D1021E'>Remove NVGS from troopers</t>",                
 		{
-		[] execVM "scripts\zeus3denScripts\playerBased\Items\NVG_R.sqf";
+		[] execVM (_playedBasedItemsQuick+_removeNVG);
 		},[1],0,false,true,"","_target == _this"];//end	
 		
 	"thunder_1" remoteExec ["playSound"];"thunder_1" remoteExec ["playSound"];
