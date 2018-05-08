@@ -19,7 +19,7 @@ mttv1={
 	{
 	mttpos = _this select 0;
 
-    [] execVM (_landBasedQuick+_mttPath+_mttFnc);
+    [] execVM (landBasedQuick+mttPath+mttFnc);
 	removeAllActions mttpos;
 	},[1],0,false,true,""," commander  _target == _this "];
 		

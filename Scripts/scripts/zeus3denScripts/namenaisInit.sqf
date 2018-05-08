@@ -3,367 +3,367 @@
 //Factorizations
 
 	//Locations
-		_aatPath="\aat";
-		publicVariable "_aatPath";
+		aatPath="\aat";
+		publicVariable "aatPath";
 
-		_actionBased="\action_menu";
-		publicVariable "_actionBased";
+		actionBased="\action_menu";
+		publicVariable "actionBased";
 
-		_aiBased="\ai_based";
-		publicVariable "_aiBased";
+		aiBased="\ai_based";
+		publicVariable "aiBased";
 
-		_airBased="\air_based";
-		publicVariable "_airBased";
+		airBased="\air_based";
+		publicVariable "airBased";
 
-		_arc170Path="\arc170";
-		publicVariable "_arc170Path";
+		arc170Path="\arc170";
+		publicVariable "arc170Path";
 
-		_attePath="\atte";
-		publicVariable "_attePath";
+		attePath="\atte";
+		publicVariable "attePath";
 
-		_aviation="\aviation";
-		publicVariable "_aviation";
+		aviation="\aviation";
+		publicVariable "aviation";
 
-		_b1Path="\b1";
-		publicVariable "_b1Path";
+		b1Path="\b1";
+		publicVariable "b1Path";
 
-		_b2Path="\b2";
-		publicVariable "_b2Path";
+		b2Path="\b2";
+		publicVariable "b2Path";
 
-		_barcPath="\barc";
-		publicVariable "_barcPath";
+		barcPath="\barc";
+		publicVariable "barcPath";
 
-		_boost="\boost";
-		publicVariable "_boost";
+		boost="\boost";
+		publicVariable "boost";
 
-		_droidekaPath="\droideka";
-		publicVariable "_droidekaPath";
+		droidekaPath="\droideka";
+		publicVariable "droidekaPath";
 
-		_dwarfSpiderDroidPath="\dwarf_spider_droid";
-		publicVariable "_dwarfSpiderDroidPath";
+		dwarfSpiderDroidPath="\dwarf_spider_droid";
+		publicVariable "dwarfSpiderDroidPath";
 
-		_factionBased="\faction_based";
-		publicVariable "_factionBased";
+		factionBased="\faction_based";
+		publicVariable "factionBased";
 
-		_hailfirePath="\hailfire";
-		publicVariable "_hailfirePath";
+		hailfirePath="\hailfire";
+		publicVariable "hailfirePath";
 
-		_hmpPath="\hmp";
-		publicVariable "_hmpPath";
+		hmpPath="\hmp";
+		publicVariable "hmpPath";
 
-		_homingSpiderDroidPath="\homing_spider_droid";
-		publicVariable "_homingSpiderDroidPath";
+		homingSpiderDroidPath="\homing_spider_droid";
+		publicVariable "homingSpiderDroidPath";
 
-		_laatpath="\laat";
-		publicVariable "_laatpath";
+		laatpath="\laat";
+		publicVariable "laatpath";
 
-		_landBased="\land_based";
-		publicVariable "_landBased";
+		landBased="\land_based";
+		publicVariable "landBased";
 
-		_item="\Items";
-		publicVariable "_item";
+		item="\Items";
+		publicVariable "item";
 
-		_magnaPath="\magna";
-		publicVariable "_magnaPath";
+		magnaPath="\magna";
+		publicVariable "magnaPath";
 
-		_mortarPath="\mortar";
-		publicVariable "_mortarPath";
+		mortarPath="\mortar";
+		publicVariable "mortarPath";
 
-		_mttPath="\mtt";
-		publicVariable "_mttPath";
+		mttPath="\mtt";
+		publicVariable "mttPath";
 
-		_pilotBased="\pilot_based";
-		publicVariable "_pilotBased";
+		pilotBased="\pilot_based";
+		publicVariable "pilotBased";
 
-		_playerBased="\played_based";
-		publicVariable "_playerBased";
+		playerBased="\played_based";
+		publicVariable "playerBased";
 
-		_praetorianPath="\praetorian";
-		publicVariable "_praetorianPath";
+		praetorianPath="\praetorian";
+		publicVariable "praetorianPath";
 
-		_repair="\repair";
-		publicVariable "_repair";
+		repair="\repair";
+		publicVariable "repair";
 
-		_root="scripts\zeus3denScripts";
-		publicVariable "_root";
+		root="scripts\zeus3denScripts";
+		publicVariable "root";
 
-		_sabrePath="\sabre";
-		publicVariable "_sabrePath";
+		sabrePath="\sabre";
+		publicVariable "sabrePath";
 
-		_seaBased="\sea_based";
-		publicVariable "_seaBased";
+		seaBased="\sea_based";
+		publicVariable "seaBased";
 
-		_smoke="\smoke";
-		publicVariable "_smoke";
+		smoke="\smoke";
+		publicVariable "smoke";
 
-		_specOpDroidPath="\spec_ops";
-		publicVariable "_specOpDroidPath";
+		specOpDroidPath="\spec_ops";
+		publicVariable "specOpDroidPath";
 
-		_speedBoat="\speed_boats"; 		
-		publicVariable "_speedBoat";
+		speedBoat="\speed_boats"; 		
+		publicVariable "speedBoat";
 
-		_tridroidPath="\tridroid";
-		publicVariable "_tridroidPath";
+		tridroidPath="\tridroid";
+		publicVariable "tridroidPath";
 
-		_vehicleBased="\vehicle_based";
-		publicVariable "_vehicleBased";
+		vehicleBased="\vehicle_based";
+		publicVariable "vehicleBased";
 
-		_vehicleVariant="\vehicle_variants";
-		publicVariable "_vehicleVariant";
+		vehicleVariant="\vehicle_variants";
+		publicVariable "vehicleVariant";
 
-		_vulturePath="\vulture";
-		publicVariable "_vulturePath";
+		vulturePath="\vulture";
+		publicVariable "vulturePath";
 
-		_vwingPath="\vwing";
-		publicVariable "_vwingPath";
+		vwingPath="\vwing";
+		publicVariable "vwingPath";
 
-		_wardenBased="\warden_based";
-		publicVariable "_wardenBased";
+		wardenBased="\warden_based";
+		publicVariable "wardenBased";
 
-		_ywingPath="\ywing";
-		publicVariable "_ywingPath";
+		ywingPath="\ywing";
+		publicVariable "ywingPath";
 
-		_zeusFncPanel="\zeus_function_panel";
-		publicVariable "_zeusFncPanel";
+		zeusFncPanel="\zeus_function_panel";
+		publicVariable "zeusFncPanel";
 
 
 	//Objects
-		_aat=_aatPath+"\aatMohawkClassBase.sqf"; 		
-		publicVariable "_aat";
+		aat=aatPath+"\aatMohawkClassBase.sqf"; 		
+		publicVariable "aat";
 
-		_arc170=_arc170Path+"\arcXiphos.sqf"; 		
-		publicVariable "_arc170";
+		arc170=arc170Path+"\arcXiphos.sqf"; 		
+		publicVariable "arc170";
 
-		_atteBase=_attePath+"\atteBase.sqf"; 		
-		publicVariable "_atteBase";
+		atteBase=attePath+"\atteBase.sqf"; 		
+		publicVariable "atteBase";
 
-		_atteType=_attePath+"\atteTypeSelector.sqf"; 		
-		publicVariable "_atteType";
+		atteType=attePath+"\atteTypeSelector.sqf"; 		
+		publicVariable "atteType";
 
-		_b1AT=_b1Path+"\b1at_at.sqf"; 		
-		publicVariable "_b1AT";
+		b1AA="\b1at_aa.sqf";
+		publicVariable "b1at";
 
-		_b1Heavy=_b1Path+"\b1heavy.sqf"; 		
-		publicVariable "_b1Heavy";
+		b1AT=b1Path+"\b1at_at.sqf"; 		
+		publicVariable "b1AT";
 
-		_b1Sniper=_b1Path+"\b1sniper.sqf"; 		
-		publicVariable "_b1Sniper";
+		b1Forest="\b1forest.sqf";
+		publicVariable "b1Forest";
 
-		_b2=_b2Path+"\b2Reconfig.sqf"; 		
-		publicVariable "_b2";
+		b1Snow="\b1snow.sqf";
+		publicVariable "b1Snow";
 
-		_barc=_barcPath+"\barc.sqf"; 		
-		publicVariable "_barc";
+		b1Heavy=b1Path+"\b1heavy.sqf"; 		
+		publicVariable "b1Heavy";
 
-		_bluforSpeedboat="\bluforSpeedBoat.sqf"; 		
-		publicVariable "_bluforSpeedboat";
+		b1Sniper=b1Path+"\b1sniper.sqf"; 		
+		publicVariable "b1Sniper";
 
-		_droideka=_droidekaPath+"\droideka.sqf"; 		
-		publicVariable "_droideka";
+		b2=b2Path+"\b2Reconfig.sqf"; 		
+		publicVariable "b2";
 
-		_dwarfSpiderDroid=_dwarfSpiderDroidPath+"\dwarf_spider_droid.sqf"; 		
-		publicVariable "_dwarfSpiderDroid";
+		barc=barcPath+"\barc.sqf"; 		
+		publicVariable "barc";
 
-		_hailfire=_hailfirePath+"\HailfireBallista.sqf"; 		
-		publicVariable "_hailfire";
+		bluforSpeedboat="\bluforSpeedBoat.sqf"; 		
+		publicVariable "bluforSpeedboat";
 
-		_homing_spider_droid="\spiderdroid_buff.sqf";
-		publicVariable "_homing_spider_droid";
+		droideka=droidekaPath+"\droideka.sqf"; 		
+		publicVariable "droideka";
 
-		_hmp=_hmpPath+"\hmp.sqf"; 		
-		publicVariable "_hmp";
+		droidekaDriver="\droideka_driver.sqf";
+		publicVariable "droidekaDriver";
 
-		_laat=_laatpath+"\laatClaymore.sqf"; 		
-		publicVariable "_laat";
+		dwarfSpiderDroid=dwarfSpiderDroidPath+"\dwarf_spider_droid.sqf"; 		
+		publicVariable "dwarfSpiderDroid";
 
-		_magnaDroid=_magnaPath+"\magna.sqf"; 		
-		publicVariable "_magnaDroid";
+		dwarfDriver="\dwarf_spider_droid_driver.sqf";
+		publicVariable "dwarfDriver";
 
-		_mortar=_mortarPath+"\mortars.sqf"; 		
-		publicVariable "_mortar";
+		hailfire=hailfirePath+"\HailfireBallista.sqf"; 		
+		publicVariable "hailfire";
 
-		_mtt=_mttPath+"\mttdeploy.sqf"; 		
-		publicVariable "_mtt";
+		homingspiderdroid="\spiderdroid_buff.sqf";
+		publicVariable "homingspiderdroid";
 
-		_opforSpeedboat="\opforSpeedBoat.sqf"; 		
-		publicVariable "_opforSpeedboat";
+		hmp=hmpPath+"\hmp.sqf"; 		
+		publicVariable "hmp";
 
-		_praetorian="\Praetorian.sqf";
-		publicVariable "_praetorian";
+		laat=laatpath+"\laatClaymore.sqf"; 		
+		publicVariable "laat";
 
-		_sabre=_sabrePath+"\Sabres.sqf"; 		
-		publicVariable "_sabre";
+		magnaDroid=magnaPath+"\magna.sqf"; 		
+		publicVariable "magnaDroid";
 
-		_specOpDroid=_specOpDroidPath+"\spec_ops.sqf"; 		
-		publicVariable "_specOpDroid";
+		mortar=mortarPath+"\mortars.sqf"; 		
+		publicVariable "mortar";
 
-		_triDroid=_tridroidPath+"\tri_droid.sqf"; 		
-		publicVariable "_triDroid";
+		mtt=mttPath+"\mttdeploy.sqf"; 		
+		publicVariable "mtt";
 
-		_vWing=_vwingPath+"\vwingarrow.sqf"; 		
-		publicVariable "_vWing";
+		opforSpeedboat="\opforSpeedBoat.sqf"; 		
+		publicVariable "opforSpeedboat";
 
-		_vulture=_vulturePath+"\vultureBase.sqf"; 		
-		publicVariable "_vulture";
+		praetorian="\Praetorian.sqf";
+		publicVariable "praetorian";
 
-		_ywing=_ywingPath+"\ywingScylla.sqf"; 		
-		publicVariable "_ywing";
+		sabre=sabrePath+"\Sabres.sqf"; 		
+		publicVariable "sabre";
+
+		specOpDroid=specOpDroidPath+"\spec_ops.sqf"; 		
+		publicVariable "specOpDroid";
+
+		triDroid=tridroidPath+"\tri_droid.sqf"; 		
+		publicVariable "triDroid";
+
+		vWing=vwingPath+"\vwingarrow.sqf"; 		
+		publicVariable "vWing";
+
+		vulture=vulturePath+"\vultureBase.sqf"; 		
+		publicVariable "vulture";
+
+		ywing=ywingPath+"\ywingScylla.sqf"; 		
+		publicVariable "ywing";
  
 	//Factions
 		//Sides
-			_blufor="\blufor"; 		
-			publicVariable "_blufor";
+			bluforFac="\blufor"; 		
+			publicVariable "blufor";
 
-			_opfor="\opfor"; 		
-			publicVariable "_opfor";
+			opforFac="\opfor"; 		
+			publicVariable "opfor";
 
-			_civ="\civilian"; 		
-			publicVariable "_civ";
+			civFac="\civilian"; 		
+			publicVariable "civ";
 
 		//Unit Factions
-			_cis="\cis";
-			publicVariable "_cis";
+			cis="\cis";
+			publicVariable "cis";
 
 	//Scripts and functions
-		_aatCoax="\aat_coxial_r.sqf";
-		publicVariable "_aatCoax";
+		aatCoax="\aat_coxial_r.sqf";
+		publicVariable "aatCoax";
 
-		_aatRetext="\aat_retext_b.sqf";
-		publicVariable "_aatRetext";
+		aatRetext="\aat_retext_b.sqf";
+		publicVariable "aatRetext";
 
-		_arcSmokeNorm="\arc_smoke_tip.sqf";
-		publicVariable "_arcSmokeNorm";
+		arcSmokeNorm="\arc_smoke_tip.sqf";
+		publicVariable "arcSmokeNorm";
 
-		_arcSmokePurBlu="\arc_smoke_tip_pur_blu.sqf";
-		publicVariable "_arcSmokePurBlu";
+		arcSmokePurBlu="\arc_smoketip_pur_blu.sqf";
+		publicVariable "arcSmokePurBlu";
 
-		_arcSmokeRedBlu="\arc_smoke_tip_red_blu.sqf";
-		publicVariable "_arcSmokeRedBlu";
+		arcSmokeRedBlu="\arc_smoke_tip_red_blu.sqf";
+		publicVariable "arcSmokeRedBlu";
 
-		_arcSmokeWhiteBlu="\arc_smoke_tip_white_blu.sqf";
-		publicVariable "_arcSmokeWhiteBlu";
+		arcSmokeWhiteBlu="\arc_smoke_tip_white_blu.sqf";
+		publicVariable "arcSmokeWhiteBlu";
 
-		_addMapGPS="\Map_GPS_A.sqf";
-		publicVariable "_addMapGPS";
+		addMapGPS="\Map_GPS_A.sqf";
+		publicVariable "addMapGPS";
 
-		_addThermal="\Thermal_A.sqf";
-		publicVariable "_addThermal";
+		addThermal="\Thermal_A.sqf";
+		publicVariable "addThermal";
 
-		_advSlingLoad="\fn_advancedSlingLoadingInit.sqf";
-		publicVariable "_advSlingLoad";
+		advSlingLoad="\fn_advancedSlingLoadingInit.sqf";
+		publicVariable "advSlingLoad";
 
-		_atteTridentClassFnc="\atteTridentClass.sqf";
-		publicVariable "_atteTridentClassFnc";
+		atteTridentClassFnc="\atteTridentClass.sqf";
+		publicVariable "atteTridentClassFnc";
 
-		_b1AA="\b1at_aa.sqf";
-		publicVariable "_b1at";
+		flareblufor="\flare_blufor.sqf";
+		publicVariable "flareblufor";
 
-		_b1Forest="\b1_forest.sqf";
-		publicVariable "_b1Forest";
+		flareopfor="\flare_opfor.sqf";
+		publicVariable "flareopfor";
 
-		_b1Snow="\b1_snow.sqf";
-		publicVariable "_b1Snow";
+		laatSmoke="\laat_smoke_tip.sqf";
+		publicVariable "laatSmoke";
 
-		_droidekaDriver="\droideka_driver.sqf";
-		publicVariable "_droidekaDriver";
+		mttFnc="\mtt.sqf";
+		publicVariable "mttFnc";
 
-		_dwarfDriver="\dwarf_spider_droid_driver.sqf";
-		publicVariable "_dwarfDriver";
+		repair65="repair_to_65.sqf";
+		publicVariable "repair65";
 
-		_flare_blufor="\flare_blufor.sqf";
-		publicVariable "_flare_blufor";
+		repairMore="repair_to_more.sqf";
+		publicVariable "repairMore";
 
-		_flare_opfor="\flare_opfor.sqf";
-		publicVariable "_flare_opfor";
+		removeEject="\removeEject.sqf";
+		publicVariable "removeEject";
 
-		_laatSmoke="\laat_smoke_tip.sqf";
-		publicVariable "_laatSmoke";
+		removeMapGPS="\Map_GPS_R.sqf";
+		publicVariable "removeMapGPS";
 
-		_mttFnc="\_mtt.sqf";
-		publicVariable "_mttFnc";
+		removeNVG="\NVG_R.sqf";
+		publicVariable "removeNVG";
 
-		_repair65="repair_to_65.sqf";
-		publicVariable "_repair65";
+		removeThermal="\Thermal_R.sqf";
+		publicVariable "removeThermal";
 
-		_repairMore="repair_to_more.sqf";
-		publicVariable "_repairMore";
+		resupplyBox="\Resupply_boxes.sqf";
+		publicVariable "resupplyBox";
 
-		_removeEject="\removeEject.sqf";
-		publicVariable "_removeEject";
+		rngCiv="\RandomSWCIV.sqf";
+		publicVariable "rngCiv";
 
-		_removeMapGPS="\Map_GPS_R.sqf";
-		publicVariable "_removeMapGPS";
+		wardenAmmoBox="\wardenAmmoBox.sqf";
+		publicVariable "wardenAmmoBox";
 
-		_removeNVG="\NVG_R.sqf";
-		publicVariable "_removeNVG";
+		ywingSmoke="\ywing_smoke_tip.sqf";
+		publicVariable "ywingSmoke";
 
-		_removeThermal="\Thermal_R.sqf";
-		publicVariable "_removeThermal";
-
-		_resupplyBox="\Resupply_boxes.sqf";
-		publicVariable "_resupplyBox";
-
-		_rngCiv="\RandomSWCIV.sqf";
-		publicVariable "_rngCiv";
-
-		_wardenAmmoBox="\wardenAmmoBox.sqf";
-		publicVariable "_wardenAmmoBox";
-
-		_ywingSmoke="\ywing_smoke_tip.sqf";
-		publicVariable "_ywingSmoke";
-
-		_zeusVarNFncPanel="\zeusVariableAndFunctionPanel.sqf";
-		publicVariable "_zeusVarNFncPanel";
+		zeusVarNFncPanel="\zeusVariableAndFunctionPanel.sqf";
+		publicVariable "zeusVarNFncPanel";
 
 	//swop functions
-		_swopBoostOn="\LAAT\initTE.sqf";
-		publicVariable "_swopBoostOn";
+		swopBoostOn="\LAAT\initTE.sqf";
+		publicVariable "swopBoostOn";
 
-		_swopBoostOff="\LAAT\initTD.sqf";
-		publicVariable "_swopBoostOff";
+		swopBoostOff="\LAAT\initTD.sqf";
+		publicVariable "swopBoostOff";
 
 //Quick strings for commonly used paths
 
-	_vehicleBasedQuick=_root+_vehicleBased;
-	publicVariable "_vehicleBasedQuick";
+	vehicleBasedQuick=root+vehicleBased;
+	publicVariable "vehicleBasedQuick";
 
-	_vehicleVariantQuick=_vehicleBasedQuick+_vehicleVariant;
-	publicVariable "_vehicleVariantQuick";
+	vehicleVariantQuick=vehicleBasedQuick+vehicleVariant;
+	publicVariable "vehicleVariantQuick";
 
-	_actionBasedQuick=_vehicleBasedQuick+_actionBased;
-	publicVariable "_actionBasedQuick";
+	actionBasedQuick=vehicleBasedQuick+actionBased;
+	publicVariable "actionBasedQuick";
 
-	_airBasedQuick=_vehicleVariantQuick+_airBased;
-	publicVariable "_airBasedQuick";
+	airBasedQuick=vehicleVariantQuick+airBased;
+	publicVariable "airBasedQuick";
 
-	_landBasedQuick=_vehicleVariantQuick+_landBased;
-	publicVariable "_landBasedQuick";
+	landBasedQuick=vehicleVariantQuick+landBased;
+	publicVariable "landBasedQuick";
 
-	_mortarPathQuick=_landBasedQuick+_mortarPath;
-	publicVariable "_mortarPathQuick";
+	mortarPathQuick=landBasedQuick+mortarPath;
+	publicVariable "mortarPathQuick";
 
-	_aiBasedQuick=_root+_aiBased;
-	publicVariable "_aiBasedQuick";
+	aiBasedQuick=root+aiBased;
+	publicVariable "aiBasedQuick";
 
-	_factionBasedQuick=_aiBasedQuick+_factionBased;
-	publicVariable "_factionBasedQuick";
+	factionBasedQuick=aiBasedQuick+factionBased;
+	publicVariable "factionBasedQuick";
 
-	_cisQuick=_factionBasedQuick+_opfor+_cis;
-	publicVariable "_cisQuick";
+	cisQuick=factionBasedQuick+opforFac+cis;
+	publicVariable "cisQuick";
 
-	_b1Quick=_cisQuick+_b1Path;
-	publicVariable "_b1Quick";
+	b1Quick=cisQuick+b1Path;
+	publicVariable "b1Quick";
 
-	_playedBasedQuick=_root+_playerBased;
-	publicVariable "_playedBasedQuick";
+	playedBasedQuick=root+playerBased;
+	publicVariable "playedBasedQuick";
 
-	_playedBasedItemsQuick=_playedBasedQuick+_item;
-	publicVariable "_playedBasedItemsQuick";
+	playedBasedItemsQuick=playedBasedQuick+item;
+	publicVariable "playedBasedItemsQuick";
 
 
 //Check sum used to check if all the exec have ran
-_checkSumVariable=0;
-_checkSumCounter=1;
+checkSumVariable=0;
+checkSumCounter=1;
 
 publicVariable "checkSum";
 publicVariable "checkSumCounter";
@@ -372,9 +372,9 @@ publicVariable "checkSumCounter";
 	//[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
 try {	
 //Allow zeus to change global variables-also Hermes Panel
-	[] execVM (_root+_zeusFncPanel+_zeusVarNFncPanel);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+zeusFncPanel+zeusVarNFncPanel);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 }
 catch {
 };
@@ -382,149 +382,149 @@ catch {
 	//[] execVM "scripts\zeus3denScripts\ZeusfunctionPanel\zeusVariableAndFunctionPanelHades.sqf";
 
 //laat weapons,adds weapons and wingtip smoke
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_laat);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+airBased+laat);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //arc-170 weapon,adds weapons,wingtip smoke and ejection prevention
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_arc170);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;	
+	[] execVM (root+vehicleBased+vehicleVariant+airBased+arc170);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;	
 
 //y-wing weapons,adds weapons and wingtip smoke
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_ywing);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;	
+	[] execVM (root+vehicleBased+vehicleVariant+airBased+ywing);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;	
 
 //b2 reconfig,forces b2's to walk
-	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_b2);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+aiBased+factionBased+opforFac+cis+b2);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Blufor Speedboat,adds republic eweb for rear and u-wing gunner gun for main cannon
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_seaBased+_speedBoat+_blufor+_bluforSpeedboat);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+seaBased+speedBoat+bluforFac+bluforSpeedboat);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Opfor Speedboat,adds imperial eweb for rear and u-wing gunner gun for main cannon
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_seaBased+_speedBoat+_opfor+_opforSpeedboat);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;	
+	[] execVM (root+vehicleBased+vehicleVariant+seaBased+speedBoat+opforFac+opforSpeedboat);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;	
 
 //AT-TE Base scripts,the armor and repair
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_atteBase);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+landBased+atteBase);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //AT-TE Type Selector that spawns in the at-te class type
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_atteType);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+landBased+atteType);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //AAT weapons
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_aat);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+landBased+aat);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Vulture droid weapons
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_vulture);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+airBased+vulture);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Add's flares to simulate plasma Mortars NATO and CSAT
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_mortar);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+landBased+mortar);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Sabre adds weapons and smokes and damage reports
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_sabre);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+landBased+sabre);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //barc allows barcs to be loaded into vehicles with a cargo space 4 or greater
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_barc);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+landBased+barc);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Eulers Spec Ops droids
-	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_specOpDroid);	
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+aiBased+factionBased+opforFac+cis+specOpDroid);	
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //adds deploy option to mtt
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_mtt);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+landBased+mtt);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //adds  Make B1 ats have better launchers
-	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_b1AT);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+aiBased+factionBased+opforFac+cis+b1AT);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //adds  Make B1 Heavy have better weapons
-	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_b1Heavy);	
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+aiBased+factionBased+opforFac+cis+b1Heavy);	
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //adds  Make  Magma Droids Stronger
-	[] execVM  (_root+_aiBased+_factionBased+_opfor+_cis+_magnaDroid);	
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM  (root+aiBased+factionBased+opforFac+cis+magnaDroid);	
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //adds advanced sling loading
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_advSlingLoad);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+airBased+advSlingLoad);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Star Wars Civilian Spawner
-	[] execVM (_root+_aiBased+_factionBased+_civ+_rngCiv);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+aiBased+factionBased+civFac+rngCiv);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Resupply Boxes
-	[] execVM (_root+_playerBased+_item+_resupplyBox);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+playerBased+item+resupplyBox);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Warden ammo and fuel system	
-	[] execVM (_root+_playerBased+_aviation+_wardenBased+_wardenAmmoBox);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+playerBased+aviation+wardenBased+wardenAmmoBox);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Tri Droid
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_triDroid);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+airBased+triDroid);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //V-Wing
-	[] execVM(_root+_vehicleBased+_vehicleVariant+_airBased+_vWing);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;	
+	[] execVM(root+vehicleBased+vehicleVariant+airBased+vWing);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;	
 
 //Hailfire Droid
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_landBased+_hailfire);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+vehicleBased+vehicleVariant+landBased+hailfire);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Sniper Droid	
-	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_b1Sniper);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+aiBased+factionBased+opforFac+cis+b1Sniper);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Droideka spawny script
-	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_droideka);	
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+aiBased+factionBased+opforFac+cis+droideka);	
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //Dwarf Spider Droid spawny script
-	[] execVM (_root+_aiBased+_factionBased+_opfor+_cis+_dwarfSpiderDroid);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;
+	[] execVM (root+aiBased+factionBased+opforFac+cis+dwarfSpiderDroid);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;
 
 //HMP Gunship
-	[] execVM (_root+_vehicleBased+_vehicleVariant+_airBased+_hmp);
-	_checkSumVariable=_checkSumVariable+_checkSumCounter;
-	_checkSumCounter=_checkSumCounter+1;	
+	[] execVM (root+vehicleBased+vehicleVariant+airBased+hmp);
+	checkSumVariable=checkSumVariable+checkSumCounter;
+	checkSumCounter=checkSumCounter+1;	
 
 	publicVariable "checkSum";
 	publicVariable "checkSumCounter";

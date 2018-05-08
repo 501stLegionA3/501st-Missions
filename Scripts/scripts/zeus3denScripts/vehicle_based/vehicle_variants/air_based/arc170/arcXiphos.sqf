@@ -59,7 +59,7 @@ xiphosI={
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
 	{
 
-		[_this select 0] execVM (_actionBasedQuick+_smoke+_arc170Path+_arcSmokeNorm);
+		[_this select 0] execVM (actionBasedQuick+smoke+arc170Path+arcSmokeNorm);
 	}
 	,[1],0,false,true,"User13"," driver  _target == _this"];
 	
@@ -94,7 +94,7 @@ xiphosI={
 	
 	
 	
-	[_vic] execVm (_airBasedQuick+_arc170+_removeEject);
+	[_vic] execVm (airBasedQuick+arc170+removeEject);
 
 	
 	

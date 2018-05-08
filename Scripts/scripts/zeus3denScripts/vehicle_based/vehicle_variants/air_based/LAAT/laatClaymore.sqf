@@ -64,7 +64,7 @@ claymoreI={
 	// function as file add the wing tip smoke for laat
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
 	{
-		[_this select 0] execVM (_actionBasedQuick+_smoke+_laatpath+_laatSmoke);
+		[_this select 0] execVM (actionBasedQuick+smoke+laatpath+laatSmoke);
 	}
 	,[1],0,false,true,"User13"," driver  _target == _this"];
 
@@ -98,7 +98,7 @@ claymoreI={
 	//boost on
 	_vic  addAction ["",
 	{
-		(_this select 0) execVM _swopBoostOn;
+		(_this select 0) execVM swopBoostOn;
 
 		//(_this select 0) setMass 119533*3;
 	},[1],0,false,true,"User19"," driver  _target == _this"];
@@ -107,7 +107,7 @@ claymoreI={
 	_vic  addAction ["",
 	{
 		
-		(_this select 0) execVM _swopBoostOff;
+		(_this select 0) execVM swopBoostOff;
 		//(_this select 0) setMass 119533;
 	},[1],0,false,true,"User20"," driver  _target == _this"];
 
