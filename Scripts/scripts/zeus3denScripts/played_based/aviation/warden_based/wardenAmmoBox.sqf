@@ -10,21 +10,21 @@ Warden=
 //LAAT
 	_user  addAction ["<t color='#0000FF'>Resupply Low Altitude Assault Transport</t>",
 	{
-	[] execVM "scripts\zeus3denScripts\playerBased\aviation\wardenBased\ResupplyData\LAAT_re.sqf";
+	[] execVM (resupplyBoxQuick+resupplyLaat);
 	},[1],0,false,true,"","_target == _this"];
 
 	
 //ARC 170 - Resupply ARC 170 
 		_user  addAction ["<t color='#0000FF'>Resupply ARC 170 Multi Role Fighter</t>",
 	{
-	[] execVM "scripts\zeus3denScripts\playerBased\aviation\wardenBased\ResupplyData\ARC_re.sqf";
+	[] execVM (resupplyBoxQuick+resupplyArc170);
 	},[1],0,false,true,"","_target == _this"];
 
 	
 //V-WING --- Add Ammo Action for V-WING 
 		_user  addAction ["<t color='#0000FF'>Resupply V-Wing Interceptor>",
 	{
-	[] execVM "scripts\zeus3denScripts\playerBased\aviation\wardenBased\ResupplyData\Vwing_re.sqf";
+	[] execVM (resupplyBoxQuick+resupplyVwing);
 	},[1],0,false,true,"","_target == _this"];
 	
 	
@@ -34,7 +34,7 @@ Warden=
 //Y-WING --- Add Ammo Action for Y-WING 
 		_user  addAction ["<t color='#0000FF'>Resupply Y-Wing Bomber>",
 	{
-	[] execVM "scripts\zeus3denScripts\playerBased\aviation\wardenBased\ResupplyData\Ywing_re.sqf";
+	[] execVM (resupplyBoxQuick+resupplyYwing);
 	},[1],0,false,true,"","_target == _this"];
 	
 	

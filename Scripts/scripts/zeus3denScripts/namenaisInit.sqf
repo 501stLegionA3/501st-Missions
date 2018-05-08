@@ -84,6 +84,9 @@
 		repair="\repair";
 		publicVariable "repair";
 
+		resupplyData="\ResupplyData";
+		publicVariable resupplyData;
+
 		root="scripts\zeus3denScripts";
 		publicVariable "root";
 
@@ -300,8 +303,20 @@
 		removeThermal="\Thermal_R.sqf";
 		publicVariable "removeThermal";
 
+		resupplyArc170="\ARC_re.sqf";
+		publicVariable resupplyArc170;
+
 		resupplyBox="\Resupply_boxes.sqf";
 		publicVariable "resupplyBox";
+
+		resupplyLaat="\LAAT_re.sqf";
+		publicVariable resupplyLaat;
+
+		resupplyVwing="\Vwing_re.sqf";
+		publicVariable resupplyVwing;
+
+		resupplyYwing="\Ywing_re.sqf";
+		publicVariable "resupplyYwing";
 
 		rngCiv="\RandomSWCIV.sqf";
 		publicVariable "rngCiv";
@@ -359,6 +374,16 @@
 
 	playedBasedItemsQuick=playedBasedQuick+item;
 	publicVariable "playedBasedItemsQuick";
+
+	aviationPlayedBasedQuick=playedBasedQuick+aviation;
+	publicVariable "aviationPlayedBasedQuick";
+
+	wardenBasedQuick=aviationPlayedBasedQuick+wardenBased;
+	publicVariable "wardenBasedQuick";
+
+	resupplyBoxQuick=wardenBasedQuick+resupplyData;
+	publicVariable "resupplyBoxQuick";
+
 
 
 //Check sum used to check if all the exec have ran
