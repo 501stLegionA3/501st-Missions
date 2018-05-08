@@ -122,7 +122,7 @@ namZeusPanelHermes={
 	//Adds maps and GPS' back to players
 		_user  addAction ["<t color='#0BD102'>Add maps and gps' back to players</t>",                
 		{
-		[] execVM (_playedBasedItemsQuick+_addMapGPS;)
+		[] execVM (_playedBasedItemsQuick+_addMapGPS);
 		},[1],0,false,true,"","_target == _this"];//end	
 	
 	//remove NVGS from troopers

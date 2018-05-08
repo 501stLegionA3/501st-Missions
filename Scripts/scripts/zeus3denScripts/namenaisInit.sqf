@@ -4,268 +4,268 @@
 
 	//Locations
 		_aatPath="\aat";
-		publicVariable _aatPath;
+		publicVariable "_aatPath";
 
 		_actionBased="\action_menu";
-		publicVariable _actionBased;
+		publicVariable "_actionBased";
 
 		_aiBased="\ai_based";
-		publicVariable _aiBased;
+		publicVariable "_aiBased";
 
 		_airBased="\air_based";
-		publicVariable _airBased;
+		publicVariable "_airBased";
 
 		_arc170Path="\arc170";
-		publicVariable _arc170Path;
+		publicVariable "_arc170Path";
 
 		_attePath="\atte";
-		publicVariable _attePath;
+		publicVariable "_attePath";
 
 		_aviation="\aviation";
-		publicVariable _aviation;
+		publicVariable "_aviation";
 
 		_b1Path="\b1";
-		publicVariable _b1Path;
+		publicVariable "_b1Path";
 
 		_b2Path="\b2";
-		publicVariable _b2Path;
+		publicVariable "_b2Path";
 
 		_barcPath="\barc";
-		publicVariable _barcPath;
+		publicVariable "_barcPath";
 
 		_boost="\boost";
-		publicVariable _boost;
+		publicVariable "_boost";
 
 		_droidekaPath="\droideka";
-		publicVariable _droidekaPath;
+		publicVariable "_droidekaPath";
 
 		_dwarfSpiderDroidPath="\dwarf_spider_droid";
-		publicVariable _dwarfSpiderDroidPath;
+		publicVariable "_dwarfSpiderDroidPath";
 
 		_factionBased="\faction_based";
-		publicVariable _factionBased;
+		publicVariable "_factionBased";
 
 		_hailfirePath="\hailfire";
-		publicVariable _hailfirePath;
+		publicVariable "_hailfirePath";
 
 		_hmpPath="\hmp";
-		publicVariable _hmpPath;
+		publicVariable "_hmpPath";
 
 		_homingSpiderDroidPath="\homing_spider_droid";
-		publicVariable _homingSpiderDroidPath;
+		publicVariable "_homingSpiderDroidPath";
 
 		_laatpath="\laat";
-		publicVariable _laatpath;
+		publicVariable "_laatpath";
 
 		_landBased="\land_based";
-		publicVariable _landBased;
+		publicVariable "_landBased";
 
 		_item="\Items";
-		publicVariable _item;
+		publicVariable "_item";
 
 		_magnaPath="\magna";
-		publicVariable _magnaPath;
+		publicVariable "_magnaPath";
 
 		_mortarPath="\mortar";
-		publicVariable _mortarPath;
+		publicVariable "_mortarPath";
 
 		_mttPath="\mtt";
-		publicVariable _mttPath;
+		publicVariable "_mttPath";
 
 		_pilotBased="\pilot_based";
-		publicVariable _pilotBased;
+		publicVariable "_pilotBased";
 
 		_playerBased="\played_based";
-		publicVariable _playerBased;
+		publicVariable "_playerBased";
 
 		_praetorianPath="\praetorian";
-		publicVariable _praetorianPath;
+		publicVariable "_praetorianPath";
 
 		_repair="\repair";
-		publicVariable _repair;
+		publicVariable "_repair";
 
 		_root="scripts\zeus3denScripts";
-		publicVariable _root;
+		publicVariable "_root";
 
 		_sabrePath="\sabre";
-		publicVariable _sabrePath;
+		publicVariable "_sabrePath";
 
 		_seaBased="\sea_based";
-		publicVariable _seaBased;
+		publicVariable "_seaBased";
 
 		_smoke="\smoke";
-		publicVariable _smoke;
+		publicVariable "_smoke";
 
 		_specOpDroidPath="\spec_ops";
-		publicVariable _specOpDroidPath;
+		publicVariable "_specOpDroidPath";
 
 		_speedBoat="\speed_boats"; 		
-		publicVariable _speedBoat;
+		publicVariable "_speedBoat";
 
 		_tridroidPath="\tridroid";
-		publicVariable _tridroidPath;
+		publicVariable "_tridroidPath";
 
 		_vehicleBased="\vehicle_based";
-		publicVariable _vehicleBased;
+		publicVariable "_vehicleBased";
 
 		_vehicleVariant="\vehicle_variants";
-		publicVariable _vehicleVariant;
+		publicVariable "_vehicleVariant";
 
 		_vulturePath="\vulture";
-		publicVariable _vulturePath;
+		publicVariable "_vulturePath";
 
 		_vwingPath="\vwing";
-		publicVariable _vwingPath;
+		publicVariable "_vwingPath";
 
 		_wardenBased="\warden_based";
-		publicVariable _wardenBased;
+		publicVariable "_wardenBased";
 
 		_ywingPath="\ywing";
-		publicVariable _ywingPath;
+		publicVariable "_ywingPath";
 
 		_zeusFncPanel="\zeus_function_panel";
-		publicVariable _zeusFncPanel;
+		publicVariable "_zeusFncPanel";
 
 
 	//Objects
 		_aat=_aatPath+"\aatMohawkClassBase.sqf"; 		
-		publicVariable _aat;
+		publicVariable "_aat";
 
 		_arc170=_arc170Path+"\arcXiphos.sqf"; 		
-		publicVariable _arc170;
+		publicVariable "_arc170";
 
 		_atteBase=_attePath+"\atteBase.sqf"; 		
-		publicVariable _atteBase;
+		publicVariable "_atteBase";
 
 		_atteType=_attePath+"\atteTypeSelector.sqf"; 		
-		publicVariable _atteType;
+		publicVariable "_atteType";
 
 		_b1AT=_b1Path+"\b1at_at.sqf"; 		
-		publicVariable _b1AT;
+		publicVariable "_b1AT";
 
 		_b1Heavy=_b1Path+"\b1heavy.sqf"; 		
-		publicVariable _b1Heavy;
+		publicVariable "_b1Heavy";
 
 		_b1Sniper=_b1Path+"\b1sniper.sqf"; 		
-		publicVariable _b1Sniper;
+		publicVariable "_b1Sniper";
 
 		_b2=_b2Path+"\b2Reconfig.sqf"; 		
-		publicVariable _b2;
+		publicVariable "_b2";
 
 		_barc=_barcPath+"\barc.sqf"; 		
-		publicVariable _barc;
+		publicVariable "_barc";
 
 		_bluforSpeedboat="\bluforSpeedBoat.sqf"; 		
-		publicVariable _bluforSpeedboat;
+		publicVariable "_bluforSpeedboat";
 
 		_droideka=_droidekaPath+"\droideka.sqf"; 		
-		publicVariable _droideka;
+		publicVariable "_droideka";
 
 		_dwarfSpiderDroid=_dwarfSpiderDroidPath+"\dwarf_spider_droid.sqf"; 		
-		publicVariable _dwarfSpiderDroid;
+		publicVariable "_dwarfSpiderDroid";
 
 		_hailfire=_hailfirePath+"\HailfireBallista.sqf"; 		
-		publicVariable _hailfire;
+		publicVariable "_hailfire";
 
 		_homing_spider_droid="\spiderdroid_buff.sqf";
-		publicVariable _homing_spider_droid;
+		publicVariable "_homing_spider_droid";
 
 		_hmp=_hmpPath+"\hmp.sqf"; 		
-		publicVariable _hmp;
+		publicVariable "_hmp";
 
 		_laat=_laatpath+"\laatClaymore.sqf"; 		
-		publicVariable _laat;
+		publicVariable "_laat";
 
 		_magnaDroid=_magnaPath+"\magna.sqf"; 		
-		publicVariable _magnaDroid;
+		publicVariable "_magnaDroid";
 
 		_mortar=_mortarPath+"\mortars.sqf"; 		
-		publicVariable _mortar;
+		publicVariable "_mortar";
 
 		_mtt=_mttPath+"\mttdeploy.sqf"; 		
-		publicVariable _mtt;
+		publicVariable "_mtt";
 
 		_opforSpeedboat="\opforSpeedBoat.sqf"; 		
-		publicVariable _opforSpeedboat;
+		publicVariable "_opforSpeedboat";
 
 		_praetorian="\Praetorian.sqf";
-		publicVariable _praetorian;
+		publicVariable "_praetorian";
 
 		_sabre=_sabrePath+"\Sabres.sqf"; 		
-		publicVariable _sabre;
+		publicVariable "_sabre";
 
 		_specOpDroid=_specOpDroidPath+"\spec_ops.sqf"; 		
-		publicVariable _specOpDroid;
+		publicVariable "_specOpDroid";
 
 		_triDroid=_tridroidPath+"\tri_droid.sqf"; 		
-		publicVariable _triDroid;
+		publicVariable "_triDroid";
 
 		_vWing=_vwingPath+"\vwingarrow.sqf"; 		
-		publicVariable _vWing;
+		publicVariable "_vWing";
 
 		_vulture=_vulturePath+"\vultureBase.sqf"; 		
-		publicVariable _vulture;
+		publicVariable "_vulture";
 
 		_ywing=_ywingPath+"\ywingScylla.sqf"; 		
-		publicVariable _ywing;
+		publicVariable "_ywing";
  
 	//Factions
 		//Sides
 			_blufor="\blufor"; 		
-			publicVariable _blufor;
+			publicVariable "_blufor";
 
 			_opfor="\opfor"; 		
-			publicVariable _opfor;
+			publicVariable "_opfor";
 
 			_civ="\civilian"; 		
-			publicVariable _civ;
+			publicVariable "_civ";
 
 		//Unit Factions
 			_cis="\cis";
-			publicVariable _cis;
+			publicVariable "_cis";
 
 	//Scripts and functions
 		_aatCoax="\aat_coxial_r.sqf";
-		publicVariable _aatCoax;
+		publicVariable "_aatCoax";
 
 		_aatRetext="\aat_retext_b.sqf";
-		publicVariable _aatRetext;
+		publicVariable "_aatRetext";
 
 		_arcSmokeNorm="\arc_smoke_tip.sqf";
-		publicVariable _arcSmokeNorm;
+		publicVariable "_arcSmokeNorm";
 
 		_arcSmokePurBlu="\arc_smoke_tip_pur_blu.sqf";
-		publicVariable _arcSmokePurBlu;
+		publicVariable "_arcSmokePurBlu";
 
 		_arcSmokeRedBlu="\arc_smoke_tip_red_blu.sqf";
-		publicVariable _arcSmokeRedBlu;
+		publicVariable "_arcSmokeRedBlu";
 
 		_arcSmokeWhiteBlu="\arc_smoke_tip_white_blu.sqf";
-		publicVariable _arcSmokeWhiteBlu;
+		publicVariable "_arcSmokeWhiteBlu";
 
 		_addMapGPS="\Map_GPS_A.sqf";
-		publicVariable _addMapGPS;
+		publicVariable "_addMapGPS";
 
 		_addThermal="\Thermal_A.sqf";
-		publicVariable _addThermal;
+		publicVariable "_addThermal";
 
 		_advSlingLoad="\fn_advancedSlingLoadingInit.sqf";
-		publicVariable _advSlingLoad;
+		publicVariable "_advSlingLoad";
 
 		_atteTridentClassFnc="\atteTridentClass.sqf";
-		publicVariable _atteTridentClassFnc;
+		publicVariable "_atteTridentClassFnc";
 
 		_b1AA="\b1at_aa.sqf";
-		publicVariable _b1at;
+		publicVariable "_b1at";
 
 		_b1Forest="\b1_forest.sqf";
-		publicVariable _b1Forest;
+		publicVariable "_b1Forest";
 
 		_b1Snow="\b1_snow.sqf";
-		publicVariable _b1Snow;
+		publicVariable "_b1Snow";
 
 		_droidekaDriver="\droideka_driver.sqf";
-		publicVariable _droidekaDriver";
+		publicVariable "_droidekaDriver";
 
 		_dwarfDriver="\dwarf_spider_droid_driver.sqf";
 		publicVariable "_dwarfDriver";
@@ -364,6 +364,9 @@
 //Check sum used to check if all the exec have ran
 _checkSumVariable=0;
 _checkSumCounter=1;
+
+publicVariable "checkSum";
+publicVariable "checkSumCounter";
 
 //global variables that are used----------------------- decommissioned due to public variables being too hard-------------------- 
 	//[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
@@ -523,5 +526,5 @@ catch {
 	_checkSumVariable=_checkSumVariable+_checkSumCounter;
 	_checkSumCounter=_checkSumCounter+1;	
 
-	publicVariable "checkSum"
-	publicVariable "checkSumCounter"''
+	publicVariable "checkSum";
+	publicVariable "checkSumCounter";
