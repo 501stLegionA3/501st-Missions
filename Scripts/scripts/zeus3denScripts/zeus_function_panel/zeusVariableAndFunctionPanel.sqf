@@ -39,7 +39,7 @@ namZeusPanelHermes={
 	//Removes AAT's AI Coxial turrets 
 		_user  addAction ["<t color='#47FF1A'>Remove AAT AI Coxial Turret </t>",                
 		{
-		[] execVM (_landBasedQuick+_aatPath+_aatCoax);
+		[] execVM (landBasedQuick+aatPath+aatCoax);
 		},[1],0,false,true,"","_target == _this"];//end
 	
 
@@ -47,20 +47,20 @@ namZeusPanelHermes={
 	//Makes spawned AAT's Blue and gray
 		_user  addAction ["<t color='#073BFC'>Make Spawned AAT's Blue Variant</t>",                
 		{
-		[] execVM(_landBasedQuick+_aatPath+_aatRetext);
+		[] execVM(landBasedQuick+aatPath+aatRetext);
 		},[1],0,false,true,"","_target == _this"];//end
 		
 	
 	//Converts Praetorian to star wars
 		_user addAction ["<t color='#47FF1A'>Converts Praetorian to star wars (CIS Colours)</t>",                
 		{
-		[] execVM (_landBasedQuick+_praetorianPath+_praetorian);
+		[] execVM (landBasedQuick+praetorianPath+praetorian);
 		},[1],0,false,true,"","_target == _this"];//end
 		
 	//Seriously buffs the Homing Spider Droids with Titan AA missles and Rebel Laser Gun removes standard guns
 		_user addAction ["<t color='#47FF1A'>Add AA Missles + better gun to Spider Droids </t>",                
 		{
-		[] execVM (_landBasedQuick+_homingSpiderDroidPath+_homing_spider_droid);
+		[] execVM (landBasedQuick+homingSpiderDroidPath+homingspiderdroid);
 		},[1],0,false,true,"","_target == _this"];//end
 
 	//Spacer
@@ -72,14 +72,14 @@ namZeusPanelHermes={
 	//Switch camo droids to Snow
 		_user  addAction ["<t color='#FFFFFF'>Switch B1 CAMO droids to Snow Camo</t>",                
 		{
-		[] execVM (_b1Quick+_b1Snow);	
+		[] execVM (b1Quick+b1Snow);	
 		},[1],0,false,true,"","_target == _this"];//end
 
 		
 	//Switch camo droids to Forest
 		_user  addAction ["<t color='#1E8E00'>Switch B1 CAMO droids to Forest Camo</t>",                
 		{
-		[] execVM (_b1Quick+_b1Forest);	
+		[] execVM (b1Quick+b1Forest);	
 		},[1],0,false,true,"","_target == _this"];//end
 
 	
@@ -87,7 +87,7 @@ namZeusPanelHermes={
 	//Switch B1 Secondary to AA
 		_user  addAction ["<t color='#073BFC'>Switch B1 Secondary to AA</t>",                
 		{
-		[] execVM (_b1Quick+_b1AA);	
+		[] execVM (b1Quick+b1AA);	
 		},[1],0,false,true,"","_target == _this"];//end
 /*   - Disabled for debugging
 	//Activate Phantom Protocol
@@ -104,31 +104,31 @@ namZeusPanelHermes={
 	//Removes Thermals from players
 		_user  addAction ["<t color='#D1021E'>Removes Thermals from players</t>",                
 		{
-		[] execVM (_playedBasedItemsQuick+_removeThermal);
+		[] execVM (playedBasedItemsQuick+removeThermal);
 		},[1],0,false,true,"","_target == _this"];//end
 	
 	//Adds Thermals back to players
 		_user  addAction ["<t color='#0BD102'>Adds Thermals back to players</t>",                
 		{
-		[] execVM (_playedBasedItemsQuick+_addThermal);
+		[] execVM (playedBasedItemsQuick+addThermal);
 		},[1],0,false,true,"","_target == _this"];//end
 		
 	//Removes maps and GPS' from players
 		_user  addAction ["<t color='#D1021E'>Removes maps and gps' from players</t>",                
 		{
-		[] execVM (_playedBasedItemsQuick+_removeMapGPS);
+		[] execVM (playedBasedItemsQuick+removeMapGPS);
 		},[1],0,false,true,"","_target == _this"];//end	
 	
 	//Adds maps and GPS' back to players
 		_user  addAction ["<t color='#0BD102'>Add maps and gps' back to players</t>",                
 		{
-		[] execVM (_playedBasedItemsQuick+_addMapGPS);
+		[] execVM (playedBasedItemsQuick+addMapGPS);
 		},[1],0,false,true,"","_target == _this"];//end	
 	
 	//remove NVGS from troopers
 		_user  addAction ["<t color='#D1021E'>Remove NVGS from troopers</t>",                
 		{
-		[] execVM (_playedBasedItemsQuick+_removeNVG);
+		[] execVM (playedBasedItemsQuick+removeNVG);
 		},[1],0,false,true,"","_target == _this"];//end	
 		
 	"thunder_1" remoteExec ["playSound"];"thunder_1" remoteExec ["playSound"];
