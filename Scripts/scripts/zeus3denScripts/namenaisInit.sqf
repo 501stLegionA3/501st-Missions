@@ -149,16 +149,16 @@
 		b1AT=b1Path+"\b1at_at.sqf"; 		
 		publicVariable "b1AT";
 
-		b1Forest="\b1forest.sqf";
+		b1Forest="\b1_forest.sqf";
 		publicVariable "b1Forest";
 
-		b1Snow="\b1snow.sqf";
+		b1Snow="\b1_snow.sqf";
 		publicVariable "b1Snow";
 
-		b1Heavy=b1Path+"\b1heavy.sqf"; 		
+		b1Heavy=b1Path+"\b1_heavy.sqf"; 		
 		publicVariable "b1Heavy";
 
-		b1Sniper=b1Path+"\b1sniper.sqf"; 		
+		b1Sniper=b1Path+"\b1_sniper.sqf"; 		
 		publicVariable "b1Sniper";
 
 		b2=b2Path+"\b2Reconfig.sqf"; 		
