@@ -267,7 +267,7 @@
 		addMapGPS="\Map_GPS_A.sqf";
 		publicVariable "addMapGPS";
 
-		addNVG="\NVG_A.sqf"
+		addNVG="\NVG_A.sqf";
 		publicVariable "addNVG";
 
 		addThermal="\Thermal_A.sqf";
