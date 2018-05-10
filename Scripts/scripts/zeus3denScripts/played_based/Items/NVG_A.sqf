@@ -1,12 +1,8 @@
 //Emergency Restore of to all players
 //Created by Rexi
-	{
-	_x unassignItem "swop_nvchipclean"; 
-	_x unassignItem "SWOP_NVChip"; 
-	_x unassignItem "SWOP_NVChip2"; 
-	_x removeItem "swop_nvchipclean"; 
-	_x removeItem "SWOP_NVChip"; 
-	_x removeItem "SWOP_NVChip2"; 
+	{	
+	_x addItem "swop_nvchipclean"; 
+	_x assignItem "swop_nvchipclean"; 
 	} forEach playableUnits;
 
 	
