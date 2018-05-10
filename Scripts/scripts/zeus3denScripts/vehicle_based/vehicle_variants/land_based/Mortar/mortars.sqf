@@ -25,7 +25,7 @@
 	_vic addEventHandler ["Fired",{private ["_al_flare"]; 
 
 	_strFlareBluforPath=(mortarPathQuick+bluforFac+flareblufor);
-	_al_flare = _this select 6;[[[_al_flare],_strFlareBluforPath],true,true] spawn BIS_fnc_MP;
+	_al_flare = _this select 6;[[[_al_flare],_strFlareBluforPath],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
 	}];		
  

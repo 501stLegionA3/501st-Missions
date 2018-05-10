@@ -36,6 +36,9 @@
 		boost="\boost";
 		publicVariable "boost";
 
+		boxes="\boxes";
+		publicVariable "boxes";
+
 		droidekaPath="\droideka";
 		publicVariable "droidekaPath";
 
@@ -85,7 +88,7 @@
 		publicVariable "repair";
 
 		resupplyData="\ResupplyData";
-		publicVariable resupplyData;
+		publicVariable "resupplyData";
 
 		root="scripts\zeus3denScripts";
 		publicVariable "root";
@@ -264,6 +267,9 @@
 		addMapGPS="\Map_GPS_A.sqf";
 		publicVariable "addMapGPS";
 
+		addNVG="\NVG_A.sqf"
+		publicVariable "addNVG";
+
 		addThermal="\Thermal_A.sqf";
 		publicVariable "addThermal";
 
@@ -281,6 +287,12 @@
 
 		laatSmoke="\laat_smoke_tip.sqf";
 		publicVariable "laatSmoke";
+
+		largeAmmo="Large_ammo.sqf";
+		publicVariable "largeAmmo";
+
+		largeMedical="Large_medical.sqf";
+		publicVariable "largeMedical";
 
 		mttFnc="\mtt.sqf";
 		publicVariable "mttFnc";
@@ -304,22 +316,28 @@
 		publicVariable "removeThermal";
 
 		resupplyArc170="\ARC_re.sqf";
-		publicVariable resupplyArc170;
+		publicVariable "resupplyArc170";
 
 		resupplyBox="\Resupply_boxes.sqf";
 		publicVariable "resupplyBox";
 
 		resupplyLaat="\LAAT_re.sqf";
-		publicVariable resupplyLaat;
+		publicVariable "resupplyLaat";
 
 		resupplyVwing="\Vwing_re.sqf";
-		publicVariable resupplyVwing;
+		publicVariable "resupplyVwing";
 
 		resupplyYwing="\Ywing_re.sqf";
 		publicVariable "resupplyYwing";
 
 		rngCiv="\RandomSWCIV.sqf";
 		publicVariable "rngCiv";
+
+		smallAmmo="Small_ammo.sqf";
+		publicVariable "smallAmmo";
+
+		smallMedical="Small_medical.sqf";
+		publicVariable "smallMedical";
 
 		wardenAmmoBox="\wardenAmmoBox.sqf";
 		publicVariable "wardenAmmoBox";
@@ -383,6 +401,12 @@
 
 	resupplyBoxQuick=wardenBasedQuick+resupplyData;
 	publicVariable "resupplyBoxQuick";
+
+	itemsQuick=playedBasedQuick+item;
+	publicVariable "itemsQuick";
+
+	boxesQuick=itemsQuick+boxes;
+	publicVariable "boxesQuick";
 
 
 

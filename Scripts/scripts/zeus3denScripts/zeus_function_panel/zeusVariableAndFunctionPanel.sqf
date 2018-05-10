@@ -130,6 +130,12 @@ namZeusPanelHermes={
 		{
 		[] execVM (playedBasedItemsQuick+removeNVG);
 		},[1],0,false,true,"","_target == _this"];//end	
+
+	//Adds nvgs back
+		_user  addAction ["<t color='#0BD102'>Add NVGS to troopers</t>",                
+		{
+		[] execVM (playedBasedItemsQuick+addNVG);
+		},[1],0,false,true,"","_target == _this"];//end	
 		
 	"thunder_1" remoteExec ["playSound"];"thunder_1" remoteExec ["playSound"];
 	

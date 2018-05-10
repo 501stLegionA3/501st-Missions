@@ -6,7 +6,7 @@ large_ammo=
 	_vic  addAction ["<t color='#47FF1A'>Unlock</t>",                
     {
     box = _this select 0;
-    [box] execVM "scripts\zeus3denScripts\playerBased\Items\Boxes\Large_ammo.sqf";
+    [box] execVM (boxesQuick+largeAmmo);
 	[box] remoteExec ["removeAllActions"];
     }];
 	};
@@ -18,7 +18,7 @@ small_ammo=
 	_vic  addAction ["<t color='#47FF1A'>Unlock</t>",                
     {
     box = _this select 0;
-    [box] execVM "scripts\zeus3denScripts\playerBased\Items\Boxes\Small_ammo.sqf";
+    [box] execVM (boxesQuick+smallAmmo);
 	[box] remoteExec ["removeAllActions"];
     }];		
 	};
@@ -30,7 +30,7 @@ Large_Medical=
 	_vic  addAction ["<t color='#47FF1A'>Unlock</t>",                
     {
     box = _this select 0;
-    [box] execVM "scripts\zeus3denScripts\playerBased\Items\Boxes\Large_medical.sqf";
+    [box] execVM (boxesQuick+largeMedical);
 	[box] remoteExec ["removeAllActions"];
     }];		
 	};
@@ -42,7 +42,7 @@ small_Medical=
 	_vic  addAction ["<t color='#47FF1A'>Unlock</t>",                
     {
     box = _this select 0;
-    [box] execVM "scripts\zeus3denScripts\playerBased\Items\Boxes\Small_medical.sqf";
+    [box] execVM (boxesQuick+smallMedical);
 	[box] remoteExec ["removeAllActions"];
     }];			
 	};
