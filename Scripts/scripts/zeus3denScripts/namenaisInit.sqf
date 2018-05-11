@@ -495,7 +495,7 @@ catch {
 	checkSumVariable=checkSumVariable+checkSumCounter;
 	checkSumCounter=checkSumCounter+1;
 
-//Eulers Spec Ops droids
+//Eulers Spec Ops droids,vr soilder
 	[] execVM (root+aiBased+factionBased+opforFac+cis+specOpDroid);	
 	checkSumVariable=checkSumVariable+checkSumCounter;
 	checkSumCounter=checkSumCounter+1;
