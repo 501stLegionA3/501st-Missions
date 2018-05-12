@@ -288,10 +288,10 @@
 		laatSmoke="\laat_smoke_tip.sqf";
 		publicVariable "laatSmoke";
 
-		largeAmmo="Large_ammo.sqf";
+		largeAmmo="\Large_ammo.sqf";
 		publicVariable "largeAmmo";
 
-		largeMedical="Large_medical.sqf";
+		largeMedical="\Large_medical.sqf";
 		publicVariable "largeMedical";
 
 		mttFnc="\mtt.sqf";
@@ -333,10 +333,10 @@
 		rngCiv="\RandomSWCIV.sqf";
 		publicVariable "rngCiv";
 
-		smallAmmo="Small_ammo.sqf";
+		smallAmmo="\Small_ammo.sqf";
 		publicVariable "smallAmmo";
 
-		smallMedical="Small_medical.sqf";
+		smallMedical="\Small_medical.sqf";
 		publicVariable "smallMedical";
 
 		wardenAmmoBox="\wardenAmmoBox.sqf";
