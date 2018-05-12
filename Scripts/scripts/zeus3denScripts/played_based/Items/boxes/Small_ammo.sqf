@@ -17,4 +17,4 @@
 	_vic addweaponcargoglobal ["SWOP_DC15ABlasterRifle",5];
 	_vic addMagazineCargoGlobal ["SWOP_Valken38XBlasterRifle_Mag", 5]; 
 	_vic addMagazineCargoGlobal ["5Rnd_HE_Grenade_DC15A", 10]; 
-	ACE_maxWeightCarry = 3000;	
+	ACE_maxWeightCarry = 10000;	
