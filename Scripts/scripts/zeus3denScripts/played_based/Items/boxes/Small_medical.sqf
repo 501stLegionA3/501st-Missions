@@ -12,4 +12,4 @@
 	_vic addItemCargoGlobal ["ACE_packingBandage", 50]; 
 	_vic addItemCargoGlobal ["ACE_fieldDressing", 50]; 
 	_vic addItemCargoGlobal ["SmokeShellPurple", 5];
-	 ACE_maxWeightCarry = 3000;	
+	 ACE_maxWeightCarry = 3000;
