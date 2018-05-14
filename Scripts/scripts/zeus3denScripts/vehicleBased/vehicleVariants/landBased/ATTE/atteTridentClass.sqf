@@ -18,14 +18,26 @@
 // remove cargo space of uav;
 	[atte_drive, -1] call ace_cargo_fnc_setSpace;
  
-
+	
 // damage the wheels of uav to set top speed: gives 3 speeds slow forward = 10km forward = 20km fast forward = 29km;
 	{atte_drive setHitPointDamage[_x,0.90]} forEach ["HitLF2Wheel","HitRFWheel","HitRF2Wheel"];
 	{atte_drive  setHitPointDamage[_x,0.89]} forEach ["HitLFWheel"];
 
+//Workaround for weird issue that sometimes occurs
+	atte_drive addAction ["<t color='#00FF00'>Fix Wheel Issue</t>",
+	{
+	_veh = nearestObject [player, "B_UGV_01_rcws_F"];
+	_veh allowDamage true;
+	{_veh setHitPointDamage[_x,0.90]} forEach ["HitLF2Wheel","HitRFWheel","HitRF2Wheel"];
+	{_veh  setHitPointDamage[_x,0.89]} forEach ["HitLFWheel"];
+	{_veh  setHitPointDamage[_x,0.89]} forEach ["HitLFWheel"];
+	{_veh setHitPointDamage[_x,0.90]} forEach ["HitRMWheel","HitLMWheel"];
+	_veh allowDamage false;
+	},[1],0,false,true,""," driver  _target == _this "];
+
 	
 	
-	//dmgs lights
+//dmgs lights
 	atte_drive setHitIndex [20, 1];
 	atte_drive setHitIndex [21, 1];
 	atte_drive setHitIndex [22, 1];
@@ -83,7 +95,7 @@
 	atte_mens allowDamage false;
 	atte_mens setvehicleammo 0;
 	atte_mens lockDriver true;
-	[atte_mens, 9] call ace_cargo_fnc_setSpace;
+	[atte_mens, 20] call ace_cargo_fnc_setSpace;
 
 
 // crewITT,purpose allows uav driver to sit there;	
