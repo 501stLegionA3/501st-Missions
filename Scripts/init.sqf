@@ -67,6 +67,6 @@ medicsLObox addAction ["Clone Medic Loadout", "scripts\loadouts\medical\loadout_
 // rtoLObox = Variable Name - A box/object - must have object down to work
 
 //calls namenai's init.sqf,refer to its readme for its purpose
-[] execVM "scripts\zeus3denScripts\namenaisInit.sqf";
+[] execVM "scripts\zeus3denScripts\custom_init.sqf";
 //Max allowed View distance
 tawvd_maxRange = 10000;
