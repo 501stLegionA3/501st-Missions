@@ -12,11 +12,11 @@ checkSumCounter=1;
 publicVariable "checkSum";
 publicVariable "checkSumCounter";
 
-//global variables that are used----------------------- decommissioned due to public variables being too hard (REVIVED WILL WORK ON SOON)-------------------- 
-//[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
-
 //waits until all the file paths are declared
 waitUntil { !(isNil  "filePathsDone") };
+
+//global variables that are used----------------------- decommissioned due to public variables being too hard (REVIVED WILL WORK ON SOON)-------------------- 
+//[] execVM "scripts\zeus3denScripts\globalVars\globalVar.sqf";
 
 //This IF Statement is here to ensure that certain scripts wont be ran on a specific mission type. Zora's M
 if(!(missionNamespace getVariable ["multipleOccupationSimulator",false])) then {
