@@ -292,10 +292,10 @@ publicVariable "largeMedical";
 mttFnc="\mtt.sqf";
 publicVariable "mttFnc";
 
-repair65="repair_to_65.sqf";
+repair65="\repair_to_65.sqf";
 publicVariable "repair65";
 
-repairMore="repair_to_more.sqf";
+repairMore="\repair_to_more.sqf";
 publicVariable "repairMore";
 
 removeEject="\removeEject.sqf";
