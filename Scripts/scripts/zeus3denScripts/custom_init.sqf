@@ -1,34 +1,35 @@
-//last update 5/20/2018 11;57 pm est by Namenai
+//last update 5/21/2018 5;38 pm est by Namenai
 root="scripts\zeus3denScripts";
 publicVariable "root";
 
 //Calls the file that has all the factorizations, basicly a really big enum file.
 [] execVM (root+"\file_paths.sqf");
 
-//Check sum used to check if all the exec have ran
+//waits until all the file paths are declared.
+waitUntil { !(isNil  "filePathsDone") };
+
+//Check sum used to check if all the exec have ran.
 checkSumVariable=0;
 checkSumCounter=1;
 
 publicVariable "checkSum";
 publicVariable "checkSumCounter";
 
-//waits until all the file paths are declared
-waitUntil { !(isNil  "filePathsDone") };
-
+//Obtains what kind of mission file the file is.
 _scriptPackage=missionNamespace getVariable ["missionType","normal"];
 
-
+//Selects the right script package based on mission type.
 switch (_scriptPackage) do {
     case "multipleOccupationSimulator": { 
-		[] execVM (root+"\mosPackage.sqf"); 
+		[] execVM (root+scriptPackage+"\mosPackage.sqf"); 
 	};
 
     case "test": { 
-	    [] execVM (root+"\defaultPackage.sqf");
-	    [] execVM (root+"\testPackage.sqf"); 
+	    [] execVM (root+scriptPackage+"\defaultPackage.sqf");
+	    [] execVM (root+scriptPackage+"\testPackage.sqf"); 
 	};
 
     default {  
-	    [] execVM (root+"\defaultPackage.sqf"); 
+	    [] execVM (root+scriptPackage+"\defaultPackage.sqf"); 
 	};
 };

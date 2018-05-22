@@ -91,6 +91,9 @@ publicVariable "resupplyData";
 sabrePath="\sabre";
 publicVariable "sabrePath";
 
+scriptPackage="\scriptPackages";
+publicVariable "scriptPackage";
+
 seaBased="\sea_based";
 publicVariable "seaBased";
 

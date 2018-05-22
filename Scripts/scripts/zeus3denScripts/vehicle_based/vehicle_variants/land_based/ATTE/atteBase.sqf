@@ -42,6 +42,27 @@ rexiAtteBase={
 		_rexiReturn
 	}];
 	
+	//Destroys at-te attached stuff on death
+	_vic addEventHandler ["Killed", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+	
+	_KillArray=_unit getVariable ["deleteOnDeath",[]];
+	
+	{ _x setDamage 1; } forEach _KillArray;
+	
+	}];
+
+
+	//Destorys at-te attached stuff on death
+	_vic addEventHandler ["Deleted", {
+	params ["_entity"];
+	
+	_DelArray=_unit getVariable ["deleteOnDeath",[]];
+	
+	{  deleteVehicle _x; } forEach _DelArray;
+	}];
+
+
 	//Removes the standard weapon and replaces it with a 120mm cannon
 	_vic removeWeaponTurret ["Cannon_ATTE", [0]];
 	_vic addWeaponTurret ["cannon_120mm", [0]];
