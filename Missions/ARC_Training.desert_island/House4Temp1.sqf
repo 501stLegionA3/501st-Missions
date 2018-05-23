@@ -1,0 +1,14 @@
+_House4Droid = creategroup [east, true];
+_House4Civ = creategroup [civilian, true];
+"SWOP_CIS_Droid" createUnit [position House4Temp1Droid1, _House4Droid, "this setPosASL (getPosASL House4Temp1Droid1); this disableAI 'PATH';"];
+"SWOP_CIS_Droid" createUnit [position House4Temp1Droid2, _House4Droid, "this setPosASL (getPosASL House4Temp1Droid2); this disableAI 'PATH';"];
+"SWOP_CIS_Droid" createUnit [position House4Temp1Droid3, _House4Droid, "this setPosASL (getPosASL House4Temp1Droid3); this disableAI 'PATH';"];
+"SWOP_CIS_Droid" createUnit [position House4Temp1Droid4, _House4Droid, "this setPosASL (getPosASL House4Temp1Droid4); this disableAI 'PATH';"];
+"SWOP_CIS_Droid" createUnit [position House4Temp1Droid5, _House4Droid, "this setPosASL (getPosASL House4Temp1Droid5); this disableAI 'PATH';"];
+"SWOP_CIS_SuperDroid_B2" createUnit [position House4Temp1Droid6, _House4Droid, "this setPosASL (getPosASL House4Temp1Droid6); this disableAI 'PATH';"];
+"SWOP_CIS_Droid" createUnit [position House4Temp1Droid7, _House4Droid, "this setPosASL (getPosASL House4Temp1Droid7); this disableAI 'PATH';"];
+"SWOP_CIS_Droid" createUnit [position House4Temp1Droid8, _House4Droid, "this setPosASL (getPosASL House4Temp1Droid8); this disableAI 'PATH';"];
+"SWOP_CIS_Droid" createUnit [position House4Temp1Droid9, _House4Droid, "this setPosASL (getPosASL House4Temp1Droid9); this disableAI 'PATH';"];
+"SWOP_CIS_Droid" createUnit [position House4Temp1Droid10, _House4Droid, "this setPosASL (getPosASL House4Temp1Droid10); this disableAI 'PATH';"];
+"C_man_1" createUnit [position House4Temp1Civ1, _House4Civ, "this setPosASL (getPosASL House4Temp1Civ1); this disableAI 'PATH';"];
+"SWOP_CIS_Droid_Tactic_Blue" createUnit [position House4Temp1Civ2, _House4Civ, "this setPosASL (getPosASL House4Temp1Civ2); this disableAI 'ALL'; removeAllWeapons this;"];
