@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4111.9731,14.718015,-211.66385};
-		dir[]={-0.53191978,-0.26846477,-0.8031773};
-		up[]={-0.14825442,0.9632715,-0.22385749};
-		aside[]={-0.83378488,-1.0877848e-006,0.55219156};
+		pos[]={4235.8921,20.752518,27.718744};
+		dir[]={-0.9215402,-0.38044366,-0.078332961};
+		up[]={-0.37910223,0.92478454,-0.032223962};
+		aside[]={-0.084700085,-1.0099702e-006,0.99646455};
 	};
 };
 binarizationWanted=0;
@@ -681,25 +681,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -731,6 +712,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
 				};
 			};
 		};
@@ -11673,7 +11673,7 @@ class Mission
 			position[]={4240.9551,38.069,-90.064003};
 			name="respawn_west";
 			type="Select";
-			angle=186.67796;
+			angle=186.67795;
 			id=0;
 			atlOffset=33.2616;
 		};
@@ -133786,7 +133786,7 @@ class Mission
 			name="marker_7";
 			text="Forward Operating Base : Sea Goat";
 			type="b_hq";
-			angle=180.91092;
+			angle=180.9109;
 			id=879;
 			atlOffset=25.437748;
 		};
