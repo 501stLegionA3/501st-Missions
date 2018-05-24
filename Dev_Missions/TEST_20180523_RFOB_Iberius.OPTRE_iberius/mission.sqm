@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={-39.804565,38.957973,-403.27826};
-		dir[]={0.47331235,-0.50902277,-0.71910816};
-		up[]={0.27989104,0.86066478,-0.42524517};
-		aside[]={-0.83540016,1.5450205e-006,-0.5498594};
+		pos[]={446.32211,20.89962,274.10522};
+		dir[]={0.28129929,-0.21779704,0.93470824};
+		up[]={0.062805973,0.97592115,0.20868613};
+		aside[]={0.95769089,2.8081849e-006,-0.28821233};
 	};
 };
 binarizationWanted=0;
@@ -699,25 +699,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -749,6 +730,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
 				};
 			};
 		};
@@ -10808,7 +10808,7 @@ class Mission
 			position[]={-28.233999,40.212002,-433.284};
 			name="respawn_west";
 			type="Select";
-			angle=226.29893;
+			angle=226.29892;
 			id=0;
 			atlOffset=33.262524;
 		};
@@ -132750,7 +132750,7 @@ class Mission
 			name="Armoury";
 			text="Armoury";
 			type="MCC_b_markerAmmo";
-			angle=220.53241;
+			angle=220.53239;
 			id=890;
 			atlOffset=11.459551;
 		};
@@ -132761,7 +132761,7 @@ class Mission
 			name="marker_3";
 			text="HQ";
 			type="b_hq";
-			angle=220.53241;
+			angle=220.53239;
 			id=891;
 			atlOffset=11.459551;
 		};
@@ -132772,7 +132772,7 @@ class Mission
 			name="marker_4";
 			text="Medical";
 			type="b_med";
-			angle=220.53241;
+			angle=220.53239;
 			id=892;
 			atlOffset=11.459551;
 		};
@@ -132783,7 +132783,7 @@ class Mission
 			name="marker_5";
 			text="LAAT's, Y-Wing's , V-wings, ARC 170's ";
 			type="b_air";
-			angle=220.53241;
+			angle=220.53239;
 			id=893;
 			atlOffset=11.459551;
 		};
@@ -132794,7 +132794,7 @@ class Mission
 			name="marker_6";
 			text="Transport's and Sabres";
 			type="b_motor_inf";
-			angle=220.53241;
+			angle=220.53239;
 			id=894;
 			atlOffset=11.459551;
 		};
@@ -132805,7 +132805,7 @@ class Mission
 			name="marker_7";
 			text="Forward Operating Base :  Charybdis ";
 			type="b_hq";
-			angle=220.53194;
+			angle=220.53192;
 			id=895;
 			atlOffset=11.459999;
 		};
@@ -132816,7 +132816,7 @@ class Mission
 			name="marker98";
 			text="ATC";
 			type="b_support";
-			angle=220.53241;
+			angle=220.53239;
 			id=896;
 			atlOffset=11.459551;
 		};
@@ -135760,18 +135760,128 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={506.75262,0.99256265,255.57321};
+						position[]={506.75299,0.99256337,255.573};
 						angles[]={0,1.5707964,0};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						isPlayer=1;
 					};
 					id=1025;
 					type="SWOP_Clonetrooper_P1";
-					atlOffset=6.5565109e-007;
+					atlOffset=5.9604645e-008;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_featureType";
+							expression="_this setFeatureType parseNumber (_value)";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_ambientAnimParams";
+							expression="	if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};	[_this,_value] spawn	{		sleep 0.1;		params ['_unit','_value'];		if (!(_value select 0 == '') && !isMultiplayer) then		{			[_unit,_value select 0,_value select 1,objNull,false,false] call BIS_fnc_ambientAnim;			waitUntil {sleep 0.1; ((behaviour _unit) == 'COMBAT') || (damage _unit > 0.6)};			_unit call BIS_fnc_ambientAnim__terminate;		};	}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="";
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ASIS";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=4;
+					};
 				};
 			};
 			class Attributes
@@ -135833,7 +135943,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={448.37762,0.51324791,306.24518};
+						position[]={448.37799,0.51326346,306.245};
 					};
 					side="West";
 					flags=6;
@@ -135842,6 +135952,117 @@ class Mission
 					};
 					id=1027;
 					type="SWOP_Clonetrooper_P1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_featureType";
+							expression="_this setFeatureType parseNumber (_value)";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_ambientAnimParams";
+							expression="	if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};	[_this,_value] spawn	{		sleep 0.1;		params ['_unit','_value'];		if (!(_value select 0 == '') && !isMultiplayer) then		{			[_unit,_value select 0,_value select 1,objNull,false,false] call BIS_fnc_ambientAnim;			waitUntil {sleep 0.1; ((behaviour _unit) == 'COMBAT') || (damage _unit > 0.6)};			_unit call BIS_fnc_ambientAnim__terminate;		};	}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="";
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="ASIS";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=4;
+					};
 				};
 			};
 			class Attributes
