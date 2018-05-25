@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4849.73,86.552849,100.27338};
-		dir[]={0.0042543281,-0.37618348,0.92657185};
-		up[]={0.001727478,0.92653018,0.37619591};
-		aside[]={1.0000205,2.3925531e-007,-0.0045893737};
+		pos[]={4975.248,29.535511,141.89529};
+		dir[]={-0.64409471,-0.54657024,0.53528345};
+		up[]={-0.42036891,0.83739489,0.34935224};
+		aside[]={0.6391902,-5.2666292e-007,0.76913184};
 	};
 };
 binarizationWanted=0;
@@ -681,25 +681,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -731,6 +712,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
 				};
 			};
 		};
@@ -10791,7 +10791,7 @@ class Mission
 			position[]={4962.0703,38.401997,147.03806};
 			name="respawn_west";
 			type="Select";
-			angle=187.62199;
+			angle=187.62198;
 			id=0;
 			atlOffset=33.26207;
 		};
@@ -21061,18 +21061,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4901.1475,18.447044,89.33783};
-				angles[]={0,4.0051994,0};
+				position[]={4901.147,18.447041,89.337997};
+				angles[]={0,4.005199,0};
 			};
 			side="Empty";
 			flags=1;
 			class Attributes
 			{
-				init="call{this  addAction [""<t color='#45EC19'>Large Medical</t>"",    " \n " {    " \n " _veh = createVehicle [""plp_ct_highsecContRed"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""]; " \n " },[1],0,false,true];    " \n "   " \n "this  addAction [""<t color='#EC1949'>Large Ammo</t>"",    " \n " {    " \n " _veh = createVehicle [""plp_ct_highsecContWhite"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""]; " \n " },[1],0,false,true];    " \n "  " \n "   " \n " this  addAction [""<t color='#45EC19'>Small Medical</t>"",    " \n " {    " \n " _veh = createVehicle [""SWOP_BoxMedium3R"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""]; " \n " },[1],0,false,true];    " \n "   " \n "this  addAction [""<t color='#EC1949'>Small Ammo</t>"",    " \n " {    " \n " _veh = createVehicle [""SWOP_BoxMedium3W"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""]; " \n " },[1],0,false,true];    " \n " }";
+				init="call{this  addAction [""<t color='#45EC19'>Spawn Wardenmobile</t>"",     " \n " {     " \n " _veh = createVehicle [""OPTRE_cart"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""];  " \n " },[1],0,false,true];     " \n " " \n " " \n "this  addAction [""<t color='#45EC19'>Large Medical</t>"",     " \n " {     " \n " _veh = createVehicle [""plp_ct_highsecContRed"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""];  " \n " },[1],0,false,true];     " \n "    " \n "this  addAction [""<t color='#EC1949'>Large Ammo</t>"",     " \n " {     " \n " _veh = createVehicle [""plp_ct_highsecContWhite"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""];  " \n " },[1],0,false,true];     " \n "   " \n "    " \n " this  addAction [""<t color='#45EC19'>Small Medical</t>"",     " \n " {     " \n " _veh = createVehicle [""SWOP_BoxMedium3R"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""];  " \n " },[1],0,false,true];     " \n "    " \n "this  addAction [""<t color='#EC1949'>Small Ammo</t>"",     " \n " {     " \n " _veh = createVehicle [""SWOP_BoxMedium3W"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""];  " \n " },[1],0,false,true];     " \n " }";
 			};
 			id=429;
 			type="SWOP_computer2";
-			atlOffset=3.6969194;
+			atlOffset=3.6969156;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -132868,7 +132868,7 @@ class Mission
 			name="marker_7";
 			text="Forward Operating Base : Gorgon";
 			type="b_hq";
-			angle=181.85497;
+			angle=181.85495;
 			id=895;
 			atlOffset=20.434;
 		};
@@ -134506,7 +134506,7 @@ class Mission
 			type="rectangle";
 			a=80;
 			b=115;
-			angle=271.04535;
+			angle=271.04532;
 			id=914;
 		};
 		class Item485
@@ -134514,7 +134514,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4915.2656,2.2623167,276.38748};
+				position[]={4914.9629,2.0750246,277.84464};
 			};
 			side="Empty";
 			class Attributes
@@ -134522,29 +134522,29 @@ class Mission
 			};
 			id=915;
 			type="B_Boat_Armed_01_minigun_F";
-			atlOffset=2.9384432;
+			atlOffset=2.7511511;
 		};
 		class Item486
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4906.9346,2.2623167,276.70309};
+				position[]={4906.6318,2.0750246,278.16025};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=916;
 			type="B_Boat_Armed_01_minigun_F";
+			atlOffset=2.7511511;
 		};
 		class Item487
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4888.7607,2.1875749,277.07361};
+				position[]={4888.458,2.0002828,278.53076};
 			};
 			side="Empty";
 			class Attributes
@@ -134552,14 +134552,14 @@ class Mission
 			};
 			id=917;
 			type="B_Boat_Armed_01_minigun_F";
-			atlOffset=2.8637013;
+			atlOffset=2.6764092;
 		};
 		class Item488
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4880.4297,2.1875749,277.38922};
+				position[]={4880.127,2.0002828,278.84637};
 			};
 			side="Empty";
 			flags=4;

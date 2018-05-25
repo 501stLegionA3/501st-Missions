@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={17020.531,39.388069,21936.73};
-		dir[]={-0.64353693,-0.48240235,-0.59438097};
-		up[]={-0.35439441,0.87593073,-0.32732311};
-		aside[]={-0.67853767,5.4592965e-007,0.73465985};
+		pos[]={17827.258,20.913431,22067.727};
+		dir[]={0.75732142,-0.32748172,-0.56512535};
+		up[]={0.26249453,0.94483697,-0.19587864};
+		aside[]={-0.59810334,-1.3934914e-007,-0.80150932};
 	};
 };
 binarizationWanted=0;
@@ -699,6 +699,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -730,25 +749,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {sleep 1; !isNull player};            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            };         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -20986,18 +20986,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17906,18.436974,22009.322};
-				angles[]={0,2.3240542,0};
+				position[]={17906,18.43726,22009.322};
+				angles[]={0,2.3240457,0};
 			};
 			side="Empty";
 			flags=1;
 			class Attributes
 			{
-				init="call{this  addAction [""<t color='#45EC19'>Large Medical</t>"",    " \n " {    " \n " _veh = createVehicle [""plp_ct_highsecContRed"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""]; " \n " },[1],0,false,true];    " \n "   " \n "this  addAction [""<t color='#EC1949'>Large Ammo</t>"",    " \n " {    " \n " _veh = createVehicle [""plp_ct_highsecContWhite"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""]; " \n " },[1],0,false,true];    " \n "  " \n "   " \n " this  addAction [""<t color='#45EC19'>Small Medical</t>"",    " \n " {    " \n " _veh = createVehicle [""SWOP_BoxMedium3R"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""]; " \n " },[1],0,false,true];    " \n "   " \n "this  addAction [""<t color='#EC1949'>Small Ammo</t>"",    " \n " {    " \n " _veh = createVehicle [""SWOP_BoxMedium3W"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""]; " \n " },[1],0,false,true];    " \n " }";
+				init="call{this  addAction [""<t color='#45EC19'>Spawn Wardenmobile</t>"",     " \n " {     " \n " _veh = createVehicle [""OPTRE_cart"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""];  " \n " },[1],0,false,true];     " \n " " \n " " \n "this  addAction [""<t color='#45EC19'>Large Medical</t>"",     " \n " {     " \n " _veh = createVehicle [""plp_ct_highsecContRed"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""];  " \n " },[1],0,false,true];     " \n "    " \n "this  addAction [""<t color='#EC1949'>Large Ammo</t>"",     " \n " {     " \n " _veh = createVehicle [""plp_ct_highsecContWhite"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""];  " \n " },[1],0,false,true];     " \n "   " \n "    " \n " this  addAction [""<t color='#45EC19'>Small Medical</t>"",     " \n " {     " \n " _veh = createVehicle [""SWOP_BoxMedium3R"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""];  " \n " },[1],0,false,true];     " \n "    " \n "this  addAction [""<t color='#EC1949'>Small Ammo</t>"",     " \n " {     " \n " _veh = createVehicle [""SWOP_BoxMedium3W"", (getPosAtL Ammo_spawn), [], 0, ""CAN_COLLIDE""];  " \n " },[1],0,false,true];     " \n " }";
 			};
 			id=410;
 			type="SWOP_computer2";
-			atlOffset=3.6969118;
+			atlOffset=3.6971979;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -134444,7 +134444,7 @@ class Mission
 			type="rectangle";
 			a=80;
 			b=115;
-			angle=174.72285;
+			angle=174.72284;
 			id=895;
 			atlOffset=70.198036;
 		};
