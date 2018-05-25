@@ -32,7 +32,7 @@ barcPath="\barc";
 publicVariable "barcPath";
 
 boostPath="\boost";
-publicVariable "boost";
+publicVariable "boostPath";
 
 boxes="\boxes";
 publicVariable "boxes";
