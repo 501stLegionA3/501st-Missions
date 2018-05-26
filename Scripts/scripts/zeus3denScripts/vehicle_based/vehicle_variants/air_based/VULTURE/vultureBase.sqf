@@ -7,6 +7,7 @@ namVultureBase=
 	weaponData=[
 	["CMFlareLauncher","300Rnd_CMFlare_Chaff_Magazine",[[-1,300,10]]]
 	];
+	
 	//	["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,400,10]]]
 	//["energy_torpedo_w","energy_torpedo_mag",[[-1,8,8]]],
 
