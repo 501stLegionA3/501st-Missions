@@ -5,11 +5,10 @@ namVultureBase=
 	comment "data for weapons";
 	comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 	weaponData=[
-	["energy_torpedo_w","energy_torpedo_mag",[[-1,8,8]]],
 	["CMFlareLauncher","300Rnd_CMFlare_Chaff_Magazine",[[-1,300,10]]]
 	];
 	//	["PomehiLauncherXT","400Rnd_Pomehi_Mag",[[-1,400,10]]]
-
+	//["energy_torpedo_w","energy_torpedo_mag",[[-1,8,8]]],
 
 	comment "For each weapon";
 	for [{ _i=0 }, { _i<(count weaponData)}, {_i=_i+1}] do
