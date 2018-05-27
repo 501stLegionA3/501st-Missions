@@ -1,0 +1,18 @@
+_Range3Droid = creategroup [east, true];
+"SWOP_CIS_Droid" createUnit [position Range3Line3Droid1, _Range3Droid, "this setPosASL (getPosASL Range3Line3Droid1); this disableAI 'ALL';"];
+"SWOP_CIS_Droid" createUnit [position Range3Line3Droid3, _Range3Droid, "this setPosASL (getPosASL Range3Line3Droid3); this disableAI 'ALL';"];
+"SWOP_CIS_Droid" createUnit [position Range3Line3Droid5, _Range3Droid, "this setPosASL (getPosASL Range3Line3Droid5); this disableAI 'ALL';"];
+"SWOP_CIS_Droid" createUnit [position Range3Line3Droid7, _Range3Droid, "this setPosASL (getPosASL Range3Line3Droid7); this disableAI 'ALL';"];
+"SWOP_CIS_Droid" createUnit [position Range3Line3Droid9, _Range3Droid, "this setPosASL (getPosASL Range3Line3Droid9); this disableAI 'ALL';"];
+Range3Line1Wall1 hideobjectglobal true;
+Range3Line1Wall2 hideobjectglobal true;
+Range3Line1Wall3 hideobjectglobal true;
+Range3Line1Wall4 hideobjectglobal true;
+Range3Line3Wall1 hideobjectglobal true;
+Range3Line3Wall2 hideobjectglobal true;
+Range3Line3Wall3 hideobjectglobal true;
+Range3Line3Wall4 hideobjectglobal true;
+Range3Line3Wall1 hideobjectglobal false;
+Range3Line3Wall2 hideobjectglobal false;
+Range3Line3Wall3 hideobjectglobal false;
+Range3Line3Wall4 hideobjectglobal false;
