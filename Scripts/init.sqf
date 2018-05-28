@@ -68,5 +68,3 @@ medicsLObox addAction ["Clone Medic Loadout", "scripts\loadouts\medical\loadout_
 
 //calls namenai's init.sqf,refer to its readme for its purpose
 [] execVM "scripts\zeus3denScripts\custom_init.sqf";
-//Max allowed View distance
-tawvd_maxRange = 10000;

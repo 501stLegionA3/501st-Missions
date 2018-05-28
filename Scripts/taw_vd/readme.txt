@@ -1,1 +1,0 @@
-These are for the view distance changer
