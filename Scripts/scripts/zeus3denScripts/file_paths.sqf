@@ -283,6 +283,9 @@ publicVariable "flareblufor";
 flareopfor="\flare_opfor.sqf";
 publicVariable "flareopfor";
 
+gunshipHMP="\Gunship.sqf"
+publicVariable "gunshipHMP";
+
 laatSmoke="\laat_smoke_tip.sqf";
 publicVariable "laatSmoke";
 
@@ -336,6 +339,9 @@ publicVariable "smallAmmo";
 
 smallMedical="\Small_medical.sqf";
 publicVariable "smallMedical";
+
+transportHMP="\Transport.sqf";
+publicVariable "transportHMP";
 
 wardenAmmoBox="\wardenAmmoBox.sqf";
 publicVariable "wardenAmmoBox";
@@ -406,7 +412,8 @@ publicVariable "itemsQuick";
 boxesQuick=itemsQuick+boxes;
 publicVariable "boxesQuick";
 
-
+hmpQuick=airBasedQuick+hmpPath;
+publicVariable="hmpQuick";
 //Variable that is declared to notify when all the above is done
 filePathsDone=true;
 publicVariable "filePathsDone";
