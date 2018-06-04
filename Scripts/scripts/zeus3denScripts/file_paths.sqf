@@ -156,7 +156,7 @@ publicVariable "b1Forest";
 b1Snow="\b1_snow.sqf";
 publicVariable "b1Snow";
 
-soblack="\soretexture.sqf";
+soblack=specOpDroidPath+"\soretexture.sqf";
 publicVariable "soblack";
 
 b1Heavy=b1Path+"\b1_heavy.sqf"; 		
