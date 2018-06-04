@@ -413,7 +413,7 @@ boxesQuick=itemsQuick+boxes;
 publicVariable "boxesQuick";
 
 hmpQuick=airBasedQuick+hmpPath;
-publicVariable="hmpQuick";
+publicVariable "hmpQuick";
 //Variable that is declared to notify when all the above is done
 filePathsDone=true;
 publicVariable "filePathsDone";
