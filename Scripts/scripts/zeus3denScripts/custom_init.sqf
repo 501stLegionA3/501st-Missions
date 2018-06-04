@@ -16,20 +16,20 @@ publicVariable "checkSum";
 publicVariable "checkSumCounter";
 
 //Obtains what kind of mission file the file is.
-_scriptPackage=missionNamespace getVariable ["missionType","normal"];
+packageType=missionNamespace getVariable ["missionType","normal"];
 
 //Selects the right script package based on mission type.
-switch (_scriptPackage) do {
+switch (packageType) do {
     case "multipleOccupationSimulator": { 
-		[] execVM (root+_scriptPackage+"\mosPackage.sqf"); 
+		[] execVM (root+scriptPackagePath+"\mosPackage.sqf"); 
 	};
 
     case "test": { 
-	    [] execVM (root+_scriptPackage+"\defaultPackage.sqf");
-	    [] execVM (root+_scriptPackage+"\testPackage.sqf"); 
+	    [] execVM (root+scriptPackagePath+"\defaultPackage.sqf");
+	    [] execVM (root+scriptPackagePath+"\testPackage.sqf"); 
 	};
 
     default {  
-	    [] execVM (root+_scriptPackage+"\defaultPackage.sqf"); 
+	    [] execVM (root+scriptPackagePath+"\defaultPackage.sqf"); 
 	};
 };

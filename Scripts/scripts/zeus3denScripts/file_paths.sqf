@@ -424,7 +424,7 @@ publicVariable "laatSmokeQuick";
 arc170SmokeQuick=actionBasedQuick+smokePath+arc170Path+arcSmokeNorm;
 publicVariable "arc170SmokeQuick";
 
-ywingSmokeQuick=actionBasedQuick+smoke+ywingPath+ywingSmoke;
+ywingSmokeQuick=actionBasedQuick+smokePath+ywingPath+ywingSmoke;
 publicVariable "ywingSmokeQuick";
 //Variable that is declared to notify when all the above is done
 filePathsDone=true;
