@@ -39,9 +39,6 @@ Specop={
 
 
 	_com AddUniform "SWOP_B1_droid_crew_F_standart";
-	[_com,[0,"optre_vehicles\cart\data\truck_01_ext_01_co.paa"]] remoteExec ["setObjectTextureglobal",0];
-	[_com,[1,"optre_vehicles\falcon\data\Falcon_Hull_Night_co.paa"]] remoteExec ["setObjectTextureglobal",0];
-	[_com,[2,"optre_vehicles\cart\data\truck_01_ext_01_co.paa"]] remoteExec ["setObjectTextureglobal",0];
 	_com Addheadgear "H_HelmetO_ViperSP_ghex_F";
 	_com AddVest "SWOP_Clonetrooper_Katarn_armor";
 	_com addBackpack "CAA_InvisBag";

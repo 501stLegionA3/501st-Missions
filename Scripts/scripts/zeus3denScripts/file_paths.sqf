@@ -156,6 +156,9 @@ publicVariable "b1Forest";
 b1Snow="\b1_snow.sqf";
 publicVariable "b1Snow";
 
+soblack="\soretexture.sqf";
+publicVariable "soblack";
+
 b1Heavy=b1Path+"\b1_heavy.sqf"; 		
 publicVariable "b1Heavy";
 
@@ -283,7 +286,7 @@ publicVariable "flareblufor";
 flareopfor="\flare_opfor.sqf";
 publicVariable "flareopfor";
 
-gunshipHMP="\Gunship.sqf"
+gunshipHMP="\Gunship.sqf";
 publicVariable "gunshipHMP";
 
 laatSmoke="\laat_smoke_tip.sqf";
@@ -413,7 +416,7 @@ boxesQuick=itemsQuick+boxes;
 publicVariable "boxesQuick";
 
 hmpQuick=airBasedQuick+hmpPath;
-publicVariable="hmpQuick";
+publicVariable "hmpQuick";
 //Variable that is declared to notify when all the above is done
 filePathsDone=true;
 publicVariable "filePathsDone";

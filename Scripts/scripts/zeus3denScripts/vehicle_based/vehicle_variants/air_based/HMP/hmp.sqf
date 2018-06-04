@@ -47,7 +47,7 @@ HMPGun=
     {
     HMP_Gunship = _this select 0;
     [HMP_Gunship] execVM "scripts\zeus3denScripts\vehicle_based\vehicle_variants\air_based\HMP\Gunship.sqf";
-	removeAllActions _this;
+	removeAllActions HMP_Gunship;
 	},[1],0,false,true,""," driver  _target == _this "];
 
 
@@ -101,7 +101,7 @@ HMPTrans=
     {
     HMP_Gunship = _this select 0;
     [HMP_Gunship] execVM "scripts\zeus3denScripts\vehicle_based\vehicle_variants\air_based\HMP\Transport.sqf";
-	removeAllActions _this;
+	removeAllActions HMP_Gunship;
 	},[1],0,false,true,""," driver  _target == _this "];
 
 
