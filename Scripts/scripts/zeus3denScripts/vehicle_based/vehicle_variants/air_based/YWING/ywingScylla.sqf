@@ -63,7 +63,7 @@ scylla={
 	
 	// function as file
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
-	{[_this select 0] execVM (actionBasedQuick+smoke+ywingPath+ywingSmoke);}
+	{[_this select 0] execVM (ywingSmokeQuick);}
 	,[1],0,false,true,"User13"," driver  _target == _this"];
 	
 

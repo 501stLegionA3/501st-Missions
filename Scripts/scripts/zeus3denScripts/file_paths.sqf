@@ -34,8 +34,8 @@ publicVariable "barcPath";
 boostPath="\boost";
 publicVariable "boostPath";
 
-boxes="\boxes";
-publicVariable "boxes";
+boxesPath="\boxes";
+publicVariable "boxesPath";
 
 droidekaPath="\droideka";
 publicVariable "droidekaPath";
@@ -91,14 +91,14 @@ publicVariable "resupplyData";
 sabrePath="\sabre";
 publicVariable "sabrePath";
 
-scriptPackage="\scriptPackages";
-publicVariable "scriptPackage";
+scriptPackagePath="\scriptPackages";
+publicVariable "scriptPackagePath";
 
 seaBased="\sea_based";
 publicVariable "seaBased";
 
-smoke="\smoke";
-publicVariable "smoke";
+smokePath="\smoke";
+publicVariable "smokePath";
 
 specOpDroidPath="\spec_ops";
 publicVariable "specOpDroidPath";
@@ -132,10 +132,10 @@ publicVariable "zeusFncPanel";
 
 
 //Objects
-aat=aatPath+"\aatMohawkClassBase.sqf"; 		
+aat=aatPath+"\aatMohawkClassBase.sqf"; 	//	
 publicVariable "aat";
 
-arc170=arc170Path+"\arcXiphos.sqf"; 		
+arc170=arc170Path+"\arcXiphos.sqf";// 		
 publicVariable "arc170";
 
 atteBase=attePath+"\atteBase.sqf"; 		
@@ -168,13 +168,13 @@ publicVariable "b1Sniper";
 b2=b2Path+"\b2Reconfig.sqf"; 		
 publicVariable "b2";
 
-barc=barcPath+"\barc.sqf"; 		
+barc=barcPath+"\barc.sqf"; //		
 publicVariable "barc";
 
 bluforSpeedboat="\bluforSpeedBoat.sqf"; 		
 publicVariable "bluforSpeedboat";
 
-droideka=droidekaPath+"\droideka.sqf"; 		
+droideka=droidekaPath+"\droideka.sqf"; 	//	
 publicVariable "droideka";
 
 droidekaDriver="\droideka_driver.sqf";
@@ -189,31 +189,31 @@ publicVariable "dwarfDriver";
 hailfire=hailfirePath+"\HailfireBallista.sqf"; 		
 publicVariable "hailfire";
 
-homingspiderdroid="\spiderdroid_buff.sqf";
+homingspiderdroid="\spiderdroid_buff.sqf";//
 publicVariable "homingspiderdroid";
 
-hmp=hmpPath+"\hmp.sqf"; 		
+hmp=hmpPath+"\hmp.sqf"; 	//	
 publicVariable "hmp";
 
-laat=laatpath+"\laatClaymore.sqf"; 		
+laat=laatpath+"\laatClaymore.sqf"; 	//	
 publicVariable "laat";
 
-magnaDroid=magnaPath+"\magna.sqf"; 		
+magnaDroid=magnaPath+"\magna.sqf"; 	//	
 publicVariable "magnaDroid";
 
-mortar=mortarPath+"\mortars.sqf"; 		
+mortar=mortarPath+"\mortars.sqf"; //		
 publicVariable "mortar";
 
-mtt=mttPath+"\mttdeploy.sqf"; 		
+mtt=mttPath+"\mttdeploy.sqf"; 	//	
 publicVariable "mtt";
 
 opforSpeedboat="\opforSpeedBoat.sqf"; 		
 publicVariable "opforSpeedboat";
 
-praetorian="\Praetorian.sqf";
+praetorian="\Praetorian.sqf";//
 publicVariable "praetorian";
 
-sabre=sabrePath+"\Sabres.sqf"; 		
+sabre=sabrePath+"\Sabres.sqf";// 		
 publicVariable "sabre";
 
 specOpDroid=specOpDroidPath+"\spec_ops.sqf"; 		
@@ -222,13 +222,13 @@ publicVariable "specOpDroid";
 triDroid=tridroidPath+"\tri_droid.sqf"; 		
 publicVariable "triDroid";
 
-vWing=vwingPath+"\vwingarrow.sqf"; 		
+vWing=vwingPath+"\vwingarrow.sqf"; //		
 publicVariable "vWing";
 
-vulture=vulturePath+"\vultureBase.sqf"; 		
+vulture=vulturePath+"\vultureBase.sqf";// 		
 publicVariable "vulture";
 
-ywing=ywingPath+"\ywingScylla.sqf"; 		
+ywing=ywingPath+"\ywingScylla.sqf";// 		
 publicVariable "ywing";
 
 //Factions
@@ -243,7 +243,7 @@ civFac="\civilian";
 publicVariable "civ";
 
 //Unit Factions
-cis="\cis";
+cis="\cis";					//
 publicVariable "cis";
 
 //Scripts and functions
@@ -412,11 +412,20 @@ publicVariable "resupplyBoxQuick";
 itemsQuick=playedBasedQuick+item;
 publicVariable "itemsQuick";
 
-boxesQuick=itemsQuick+boxes;
+boxesQuick=itemsQuick+boxesPath;
 publicVariable "boxesQuick";
 
 hmpQuick=airBasedQuick+hmpPath;
 publicVariable "hmpQuick";
+
+laatSmokeQuick=actionBasedQuick+smokePath+laatpath+laatSmoke;
+publicVariable "laatSmokeQuick";
+
+arc170SmokeQuick=actionBasedQuick+smokePath+arc170Path+arcSmokeNorm;
+publicVariable "arc170SmokeQuick";
+
+ywingSmokeQuick=actionBasedQuick+smoke+ywingPath+ywingSmoke;
+publicVariable "ywingSmokeQuick";
 //Variable that is declared to notify when all the above is done
 filePathsDone=true;
 publicVariable "filePathsDone";
