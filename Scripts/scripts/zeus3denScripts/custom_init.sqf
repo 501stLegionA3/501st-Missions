@@ -22,14 +22,17 @@ packageType=missionNamespace getVariable ["missionType","normal"];
 switch (packageType) do {
     case "multipleOccupationSimulator": { 
 		[] execVM (root+scriptPackagePath+"\mosPackage.sqf"); 
+		missionNamespace setVariable ["scriptPackageDeployedName", "multipleOccupationSimulator package", true];
 	};
 
     case "test": { 
 	    [] execVM (root+scriptPackagePath+"\defaultPackage.sqf");
 	    [] execVM (root+scriptPackagePath+"\testPackage.sqf"); 
+	    missionNamespace setVariable ["scriptPackageDeployedName", "test package", true];
 	};
 
     default {  
-	    [] execVM (root+scriptPackagePath+"\defaultPackage.sqf"); 
+	    [] execVM (root+scriptPackagePath+"\defaultPackage.sqf");
+	    missionNamespace setVariable ["scriptPackageDeployedName", "default package", true];
 	};
 };

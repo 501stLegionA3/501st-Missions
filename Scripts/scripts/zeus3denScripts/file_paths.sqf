@@ -132,11 +132,11 @@ publicVariable "zeusFncPanel";
 
 
 //Objects
-aat=aatPath+"\aatMohawkClassBase.sqf"; 	//	
-publicVariable "aat";
+aatSQF=aatPath+"\aatMohawkClassBase.sqf"; 		
+publicVariable "aatSQF";
 
-arc170=arc170Path+"\arcXiphos.sqf";// 		
-publicVariable "arc170";
+arc170SQF=arc170Path+"\arcXiphos.sqf"; 		
+publicVariable "arc170SQF";
 
 atteBase=attePath+"\atteBase.sqf"; 		
 publicVariable "atteBase";

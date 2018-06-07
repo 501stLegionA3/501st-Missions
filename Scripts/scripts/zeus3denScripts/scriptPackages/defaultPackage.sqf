@@ -28,7 +28,7 @@ checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
 
 //arc-170 weapon,adds weapons,wingtip smoke and ejection prevention
-[] execVM (root+vehicleBased+vehicleVariant+airBased+arc170);
+[] execVM (root+vehicleBased+vehicleVariant+airBased+arc170SQF);
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;	
 
@@ -53,7 +53,7 @@ checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;	
 
 //AAT weapons
-[] execVM (root+vehicleBased+vehicleVariant+landBased+aat);
+[] execVM (root+vehicleBased+vehicleVariant+landBased+aatSQF);
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
 
