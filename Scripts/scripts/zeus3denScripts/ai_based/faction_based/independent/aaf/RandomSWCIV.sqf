@@ -1,6 +1,8 @@
 //----------
 //Now this file is called in the init.sqf. Thus whenever an independent AAF VR entity is spawned,this is ran
 
+//******************$$$$$$$$$$$$$$$$$$**************NOTE AS OF RIGHT NOW THIS FILE IS NOT CALLED----$$$$$$--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
 //general script
 rexirandomswciv={
 	params["_swciv"];
@@ -69,7 +71,8 @@ rexirandomswgroup={
 	SWCIVGROUP_8 = "c_Soldier_VR_F" createunit [position _grouplead, group _grouplead];
 	
 };//end S					 Random Uniform Selector								
+		
 								
-["C_Soldier_VR_F", "init",rexirandomswciv, true, [], true] call CBA_fnc_addClassEventHandler; 
-["C_Protagonist_VR_F", "init",rexirandomswciv, true, [], true] call CBA_fnc_addClassEventHandler; 
-["C_Protagonist_VR_F", "init",rexirandomswgroup, true, [], true] call CBA_fnc_addClassEventHandler; 
+["I_Soldier_VR_F", "init",rexirandomswciv, true, [], true] call CBA_fnc_addClassEventHandler; 
+["I_Protagonist_VR_F", "init",rexirandomswciv, true, [], true] call CBA_fnc_addClassEventHandler; 
+["I_Protagonist_VR_F", "init",rexirandomswgroup, true, [], true] call CBA_fnc_addClassEventHandler; 
