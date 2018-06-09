@@ -161,15 +161,15 @@ claymoreI={
 					};//makes two fires or watever much, and then stores them in the array while also randomly palcing on laat
 					
 					
+					sleep 20;
+					_namUnitSpawn allowDamage true;
 					
-
-					
-					sleep 50;
+					sleep 30;
 					{ 
 						deleteVehicle _x;
-						_namLaatFireObj=[];
+						
 					} forEach _namLaatFireObj;//delets all of them
-					
+					_namLaatFireObj=[];
 					
 					
 				};
@@ -181,12 +181,7 @@ claymoreI={
 			_namResultingDmg=_namDmg/2;
 		
 		
-		};
-		
-		
-		
-		
-		
+		};	
 	}];
 	
 };
