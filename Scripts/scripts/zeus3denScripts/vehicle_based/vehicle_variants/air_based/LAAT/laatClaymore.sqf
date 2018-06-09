@@ -81,7 +81,7 @@ claymoreI={
 	//_vic setvariable ["OPTRE_Thruster_EngagedStatus",false,true];
 	
 
-	/*
+/*
 	//adds action to engage boost
 	_vic  addAction ["<t color='#00FF00'>Engage C.R.U.I.S.I.E Control System -------- U18</t>",
 	{
@@ -93,8 +93,8 @@ claymoreI={
 	{
 		[_this select 0,80,5] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStop.sqf";
 	},[1],0,false,true,"User19"," driver  _target == _this"];
-	*/
 
+*/
 	//boost on
 	_vic  addAction ["",
 	{
@@ -137,8 +137,17 @@ claymoreI={
 			_namUnit allowDamage false;
 			_namUnit setFuel 0;
 			_namUnit setDamage .7;
-			_namUnit vehicleChat format["MAYDAY MAYDAY MAYDAY THIS IS %1 GOING DOWN OVER GRID %2 BRRRRRRR*****BRRRRR ****BRRRRR",(name (driver _namUnit)),(mapGridPosition _namUnit)];
-
+			_namunit setHitIndex [3, 1];
+			_namunit setHitIndex [3, 1];
+			_namunit setHitIndex [4, 1];
+			_namunit setHitIndex [7, 1]; 
+			_namunit setHitIndex [6, 1]; 
+			_namunit setHitIndex [9, 1];
+			_namunit setHitIndex [8, 1];
+			_namunit setHitIndex [10, 1];
+			_namunit setHitIndex [1, 0.5];
+			
+			[_namUnit,format["MAYDAY MAYDAY MAYDAY THIS IS %1 GOING DOWN OVER GRID %2 BRRRRRRR*****BRRRRR ****BRRRRR",(name (driver _namUnit)),(mapGridPosition _namUnit)]] remoteExec ["sideChat", -2];
 			_namResultingDmg=0;
 			_namIsCrashing=((_namUnit) getVariable["isCrashing",false]); 
 
@@ -147,10 +156,9 @@ claymoreI={
 				_null = _this spawn 
 				{	
 					_namUnitSpawn=_this select 0;
-					[west, "HQ"] sideChat format["fire made %1",time];
 					_namLaatFirePosArray=[[6,-2.5,-1],[-6,-2.5,-1], [1.5,-5,2.5], [-1.5,-5,2.5],[0,3,0],[0,6,-.5],[0,0,-2]];
 					
-					
+					removeAllEventHandlers _namUnitSpawn;
 					_namLaatFireObj=[];
 					
 					for "_i" from 0 to 1 do
@@ -160,19 +168,23 @@ claymoreI={
 						_namLaatFireObj=_namLaatFireObj+[_fire];
 					};//makes two fires or watever much, and then stores them in the array while also randomly palcing on laat
 					
-					
 					sleep 20;
-					_namUnitSpawn allowDamage true;
+					_namUnitSpawn allowDamage true;	
 					
-					sleep 30;
+					sleep 60;
 					{ 
 						deleteVehicle _x;
 						
+						_namLaatFireObj=[];
 					} forEach _namLaatFireObj;//delets all of them
-					_namLaatFireObj=[];
-					_namUnitSpawn setDamage 1;
+					 _namUnitSpawn setDamage 1;
+					bomb = "Bo_Mk82" createVehicle (getpos _namUnitSpawn);
+					 sleep 2;
+					 bomb = "Bo_Mk82" createVehicle (getpos _namUnitSpawn);
 					
 				};
+				
+					
 			};
 			_namUnit setVariable ["isCrashing", true,true];
 		}
@@ -181,7 +193,12 @@ claymoreI={
 			_namResultingDmg=_namDmg/2;
 		
 		
-		};	
+		};
+		
+		
+		
+		
+		
 	}];
 	
 };

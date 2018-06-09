@@ -6,7 +6,7 @@ namStarWarsSpeedBoatOpfor={
 		comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 		weaponData=[
 		["Cannon_EWEBSWBFgun","1000Rnd_Laser_Cannon_EWEBSWBF",[[1,1000,2]]],
-		["Cannon_UWINGback","500Rnd_Cannon_UWINGback",[[0,500,2]]],
+		["Can_tur","300Rnd_Laser_Can_tur",[[0,500,2]]],
 		["SmokeLauncher","SmokeLauncherMag",[[-1,2,20]]]
 		];
 
