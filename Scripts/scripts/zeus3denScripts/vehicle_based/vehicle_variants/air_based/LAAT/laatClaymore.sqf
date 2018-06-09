@@ -170,7 +170,7 @@ claymoreI={
 						
 					} forEach _namLaatFireObj;//delets all of them
 					_namLaatFireObj=[];
-					
+					_namUnitSpawn setDamage 1;
 					
 				};
 			};
