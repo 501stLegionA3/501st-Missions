@@ -158,7 +158,6 @@ claymoreI={
 					_namUnitSpawn=_this select 0;
 					_namLaatFirePosArray=[[6,-2.5,-1],[-6,-2.5,-1], [1.5,-5,2.5], [-1.5,-5,2.5],[0,3,0],[0,6,-.5],[0,0,-2]];
 					
-					removeAllEventHandlers _namUnitSpawn;
 					_namLaatFireObj=[];
 					
 					for "_i" from 0 to 1 do
@@ -170,6 +169,7 @@ claymoreI={
 					
 					sleep 20;
 					_namUnitSpawn allowDamage true;	
+					_namUnitSpawn removeAllEventHandlers "HandleDamage";
 					
 					sleep 60;
 					{ 
