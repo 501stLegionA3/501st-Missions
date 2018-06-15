@@ -38,4 +38,4 @@ _x removeAllMPEventHandlers "MPKILLED";
 
 }];
 
-
+player enableFatigue false;

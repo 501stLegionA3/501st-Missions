@@ -4,7 +4,7 @@ Magma={
 	params["_mag"];
 _mag setSkill 1;
 _mag setAnimSpeedCoef 1.45;
-_mag setvariable ["ace_medical_unitDamageThreshold", [55,70,70], true];
+_mag setvariable ["ace_medical_unitDamageThreshold", [64,81,81], true]; //*Zatama 15.06.18
 _mag setUnitAbility 100; 
 _mag setskill ["aimingAccuracy",1]; 
 _mag setskill ["aimingShake",1]; 
@@ -14,6 +14,7 @@ _mag setUnitRecoilCoefficient 0;
 _mag setskill ["spotTime",1]; 
 _mag setskill ["courage",1]; 
 _mag setskill ["reloadSpeed",1]; 
+_mag setunitpos "auto"; //Zatama 15/06/18
 _mag setSkill ["general", 1]; 
 _mag addItem "swop_nvchipclean"; 
 _mag assignItem "swop_nvchipclean";

@@ -46,6 +46,9 @@ publicVariable "dwarfSpiderDroidPath";
 factionBased="\faction_based";
 publicVariable "factionBased";
 
+geonosiansAllPath="\geonosians"; //zatama test
+publicVariable "geonosiansAllPath";
+
 hailfirePath="\hailfire";
 publicVariable "hailfirePath";
 
@@ -185,6 +188,9 @@ publicVariable "dwarfSpiderDroid";
 
 dwarfDriver="\dwarf_spider_droid_driver.sqf";
 publicVariable "dwarfDriver";
+
+geonosianAll=geonosiansAllPath+"\geo_all.sqf"; //ZATAMA TEST
+publicVariable "geonosianAll";
 
 hailfire=hailfirePath+"\HailfireBallista.sqf"; 		
 publicVariable "hailfire";
