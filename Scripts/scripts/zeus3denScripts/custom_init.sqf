@@ -16,7 +16,6 @@ publicVariable "checkSum";
 publicVariable "checkSumCounter";
 
 //Obtains what kind of mission file the file is.
-//So you should have (missionNamespace setVariable ["missionType","NAME OF MISSION TYPE",true];)
 packageType=missionNamespace getVariable ["missionType","normal"];
 
 //Selects the right script package based on mission type.
@@ -30,12 +29,6 @@ switch (packageType) do {
 	    [] execVM (root+scriptPackagePath+"\defaultPackage.sqf");
 	    [] execVM (root+scriptPackagePath+"\testPackage.sqf"); 
 	    missionNamespace setVariable ["scriptPackageDeployedName", "test package", true];
-	};
-
-    case "modTest1": { 
-	    
-	    [] execVM (root+scriptPackagePath+"\modTest1Package.sqf"); 
-	    missionNamespace setVariable ["scriptPackageDeployedName", "Mod test 1 package", true];
 	};
 
     default {  
