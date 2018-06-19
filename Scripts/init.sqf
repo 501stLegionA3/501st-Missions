@@ -24,8 +24,8 @@ _EndSplashScreen = {
 //////////LAAT C Monitor/////////////
 [] execVM "scripts\LAATCMonitor.sqf";
 /////////////////////////////////////
-//////////SCFramework////////////////
-//[] execVM "SCFramework\Init_SCFramework.SQF";
+//////////kleinToHCs////////////////
+[] execVM "kleinToHCs.sqf";
 /////////////////////////////////////
 ///////// Infatry Loadouts /////////
 // loadOutbox = Variable Name - A box/object - must have object down to work
