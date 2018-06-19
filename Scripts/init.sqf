@@ -25,7 +25,7 @@ _EndSplashScreen = {
 [] execVM "scripts\LAATCMonitor.sqf";
 /////////////////////////////////////
 //////////kleinToHCs////////////////
-[] execVM "kleinToHCs.sqf";
+[] execVM "Klein's_AI_Loadbalancer\kleinToHCs.sqf";
 /////////////////////////////////////
 ///////// Infatry Loadouts /////////
 // loadOutbox = Variable Name - A box/object - must have object down to work
