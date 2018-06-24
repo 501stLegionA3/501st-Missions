@@ -28,14 +28,5 @@ _EndSplashScreen = {
 //[] execVM "SCFramework\Init_SCFramework.SQF";
 /////////////////////////////////////
 
-///////// Airborne Loadouts /////////
-// airbornLObox = Variable Name - A box/object - must have object down to work
-
-///////// Arc Loadouts /////////
-// arcLObox = Variable Name - A box/object - must have object down to work
-
-///////// RTO Loadouts /////////
-// rtoLObox = Variable Name - A box/object - must have object down to work
-
 //calls namenai's init.sqf,refer to its readme for its purpose
 [] execVM "scripts\zeus3denScripts\custom_init.sqf";
