@@ -14,10 +14,6 @@ checkSumCounter=checkSumCounter+1;
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;	
 
-//Eulers Spec Ops droids,vr soilder
-[] execVM (root+aiBased+factionBased+opforFac+cis+specOpDroid);	
-checkSumVariable=checkSumVariable+checkSumCounter;
-checkSumCounter=checkSumCounter+1;
 
 //Zatama's Geocunts
 [] execVM (root+aiBased+factionBased+opforFac+cis+geonosianAll);	
@@ -141,6 +137,12 @@ checkSumCounter=checkSumCounter+1;
 [] execVM (root+aiBased+factionBased+opforFac+cis+b1Sniper);
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
+
+//Eulers Spec Ops droids vr soldier
+[] execVM (root+aiBased+factionBased+opforFac+cis+specOpDroid);	
+checkSumVariable=checkSumVariable+checkSumCounter;
+checkSumCounter=checkSumCounter+1;
+
 
 //Droideka spawny script
 [] execVM (root+aiBased+factionBased+opforFac+cis+droideka);	
