@@ -15,11 +15,6 @@ checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;	
 
 
-//Zatama's Geocunts
-[] execVM (root+aiBased+factionBased+opforFac+cis+geonosianAll);	
-checkSumVariable=checkSumVariable+checkSumCounter;
-checkSumCounter=checkSumCounter+1;
-
 //Hades Panel - Currently decommissioned
 //[] execVM "scripts\zeus3denScripts\ZeusfunctionPanel\zeusVariableAndFunctionPanelHades.sqf";
 
@@ -143,6 +138,10 @@ checkSumCounter=checkSumCounter+1;
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
 
+//Zatama's Geocunts
+[] execVM (root+aiBased+factionBased+opforFac+cis+geonosianAll);	
+checkSumVariable=checkSumVariable+checkSumCounter;
+checkSumCounter=checkSumCounter+1;
 
 //Droideka spawny script
 [] execVM (root+aiBased+factionBased+opforFac+cis+droideka);	

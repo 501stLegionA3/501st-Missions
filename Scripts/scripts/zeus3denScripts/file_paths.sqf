@@ -240,13 +240,13 @@ publicVariable "ywing";
 //Factions
 //Sides
 bluforFac="\blufor"; 		
-publicVariable "blufor";
+publicVariable "bluforFac";
 
 opforFac="\opfor"; 		
-publicVariable "opfor";
+publicVariable "opforFac";
 
 civFac="\civilian"; 		
-publicVariable "civ";
+publicVariable "civFac";
 
 //Unit Factions
 cis="\cis";					//
