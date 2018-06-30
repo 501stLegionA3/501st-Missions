@@ -26,11 +26,11 @@ _EndSplashScreen = {
 /////////////////////////////////////
 
 //////////SCFramework////////////////
-[] execVM "SCFramework\Init_SCFramework.SQF";
+//[] execVM "SCFramework\Init_SCFramework.SQF";
 /////////////////////////////////////
 
 //////////kleinToHCs////////////////
-//[] execVM "Klein's_AI_Loadbalancer\kleinToHCs.sqf";
+[] execVM "Klein's_AI_Loadbalancer\kleinToHCs.sqf";
 
 //////////Custom Scripts Init //////////
 [] execVM "scripts\zeus3denScripts\custom_init.sqf";
