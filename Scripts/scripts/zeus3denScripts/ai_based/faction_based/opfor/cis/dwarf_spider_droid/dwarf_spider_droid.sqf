@@ -1,6 +1,8 @@
 //created by Rexi
 DSD={
 	params["_obj"];
+	[_obj, false, [0, 3, 1], 10] call ace_dragging_fnc_setCarryable;
+	[_obj, false, [0, 3, 1], 10] call ace_dragging_fnc_setdraggable;
 	_obj addAction ["<t color='#00FF00'>Convert to moveable</t>", {
     Dspawner = _this select 0;
     [Dspawner] execVM (cisQuick+dwarfSpiderDroidPath+dwarfDriver);

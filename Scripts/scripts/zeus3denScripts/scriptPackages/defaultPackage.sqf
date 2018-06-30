@@ -93,6 +93,11 @@ checkSumCounter=checkSumCounter+1;
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
 
+//adds  Medical stretcher Script to Light Medical Boxes
+[] execVM  (medicalPlayedBasedQuick+Mstretcher);	
+checkSumVariable=checkSumVariable+checkSumCounter;
+checkSumCounter=checkSumCounter+1;
+
 //adds advanced sling loading
 [] execVM (root+vehicleBased+vehicleVariant+airBased+advSlingLoad);
 checkSumVariable=checkSumVariable+checkSumCounter;

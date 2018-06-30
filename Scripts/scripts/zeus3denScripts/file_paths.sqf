@@ -70,6 +70,9 @@ publicVariable "item";
 magnaPath="\magna";
 publicVariable "magnaPath";
 
+MedicalP="\medical";
+publicVariable "MedicalP";
+
 mortarPath="\mortar";
 publicVariable "mortarPath";
 
@@ -225,6 +228,7 @@ publicVariable "sabre";
 specOpDroid=specOpDroidPath+"\spec_ops.sqf"; 		
 publicVariable "specOpDroid";
 
+
 triDroid=tridroidPath+"\tri_droid.sqf"; 		
 publicVariable "triDroid";
 
@@ -306,6 +310,9 @@ publicVariable "largeMedical";
 
 mttFnc="\mtt.sqf";
 publicVariable "mttFnc";
+
+Mstretcher="\stretcher.sqf"; 		
+publicVariable "Mstretcher";
 
 repair65="\repair_to_65.sqf";
 publicVariable "repair65";
@@ -409,8 +416,14 @@ publicVariable "playedBasedItemsQuick";
 aviationPlayedBasedQuick=playedBasedQuick+aviation;
 publicVariable "aviationPlayedBasedQuick";
 
+MedicalplayedBasedQuick=playedBasedQuick+MedicalP;
+publicVariable "MedicalplayedBasedQuick";
+
 wardenBasedQuick=aviationPlayedBasedQuick+wardenBased;
 publicVariable "wardenBasedQuick";
+
+MedicalQuick=medicalPlayedBasedQuick+Mstretcher;
+publicVariable "MedicalQuick";
 
 resupplyBoxQuick=wardenBasedQuick+resupplyData;
 publicVariable "resupplyBoxQuick";

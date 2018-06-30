@@ -1,8 +1,5 @@
 //created by Namenai
 b2ForceWalk={
-params["_vic"];
-if (!local _vic) exitWith {};
-
  params ["_obj"];
 _obj forceWalk true;
 };
