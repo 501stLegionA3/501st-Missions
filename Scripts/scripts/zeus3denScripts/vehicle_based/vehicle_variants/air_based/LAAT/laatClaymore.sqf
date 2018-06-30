@@ -180,6 +180,7 @@ claymoreI={
 		
 		if(surfaceIsWater (getPos _namUnitSpawn))then
 		{ 
+		_namUnitSpawn allowDamage false;	
 		}
 		else {	_namUnitSpawn setDamage 1; 
 		bomb = "Bo_Mk82" createVehicle (getpos _namUnitSpawn); 
