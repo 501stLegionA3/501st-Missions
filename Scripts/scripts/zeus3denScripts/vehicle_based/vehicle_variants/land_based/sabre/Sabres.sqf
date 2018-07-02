@@ -14,7 +14,7 @@ Sabre={
 	{
 		[_this select 0] execVM (actionBasedQuick+repair+repairMore);
 	}];
-	
+	/*
 	comment "add in weapons and ammo";
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[-1]];
 	_vic addWeapon "Cannon_Portableun";  
@@ -34,11 +34,10 @@ Sabre={
 	} else { 
 	0 
 	} 
-	}];
+	*/
 	};
 
-["O_JM_TX130m1r_1", "init",sabre, true, [], true] call CBA_fnc_addClassEventHandler; 
-
+["O_JM_TX130m1r_1_RD501", "init",sabre, true, [], true] call CBA_fnc_addClassEventHandler; 
 
 
 
@@ -59,7 +58,7 @@ SSabre={
 	{
 		[_this select 0] execVM (actionBasedQuick+repair+repairMore);
 	}];
-
+/*
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[0]];
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[0]];
 	_vic addMagazineTurret ["1000Rnd_Laser_Cannon_EWEBSWBF_REP",[0]]; 
@@ -76,9 +75,10 @@ SSabre={
 	0 
 	} 
 	}];
+	*/
 	};
 
-["O_JM_TX130m2r_1", "init",Ssabre, true, [], true] call CBA_fnc_addClassEventHandler; 
+["O_JM_TX130m2r_1_RD501", "init",Ssabre, true, [], true] call CBA_fnc_addClassEventHandler; 
 
 
 
@@ -98,7 +98,7 @@ Sabrec={
 	{
 		[_this select 0] execVM (actionBasedQuick+repair+repairMore);
 	}];
-
+/*
 	comment "add in weapons and ammo";
 	_vic addWeapon "Cannon_Portableun";  
 	_vic removeWeapon "SWOP_DC15ABlasterRifle";
@@ -118,11 +118,11 @@ Sabrec={
 	0 
 	} 
 	}];
-	
+	*/
 	
 	};
 
-["O_JM_TX130r_1", "init",sabrec, true, [], true] call CBA_fnc_addClassEventHandler; 
+["O_JM_TX130r_1_RD501", "init",sabrec, true, [], true] call CBA_fnc_addClassEventHandler; 
 
 
 
@@ -143,7 +143,7 @@ IMPSabre={
 	{
 		[_this select 0] execVM (actionBasedQuick+repair+repairMore);
 	}];
-	
+	/*
 	comment "add in weapons and ammo";
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[-1]];
 	_vic addWeapon "Cannon_Portableun";  
@@ -164,9 +164,10 @@ IMPSabre={
 	0 
 	} 
 	}];
+	*/
 	};
 
-["O_JM_TX130_1", "init",IMPsabre, true, [], true] call CBA_fnc_addClassEventHandler; 
+["O_JM_TX130_1_RD501", "init",IMPsabre, true, [], true] call CBA_fnc_addClassEventHandler; 
 
 
 
@@ -188,6 +189,7 @@ IMPSSabre={
 	{
 		[_this select 0] execVM (actionBasedQuick+repair+repairMore);
 	}];
+	/*
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[0]];
 	_vic addMagazineTurret ["100Rnd_TXLaser_Cannon_mag",[0]];
 	_vic addMagazineTurret ["1000Rnd_Laser_Cannon_EWEBSWBF_REP",[0]]; 
@@ -204,9 +206,10 @@ IMPSSabre={
 	0 
 	} 
 	}];
+	*/
 	};
 
-["O_JM_TX130m2_1", "init",IMPSsabre, true, [], true] call CBA_fnc_addClassEventHandler; 
+["O_JM_TX130m2_1_RD501", "init",IMPSsabre, true, [], true] call CBA_fnc_addClassEventHandler; 
 
 
 
@@ -226,7 +229,7 @@ IMPSabrec={
 	{
 		[_this select 0] execVM (actionBasedQuick+repair+repairMore);
 	}];
-	
+	/*
 	comment "add in weapons and ammo";
 	_vic addWeapon "Cannon_Portableun";  
 	_vic removeWeapon "SWOP_DC15ABlasterRifle";
@@ -246,8 +249,7 @@ IMPSabrec={
 	0 
 	} 
 	}];
-	
-	
+	*/	
 	};
 
-[ "O_JM_TX130m1_1", "init",IMPsabrec, true, [], true] call CBA_fnc_addClassEventHandler; 
+[ "O_JM_TX130m1_1_RD501", "init",IMPsabrec, true, [], true] call CBA_fnc_addClassEventHandler; 

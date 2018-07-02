@@ -62,7 +62,7 @@ rexiAtteBase={
 	{  deleteVehicle _x; } forEach _DelArray;
 	}];
 
-
+/*
 	//Removes the standard weapon and replaces it with a 120mm cannon
 	_vic removeWeaponTurret ["Cannon_ATTE", [0]];
 	_vic addWeaponTurret ["cannon_120mm", [0]];
@@ -71,7 +71,7 @@ rexiAtteBase={
 	{
 		_vic addMagazineTurret ["32Rnd_120mm_APFSDS_shells_Tracer_Green" ,[0]];
 	};
-
+*/
 
 };//end at-te Base
 
@@ -105,5 +105,5 @@ UAVT={
 	
 ["B_HMG_01_A_F", "init",UAVT, true, [], true] call CBA_fnc_addClassEventHandler; 
 
-["Republic_ATTE", "init",rexiAtteBase, true, [], true] call CBA_fnc_addClassEventHandler; 
+["Republic_ATTE_RD501", "init",rexiAtteBase, true, [], true] call CBA_fnc_addClassEventHandler; 
 

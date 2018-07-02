@@ -4,7 +4,7 @@ xiphosI={
 	
 	//if (!(_vic getVariable ["namReconfigured", false])) then 
 	//{
-	
+	/*
 		comment "data for weapons";
 		comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 		weaponData=[
@@ -54,7 +54,7 @@ xiphosI={
 	//	_vic setVariable ["namReconfigured", true, true];
 //	}
 //	else {};
-	
+*/	
 	// function as file
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
 	{

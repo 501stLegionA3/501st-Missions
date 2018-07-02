@@ -1,6 +1,6 @@
 scylla={
 	params["_vic"];
-
+/*
 
 		comment "data for weapons";
 		comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
@@ -59,7 +59,7 @@ scylla={
 	//	_vic setVariable ["namReconfigured", true, true];
 //	}
 //	else {};
-
+*/
 	
 	// function as file
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",

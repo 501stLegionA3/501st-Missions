@@ -3,7 +3,7 @@
 
 arrow={
 	params["_vic"];
-	
+/*	
 	comment "data for weapons";
 	comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 	weaponData=[
@@ -47,7 +47,7 @@ arrow={
 		};
 
 	};//end weapon additon
-	
+	*/
 
 	comment "gets health";
 	_vic   addAction ["<t color='#00FF00'>Damage Report</t>",
@@ -73,7 +73,7 @@ arrow={
 	(_this select 0) setAirplaneThrottle ((airplaneThrottle (_this select 0))-0.01);	
 
 	},[1],0,false,true,"User17","driver  _target == _this"];
-	
+/*	
 	Comment "Set Mass Style";
 	_vic addAction ["<t color='#00FF00'>High Maneuverability</t>", {
 	(_this select 0) setmass 28000;
@@ -89,7 +89,7 @@ arrow={
 	_vic addAction ["<t color='#00FF00'>Standard Maneuverability</t>", {
 	(_this select 0) setmass 18000;
 	},[1],0,false,true,""," driver  _target == _this "];
-	
+	*/
 
 };
 ["swop_Vwing", "init",arrow, true, [], true] call CBA_fnc_addClassEventHandler; 

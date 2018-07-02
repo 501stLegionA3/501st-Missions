@@ -7,7 +7,7 @@ rexiAttMohawk=
 		
 		//also locks the aat
 		_vic setVehicleLock "LOCKED";
-		
+	/*	
 		//by default will add the new guns
 		_vic addWeaponTurret ["Cannon_EWEBSWBFgun", [0]];
 		for [{_i=0}, {_i<4}, {_i=_i+1}] do
@@ -16,7 +16,7 @@ rexiAttMohawk=
 		
 		};//
 		
-		
+		*/
 			
 			
 	};//end aatcoxial meme

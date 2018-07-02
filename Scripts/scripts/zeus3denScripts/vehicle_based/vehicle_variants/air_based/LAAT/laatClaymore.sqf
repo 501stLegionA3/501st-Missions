@@ -4,7 +4,7 @@ claymoreI={
 		//for Ai
 		_vic limitSpeed 220;
 	
-	
+/*	
 		comment "data for weapons";
 		comment"format of [weapon,weaponMagType,[[seat,ammoPerMag,MagCount],[seat,ammoPerMag,MagCount],......etc]]";
 		weaponData=[
@@ -60,7 +60,7 @@ claymoreI={
 		//removes torpedos
 		//_vic removeWeaponTurret["laat_proton_torpedo_launcher", [-1]];
 		
-
+*/
 	// function as file add the wing tip smoke for laat
 	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
 	{
@@ -94,7 +94,7 @@ claymoreI={
 		[_this select 0,80,5] execVM "scripts\zeus3denScripts\vehicleBased\actionMenu\Boost\boostStop.sqf";
 	},[1],0,false,true,"User19"," driver  _target == _this"];
 
-*/
+
 	//boost on
 	_vic  addAction ["",
 	{
@@ -114,7 +114,7 @@ claymoreI={
 		//(_this select 0) setMass 119533;
 	},[1],0,false,true,"User20"," driver  _target == _this"];
 
-	
+*/	
 	_vic addEventHandler ["HandleDamage",
 	{
 	

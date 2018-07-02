@@ -43,26 +43,26 @@ namZeusPanelHermes={
 		},[1],0,false,true,"","_target == _this"];//end
 	
 
-	
+	/*
 	//Makes spawned AAT's Blue and gray
 		_user  addAction ["<t color='#073BFC'>Make Spawned AAT's Blue Variant</t>",                
 		{
 		[] execVM(landBasedQuick+aatPath+aatRetext);
 		},[1],0,false,true,"","_target == _this"];//end
 		
-	
+	*/
 	//Converts Praetorian to star wars
 		_user addAction ["<t color='#47FF1A'>Converts Praetorian to star wars (CIS Colours)</t>",                
 		{
 		[] execVM (landBasedQuick+praetorianPath+praetorian);
 		},[1],0,false,true,"","_target == _this"];//end
-		
+/*		
 	//Seriously buffs the Homing Spider Droids with Titan AA missles and Rebel Laser Gun removes standard guns
 		_user addAction ["<t color='#47FF1A'>Add AA Missles + better gun to Spider Droids </t>",                
 		{
 		[] execVM (landBasedQuick+homingSpiderDroidPath+homingspiderdroid);
 		},[1],0,false,true,"","_target == _this"];//end
-
+*/
 	//Spacer
 		_user addAction ["<t color='#A020F0'> ---Zeus Infantry-----</t>", 
 		{
@@ -105,7 +105,7 @@ namZeusPanelHermes={
 		_user addAction ["<t color='#A020F0'> ---Players-----</t>", 
 		{
 		},[1],0,false,true,"","_target == _this"];//end
-	
+/*	
 	//Removes Thermals from players
 		_user  addAction ["<t color='#D1021E'>Removes Thermals from players</t>",                
 		{
@@ -117,7 +117,7 @@ namZeusPanelHermes={
 		{
 		[] execVM (playedBasedItemsQuick+addThermal);
 		},[1],0,false,true,"","_target == _this"];//end
-		
+*/		
 	//Removes maps and GPS' from players
 		_user  addAction ["<t color='#D1021E'>Removes maps and gps' from players</t>",                
 		{

@@ -1,4 +1,4 @@
-//At-TE components 
+//At-TE components puts together atte after being called from Hermes friend 
 //Created by Rexi
 //ye ole drop turret on which all stands
 	params["_vic"];
@@ -83,7 +83,7 @@
 	atte_drive addItemCargoGlobal ["B_UavTerminal", 5];
 
 //spawns a at-te on the dropturrets pos
-	atte_body  = "Republic_ATTE" createVehicle (getPosASL _dropTurret);
+	atte_body  = "Republic_ATTE_RD501" createVehicle (getPosASL _dropTurret);
 	atte_body attachTo [atte_drive,[0,-0.5,-2]]; 
 
 	

@@ -15,7 +15,7 @@
   
   
 	//right
-    _frag_grenade = createvehicle ["smokeshell",((_vic  ) getPos [0, (direction (_vic ))]) ,[],0,"none"]; 
+    _frag_grenade = createvehicle ["smokeshellred",((_vic  ) getPos [0, (direction (_vic ))]) ,[],0,"none"]; 
    
    comment "side,forward,up";
    _frag_grenade attachTo [_vic  ,[8.8,-.5,-1]];
