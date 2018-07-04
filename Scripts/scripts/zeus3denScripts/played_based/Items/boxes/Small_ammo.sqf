@@ -14,7 +14,7 @@
 	_vic addItemCargoGlobal ["SWOP_termDet_G", 20];
 	_vic addItemCargoGlobal ["SmokeShell", 20];
 	_vic addItemCargoGlobal ["SWOPthrowablectype", 2];
-	_vic addweaponcargoglobal ["SWOP_DC15ABlasterRifle",5];
+	_vic addweaponcargoglobal ["SWOP_DC15ABlasterRifle_RD501",5];
 	_vic addMagazineCargoGlobal ["SWOP_dc15xBlasterRifle_RD501_Mag", 5]; 
 	_vic addMagazineCargoGlobal ["5Rnd_HE_Grenade_DC15A", 10]; 
 	

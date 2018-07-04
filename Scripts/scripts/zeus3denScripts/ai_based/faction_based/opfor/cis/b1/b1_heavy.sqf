@@ -5,14 +5,21 @@
 	
 	for [{_i=0}, {_i<10}, {_i=_i+1}] do
 	{
-	_b1h addItemToBackpack "swop_CISShotgun_Mag";
-	_b1h addItemToBackpack "SWOP_EE3BlasterRifle_Mag";
 	_b1h addItemToBackpack "SWOP_E5C_Mag";
 	}; 
 	
+	for [{_i=0}, {_i<4}, {_i=_i+1}] do
+	{
+	_b1h addItemToBackpack "swop_RepShotgun_Mag_RD501";
+	}; 
+	
+	
+	
+	
+	
 //Uniforms to select from
 	_heavyguns = [ 
-	"swop_CISShotgun","SWOP_EE3BlasterRifle","SWOP_E5C"	
+	"swop_REPShotgun_rd501","SWOP_E5C","SWOP_E5C","SWOP_E5C"	
 	];
 	_guncount = count _heavyguns;
 //selects random gun

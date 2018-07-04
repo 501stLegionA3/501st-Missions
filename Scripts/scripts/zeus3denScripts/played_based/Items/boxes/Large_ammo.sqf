@@ -13,8 +13,7 @@
 	_vic addItemCargoGlobal ["SWOP_termDet_G", 50];
 	_vic addItemCargoGlobal ["SmokeShell", 50];
 	_vic addItemCargoGlobal ["SWOPthrowablectype", 10];
-	_vic addweaponcargoglobal ["SWOP_DC15ABlasterRifle",10];
-	_vic addMagazineCargoGlobal ["SWOP_Valken38XBlasterRifle_Mag", 20]; 
+	_vic addweaponcargoglobal [" SWOP_DC15ABlasterRifle_RD501",10];
 	_vic addMagazineCargoGlobal ["5Rnd_HE_Grenade_DC15A", 35]; 
 	 
 	_vic addMagazineCargoGlobal ["SWOP_DC15ABlasterRifle_Low_highcap_Mag", 8];
