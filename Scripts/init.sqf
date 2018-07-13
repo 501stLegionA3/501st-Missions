@@ -39,6 +39,7 @@ _EndSplashScreen = {
 
 // DON'T REMOVE THE CODE BELOW THIS //
 ///////// Infatry Loadouts /////////
+// Box Must Be Named = loadOutbox  //
 // loadOutbox = Variable Name - A box/object - must have object down to work
 //loadOutbox addAction ["Clone Recruit Loadout", "scripts\loadouts\infatry\loadout_cr.sqf"];
 //loadOutbox addAction ["Clone Cadet Loadout", "scripts\loadouts\infatry\loadout_cr-c.sqf"];
@@ -49,6 +50,7 @@ _EndSplashScreen = {
 //loadOutbox addAction ["Clone Sergeant-Major Loadout", "scripts\loadouts\infatry\loadout_cs-m.sqf"];
 //loadOutbox addAction ["Clone Commander Loadout", "scripts\loadouts\infatry\loadout_cc.sqf"];
 
+// Box Must Be Named = pilotsLObox  //
 ///////// Pilot Loadouts /////////
 // pilotsLObox = Variable Name - A box/object - must have object down to work
 //pilotsLObox addAction ["Senior CX-P Loadout", "scripts\loadouts\pilots\loadout_sr-cx-p.sqf"];
@@ -61,6 +63,7 @@ _EndSplashScreen = {
 //pilotsLObox addAction ["CX Scuba's Loadout", "scripts\loadouts\pilots\loadout_cx-scuba.sqf"];
 //pilotsLObox addAction ["CX White's Loadout", "scripts\loadouts\pilots\loadout_cx-white.sqf"];
 
+// Box Must Be Named = medicsLObox  //
 ///////// Medics Loadouts /////////
 // medicsLObox = Variable Name - A box/object - must have object down to work
 //medicsLObox addAction ["CM-S Loadout", "scripts\loadouts\medical\loadout_cm-s.sqf"];
@@ -68,12 +71,15 @@ _EndSplashScreen = {
 //medicsLObox addAction ["CM-C Loadout", "scripts\loadouts\medical\loadout_cm-c.sqf"];
 //medicsLObox addAction ["Clone Medic Loadout", "scripts\loadouts\medical\loadout_cm.sqf"];
 
+// Box Must Be Named = airbornLObox  //
 ///////// Airborne Loadouts /////////
 // airbornLObox = Variable Name - A box/object - must have object down to work
 
+// Box Must Be Named = arcLObox  //
 ///////// Arc Loadouts /////////
 // arcLObox = Variable Name - A box/object - must have object down to work
 
+// Box Must Be Named = rtoLObox  //
 ///////// RTO Loadouts /////////
 // rtoLObox = Variable Name - A box/object - must have object down to work
 // DON'T REMOVE THE CODE ABOVE THIS //
