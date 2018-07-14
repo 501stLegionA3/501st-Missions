@@ -5,19 +5,9 @@ enableSaving [ false, false ];
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
 [] call compileFinal preprocessFileLineNumbers "IA_liberation_config.sqf";
 
-// TODO: Clean Up - Ile 2 - Remove the un-needed presets, this is 501st Lib - remove RHS and others
 switch (IA_liberation_preset) do {
-	case 0: {[] call compileFinal preprocessFileLineNumbers "presets\custom.sqf";};
-	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\apex_tanoa.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\rhs.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_bw.sqf";};
-	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_takistan.sqf";};
-	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\3cbBAF.sqf";};
-	case 6: {[] call compileFinal preprocessFileLineNumbers "presets\customRebelVsEmpire.sqf";};
-	case 7: {[] call compileFinal preprocessFileLineNumbers "presets\customEmpireVsRebel.sqf";};
-	case 8: {[] call compileFinal preprocessFileLineNumbers "presets\customCloneVsCis.sqf";};
-	case 9: {[] call compileFinal preprocessFileLineNumbers "presets\customCisVsClone.sqf";};
-	default {[] call compileFinal preprocessFileLineNumbers "presets\customRebelVsEmpire.sqf";};
+	case 0: {[] call compileFinal preprocessFileLineNumbers "presets\501st.sqf";};
+	default {[] call compileFinal preprocessFileLineNumbers "presets\501st.sqf";};
 };
 
 MISSION_ROOT = call {

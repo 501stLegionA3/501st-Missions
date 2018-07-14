@@ -1,4 +1,3 @@
-
 infCounter=0;
 activated =0;
 
