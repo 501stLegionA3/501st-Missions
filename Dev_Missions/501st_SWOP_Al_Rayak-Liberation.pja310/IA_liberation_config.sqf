@@ -24,14 +24,8 @@ IA_liberation_ace_crates = [
 
 /* - Custom unit and arsenal preset settings.
 Which units preset should be used?
-0 = Default vanilla with RHS USAF and BWMod, both optional (edit the custom.sqf in the presets\ folder to change things for your own versions and tweaks).
-1 = Apex vanilla with RHS USAF and BWMod, both optional (edit the apex_tanoa.sqf in the presets\ folder to change things for your own versions and tweaks).
-2 = RHS USAF and RHS AFRF.
-3 = RHS USAF, RHS AFRF and BWMod.
-4 = RHS USAF, RHS AFRF and Project OPFOR (Takistan)
-5 = 3cbBAF, RHS USAF and RHS AFRF. */
-// 6 = SWOP
-// TODO: Clean this up, use 1 (create 501st Preset as 1)
+0 = Default 501st.
+*/
 
 if ((paramsArray select 1) == 6) then{
 	IA_liberation_preset = 6;
@@ -113,6 +107,8 @@ GRLIB_sector_cap = 180								* GRLIB_unitcap;											// Cap for sector defen
 GRLIB_battlegroup_cap = 150							* GRLIB_unitcap;											// Cap for enemy battlegroups.
 GRLIB_patrol_cap = 150								* GRLIB_unitcap;											// Cap for enemy patrols.
 
+
+// TODO - Add All Arma Vinella/DLC Weapons, Vechs, and Unit Stuff - Just need buildsing, objects, and some other stuff
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.	*/
