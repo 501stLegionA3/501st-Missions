@@ -22,3 +22,19 @@ rexiAttMohawk=
 	};//end aatcoxial meme
     
     ["O_SWOP_AAT_1", "init",rexiAttMohawk, true, [], true] call CBA_fnc_addClassEventHandler; 
+	
+ArmoredAssaultTank=
+	{
+	params["_vic"];
+	
+	_vic forceWeaponFire ["SWOP_E5AAT", "close"];
+	};
+	
+    ["O_SWOP_AAT_1", "init",ArmoredAssaultTank, true, [], true] call CBA_fnc_addClassEventHandler;
+	["O_SWOP_AAT_1_RD501", "init",ArmoredAssaultTank, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["O_SWOP_AAT_1_RD501_snow", "init",ArmoredAssaultTank, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["O_SWOP_AAT_1_RD501_urban", "init",ArmoredAssaultTank, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["O_SWOP_AAT_1_King_RD501", "init",ArmoredAssaultTank, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["O_SWOP_AAT_1_King_RD501_green", "init",ArmoredAssaultTank, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["O_SWOP_AAT_1_King_RD501_red", "init",ArmoredAssaultTank, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["O_SWOP_AAT_1_King_RD501_white", "init",ArmoredAssaultTank, true, [], true] call CBA_fnc_addClassEventHandler;

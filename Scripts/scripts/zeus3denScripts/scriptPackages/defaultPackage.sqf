@@ -34,10 +34,10 @@ checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;	
 
 //b2 reconfig,forces b2's to walk
-[] execVM (root+aiBased+factionBased+opforFac+cis+b2);
+/*[] execVM (root+aiBased+factionBased+opforFac+cis+b2);
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
-
+*/
 //Blufor Speedboat,adds republic eweb for rear and u-wing gunner gun for main cannon
 [] execVM (root+vehicleBased+vehicleVariant+seaBased+speedBoat+bluforFac+bluforSpeedboat);
 checkSumVariable=checkSumVariable+checkSumCounter;
@@ -47,12 +47,12 @@ checkSumCounter=checkSumCounter+1;
 [] execVM (root+vehicleBased+vehicleVariant+seaBased+speedBoat+opforFac+opforSpeedboat);
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;	
-
+/*
 //AAT weapons
 [] execVM (root+vehicleBased+vehicleVariant+landBased+aatSQF);
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
-
+*/
 //Vulture droid weapons
 [] execVM (root+vehicleBased+vehicleVariant+airBased+vulture);
 checkSumVariable=checkSumVariable+checkSumCounter;

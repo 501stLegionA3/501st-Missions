@@ -24,7 +24,7 @@
 	Mini_Middle = "O_GMG_01_A_F" createVehicle (getPosASL HMP_Gunship);
 	Mini_Middle attachTo [HMP_Gunship,[0,.7,-1]]; 
 	Mini_Middle removeWeapon "GMG_20mm"; 
-	Mini_Middle addWeaponTurret ["Cannon_droideka",[0]]; 
+	Mini_Middle addWeaponTurret ["RD501_droideka",[0]]; 
 	for [{_i=0}, {_i<50}, {_i=_i+1}] do  
 	{  
 	Mini_Middle addMagazineTurret ["SW_Droideka_Mag",[0]];  
