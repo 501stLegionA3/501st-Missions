@@ -11,6 +11,7 @@
 	_vic addMagazineCargoGlobal ["SWOP_DC15_Mag", 25];
 	_vic addMagazineCargoGlobal ["300Rnd_BlasterLaser_Belt_RD501", 30];
 	_vic addMagazineCargoGlobal [ "RocketHH15CloneHEATFF_Mag", 10];
+	_vic addMagazineCargoGlobal [ "RocketHH15CloneHEATFF_Mag_RD501", 10];
 	_vic addItemCargoGlobal ["SWOP_termDet_G", 20];
 	_vic addItemCargoGlobal ["SmokeShell", 20];
 	_vic addItemCargoGlobal ["SWOPthrowablectype", 2];
@@ -41,4 +42,4 @@
 	_vic addMagazineCargoGlobal ["ACE_HuntIR_M203", 10];
 	_vic addMagazineCargoGlobal ["SWOP_DC17Pistol_Mag", 15]; 
 	_vic addMagazineCargoGlobal ["DCStun_DC17_Mag" , 15];
-	ACE_maxWeightCarry = 10000;	
+	ACE_maxWeightCarry = 20000;	

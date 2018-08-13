@@ -182,10 +182,7 @@ claymoreI={
 		{ 
 		_namUnitSpawn allowDamage false;	
 		}
-		else {	_namUnitSpawn setDamage 1; 
-		bomb = "Bo_Mk82" createVehicle (getpos _namUnitSpawn); 
-		sleep 2; 
-		bomb = "Bo_Mk82" createVehicle (getpos _namUnitSpawn); 
+		else {	
 		} ;
 		
 				};
