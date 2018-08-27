@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=4818;
+		nextID=4824;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=183;
+		nextID=302;
 	};
 	class Camera
 	{
-		pos[]={19004.326,868.04041,12746.978};
-		dir[]={-0.84130692,-0.35852391,-0.40459356};
-		up[]={-0.32311159,0.93351638,-0.15538831};
-		aside[]={-0.43340421,-3.4167897e-008,0.90121675};
+		pos[]={4664.5889,2229.604,6271.5449};
+		dir[]={0.021344267,-0.56023914,0.82807708};
+		up[]={0.014436384,0.82832682,0.56006128};
+		aside[]={0.9996841,2.030356e-008,-0.025768742};
 	};
 };
 binarizationWanted=0;
@@ -12159,8 +12159,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -12169,10 +12169,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="tfHead_cruisie_A3";
 								};
 							};
 						};
@@ -12197,8 +12197,8 @@ class Mission
 						};
 						class Attribute3
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -12207,10 +12207,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="tfHead_cruisie_A3";
+									value=0;
 								};
 							};
 						};
@@ -111515,7 +111515,7 @@ class Mission
 					};
 					id=4468;
 					type="SWOP_Storm_stormtrooperC";
-					atlOffset=0.46429443;
+					atlOffset=0.4642334;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -111586,7 +111586,7 @@ class Mission
 				};
 			};
 			id=4467;
-			atlOffset=0.46429443;
+			atlOffset=0.46990967;
 		};
 		class Item189
 		{
@@ -111607,7 +111607,7 @@ class Mission
 			};
 			id=4469;
 			type="Imperial_TurboLaser";
-			atlOffset=0.46429443;
+			atlOffset=0.46990967;
 		};
 		class Item190
 		{
@@ -112921,7 +112921,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{This addAction [""<t color='#FF0000'>Use Charges</t>"",   " \n "    {   " \n "        [_this select 0] execVM ""MunificentBoom.sqf"";   " \n "    },[2],0,false,true,"""",""true"",7];}";
+				init="call{This addAction [""<t color='#FF0000'>Use Charges</t>"",   " \n "{   " \n "execVM ""MunificentBoom.sqf"";   " \n "},[2],0,false,true,"""",""true"",7];}";
 				name="LAAT_Wreck_096";
 			};
 			id=4549;
@@ -121189,7 +121189,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{This addAction [""<t color='#FF0000'>Disappear Munificent</t>"",   " \n "    {   " \n "        [_this select 0] execVM ""Debug_Munificent_1.sqf"";  " \n "    },[2],0,false,true,"""",""true"",7];" \n "This addAction [""<t color='#0011FF'>Appear Munificent</t>"",   " \n "    {   " \n "        [_this select 0] execVM ""Debug_Munificent_2.sqf"";  " \n "    },[2],0,false,true,"""",""true"",7];}";
+				init="call{This addAction [""<t color='#FF0000'>Disappear Munificent</t>"",   " \n "{   " \n "execVM ""Debug_Munificent_1.sqf"";  " \n "},[2],0,false,true,"""",""true"",7];" \n "This addAction [""<t color='#0011FF'>Appear Munificent</t>"",   " \n "{   " \n "execVM ""Debug_Munificent_2.sqf"";  " \n "},[2],0,false,true,"""",""true"",7];}";
 				name="Debug_Console";
 			};
 			id=4786;
