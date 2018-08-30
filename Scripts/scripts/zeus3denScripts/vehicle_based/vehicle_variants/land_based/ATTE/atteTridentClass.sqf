@@ -5,7 +5,7 @@
 //The object that has the action menu to deploy this at-te
 	_dropTurret=_vic;
 //The stomper that makes at-te move	
-	atte_drive = "B_UGV_01_rcws_F" createVehicle (getPosASL _dropTurret);
+	atte_drive = "501_UGV_01_F" createVehicle (getPosASL _dropTurret);
 
 //sleep 1;
 // create the ai crew to allow you to control the uav;
@@ -18,21 +18,10 @@
 // remove cargo space of uav;
 	[atte_drive, -1] call ace_cargo_fnc_setSpace;
  
-
-	
-// damage the wheels of uav to set top speed: gives 3 speeds slow forward = 10km forward = 20km fast forward = 29km;
-	{atte_drive setHitPointDamage[_x,0.90]} forEach ["HitLF2Wheel","HitRFWheel","HitRF2Wheel"];
-	{atte_drive  setHitPointDamage[_x,0.89]} forEach ["HitLFWheel"];
-
 //Workaround for weird issue that sometimes occurs
 	atte_drive addAction ["<t color='#00FF00'>Fix Wheel Issue</t>",
 	{
-	_veh = nearestObject [player, "B_UGV_01_rcws_F"];
-	_veh allowDamage true;
-	{_veh setHitPointDamage[_x,0.90]} forEach ["HitLF2Wheel","HitRFWheel","HitRF2Wheel"];
-	{_veh  setHitPointDamage[_x,0.89]} forEach ["HitLFWheel"];
-	{_veh  setHitPointDamage[_x,0.89]} forEach ["HitLFWheel"];
-	{_veh setHitPointDamage[_x,0.90]} forEach ["HitRMWheel","HitLMWheel"];
+	_veh = nearestObject [player, "501_UGV_01_F"];
 	_veh allowDamage false;
 	},[1],0,false,true,""," driver  _target == _this "];
 

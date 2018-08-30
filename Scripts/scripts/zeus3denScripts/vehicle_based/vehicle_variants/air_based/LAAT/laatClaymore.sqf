@@ -147,7 +147,7 @@ claymoreI={
 			_namunit setHitIndex [10, 1];
 			_namunit setHitIndex [1, 0.5];
 			
-			[_namUnit,format["MAYDAY MAYDAY MAYDAY THIS IS %1 GOING DOWN OVER GRID %2 BRRRRRRR*****BRRRRR ****BRRRRR",(name (driver _namUnit)),(mapGridPosition _namUnit)]] remoteExec ["sideChat", -2];
+
 			_namResultingDmg=0;
 			_namIsCrashing=((_namUnit) getVariable["isCrashing",false]); 
 
