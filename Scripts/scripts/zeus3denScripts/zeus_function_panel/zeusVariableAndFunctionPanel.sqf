@@ -82,18 +82,8 @@ namZeusPanelHermes={
 		[] execVM (b1Quick+b1Forest);	
 		},[1],0,false,true,"","_target == _this"];//end
 
-	//Switch camo droids to Forest
-		_user  addAction ["<t color='#1E8E00'>Switch Specs op to black</t>",                
-		{
-		[] execVM (root+aiBased+factionBased+opforFac+cis+soblack);		
-		},[1],0,false,true,"","_target == _this"];//end
-		
 	
-	//Switch B1 Secondary to AA
-		_user  addAction ["<t color='#073BFC'>Switch B1 Secondary to AA</t>",                
-		{
-		[] execVM (b1Quick+b1AA);	
-		},[1],0,false,true,"","_target == _this"];//end
+
 /*   - Disabled for debugging
 	//Activate Phantom Protocol
 		_user  addAction ["<t color='#073BFC'>Activate Phantom Protocol</t>",                

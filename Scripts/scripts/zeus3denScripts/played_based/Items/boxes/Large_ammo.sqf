@@ -9,16 +9,12 @@
 	_vic addMagazineCargoGlobal ["DCStun_Mag", 25]; 	
 	_vic addMagazineCargoGlobal ["SWOP_DC15_Mag", 100];
 	_vic addMagazineCargoGlobal ["300Rnd_BlasterLaser_Belt", 100];
-	_vic addMagazineCargoGlobal [ "RocketHH15CloneHEATFF_Mag", 50];
 	_vic addMagazineCargoGlobal [ "RocketHH15CloneHEATFF_Mag_RD501", 50];	
-	
-		_vic addMagazineCargoGlobal ["300Rnd_BlasterLaser_Belt_RD501", 100];
 	_vic addItemCargoGlobal ["SWOP_termDet_G", 50];
 	_vic addItemCargoGlobal ["SmokeShell", 50];
 	_vic addItemCargoGlobal ["SWOPthrowablectype", 10];
 	_vic addweaponcargoglobal [" SWOP_DC15ABlasterRifle_RD501",10];
 	_vic addMagazineCargoGlobal ["5Rnd_HE_Grenade_DC15A", 35]; 
-	 
 	_vic addMagazineCargoGlobal ["SWOP_DC15ABlasterRifle_Low_highcap_Mag", 50];
 	_vic addMagazineCargoGlobal ["SWOP_DC15ABlasterRifle_Low_highcap_box_Mag", 50];
 	_vic addMagazineCargoGlobal ["1Rnd_AT_Grenade_DC15A",  10];      
