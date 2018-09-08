@@ -150,6 +150,12 @@ publicVariable "atteBase";
 atteType=attePath+"\atteTypeSelector.sqf"; 		
 publicVariable "atteType";
 
+b1AA="\b1at_aa.sqf";
+publicVariable "b1at";
+
+b1AT=b1Path+"\b1at_at.sqf"; 		
+publicVariable "b1AT";
+
 b1Forest="\b1_forest.sqf";
 publicVariable "b1Forest";
 

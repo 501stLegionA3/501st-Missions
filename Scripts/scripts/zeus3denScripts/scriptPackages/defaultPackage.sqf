@@ -78,6 +78,10 @@ checkSumCounter=checkSumCounter+1;
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
 
+//adds  Make B1 ats have better launchers
+[] execVM (root+aiBased+factionBased+opforFac+cis+b1AT);
+checkSumVariable=checkSumVariable+checkSumCounter;
+checkSumCounter=checkSumCounter+1;
 
 //adds  Make B1 Heavy have better weapons
 [] execVM (root+aiBased+factionBased+opforFac+cis+b1Heavy);	
@@ -89,6 +93,10 @@ checkSumCounter=checkSumCounter+1;
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
 
+//adds  Medical stretcher Script to Light Medical Boxes
+[] execVM  (medicalPlayedBasedQuick+Mstretcher);	
+checkSumVariable=checkSumVariable+checkSumCounter;
+checkSumCounter=checkSumCounter+1;
 
 //adds advanced sling loading
 [] execVM (root+vehicleBased+vehicleVariant+airBased+advSlingLoad);
@@ -130,6 +138,10 @@ checkSumCounter=checkSumCounter+1;
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
 
+//Eulers Spec Ops droids vr soldier
+[] execVM (root+aiBased+factionBased+opforFac+cis+specOpDroid);	
+checkSumVariable=checkSumVariable+checkSumCounter;
+checkSumCounter=checkSumCounter+1;
 
 //Zatama's Geocunts
 [] execVM (root+aiBased+factionBased+opforFac+cis+geonosianAll);	

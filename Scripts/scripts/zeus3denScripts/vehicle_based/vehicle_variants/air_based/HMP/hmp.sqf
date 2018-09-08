@@ -43,6 +43,13 @@ HMPGun=
 		};
 
 	};
+    _vic  addAction ["<t color='#47FF1A'>Clone Killing Time</t>",                
+    {
+    HMP_Gunship = _this select 0;
+    [HMP_Gunship] execVM "scripts\zeus3denScripts\vehicle_based\vehicle_variants\air_based\HMP\Gunship.sqf";
+	removeAllActions HMP_Gunship;
+	},[1],0,false,true,""," driver  _target == _this "];
+
 
 };
 
@@ -90,6 +97,13 @@ HMPTrans=
 		};
 
 	};
+    _vic  addAction ["<t color='#47FF1A'>Clone Killing Time</t>",                
+    {
+    HMP_Gunship = _this select 0;
+    [HMP_Gunship] execVM "scripts\zeus3denScripts\vehicle_based\vehicle_variants\air_based\HMP\Transport.sqf";
+	removeAllActions HMP_Gunship;
+	},[1],0,false,true,""," driver  _target == _this "];
+
 
 };
 
