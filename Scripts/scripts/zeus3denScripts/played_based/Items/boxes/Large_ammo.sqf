@@ -40,3 +40,6 @@
 	_vic addMagazineCargoGlobal ["ACE_HuntIR_M203", 20];
 	_vic addMagazineCargoGlobal ["SWOP_DC17Pistol_Mag", 25]; 
 	_vic addMagazineCargoGlobal ["DCStun_DC17_Mag" , 20];
+	_vic addMagazineCargoGlobal ["SWOP_WESTARM5_MAG", 50];
+	_vic addMagazineCargoGlobal ["SWOP_Westar35Pistol_Mag", 50];
+	
