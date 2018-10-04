@@ -42,6 +42,6 @@
 	_vic addMagazineCargoGlobal ["ACE_HuntIR_M203", 10];
 	_vic addMagazineCargoGlobal ["SWOP_DC17Pistol_Mag", 15]; 
 	_vic addMagazineCargoGlobal ["DCStun_DC17_Mag" , 15];
-	_vic addMagazineCargoGlobal ["SWOP_WESTARM5_MAG", 10];
-	_vic addMagazineCargoGlobal ["SWOP_Westar35Pistol_Mag", 15];
+	_vic addMagazineCargoGlobal ["SWOP_WESTARM5_MAG", 25];
+	_vic addMagazineCargoGlobal ["SWOP_Westar35Pistol_Mag", 30];
 	ACE_maxWeightCarry = 20000;	
