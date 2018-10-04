@@ -62,13 +62,13 @@ claymoreI={
 		
 */
 	// function as file add the wing tip smoke for laat
-/*	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
+	_vic  addAction ["<t color='#886688'>Smoker--------U13</t>",
 	{
 		[_this select 0] execVM (laatSmokeQuick);
 	}
 	,[1],0,false,true,"User13"," driver  _target == _this"];
 
-*/
+
 	comment "gets health";
 	_vic   addAction ["<t color='#00FF00'>Damage Report</t>",
 	{
@@ -167,7 +167,7 @@ claymoreI={
 						_namLaatFireObj=_namLaatFireObj+[_fire];
 					};//makes two fires or watever much, and then stores them in the array while also randomly palcing on laat
 					
-					sleep 60;
+					sleep 20;
 					_namUnitSpawn allowDamage true;	
 					_namUnitSpawn removeAllEventHandlers "HandleDamage";
 					

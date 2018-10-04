@@ -3,8 +3,6 @@
 large_ammo=
 	{
 	params["_vic"];
-	_vic  allowDamage false;
-	_vic addEventHandler ["HandleDamage", {0}];
 	_vic  addAction ["<t color='#47FF1A'>Unlock</t>",                
     {
     box = _this select 0;
@@ -17,8 +15,6 @@ large_ammo=
 small_ammo=
 	{
 	params["_vic"];
-	_vic  allowDamage false;
-	_vic addEventHandler ["HandleDamage", {0}];
 	_vic  addAction ["<t color='#47FF1A'>Unlock</t>",                
     {
     box = _this select 0;
@@ -30,9 +26,7 @@ small_ammo=
 	
 Large_Medical=
 	{
-	params["_vic"];
-	_vic  allowDamage false;
-	_vic addEventHandler ["HandleDamage", {0}];
+		params["_vic"];
 	_vic  addAction ["<t color='#47FF1A'>Unlock</t>",                
     {
     box = _this select 0;
@@ -44,9 +38,7 @@ Large_Medical=
 
 small_Medical=
 	{
-	params["_vic"];
-	_vic  allowDamage false;
-	_vic addEventHandler ["HandleDamage", {0}];
+			params["_vic"];
 	_vic  addAction ["<t color='#47FF1A'>Unlock</t>",                
     {
     box = _this select 0;
