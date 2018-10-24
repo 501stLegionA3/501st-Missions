@@ -38,4 +38,5 @@ _x removeAllMPEventHandlers "MPKILLED";
 
 }];
 
-player enableFatigue false;
+player enableFatigue False;  
+player addEventHandler ["Respawn", {player enableFatigue false}];
