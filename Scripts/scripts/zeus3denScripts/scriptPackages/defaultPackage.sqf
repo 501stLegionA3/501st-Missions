@@ -138,11 +138,6 @@ checkSumCounter=checkSumCounter+1;
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
 
-//Eulers Spec Ops droids vr soldier
-[] execVM (root+aiBased+factionBased+opforFac+cis+specOpDroid);	
-checkSumVariable=checkSumVariable+checkSumCounter;
-checkSumCounter=checkSumCounter+1;
-
 //Zatama's Geocunts
 [] execVM (root+aiBased+factionBased+opforFac+cis+geonosianAll);	
 checkSumVariable=checkSumVariable+checkSumCounter;
