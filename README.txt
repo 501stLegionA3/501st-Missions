@@ -14,6 +14,8 @@ Scripts
 	scripts
 		script subfolders
 			script files
+	pictures
+		picturefile.png/jpg/paa
 	init.sqm
 
 Util
