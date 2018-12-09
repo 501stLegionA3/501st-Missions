@@ -20,7 +20,7 @@ Ballista=
 	_vic addWeaponTurret ["missiles_DAR",[0]];
 	for [{_i=0}, {_i<6}, {_i=_i+1}] do
 	{
-	_vic addMagazineTurret ["PylonRack_12Rnd_missiles_Nerfed",[0]];
+	_vic addMagazineTurret ["PylonRack_12Rnd_missiles",[0]];
 	};
 	[Ballista] execVM "DarMissileNerf.sqf";
 			
