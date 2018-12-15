@@ -115,97 +115,97 @@ claymoreI={
 	},[1],0,false,true,"User20"," driver  _target == _this"];
 
 */	
-	_vic addEventHandler ["HandleDamage",
-	{
+	// _vic addEventHandler ["HandleDamage",
+	// {
 	
 	
-		if(((_this select 0) getVariable["isCrashing",false]) || {(damage (_this select 0))>=.7}) then
-		{
-			_namResultingDmg=0;
+	// 	if(((_this select 0) getVariable["isCrashing",false]) || {(damage (_this select 0))>=.7}) then
+	// 	{
+	// 		_namResultingDmg=0;
 			
 		
 	
-		};
-		_namUnit=_this select 0;
-		_namDmg=_this select 2;
-		_namCurrentDmg=damage _namUnit;//0 if health 1 if dead
-		_namResultingDmg=_namDmg/2;
+	// 	};
+	// 	_namUnit=_this select 0;
+	// 	_namDmg=_this select 2;
+	// 	_namCurrentDmg=damage _namUnit;//0 if health 1 if dead
+	// 	_namResultingDmg=_namDmg/2;
 		
 	
-		if((_namCurrentDmg+_namDmg)>.7) then
-		{
-			_namUnit allowDamage false;
-			_namUnit setFuel 0;
-			_namUnit setDamage .7;
-			_namunit setHitIndex [3, 1];
-			_namunit setHitIndex [3, 1];
-			_namunit setHitIndex [4, 1];
-			_namunit setHitIndex [7, 1]; 
-			_namunit setHitIndex [6, 1]; 
-			_namunit setHitIndex [9, 1];
-			_namunit setHitIndex [8, 1];
-			_namunit setHitIndex [10, 1];
-			_namunit setHitIndex [1, 0.5];
+	// 	if((_namCurrentDmg+_namDmg)>.7) then
+	// 	{
+	// 		_namUnit allowDamage false;
+	// 		_namUnit setFuel 0;
+	// 		_namUnit setDamage .7;
+	// 		_namunit setHitIndex [3, 1];
+	// 		_namunit setHitIndex [3, 1];
+	// 		_namunit setHitIndex [4, 1];
+	// 		_namunit setHitIndex [7, 1]; 
+	// 		_namunit setHitIndex [6, 1]; 
+	// 		_namunit setHitIndex [9, 1];
+	// 		_namunit setHitIndex [8, 1];
+	// 		_namunit setHitIndex [10, 1];
+	// 		_namunit setHitIndex [1, 0.5];
 			
-			[_namUnit,format["MAYDAY MAYDAY MAYDAY THIS IS %1 GOING DOWN OVER GRID %2 BRRRRRRR*****BRRRRR ****BRRRRR",(name (driver _namUnit)),(mapGridPosition _namUnit)]] remoteExec ["sideChat", -2];
-			_namResultingDmg=0;
-			_namIsCrashing=((_namUnit) getVariable["isCrashing",false]); 
+	// 		[_namUnit,format["MAYDAY MAYDAY MAYDAY THIS IS %1 GOING DOWN OVER GRID %2 BRRRRRRR*****BRRRRR ****BRRRRR",(name (driver _namUnit)),(mapGridPosition _namUnit)]] remoteExec ["sideChat", -2];
+	// 		_namResultingDmg=0;
+	// 		_namIsCrashing=((_namUnit) getVariable["isCrashing",false]); 
 
-			if(!_namIsCrashing) then
-			{
-				_null = _this spawn 
-				{	
-					_namUnitSpawn=_this select 0;
-					_namLaatFirePosArray=[[6,-2.5,-1],[-6,-2.5,-1], [1.5,-5,2.5], [-1.5,-5,2.5],[0,3,0],[0,6,-.5],[0,0,-2]];
+	// 		if(!_namIsCrashing) then
+	// 		{
+	// 			_null = _this spawn 
+	// 			{	
+	// 				_namUnitSpawn=_this select 0;
+	// 				_namLaatFirePosArray=[[6,-2.5,-1],[-6,-2.5,-1], [1.5,-5,2.5], [-1.5,-5,2.5],[0,3,0],[0,6,-.5],[0,0,-2]];
 					
-					_namLaatFireObj=[];
+	// 				_namLaatFireObj=[];
 					
-					for "_i" from 0 to 1 do
-					{
-						_fire = "test_EmptyObjectForFireBig" createVehicle position (_namUnitSpawn);
-						_fire attachTo [_namUnitSpawn,(selectRandom _namLaatFirePosArray)];
-						_namLaatFireObj=_namLaatFireObj+[_fire];
-					};//makes two fires or watever much, and then stores them in the array while also randomly palcing on laat
+	// 				for "_i" from 0 to 1 do
+	// 				{
+	// 					_fire = "test_EmptyObjectForFireBig" createVehicle position (_namUnitSpawn);
+	// 					_fire attachTo [_namUnitSpawn,(selectRandom _namLaatFirePosArray)];
+	// 					_namLaatFireObj=_namLaatFireObj+[_fire];
+	// 				};//makes two fires or watever much, and then stores them in the array while also randomly palcing on laat
 					
-					sleep 20;
-					_namUnitSpawn allowDamage true;	
-					_namUnitSpawn removeAllEventHandlers "HandleDamage";
+	// 				sleep 20;
+	// 				_namUnitSpawn allowDamage true;	
+	// 				_namUnitSpawn removeAllEventHandlers "HandleDamage";
 					
-					sleep 60;
-								{ 
-						deleteVehicle _x;
+	// 				sleep 60;
+	// 							{ 
+	// 					deleteVehicle _x;
 						
-						_namLaatFireObj=[];
-					} forEach _namLaatFireObj;//delets all of them
+	// 					_namLaatFireObj=[];
+	// 				} forEach _namLaatFireObj;//delets all of them
 		
-		if(surfaceIsWater (getPos _namUnitSpawn))then
-		{ 
-		_namUnitSpawn allowDamage false;	
-		}
-		else {	_namUnitSpawn setDamage 1; 
-		bomb = "Bo_Mk82" createVehicle (getpos _namUnitSpawn); 
-		sleep 2; 
-		bomb = "Bo_Mk82" createVehicle (getpos _namUnitSpawn); 
-		} ;
+	// 	if(surfaceIsWater (getPos _namUnitSpawn))then
+	// 	{ 
+	// 	_namUnitSpawn allowDamage false;	
+	// 	}
+	// 	else {	_namUnitSpawn setDamage 1; 
+	// 	bomb = "Bo_Mk82" createVehicle (getpos _namUnitSpawn); 
+	// 	sleep 2; 
+	// 	bomb = "Bo_Mk82" createVehicle (getpos _namUnitSpawn); 
+	// 	} ;
 		
-				};
+	// 			};
 				
 					
-			};
-			_namUnit setVariable ["isCrashing", true,true];
-		}
-		else
-		{
-			_namResultingDmg=_namDmg/2;
+	// 		};
+	// 		_namUnit setVariable ["isCrashing", true,true];
+	// 	}
+	// 	else
+	// 	{
+	// 		_namResultingDmg=_namDmg/2;
 		
 		
-		};
+	// 	};
 		
 		
 		
 		
 		
-	}];
+	// }];
 	
 };
 
