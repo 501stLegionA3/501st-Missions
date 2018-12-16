@@ -83,10 +83,7 @@ checkSumCounter=checkSumCounter+1;
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
 
-//adds  Make B1 Heavy have better weapons
-[] execVM (root+aiBased+factionBased+opforFac+cis+b1Heavy);	
-checkSumVariable=checkSumVariable+checkSumCounter;
-checkSumCounter=checkSumCounter+1;
+
 
 //adds  Make  Magma Droids Stronger
 [] execVM  (root+aiBased+factionBased+opforFac+cis+magnaDroid);	
