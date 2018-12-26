@@ -1,27 +1,36 @@
 try
 {
 pads=[
-[pad_middle,1],
-[pad_left,1],
-[pad_right,1]
+[Landingpad_1,1],
+[Landingpad_2,1],
+[Landingpad_3,1],
+[Landingpad_4,1]
 ];
 
 
 vics=[
-["swop_LAAT","<t color='#00FF00'> Laat MK1</t>"],
-["swop_LAATmk2","<t color='#00FF00'> Laat MK2</t>"],
-["swop_LAATmk2_74","<t color='#F4A460 '> Laat MK2 74th</t>"],
-["swop_LAATmk2_104","<t color='#0000FF'> Laat MK2 104th</t>"],
-["swop_LAATmk2_spec","<t color='#FF0000'> Laat MK2 Spec Op</t>"],
-["swop_LAATmk2_ARC","<t color='#00f9ff'> Laat MK2 ARC</t>"],
-["swop_LAAT_cargo","<t color='#0000FF'> Laat Cargo</t>"],
-["swop_arc_t","<t color='#FF0000'> ARC-170</t>"],
-["swop_ywclones","<t color='#FFFF00'> Y-Wing</t>"]
+["laat_mk3","<t color='#00FF00'>LAAT MK3</t>"],
+["RD501_LAAT_MK3_Doors","<t color='#00FF00'>LAAT MK3 Doors</t>"],
+["RD501_LAAT_MK3_Doors_ARC","<t color='#00FF00'>LAAT MK3 Doors ARC</t>"],
+["RD501_LAAT_MK3_Doors_SpecOps","<t color='#00FF00'>LAAT MK3 Doors SpecOps</t>"],
+["laat_mk3_redMedic","<t color='#00FF00'>LAAT MK3 Rescue</t>"],
+["laat_mk3_blackblueKrayt","<t color='#00FF00'>LAAT MK3 Stealth Blue Krayt</t>"],
+["laat_mk3_blackredKrayt","<t color='#00FF00'>LAAT MK3 Stealth Red Krayt</t>"],
+["laat_mk3_blackwhiteKrayt","<t color='#00FF00'>LAAT MK3 Stealth White Krayt</t>"],
+["laat_mk3_redKrayt","<t color='#00FF00'>LAAT MK3 Red Krayt</t>"],
+["laat_mk3_blueKrayt","<t color='#00FF00'>LAAT MK3 Blue Krayt</t>"],
+["laat_mk3_rangerEnforcer","<t color='#00FF00'>LAAT MK3 Ranger Enforcer</t>"],
+["laat_mk3_Laathawkdown","<t color='#00FF00'>LAATHAWKDOWN</t>"],
+["arc180","<t color='#00FF00'>ARC-170</t>"],
+["swop_delta7a_RD501","<t color='#00FF00'>Interceptor Heavy</t>"],
+["vwing_heavy","<t color='#00FF00'>V-Wing</t>"],
+["super_ywing","<t color='#00FF00'>Y-Wing</t>"]
 ];
 
 _this setVariable ["vicToSpawn",((vics select 0) select 0), false];
 _this setVariable ["padToSpawnOn",((pads select 0) select 0), false];
 _this setVariable ["heightOfPad",((pads select 0) select 1), false];
+
 
 for [{_i=0}, {_i<(count vics)}, {_i=_i+1}] do
 {
@@ -38,10 +47,11 @@ for [{_i=0}, {_i<(count vics)}, {_i=_i+1}] do
                 }];
         
 };
-                _this  addAction ["<t color='#FF0000'>--------------------------------</t>",
-                {
-                    hint "no-CC Bondo ^.^";
-                }];
+
+_this  addAction ["<t color='#FF0000'>--------------------------------</t>",
+{
+	hint "";
+}];
                 
                 
 
@@ -72,9 +82,9 @@ for [{_i=0}, {_i<(count pads)}, {_i=_i+1}] do
         unitPad=(_this select 0) getVariable "padToSpawnOn";
         unitPadHeight=(_this select 0) getVariable "heightOfPad";
         
-        _unit=createVehicle [unitVic, [(getPos unitPad select 0), (getPos unitPad select 1), (getPos unitPad select 2)+unitPadHeight], [], 0,"CAN_COLLIDE"];
+        _unit=createVehicle [unitVic, [(getPosATL unitPad select 0), (getPosATL unitPad select 1), (getPosATL unitPad select 2)+unitPadHeight], [], 0,"CAN_COLLIDE"];
         _unit setDir (getDir unitPad);
-        
+
         
         _unit="";
         unitVic="";
@@ -84,8 +94,7 @@ for [{_i=0}, {_i<(count pads)}, {_i=_i+1}] do
 }
 catch
 {
-	hint ("Vicspawner is broken, badger Namenai to fix it.");
+	hint ("Vicspawner is broken!");
 }
 
-//added try catch suck it namenai, okaie
-//why do we still have to use this script,why dont we remove it from all missions :(
+//fixed for V6 by Peterson
