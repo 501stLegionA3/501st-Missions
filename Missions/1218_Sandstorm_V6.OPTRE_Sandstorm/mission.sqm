@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=20;
+		nextID=30;
 	};
 	class Camera
 	{
-		pos[]={142.72662,292.20389,-165.66312};
-		dir[]={0.80291164,-0.51097643,0.30726871};
-		up[]={0.47729436,0.85954827,0.18265487};
-		aside[]={0.35744059,9.8894816e-008,-0.93402392};
+		pos[]={438.28821,65.096817,-103.42391};
+		dir[]={0.71757841,-0.6958794,-0.031848587};
+		up[]={0.69523233,0.71811897,-0.030859016};
+		aside[]={-0.044346832,9.3708513e-007,-0.9990989};
 	};
 };
 binarizationWanted=0;
@@ -429,25 +429,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -479,6 +460,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
 				};
 			};
 		};
@@ -18039,7 +18039,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -18218,7 +18218,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -18473,7 +18473,7 @@ class Mission
 						class Attribute4
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -18671,7 +18671,7 @@ class Mission
 						class Attribute4
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -18869,7 +18869,7 @@ class Mission
 						class Attribute4
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -19067,7 +19067,7 @@ class Mission
 						class Attribute4
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -19265,7 +19265,7 @@ class Mission
 						class Attribute4
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -19424,7 +19424,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -19603,7 +19603,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -19782,7 +19782,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -19961,7 +19961,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -20140,7 +20140,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -20919,7 +20919,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -21836,7 +21836,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -22556,7 +22556,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -23473,7 +23473,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -24193,7 +24193,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -25110,7 +25110,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -25830,7 +25830,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -26747,7 +26747,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -27467,7 +27467,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -28087,7 +28087,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -29004,7 +29004,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -29724,7 +29724,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -30641,7 +30641,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -31361,7 +31361,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -32278,7 +32278,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -32998,7 +32998,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -33915,7 +33915,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -34635,7 +34635,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -35255,7 +35255,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -36172,7 +36172,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -36892,7 +36892,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -37809,7 +37809,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -38529,7 +38529,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -39446,7 +39446,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -40166,7 +40166,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -41083,7 +41083,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -41803,7 +41803,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -42423,7 +42423,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -43340,7 +43340,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -44060,7 +44060,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -44977,7 +44977,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -45697,7 +45697,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -46614,7 +46614,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -47334,7 +47334,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -48251,7 +48251,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -48971,7 +48971,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -51728,7 +51728,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -51910,7 +51910,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -52092,7 +52092,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -52274,7 +52274,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -52456,7 +52456,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -52638,7 +52638,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -52820,7 +52820,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -53002,7 +53002,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -53184,7 +53184,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -53366,7 +53366,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -53548,7 +53548,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -53730,7 +53730,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -53912,7 +53912,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -54094,7 +54094,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -54276,7 +54276,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -54458,7 +54458,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -54640,7 +54640,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -54822,7 +54822,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -56337,7 +56337,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -56519,7 +56519,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -56701,7 +56701,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -56883,7 +56883,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -57065,7 +57065,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -57247,7 +57247,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -57429,7 +57429,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -57611,7 +57611,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -57793,7 +57793,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -58009,7 +58009,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -58188,7 +58188,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -58367,7 +58367,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -58546,7 +58546,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -58762,7 +58762,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -59081,7 +59081,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -59259,7 +59259,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -60278,7 +60278,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -60475,7 +60475,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -60794,7 +60794,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -60972,7 +60972,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -61991,7 +61991,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -62188,7 +62188,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -62507,7 +62507,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -62685,7 +62685,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -63704,7 +63704,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -63901,7 +63901,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -64220,7 +64220,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -64398,7 +64398,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -65417,7 +65417,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -65614,7 +65614,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -65793,7 +65793,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -65972,7 +65972,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -66151,7 +66151,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -66367,7 +66367,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -66546,7 +66546,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -66725,7 +66725,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -66904,7 +66904,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -67120,7 +67120,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -67299,7 +67299,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -67478,7 +67478,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -67657,7 +67657,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -67873,7 +67873,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -68052,7 +68052,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -68231,7 +68231,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -68410,7 +68410,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -68589,7 +68589,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -68805,7 +68805,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -68984,7 +68984,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -69163,7 +69163,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -69342,7 +69342,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -69521,7 +69521,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -69737,7 +69737,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -69916,7 +69916,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -70095,7 +70095,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -70274,7 +70274,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -70453,7 +70453,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -70669,7 +70669,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -70848,7 +70848,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -71027,7 +71027,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -71206,7 +71206,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -71385,7 +71385,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -71601,7 +71601,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -71780,7 +71780,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -71995,7 +71995,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -72173,7 +72173,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -72351,7 +72351,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -72529,7 +72529,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -72744,7 +72744,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -72922,7 +72922,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -73100,7 +73100,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -73278,7 +73278,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -73493,7 +73493,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -73671,7 +73671,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -73849,7 +73849,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -74027,7 +74027,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -74242,7 +74242,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -74420,7 +74420,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -74598,7 +74598,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -74776,7 +74776,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -74992,7 +74992,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75170,7 +75170,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75348,7 +75348,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75526,7 +75526,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75741,7 +75741,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -75919,7 +75919,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -76097,7 +76097,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -76275,7 +76275,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -76490,7 +76490,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -76705,7 +76705,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -76883,7 +76883,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -77098,7 +77098,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -77276,7 +77276,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -77491,7 +77491,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -77669,7 +77669,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -77847,7 +77847,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -78025,7 +78025,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -78203,7 +78203,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -78381,7 +78381,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -78597,7 +78597,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -78776,7 +78776,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -78955,7 +78955,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -79134,7 +79134,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -79313,7 +79313,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if(_value>-1) then{_this setVariable[""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 							class Value
 							{
 								class data
@@ -81308,7 +81308,7 @@ class Mission
 								class Attribute1
 								{
 									property="ace_isMedicalFacility";
-									expression="_this setVariable[""ace_medical_isMedicalFacility"", _value, true];";
+									expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
 									class Value
 									{
 										class data
@@ -81571,7 +81571,7 @@ class Mission
 								class Attribute2
 								{
 									property="ace_isMedicalFacility";
-									expression="_this setVariable[""ace_medical_isMedicalFacility"", _value, true];";
+									expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
 									class Value
 									{
 										class data
@@ -81872,7 +81872,7 @@ class Mission
 								class Attribute2
 								{
 									property="ace_isMedicalFacility";
-									expression="_this setVariable[""ace_medical_isMedicalFacility"", _value, true];";
+									expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
 									class Value
 									{
 										class data
@@ -82114,7 +82114,7 @@ class Mission
 								class Attribute2
 								{
 									property="ace_isMedicalFacility";
-									expression="_this setVariable[""ace_medical_isMedicalFacility"", _value, true];";
+									expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
 									class Value
 									{
 										class data
@@ -87727,7 +87727,7 @@ class Mission
 							};
 							id=690;
 							type="UserTexture1m_F";
-							atlOffset=4.7878113;
+							atlOffset=4.7874603;
 						};
 						class Item1
 						{
@@ -87963,18 +87963,40 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={445.4386,58.14481,-102.00496};
+								position[]={445.439,58.145161,-102.005};
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=5;
 							class Attributes
 							{
-								disableSimulation=1;
 							};
 							id=705;
 							type="modular_building_door";
-							atlOffset=0.014587402;
+							atlOffset=0.01492691;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="Enh_featureType";
+									expression="_this setFeatureType parseNumber (_value)";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="0";
+										};
+									};
+								};
+								nAttributes=1;
+							};
 						};
 						class Item1
 						{
@@ -87991,7 +88013,7 @@ class Mission
 							};
 							id=706;
 							type="Land_plataformahangar";
-							atlOffset=1.2709656;
+							atlOffset=1.2706146;
 						};
 						class Item2
 						{
@@ -88360,7 +88382,7 @@ class Mission
 							};
 							id=727;
 							type="Land_sidewalk_service_entrance";
-							atlOffset=2.4663811;
+							atlOffset=2.4660301;
 						};
 						class Item23
 						{

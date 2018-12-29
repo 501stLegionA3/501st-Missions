@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10;
+		nextID=20;
 	};
 	class Camera
 	{
-		pos[]={9129.1523,74.413513,9524.6289};
-		dir[]={0.10666933,-0.57660496,0.81008768};
-		up[]={0.075282961,0.81697834,0.57172781};
-		aside[]={0.99148613,-1.8029823e-007,-0.13055365};
+		pos[]={9307.1357,7.5945501,9630.3506};
+		dir[]={0.91946125,-0.38981688,0.052296802};
+		up[]={0.38926962,0.92085379,0.022140961};
+		aside[]={0.056790415,2.525594e-007,-0.99843615};
 	};
 };
 binarizationWanted=0;
@@ -429,6 +429,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -460,25 +479,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -91260,7 +91260,7 @@ class Mission
 							};
 							id=480;
 							type="SWOP_ContRepMedium";
-							atlOffset=2.1457672e-006;
+							atlOffset=2.2649765e-006;
 						};
 						class Item49
 						{
@@ -91277,7 +91277,7 @@ class Mission
 							};
 							id=481;
 							type="gonkdroid";
-							atlOffset=2.3841858e-007;
+							atlOffset=2.9802322e-007;
 						};
 						class Item50
 						{
@@ -91294,7 +91294,7 @@ class Mission
 							};
 							id=482;
 							type="RD501_Ammo_plat_ammo";
-							atlOffset=2.3841858e-007;
+							atlOffset=0.00023329258;
 						};
 						class Item51
 						{
@@ -91311,7 +91311,7 @@ class Mission
 							};
 							id=483;
 							type="RD501_Ammo_plat_ammo";
-							atlOffset=2.3841858e-007;
+							atlOffset=0.00023305416;
 						};
 						class Item52
 						{
@@ -91329,7 +91329,7 @@ class Mission
 							};
 							id=484;
 							type="SWOP_ContRepMedium";
-							atlOffset=0.00023388863;
+							atlOffset=0.00023400784;
 						};
 						class Item53
 						{
@@ -91347,7 +91347,7 @@ class Mission
 							};
 							id=485;
 							type="SWOP_ContRepMedium";
-							atlOffset=0.00023436546;
+							atlOffset=0.00023448467;
 						};
 						class Item54
 						{
@@ -91363,7 +91363,7 @@ class Mission
 							};
 							id=486;
 							type="RD501_SmallAmmo";
-							atlOffset=0.76986718;
+							atlOffset=0.76986647;
 						};
 						class Item55
 						{
@@ -91379,7 +91379,7 @@ class Mission
 							};
 							id=487;
 							type="RD501_SmallAmmo";
-							atlOffset=0.7704165;
+							atlOffset=0.77041578;
 						};
 						class Item56
 						{
@@ -91395,7 +91395,7 @@ class Mission
 							};
 							id=488;
 							type="RD501_SmallAmmo";
-							atlOffset=0.76455712;
+							atlOffset=0.76455641;
 						};
 						class Item57
 						{
@@ -91435,7 +91435,7 @@ class Mission
 						};
 					};
 					id=431;
-					atlOffset=0.16772121;
+					atlOffset=0.16772103;
 				};
 				class Item1
 				{
@@ -91563,7 +91563,7 @@ class Mission
 							};
 							id=493;
 							type="Bacta_tank";
-							atlOffset=0.022768259;
+							atlOffset=0.022767663;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -91605,7 +91605,7 @@ class Mission
 							};
 							id=494;
 							type="SWOP_computerMedical";
-							atlOffset=0.043768167;
+							atlOffset=0.043768108;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -91707,7 +91707,7 @@ class Mission
 							};
 							id=496;
 							type="Medical_bed";
-							atlOffset=0.064999104;
+							atlOffset=0.0649997;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -91747,7 +91747,7 @@ class Mission
 							};
 							id=497;
 							type="medammobox";
-							atlOffset=0.94212556;
+							atlOffset=0.9421258;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -91827,7 +91827,7 @@ class Mission
 							};
 							id=498;
 							type="medicdroid";
-							atlOffset=0.064999342;
+							atlOffset=0.064998627;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -92129,7 +92129,7 @@ class Mission
 							};
 							id=504;
 							type="Medical_bed";
-							atlOffset=0.064768076;
+							atlOffset=0.064768672;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -92170,7 +92170,7 @@ class Mission
 							};
 							id=505;
 							type="Medical_bed";
-							atlOffset=0.064768076;
+							atlOffset=0.064768672;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -92371,7 +92371,7 @@ class Mission
 							};
 							id=509;
 							type="Bacta_tank";
-							atlOffset=0.022768259;
+							atlOffset=0.022767663;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -92413,7 +92413,7 @@ class Mission
 							};
 							id=510;
 							type="SWOP_computerMedical";
-							atlOffset=0.043768167;
+							atlOffset=0.043768108;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -92473,7 +92473,7 @@ class Mission
 							};
 							id=511;
 							type="Bacta_tank";
-							atlOffset=0.022768259;
+							atlOffset=0.022767663;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -92515,7 +92515,7 @@ class Mission
 							};
 							id=512;
 							type="SWOP_computerMedical";
-							atlOffset=0.043768167;
+							atlOffset=0.043768108;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -92616,7 +92616,7 @@ class Mission
 							};
 							id=514;
 							type="medicdroid";
-							atlOffset=0.00023317337;
+							atlOffset=0.00023245811;
 						};
 						class Item23
 						{
@@ -92627,14 +92627,13 @@ class Mission
 								angles[]={0,5.497787,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 								init="call{this addAction [""Receive Medical Treatment"",""call ace_medical_fnc_treatmentAdvanced_fullHeal;""]; " \n " " \n "}";
 							};
 							id=515;
 							type="medicdroid";
-							atlOffset=2.3841858e-007;
+							atlOffset=17.81076;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -92674,7 +92673,7 @@ class Mission
 							};
 							id=516;
 							type="RD501_SmallMed";
-							atlOffset=2.3841858e-007;
+							atlOffset=0.00023293495;
 						};
 						class Item25
 						{
@@ -92691,7 +92690,7 @@ class Mission
 							};
 							id=517;
 							type="RD501_SmallMed";
-							atlOffset=2.1457672e-006;
+							atlOffset=1.4305115e-006;
 						};
 						class Item26
 						{
@@ -92708,7 +92707,7 @@ class Mission
 							};
 							id=518;
 							type="RD501_SmallMed";
-							atlOffset=2.1457672e-006;
+							atlOffset=1.4305115e-006;
 						};
 						class Item27
 						{
@@ -92725,7 +92724,7 @@ class Mission
 							};
 							id=519;
 							type="RD501_Med_plat_ammo";
-							atlOffset=2.3841858e-007;
+							atlOffset=0.00023329258;
 						};
 						class Item28
 						{
@@ -92765,7 +92764,7 @@ class Mission
 						};
 					};
 					id=491;
-					atlOffset=8.4638596e-006;
+					atlOffset=8.2850456e-006;
 				};
 				class Item2
 				{
@@ -93569,7 +93568,7 @@ class Mission
 							};
 							id=542;
 							type="Land_optre_milwall_corner";
-							atlOffset=1.1902087;
+							atlOffset=1.1902089;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -93610,7 +93609,7 @@ class Mission
 							};
 							id=543;
 							type="Land_optre_milwall_corner";
-							atlOffset=1.5698271;
+							atlOffset=1.5698273;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -93651,7 +93650,7 @@ class Mission
 							};
 							id=544;
 							type="Land_optre_milwall_corner";
-							atlOffset=1.206444;
+							atlOffset=1.2064443;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -93692,7 +93691,7 @@ class Mission
 							};
 							id=545;
 							type="Land_optre_milwall_corner";
-							atlOffset=0.90435314;
+							atlOffset=0.90435338;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -98160,7 +98159,7 @@ class Mission
 							};
 							id=690;
 							type="UserTexture1m_F";
-							atlOffset=4.7878122;
+							atlOffset=4.7881403;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -98316,7 +98315,7 @@ class Mission
 							};
 							id=695;
 							type="Land_Billboard_02_blank_F";
-							atlOffset=1.483444;
+							atlOffset=1.4834437;
 						};
 						class Item6
 						{
@@ -98334,7 +98333,7 @@ class Mission
 							};
 							id=696;
 							type="Land_Billboard_02_blank_F";
-							atlOffset=1.483444;
+							atlOffset=1.4834437;
 						};
 						class Item7
 						{
@@ -98379,7 +98378,7 @@ class Mission
 						};
 					};
 					id=689;
-					atlOffset=0.67291021;
+					atlOffset=0.67290998;
 				};
 				class Item6
 				{
@@ -98511,18 +98510,17 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={9311.8223,4.1058788,9630.3008};
+								position[]={9311.8223,4.1055508,9630.3008};
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=5;
 							class Attributes
 							{
-								disableSimulation=1;
 							};
 							id=705;
 							type="modular_building_door";
-							atlOffset=0.014588833;
+							atlOffset=0.014260769;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -98562,7 +98560,7 @@ class Mission
 							};
 							id=706;
 							type="Land_plataformahangar";
-							atlOffset=1.2709665;
+							atlOffset=1.2712946;
 						};
 						class Item2
 						{
@@ -98580,7 +98578,7 @@ class Mission
 							};
 							id=707;
 							type="rmair_DividerWall_High";
-							atlOffset=2.0706403;
+							atlOffset=2.0706406;
 						};
 						class Item3
 						{
@@ -98598,7 +98596,7 @@ class Mission
 							};
 							id=708;
 							type="rmair_DividerWall_High";
-							atlOffset=2.0656927;
+							atlOffset=2.0656929;
 						};
 						class Item4
 						{
@@ -99300,7 +99298,7 @@ class Mission
 							};
 							id=727;
 							type="Land_sidewalk_service_entrance";
-							atlOffset=2.4663806;
+							atlOffset=2.4667087;
 						};
 						class Item23
 						{
@@ -99737,7 +99735,7 @@ class Mission
 							};
 							id=753;
 							type="Land_rmair_PillarSmallVert";
-							atlOffset=4.4302368;
+							atlOffset=4.4302373;
 						};
 						class Item49
 						{
@@ -99770,7 +99768,7 @@ class Mission
 							};
 							id=755;
 							type="Land_rmair_PillarSmallVert";
-							atlOffset=4.4302368;
+							atlOffset=4.4302373;
 						};
 						class Item51
 						{
@@ -99974,7 +99972,7 @@ class Mission
 							};
 							id=764;
 							type="rmair_DividerWall_High";
-							atlOffset=2.0706403;
+							atlOffset=2.0706406;
 						};
 						class Item60
 						{
@@ -99992,7 +99990,7 @@ class Mission
 							};
 							id=765;
 							type="rmair_DividerWall_High";
-							atlOffset=2.0656927;
+							atlOffset=2.0656929;
 						};
 						class Item61
 						{
@@ -101235,7 +101233,7 @@ class Mission
 			};
 			id=799;
 			type="MCC_Module_settings";
-			atlOffset=3.2637615;
+			atlOffset=3.2637625;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -101668,7 +101666,7 @@ class Mission
 			};
 			id=800;
 			type="SWOP_DynamicVoiceModule";
-			atlOffset=3.1230755;
+			atlOffset=3.1230745;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -103161,7 +103159,7 @@ class Mission
 			};
 			id=823;
 			type="Venator_MK2";
-			atlOffset=392.08582;
+			atlOffset=392.08585;
 		};
 		class Item82
 		{

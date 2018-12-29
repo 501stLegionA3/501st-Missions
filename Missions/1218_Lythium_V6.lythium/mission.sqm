@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10;
+		nextID=20;
 	};
 	class Camera
 	{
-		pos[]={20365.291,161.16173,17708.82};
-		dir[]={0.88244545,-0.4676142,0.051862907};
-		up[]={0.4668268,0.88392603,0.027436173};
-		aside[]={0.05867368,-3.1973468e-007,-0.99831003};
+		pos[]={20625.342,99.389183,17724.098};
+		dir[]={0.63812494,-0.76790982,-0.056351706};
+		up[]={0.76493394,0.64056027,-0.067550078};
+		aside[]={-0.087967873,-7.5230491e-007,-0.99615687};
 	};
 };
 binarizationWanted=0;
@@ -429,6 +429,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -460,25 +479,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -94534,7 +94534,7 @@ class Mission
 							};
 							id=566;
 							type="Land_Highway_gate_house_a";
-							atlOffset=-1.4863815;
+							atlOffset=-1.4863739;
 						};
 						class Item44
 						{
@@ -94551,7 +94551,7 @@ class Mission
 							};
 							id=567;
 							type="Land_Highway_gate_house_a";
-							atlOffset=-2.765358;
+							atlOffset=-2.7653503;
 						};
 						class Item45
 						{
@@ -98128,7 +98128,7 @@ class Mission
 							};
 							id=690;
 							type="UserTexture1m_F";
-							atlOffset=4.7878189;
+							atlOffset=4.7875977;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -98479,18 +98479,17 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={20630.434,92.340973,17722.232};
+								position[]={20630.434,92.341194,17722.232};
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=5;
 							class Attributes
 							{
-								disableSimulation=1;
 							};
 							id=705;
 							type="modular_building_door";
-							atlOffset=0.01461792;
+							atlOffset=0.014839172;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -98530,7 +98529,7 @@ class Mission
 							};
 							id=706;
 							type="Land_plataformahangar";
-							atlOffset=1.2709732;
+							atlOffset=1.270752;
 						};
 						class Item2
 						{
@@ -99267,7 +99266,7 @@ class Mission
 							};
 							id=727;
 							type="Land_sidewalk_service_entrance";
-							atlOffset=2.4663849;
+							atlOffset=2.4661636;
 						};
 						class Item23
 						{

@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10;
+		nextID=20;
 	};
 	class Camera
 	{
-		pos[]={1431.27,212.12245,142.13132};
-		dir[]={0.77755237,-0.62877619,-0.0085166954};
-		up[]={0.62873763,0.77758479,-0.0068867039};
-		aside[]={-0.010952634,-4.9818482e-008,-0.99994797};
+		pos[]={1719.7157,58.824123,122.98433};
+		dir[]={0.72781795,-0.68527746,-0.026527835};
+		up[]={0.6848262,0.72827524,-0.024961002};
+		aside[]={-0.036425032,-1.1582961e-007,-0.99934781};
 	};
 };
 binarizationWanted=0;
@@ -429,6 +429,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -460,25 +479,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -96472,7 +96472,7 @@ class Mission
 							};
 							id=621;
 							type="Land_Antena";
-							atlOffset=2.6132088;
+							atlOffset=2.6132126;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -96512,7 +96512,7 @@ class Mission
 							};
 							id=622;
 							type="Land_Antena";
-							atlOffset=2.6122704;
+							atlOffset=2.6122742;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -96552,7 +96552,7 @@ class Mission
 							};
 							id=623;
 							type="Land_Antena";
-							atlOffset=1.7676163;
+							atlOffset=1.7676201;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -96592,7 +96592,7 @@ class Mission
 							};
 							id=624;
 							type="Land_Antena";
-							atlOffset=1.7679138;
+							atlOffset=1.7679176;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -97346,7 +97346,7 @@ class Mission
 							};
 							id=657;
 							type="Land_Antena";
-							atlOffset=-0.22337341;
+							atlOffset=-0.2233696;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -97386,7 +97386,7 @@ class Mission
 							};
 							id=658;
 							type="Land_Antena";
-							atlOffset=-0.22464752;
+							atlOffset=-0.22464371;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -97426,7 +97426,7 @@ class Mission
 							};
 							id=659;
 							type="Land_Antena";
-							atlOffset=-0.097496033;
+							atlOffset=-0.097492218;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -97466,7 +97466,7 @@ class Mission
 							};
 							id=660;
 							type="Land_Antena";
-							atlOffset=-0.099040985;
+							atlOffset=-0.09903717;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -97506,7 +97506,7 @@ class Mission
 							};
 							id=661;
 							type="Land_Antena";
-							atlOffset=-0.96273422;
+							atlOffset=-0.96273041;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -97546,7 +97546,7 @@ class Mission
 							};
 							id=662;
 							type="Land_Antena";
-							atlOffset=-0.90164566;
+							atlOffset=-0.90164185;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -97666,7 +97666,7 @@ class Mission
 							};
 							id=665;
 							type="Land_Antena";
-							atlOffset=-13.001564;
+							atlOffset=-13.001562;
 						};
 						class Item45
 						{
@@ -97683,7 +97683,7 @@ class Mission
 							};
 							id=666;
 							type="Land_Antena";
-							atlOffset=-13.048176;
+							atlOffset=-13.048174;
 						};
 						class Item46
 						{
@@ -97700,7 +97700,7 @@ class Mission
 							};
 							id=667;
 							type="Land_Antena";
-							atlOffset=-13.064533;
+							atlOffset=-13.064531;
 						};
 						class Item47
 						{
@@ -97717,7 +97717,7 @@ class Mission
 							};
 							id=668;
 							type="Land_Antena";
-							atlOffset=-13.131214;
+							atlOffset=-13.131212;
 						};
 						class Item48
 						{
@@ -97734,7 +97734,7 @@ class Mission
 							};
 							id=669;
 							type="Land_Antena";
-							atlOffset=-12.699093;
+							atlOffset=-12.699091;
 						};
 						class Item49
 						{
@@ -97751,7 +97751,7 @@ class Mission
 							};
 							id=670;
 							type="Land_Antena";
-							atlOffset=-12.908665;
+							atlOffset=-12.908663;
 						};
 						class Item50
 						{
@@ -97768,7 +97768,7 @@ class Mission
 							};
 							id=671;
 							type="Land_Antena";
-							atlOffset=-12.781033;
+							atlOffset=-12.781031;
 						};
 						class Item51
 						{
@@ -97785,7 +97785,7 @@ class Mission
 							};
 							id=672;
 							type="Land_Antena";
-							atlOffset=-12.632366;
+							atlOffset=-12.632364;
 						};
 						class Item52
 						{
@@ -97802,7 +97802,7 @@ class Mission
 							};
 							id=673;
 							type="Land_Antena";
-							atlOffset=-12.912899;
+							atlOffset=-12.912897;
 						};
 						class Item53
 						{
@@ -97819,7 +97819,7 @@ class Mission
 							};
 							id=674;
 							type="Land_Antena";
-							atlOffset=-12.69923;
+							atlOffset=-12.699228;
 						};
 						class Item54
 						{
@@ -97836,7 +97836,7 @@ class Mission
 							};
 							id=675;
 							type="Land_Antena";
-							atlOffset=-13.204937;
+							atlOffset=-13.204935;
 						};
 						class Item55
 						{
@@ -97853,7 +97853,7 @@ class Mission
 							};
 							id=676;
 							type="Land_Antena";
-							atlOffset=-12.962975;
+							atlOffset=-12.962973;
 						};
 						class Item56
 						{
@@ -97870,7 +97870,7 @@ class Mission
 							};
 							id=677;
 							type="Land_Antena";
-							atlOffset=-12.817924;
+							atlOffset=-12.817923;
 						};
 						class Item57
 						{
@@ -97887,7 +97887,7 @@ class Mission
 							};
 							id=678;
 							type="Land_Antena";
-							atlOffset=-13.01973;
+							atlOffset=-13.019728;
 						};
 						class Item58
 						{
@@ -97904,7 +97904,7 @@ class Mission
 							};
 							id=679;
 							type="Land_Antena";
-							atlOffset=-12.703152;
+							atlOffset=-12.70315;
 						};
 						class Item59
 						{
@@ -97921,7 +97921,7 @@ class Mission
 							};
 							id=680;
 							type="Land_Antena";
-							atlOffset=-12.682377;
+							atlOffset=-12.682375;
 						};
 						class Item60
 						{
@@ -97938,7 +97938,7 @@ class Mission
 							};
 							id=681;
 							type="Land_Antena";
-							atlOffset=-12.99548;
+							atlOffset=-12.995478;
 						};
 						class Item61
 						{
@@ -97955,7 +97955,7 @@ class Mission
 							};
 							id=682;
 							type="Land_Antena";
-							atlOffset=-13.098957;
+							atlOffset=-13.098955;
 						};
 						class Item62
 						{
@@ -97972,7 +97972,7 @@ class Mission
 							};
 							id=683;
 							type="Land_Antena";
-							atlOffset=-12.522121;
+							atlOffset=-12.52212;
 						};
 						class Item63
 						{
@@ -97989,7 +97989,7 @@ class Mission
 							};
 							id=684;
 							type="Land_Antena";
-							atlOffset=-12.506927;
+							atlOffset=-12.506926;
 						};
 						class Item64
 						{
@@ -98006,7 +98006,7 @@ class Mission
 							};
 							id=685;
 							type="Land_Antena";
-							atlOffset=-12.697826;
+							atlOffset=-12.697824;
 						};
 						class Item65
 						{
@@ -98023,7 +98023,7 @@ class Mission
 							};
 							id=686;
 							type="Land_Antena";
-							atlOffset=-12.731815;
+							atlOffset=-12.731813;
 						};
 						class Item66
 						{
@@ -98040,7 +98040,7 @@ class Mission
 							};
 							id=687;
 							type="Land_Antena";
-							atlOffset=-12.44553;
+							atlOffset=-12.445528;
 						};
 						class Item67
 						{
@@ -98057,11 +98057,11 @@ class Mission
 							};
 							id=688;
 							type="Land_Antena";
-							atlOffset=-12.749203;
+							atlOffset=-12.749197;
 						};
 					};
 					id=620;
-					atlOffset=-12.613976;
+					atlOffset=-12.613972;
 				};
 				class Item5
 				{
@@ -98086,7 +98086,7 @@ class Mission
 							};
 							id=690;
 							type="UserTexture1m_F";
-							atlOffset=4.7878113;
+							atlOffset=4.7875633;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -98437,18 +98437,17 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={1730.9277,48.645622,120.0125};
+								position[]={1730.928,48.64587,120.012};
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=5;
 							class Attributes
 							{
-								disableSimulation=1;
 							};
 							id=705;
 							type="modular_building_door";
-							atlOffset=0.014591217;
+							atlOffset=0.014827728;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -98488,7 +98487,7 @@ class Mission
 							};
 							id=706;
 							type="Land_plataformahangar";
-							atlOffset=1.2709656;
+							atlOffset=1.2707176;
 						};
 						class Item2
 						{
@@ -99225,7 +99224,7 @@ class Mission
 							};
 							id=727;
 							type="Land_sidewalk_service_entrance";
-							atlOffset=2.4663773;
+							atlOffset=2.4661293;
 						};
 						class Item23
 						{
@@ -103076,7 +103075,7 @@ class Mission
 			b=80.709;
 			drawBorder=1;
 			id=822;
-			atlOffset=-15.953667;
+			atlOffset=-15.953663;
 		};
 		class Item81
 		{

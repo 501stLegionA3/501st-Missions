@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10;
+		nextID=20;
 	};
 	class Camera
 	{
-		pos[]={8576.9043,774.96777,2194.6472};
-		dir[]={-0.12178088,-0.52670711,0.84128815};
-		up[]={-0.075457439,0.85004705,0.52127618};
-		aside[]={0.98969448,1.1034717e-007,0.14326289};
+		pos[]={8733.9121,608.94116,2394.7949};
+		dir[]={0.72022676,-0.6932025,-0.027652213};
+		up[]={0.69269401,0.72074276,-0.026595106};
+		aside[]={-0.038366813,2.5368536e-007,-0.99927521};
 	};
 };
 binarizationWanted=0;
@@ -429,6 +429,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="Enh_saveLoadout";
+			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -460,25 +479,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="Enh_saveLoadout";
-			expression="      if (!is3DEN && hasInterface && _value) then      {         [] spawn         {            waitUntil {!isNull player};            player setVariable ['Enh_savedLoadout',getUnitloadout player];            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];         };      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -98106,7 +98106,7 @@ class Mission
 							};
 							id=690;
 							type="UserTexture1m_F";
-							atlOffset=4.7878418;
+							atlOffset=4.7874756;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -98457,18 +98457,17 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={8740.4912,601.45056,2394.5164};
+								position[]={8740.4912,601.45093,2394.5161};
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=5;
 							class Attributes
 							{
-								disableSimulation=1;
 							};
 							id=705;
 							type="modular_building_door";
-							atlOffset=0.014587402;
+							atlOffset=0.014953613;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -98508,7 +98507,7 @@ class Mission
 							};
 							id=706;
 							type="Land_plataformahangar";
-							atlOffset=1.2709961;
+							atlOffset=1.2706299;
 						};
 						class Item2
 						{
@@ -99245,7 +99244,7 @@ class Mission
 							};
 							id=727;
 							type="Land_sidewalk_service_entrance";
-							atlOffset=2.4664307;
+							atlOffset=2.4660645;
 						};
 						class Item23
 						{
