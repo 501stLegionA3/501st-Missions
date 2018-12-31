@@ -162,11 +162,29 @@ publicVariable "b1Forest";
 b1Snow="\b1_snow.sqf";
 publicVariable "b1Snow";
 
+b1Wookie="\b1_wookie.sqf";
+publicVariable "b1Wookie";
+
+b1Construction="\b1_construction.sqf";
+publicVariable "b1Construction";
+
+b1Wasp="\b1_wasp.sqf";
+publicVariable "b1Wasp";
+
+soblack=specOpDroidPath+"\soretexture.sqf";
+publicVariable "soblack";
+
+b1Heavy=b1Path+"\b1_heavy.sqf"; 		
+publicVariable "b1Heavy";
+
 b1Sniper=b1Path+"\b1_sniper.sqf"; 		
 publicVariable "b1Sniper";
 
 b2=b2Path+"\b2Reconfig.sqf"; 		
 publicVariable "b2";
+
+b2Wasp=b2Path+"\b2_wasp.sqf"; 		
+publicVariable "b2Wasp";
 
 barc=barcPath+"\barc.sqf"; //		
 publicVariable "barc";
@@ -218,6 +236,9 @@ publicVariable "praetorian";
 
 sabre=sabrePath+"\Sabres.sqf";// 		
 publicVariable "sabre";
+
+specOpDroid=specOpDroidPath+"\spec_ops.sqf"; 		
+publicVariable "specOpDroid";
 
 
 triDroid=tridroidPath+"\tri_droid.sqf"; 		

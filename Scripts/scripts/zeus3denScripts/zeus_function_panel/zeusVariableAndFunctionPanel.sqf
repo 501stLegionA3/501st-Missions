@@ -63,37 +63,58 @@ namZeusPanelHermes={
 		[] execVM (landBasedQuick+homingSpiderDroidPath+homingspiderdroid);
 		},[1],0,false,true,"","_target == _this"];//end
 */
-	//Spacer
-		_user addAction ["<t color='#A020F0'> ---Zeus Infantry-----</t>", 
+//Spacer
+		_user addAction ["<t color='#A020F0'> ---Zeus Infantry Loadout---</t>", 
 		{
-		},[1],0,false,true,"","_target == _this"];//end
-	
-	
-	//Switch camo droids to Snow
-		_user  addAction ["<t color='#FFFFFF'>Switch B1 CAMO droids to Snow Camo</t>",                
-		{
-		[] execVM (b1Quick+b1Snow);	
-		},[1],0,false,true,"","_target == _this"];//end
-
-		
-	//Switch camo droids to Forest
-		_user  addAction ["<t color='#1E8E00'>Switch B1 CAMO droids to Forest Camo</t>",                
-		{
-		[] execVM (b1Quick+b1Forest);	
-		},[1],0,false,true,"","_target == _this"];//end
-
-	//Switch camo droids to Forest
-		_user  addAction ["<t color='#1E8E00'>Switch Specs op to black</t>",                
-		{
-		[] execVM (root+aiBased+factionBased+opforFac+cis+soblack);		
 		},[1],0,false,true,"","_target == _this"];//end
 		
-	
 	//Switch B1 Secondary to AA
 		_user  addAction ["<t color='#073BFC'>Switch B1 Secondary to AA</t>",                
 		{
 		[] execVM (b1Quick+b1AA);	
 		},[1],0,false,true,"","_target == _this"];//end
+
+//Spacer
+		_user addAction ["<t color='#A020F0'> ---Paint the Droids!---</t>", 
+		{
+		},[1],0,false,true,"","_target == _this"];//end
+		
+	//Switch Camo Droids to Snow
+		_user  addAction ["<t color='#FFFFFF'>Switch B1 CAMO droids to Snow Camo</t>",                
+		{
+		[] execVM (b1Quick+b1Snow);	
+		},[1],0,false,true,"","_target == _this"];//end
+
+	//Switch Camo Droids to Forest
+		_user  addAction ["<t color='#FFFFFF'>Switch B1 CAMO droids to Forest Camo</t>",                
+		{
+		[] execVM (b1Quick+b1Forest);	
+		},[1],0,false,true,"","_target == _this"];//end
+		
+	//Switch Normal Droids to  Wookie 
+		_user  addAction ["<t color='#FFFFFF'>Switch B1 Droids to Wookie </t>",                
+		{
+		[] execVM (b1Quick+b1Wookie);	
+		},[1],0,false,true,"","_target == _this"];//end
+		
+	//Switch Normal Droids to  Construction
+		_user  addAction ["<t color='#FFFFFF'>Switch B1 Droids to Construction</t>",                
+		{
+		[] execVM (b1Quick+b1Construction);	
+		},[1],0,false,true,"","_target == _this"];//end
+		
+	//Switch Normal Droids to  Wasp
+		_user  addAction ["<t color='#FFFFFF'>Switch B1 Droids to Wasp</t>",                
+		{
+		[] execVM (b1Quick+b1Wasp);	
+		},[1],0,false,true,"","_target == _this"];//end
+		
+	//Switch Spec droids to Black
+		_user  addAction ["<t color='#FFFFFF'>Switch Spec Ops to Black</t>",                
+		{
+		[] execVM (root+aiBased+factionBased+opforFac+cis+soblack);		
+		},[1],0,false,true,"","_target == _this"];//end
+		
 /*   - Disabled for debugging
 	//Activate Phantom Protocol
 		_user  addAction ["<t color='#073BFC'>Activate Phantom Protocol</t>",                
