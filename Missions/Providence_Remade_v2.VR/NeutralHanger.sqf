@@ -1,0 +1,9 @@
+[NeutralHanger, false] remoteExec ["hideObjectGlobal", 2];
+[NeutralHanger1, false] remoteExec ["hideObjectGlobal", 2];
+[NeutralHanger2, false] remoteExec ["hideObjectGlobal", 2];
+[RepublicHanger, true] remoteExec ["hideObjectGlobal", 2];
+[RepublicHanger1, true] remoteExec ["hideObjectGlobal", 2];
+[RepublicHanger2, true] remoteExec ["hideObjectGlobal", 2];
+[CISHanger, true] remoteExec ["hideObjectGlobal", 2];
+[CISHanger1, true] remoteExec ["hideObjectGlobal", 2];
+[CISHanger2, true] remoteExec ["hideObjectGlobal", 2];
