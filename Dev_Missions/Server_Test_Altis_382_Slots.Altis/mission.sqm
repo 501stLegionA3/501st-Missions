@@ -5,10 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1025;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=468;
+		nextID=469;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
 	};
 	class LayerIndexProvider
 	{
@@ -16,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14678.271,35.900768,16737.904};
-		dir[]={-0.58969206,-0.37447628,0.71564186};
-		up[]={-0.23815919,0.92722404,0.28902483};
-		aside[]={0.77178752,3.8236612e-007,0.63596171};
+		pos[]={14657.522,43.163673,16754.533};
+		dir[]={-0.66339773,-0.45599833,0.59341741};
+		up[]={-0.33989751,0.88995862,0.3040399};
+		aside[]={0.66675413,-4.2794272e-007,0.74539238};
 	};
 };
 binarizationWanted=0;
@@ -46,13 +50,14 @@ addons[]=
 	"A3_Characters_F",
 	"A3_Modules_F_ObjectModifiers",
 	"ace_respawn",
-	"ace_zeus"
+	"ace_zeus",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=22;
+		items=23;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -193,16 +198,51 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
+		class Item22
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=10432535;
 class ScenarioData
 {
 	author="Daedalus";
+	briefing=0;
+	debriefing=0;
+	respawnDialog=0;
+	disabledAI=1;
+	respawn=3;
 };
 class CustomAttributes
 {
 	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -250,7 +290,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=216;
+									items=217;
 									class Item0
 									{
 										class data
@@ -3275,6 +3315,20 @@ class CustomAttributes
 											value="ace_pylons_timeperpylon";
 										};
 									};
+									class Item216
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_markers_moverestriction";
+										};
+									};
 								};
 							};
 						};
@@ -3291,7 +3345,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=216;
+									items=217;
 									class Item0
 									{
 										class data
@@ -13012,6 +13066,51 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item216
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=-1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -13038,8 +13137,10 @@ class CustomAttributes
 };
 class Mission
 {
+	assetType="Free";
 	class Intel
 	{
+		briefingName="Altis Server Test 382 Slot";
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;
@@ -13060,7 +13161,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=80;
+		items=81;
 		class Item0
 		{
 			dataType="Logic";
@@ -77598,6 +77699,15 @@ class Mission
 				};
 				nAttributes=6;
 			};
+		};
+		class Item80
+		{
+			dataType="Marker";
+			position[]={14630.294,17.91,16757.596};
+			name="respawn";
+			type="Select";
+			alpha=0;
+			id=468;
 		};
 	};
 	class Connections
