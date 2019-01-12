@@ -109,6 +109,12 @@ namZeusPanelHermes={
 		[] execVM (b1Quick+b1Wasp);	
 		},[1],0,false,true,"","_target == _this"];//end
 		
+	//Switch B2 Droids to  Wasp
+		_user  addAction ["<t color='#FFFFFF'>Switch B2 Droids to Wasp</t>",                
+		{
+		[] execVM (b2Quick+b2Wasp);	
+		},[1],0,false,true,"","_target == _this"];//end
+		
 	//Switch Spec droids to Black
 		_user  addAction ["<t color='#FFFFFF'>Switch Spec Ops to Black</t>",                
 		{
