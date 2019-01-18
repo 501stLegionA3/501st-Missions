@@ -94,7 +94,7 @@ xiphosI={
 	
 	
 	
-	[_vic] execVm (airBasedQuick+arc170Path+removeEject);
+	//[_vic] execVm (airBasedQuick+arc170Path+removeEject);
 
 	
 	

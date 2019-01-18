@@ -19,7 +19,7 @@ checkSumCounter=checkSumCounter+1;
 //[] execVM "scripts\zeus3denScripts\ZeusfunctionPanel\zeusVariableAndFunctionPanelHades.sqf";
 
 //laat weapons,adds weapons and wingtip smoke
-[] execVM (root+vehicleBased+vehicleVariant+airBased+laat);
+[] execVM (root+vehicleBased+vehicleVariant+airBased+laat);//disable
 checkSumVariable=checkSumVariable+checkSumCounter;
 checkSumCounter=checkSumCounter+1;
 
