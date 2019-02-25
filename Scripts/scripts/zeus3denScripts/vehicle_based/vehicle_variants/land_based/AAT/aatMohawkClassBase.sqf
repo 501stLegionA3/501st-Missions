@@ -26,7 +26,7 @@ rexiAttMohawk=
 ArmoredAssaultTank=
 	{
 	params["_vic"];
-	
+	_vic setVehicleLock "LOCKED";
 	_vic forceWeaponFire ["SWOP_E5AAT", "close"];
 	};
 	
