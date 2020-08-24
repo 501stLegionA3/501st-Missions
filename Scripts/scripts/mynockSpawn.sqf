@@ -9,7 +9,6 @@ pads=[
 
 
 vics=[
-["RD501_bantha_501st_MkI","<t color='#00FF00'>Bantha IFV</t>"],
 ["RD501_Longbow_Republic","<t color='#00FF00'>Longbow AA</t>"],
 ["RD501_Glaive_Mynock","<t color='#00FF00'>Glaive TD</t>"],
 ["RD501_warden_tank_mobile","<t color='#00FF00'>Overseer ASV</t>"],
