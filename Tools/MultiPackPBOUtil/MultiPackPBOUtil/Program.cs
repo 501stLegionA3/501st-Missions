@@ -54,6 +54,8 @@ namespace MultiPackPBOUtil
 
             var missionFolders = GetMissionFileDirectories(StartFolderPath);
 
+            Console.WriteLine($"Found {missionFolders.Length} mission files.");
+
             if(missionFolders.Length <= 0)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -73,14 +75,20 @@ namespace MultiPackPBOUtil
                 tempFolderUsed = true;
             }
 
+            Console.WriteLine("PBO files built, moving files to output.");
+
             CopyPboFilesToOutput(StartFolderPath, output);
 
             if(!string.IsNullOrWhiteSpace(MoveToFolderPath))
             {
+                Console.WriteLine($"Moving Mission Files to {MoveToFolderPath}");
+
                 Directory.CreateDirectory(MoveToFolderPath);
 
                 await CopyFolderRecursively(StartFolderPath, MoveToFolderPath);
             }
+
+            Console.WriteLine("Cleaning up...");
 
             if (DeleteAfterConversion)
                 CleanupInputFolder(StartFolderPath);
@@ -158,6 +166,8 @@ namespace MultiPackPBOUtil
 
             foreach (var folder in missionFolders)
             {
+                Console.WriteLine($"Building PBO for {folder}");
+
                 if (addContent)
                 {
                     await CopyFolderRecursively(ContentDirectoryPath, folder);
