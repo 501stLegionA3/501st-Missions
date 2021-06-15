@@ -98,6 +98,8 @@ namespace MultiPackPBOUtil
             {
                 var outputActual = Path.Join(StartFolderPath, "output");
 
+                Console.WriteLine($"Moving PBOs back to {outputActual}");
+
                 CopyPboFilesToOutput(output, outputActual);
 
                 Directory.Delete(output, true);
@@ -186,7 +188,13 @@ namespace MultiPackPBOUtil
                 });
 
                 if (converting is null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.WriteLine("Failed to lauch converter.");
+                    ResetConsoleColors();
                     break;
+                }
 
                 await converting.WaitForExitAsync();
 
@@ -212,6 +220,8 @@ namespace MultiPackPBOUtil
         private void CopyPboFilesToOutput(string path, string copyTo)
         {
             var pboFiles = GetPboFiles(path);
+
+            Console.WriteLine($"Found {pboFiles.Length} PBO files.");
 
             Directory.CreateDirectory(copyTo);
 
