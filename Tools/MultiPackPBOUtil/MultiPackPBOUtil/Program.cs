@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace MultiPackPBOUtil
@@ -176,7 +177,7 @@ namespace MultiPackPBOUtil
                 var converting = Process.Start(new ProcessStartInfo()
                 {
                     Arguments = $"-P \"{folder}\"",
-                    FileName = Path.Join("Utils", "MakePbo"),
+                    FileName = Path.Join(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Utils", "MakePbo"),
                     RedirectStandardError = true
                 });
 
