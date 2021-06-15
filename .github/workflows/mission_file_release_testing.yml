@@ -1,0 +1,22 @@
+name: Mission File Release
+
+on:
+  workflow_dispatch:
+  release:
+    types: ['published']
+
+jobs:
+  rmf-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Mikero Dependencies
+      run: |
+        sudo apt-add-repository universe
+        sudo apt-get --assume-yes update
+        sudo apt-get --assume-yes install liblzo2-2 libvorbis0a libvorbisfile3 libvorbisenc2 libogg0 libuchardet0
+        tar -xzvf Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/Utils/depbo-tools.tgz
+        cd Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/Utils/ && ls
+        chmod u+x Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/Utils/depbo-tools-0.8.10/bin/makepbo

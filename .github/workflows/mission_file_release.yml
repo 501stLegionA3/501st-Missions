@@ -6,7 +6,7 @@ on:
     types: ['published']
 
 jobs:
-  build:
+  rmf:
 
     runs-on: ubuntu-latest
 
@@ -21,7 +21,15 @@ jobs:
     - name: Build Multipack Util
       run: dotnet build --no-restore --configuration Release "Tools/MultiPackPBOUtil/MultiPackPBOUtil.sln"
     - name: Install Mikero Dependencies
-      run: sudo apt-get install liblzo2-2 libvorbis0a libvorbisfile3 libvorbisenc2 libogg0 libuchardet0
+      run: |
+        sudo apt-add-repository universe
+        sudo apt-get --assume-yes update
+        sudo apt-get --assume-yes install liblzo2-2 libvorbis0a libvorbisfile3 libvorbisenc2 libogg0 libuchardet0
+        cd Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/ && ls
+        cd Utils/ && ls
+        tar -xzvf depbo-tools.tgz
+        cd depbo-tools-0.8.10/ && ls
+        chmod u+x bin/makepbo
     - name: Run Multipack Util
       run: dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "Missions/Live/PBO" --content "Scripts" --ignore "placeholder"
     - name: Update Repo
