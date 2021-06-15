@@ -84,7 +84,7 @@ namespace MultiPackPBOUtil
 
             if (tempFolderUsed)
             {
-                var outputActual = Path.Join(StartFolderPath, "output");
+                var outputActual = Path.Join(StartFolderPath, "Output");
 
                 CopyPboFilesToOutput(output, outputActual);
 
