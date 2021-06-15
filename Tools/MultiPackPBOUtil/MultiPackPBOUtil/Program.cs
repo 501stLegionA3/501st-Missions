@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace MultiPackPBOUtil
@@ -167,7 +168,20 @@ namespace MultiPackPBOUtil
         {
             bool addContent = !string.IsNullOrWhiteSpace(ContentDirectoryPath);
 
-            var toolPath = Path.Join(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Utils", "MakePbo.exe");
+            string toolPath;
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                toolPath = Path.Join(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Utils", "MakePbo.exe");
+            }
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+                toolPath = Path.Join(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Utils", "u_bin", "makepbo");
+            }
+            else
+            {
+                Console.WriteLine("Invalid runtime for mikero tools.");
+                return;
+            };
 
             Console.WriteLine($"Pulling tools from {toolPath}");
 

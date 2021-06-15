@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -20,6 +20,8 @@ jobs:
       run: dotnet restore "Tools/MultiPackPBOUtil/MultiPackPBOUtil.sln"
     - name: Build Multipack Util
       run: dotnet build --no-restore --configuration Release "Tools/MultiPackPBOUtil/MultiPackPBOUtil.sln"
+    - name: Install Mikero Dependencies
+      run: sudo apt-get install liblzo2-2 libvorbis0a libvorbisfile3 libvorbisenc2 libogg0 libuchardet0
     - name: Run Multipack Util
       run: dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "Missions/Live/PBO" --content "Scripts" --ignore "placeholder"
     - name: Update Repo
