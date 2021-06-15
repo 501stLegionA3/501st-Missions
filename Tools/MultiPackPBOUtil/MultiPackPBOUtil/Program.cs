@@ -165,6 +165,10 @@ namespace MultiPackPBOUtil
         {
             bool addContent = !string.IsNullOrWhiteSpace(ContentDirectoryPath);
 
+            var toolPath = Path.Join(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Utils", "MakePbo.exe");
+
+            Console.WriteLine($"Pulling tools from {toolPath}");
+
             foreach (var folder in missionFolders)
             {
                 Console.WriteLine($"Building PBO for {folder}");
@@ -177,7 +181,7 @@ namespace MultiPackPBOUtil
                 var converting = Process.Start(new ProcessStartInfo()
                 {
                     Arguments = $"-P \"{folder}\"",
-                    FileName = Path.Join(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Utils", "MakePbo"),
+                    FileName = toolPath,
                     RedirectStandardError = true
                 });
 
