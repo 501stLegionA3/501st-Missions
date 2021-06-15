@@ -20,6 +20,10 @@ jobs:
       run: dotnet restore "Tools/MultiPackPBOUtil/MultiPackPBOUtil.sln"
     - name: Build Multipack Util
       run: dotnet build --no-restore --configuration Release "Tools/MultiPackPBOUtil/MultiPackPBOUtil.sln"
+    - name: Lemme See
+      run: cd Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/ && ls
+    - name: Lemme See more
+      run: Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/Utils && ls
     - name: Run Multipack Util
       run: dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "Missions/Live/PBO" --content "Scripts" --ignore "placeholder"
     - name: Update Repo
