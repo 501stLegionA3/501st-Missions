@@ -1,9 +1,10 @@
 name: .NET
 
 on:
-  release:
-    types:
-      - created
+  pull_request:
+    tags: ['multipack']
+  push:
+    paths: ['Tools/MultiPackPBOUtil']
   workflow_dispatch:
 
 jobs:
