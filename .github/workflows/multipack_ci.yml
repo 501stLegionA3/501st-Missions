@@ -1,0 +1,23 @@
+name: Multipack CI
+
+on:
+  pull_request:
+    tags: ['multipack']
+  push:
+    paths: ['Tools/MultiPackPBOUtil']
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore "Tools/MultiPackPBOUtil/MultiPackPBOUtil.sln"
+    - name: Build
+      run: dotnet build --no-restore "Tools/MultiPackPBOUtil/MultiPackPBOUtil.sln"
