@@ -76,7 +76,7 @@ namespace MultiPackPBOUtil
                 tempFolderUsed = true;
             }
 
-            Console.WriteLine("PBO files built, moving files to output.");
+            Console.WriteLine($"PBO files built, moving files to {output}.");
 
             CopyPboFilesToOutput(StartFolderPath, output);
 
