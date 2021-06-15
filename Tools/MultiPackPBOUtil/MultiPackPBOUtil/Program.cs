@@ -32,6 +32,9 @@ namespace MultiPackPBOUtil
         [Option("-c|--content", Description = "Location where additional content should be copied from and into each pbo file.")]
         private string ContentDirectoryPath { get; } = "";
 
+        [Option("-i|--ignore", CommandOptionType.MultipleValue, Description = "File name(s) to ignore when running --delete and --move.")]
+        public string[] FileNamesToIgnore { get; } = Array.Empty<string>();
+
         private ConsoleColor ForegroundColor { get; set; } = ConsoleColor.Black;
         private ConsoleColor BackgroundColor { get; set; } = ConsoleColor.White;
 
@@ -126,7 +129,12 @@ namespace MultiPackPBOUtil
             {
                 Directory.CreateDirectory(copyTo);
 
-                var path = Path.Combine(copyTo, Path.GetFileName(file));
+                var name = Path.GetFileName(file);
+
+                if (FileNamesToIgnore.Contains(name))
+                    break;
+
+                var path = Path.Combine(copyTo, name);
                 if(File.Exists(path))
                     File.Delete(path);
 
@@ -226,10 +234,21 @@ namespace MultiPackPBOUtil
             return foundFiles.ToArray();
         }
 
-        private static void CleanupInputFolder(string path)
+        private void CleanupInputFolder(string path)
         {
-            Directory.Delete(path, true);
-            Directory.CreateDirectory(path);
+            var files = Directory.GetFiles(path);
+            foreach(var file in files)
+            {
+                if (!FileNamesToIgnore.Contains(Path.GetFileName(file)))
+                    File.Delete(file);
+            }
+
+            foreach (var folder in Directory.GetDirectories(path))
+                CleanupInputFolder(folder);
+
+            var data = Directory.GetFileSystemEntries(path);
+            if (data?.Length <= 0)
+                Directory.Delete(path);
         }
 
         private void ResetConsoleColors()
