@@ -25,14 +25,11 @@ jobs:
         sudo apt-add-repository universe
         sudo apt-get --assume-yes update
         sudo apt-get --assume-yes install liblzo2-2 libvorbis0a libvorbisfile3 libvorbisenc2 libogg0 libuchardet0
-        echo -nUtils Listing-n
-        cd Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/ && ls
-        cd Utils/ && ls
+        cd Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/
+        cd Utils/
         tar -xzvf depbo-tools.tgz
-        echo -nDepbo Tools Listing-n
         cd depbo-tools-0.8.10/ && ls
-        export PATH=$PATH:$(pwd)/bin
-        export LD_LIBRARY_PATH=$(pwd)/lib
+        cp -a lib/. /lib/
         sudo /sbin/ldconfig -v
     - name: Run Multipack Util
       run: dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "Missions/Live/PBO" --content "Scripts" --ignore "placeholder"
