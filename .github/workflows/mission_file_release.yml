@@ -25,14 +25,12 @@ jobs:
         sudo apt-add-repository universe
         sudo apt-get --assume-yes update
         sudo apt-get --assume-yes install liblzo2-2 libvorbis0a libvorbisfile3 libvorbisenc2 libogg0 libuchardet0
-        cd Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/
-        cd Utils/
+        cd Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/Utils/
         tar -xzvf depbo-tools.tgz
-        cd depbo-tools-0.8.10/ && ls
-        cp -a lib/. /usr/local/lib/
-        sudo /sbin/ldconfig -v
     - name: Run Multipack Util
-      run: dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "Missions/Live/PBO" --content "Scripts" --ignore "placeholder"
+      run: |
+        export LD_LIBRARY_PATH=$(pwd)/Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/Utils/depbo-tools-0.8.10/lib:$LD_LIBRARY_PATH
+        dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "Missions/Live/PBO" --content "Scripts" --ignore "placeholder"
     - name: Update Repo
       if: ${{ !env.ACT }}
       uses: stefanzweifel/git-auto-commit-action@v4
