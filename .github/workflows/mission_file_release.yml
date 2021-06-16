@@ -29,7 +29,7 @@ jobs:
         cd Utils/
         tar -xzvf depbo-tools.tgz
         cd depbo-tools-0.8.10/ && ls
-        cp -a lib/. /lib/
+        cp -a lib/. /usr/local/lib/
         sudo /sbin/ldconfig -v
     - name: Run Multipack Util
       run: dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "Missions/Live/PBO" --content "Scripts" --ignore "placeholder"
