@@ -176,28 +176,6 @@ namespace MultiPackPBOUtil
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
                 toolPath = Path.Join(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Utils", "depbo-tools-0.8.10", "bin", "makepbo");
-                //var tarPath = Path.Join(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Utils", "depbo-tools.tgz");
-
-                //Console.WriteLine("Extracting depbo tools");
-
-                //using var extract = Process.Start(new ProcessStartInfo()
-                //{
-                //    FileName = "/bin/bash",
-                //    Arguments = $"tar -zxvf {tarPath}",
-                //});
-
-                //await extract!.WaitForExitAsync();
-
-                //Console.WriteLine("Updating tool permissions");
-
-                //using var permMod = Process.Start(new ProcessStartInfo()
-                //{
-                //    CreateNoWindow = true,
-                //    FileName = "/bin/bash",
-                //    Arguments = $"chmod u+x {toolPath}"
-                //});
-
-                //await permMod!.WaitForExitAsync();
             }
             else
             {
