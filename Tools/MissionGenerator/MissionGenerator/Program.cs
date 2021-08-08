@@ -41,7 +41,7 @@ namespace MissionGenerator
         {
             Console.WriteLine("\nStarting File Generator\n");
 
-            var missionNames = new Dictionary<string, string>();
+            var missionNames = await GetMissionNames();
 
             var data = await GetMissionDataAsync(missionNames);
 
@@ -317,7 +317,7 @@ namespace MissionGenerator
 
                         finalData.Add(new MissionData(title, desc, compData.Author, compData, map, mapName, offsetPos.Value));
 
-                        Console.WriteLine($"Built data for {mapName}");
+                        Console.WriteLine($"Built data for {missionName}");
                     }
                 }
             }
