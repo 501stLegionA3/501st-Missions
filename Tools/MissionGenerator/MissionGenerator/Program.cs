@@ -203,6 +203,8 @@ namespace MissionGenerator
             Directory.CreateDirectory(fullPath);
 
             await File.WriteAllLinesAsync(Path.Combine(fullPath, "mission.sqm"), newMissionData);
+
+            Console.WriteLine($"Created mission file for: {missionData.Title}");
         }
 
         private async Task<List<MissionData>> GetMissionDataAsync(Dictionary<string, string> missionNames)
@@ -306,7 +308,7 @@ namespace MissionGenerator
                         }
 
                         // No offest means no proper map placement, skip.
-                        if (offsetPos is null) continue;
+                        if (!found || offsetPos is null) continue;
 
                         // Set the mission title.
                         var title = string.Format(TitleOutline, compData.Title, missionName, compData.Version);
@@ -314,6 +316,8 @@ namespace MissionGenerator
                         var desc = string.Format(DescOutline, compData.Version);
 
                         finalData.Add(new MissionData(title, desc, compData.Author, compData, map, mapName, offsetPos.Value));
+
+                        Console.WriteLine($"Built data for {mapName}");
                     }
                 }
             }
