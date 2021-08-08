@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  rmf:
+  mgr:
 
     runs-on: ubuntu-latest
 
@@ -16,11 +16,11 @@ jobs:
         dotnet-version: 6.0.x
         include-prerelease: true
     - name: Restore Mission Generator dependencies
-      run: dotnet restore "Tools/MultiPackPBOUtil/MultiPackPBOUtil.sln"
+      run: dotnet restore "Tools/MissionGenerator/MissionGenerator.sln"
     - name: Build Mission Generator
       run: dotnet build --no-restore --configuration Release "Tools/MissionGenerator/MissionGenerator.sln"
     - name: Run Mission Generator
-      run: 'dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Framework/" "Compositions/Generator/" "Missions/Pending/" --title "501st Legion FunOp {0}: {1} {2}" --desc "Official 501st Legion FunOP | All 501st, 212th, 91st, 101st, and 327th slots! | {0}" --missions "Missions/missions.cfg"'
+      run: 'dotnet Tools/MissionGenerator/MissionGenerator/bin/Release/net6.0/MissionGenerator.dll "Missions/Framework/" "Compositions/Generator/" "Missions/Pending/" --title "501st Legion FunOp {0}: {1} {2}" --desc "Official 501st Legion FunOP | All 501st, 212th, 91st, 101st, and 327th slots! | {0}" --missions "Missions/missions.cfg"'
     - name: Update Repo
       if: ${{ !env.ACT }}
       uses: stefanzweifel/git-auto-commit-action@v4
