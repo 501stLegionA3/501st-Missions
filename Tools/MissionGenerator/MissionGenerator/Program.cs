@@ -296,7 +296,7 @@ namespace MissionGenerator
 
                                         if (TryGetVaraibleFromLine(name, out string? nameString))
                                         {
-                                            if (nameString.ToLower().Equals(compName.ToLower()))
+                                            if (nameString.ToLower().Replace("_", " ").Equals(compName.ToLower()))
                                             {
                                                 found = true;
                                                 break;
