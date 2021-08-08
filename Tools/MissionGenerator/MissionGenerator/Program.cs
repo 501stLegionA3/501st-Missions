@@ -34,7 +34,7 @@ namespace MissionGenerator
         [Option("-d|--desc", Description = "Description format string. {0} is replaced with the version number.")]
         private string DescOutline { get; } = "Official 501st Legion FunOP | All 501st, 212th, 91st, 101st, and 327th slots! | {0}";
 
-        [Option("-m|-missions", Description = "Location of the missions.cfg file. Will use the default file if none is provided.")]
+        [Option("-m|--missions", Description = "Location of the missions.cfg file. Will use the default file if none is provided.")]
         private string MissionCfgPath { get; } = "missions.cfg";
 
         private async Task OnExecute()
