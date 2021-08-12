@@ -1,0 +1,1 @@
+player enableStamina false;
