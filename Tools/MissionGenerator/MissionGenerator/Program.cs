@@ -199,7 +199,8 @@ namespace MissionGenerator
             var fileName = $"{rawFileName}.{missionData.MapId}";
 
             var fullPath = Path.Combine(ResPath, fileName);
-
+            // get rid of special characters in the mission file save name for readability.
+            fullPath = fullPath.Replace("%2e", "-").Replace("%20", "_");
             Directory.CreateDirectory(fullPath);
 
             await File.WriteAllLinesAsync(Path.Combine(fullPath, "mission.sqm"), newMissionData);
