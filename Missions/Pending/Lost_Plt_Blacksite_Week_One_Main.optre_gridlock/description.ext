@@ -1,0 +1,59 @@
+class CfgFunctions {
+	class SVLN {
+		tag = "SVLN";
+
+		class gatekeeper {
+			file = "gatekeeper";
+			class registerKey {
+				file = "gatekeeper\register_key.sqf";
+			};
+			class pickupKey {
+				file = "gatekeeper\pickup_key.sqf";
+			};
+			class dropKey {
+				file = "gatekeeper\drop_key.sqf";
+			};
+			class resetKey {
+				file = "gatekeeper\reset_key.sqf";
+			};
+			class registerDoor {
+				file = "gatekeeper\register_door.sqf";
+			};
+			class checkColors {
+				file = "gatekeeper\check_colors.sqf";
+			};
+		};
+		class teleports {
+			class registerIterativeTeleporter {
+				file = "teleports\register_iterative_teleporter.sqf";
+			};
+			class iterativeTeleport {
+				file = "teleports\iterative_teleport.sqf";
+			};
+		};
+		class lighting {
+			class registerLight {
+				file = "lighting\register_light.sqf";
+			};
+		};
+	};
+};
+class CfgMusic
+{
+	tracks[]={};
+	class glass_destroyMe
+	{
+		name = "Destroy Me - Mr. Kitty";
+		sound[] = {"\music\destroy_me.ogg", db+0, 1.0};
+	};
+	class glass_theSword
+	{
+		name = "The Sword - Night City";
+		sound[] = {"\music\the_sword.ogg", db+0, 1.0};
+	};
+	class glass_scandroid
+	{
+		name = "Neo Tokyo - Scandroid";
+		sound[] = {"\music\scandroid.ogg", db+0, 1.0};
+	};
+};
