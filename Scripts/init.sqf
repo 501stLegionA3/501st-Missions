@@ -10,7 +10,7 @@
 //	7-05-2018 - 
 //
 //  ADD THIS INTO THE MISSION FOLDER, NEXT TO MISSION.SQM
-//
+//      (GOING TO POINT OUT, SOME ONE USED MY LOADOUT SCRIPT)
 */
 /////////////////////////////////////
 // Fix Loading Screen Issues - BDC //
