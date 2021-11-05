@@ -257,11 +257,20 @@ namespace MissionGenerator
 
                                 if (trimmed.StartsWith("class Entities"))
                                 {
-                                    while (!((line = await sr.ReadLineAsync())?.Trim().StartsWith("};") ?? true))
-                                    {
-                                        // Skip to the line that has position data within entities. Should be only one of these in the base file.
-                                        while (!((line = await sr.ReadLineAsync())?.Trim().StartsWith("class") ?? true)) { }
+                                    while (!((line = await sr.ReadLineAsync())?.Trim().StartsWith("items=") ?? true)) { }
 
+                                    var itemCount = 0;
+                                    if (TryGetVaraibleFromLine(line ?? "", out var dat))
+                                        _ = int.TryParse(dat, out itemCount);
+
+                                    if (itemCount <= 0) break;
+
+                                    // Skip to the line that has position data within entities. Should be only one of these in the base file.
+                                    while (!((line = await sr.ReadLineAsync())?.Trim().StartsWith("class") ?? true)) { }
+
+                                    int i = 0;
+                                    while (i < itemCount && !sr.EndOfStream)
+                                    {
                                         List<string> markerLines = new();
 
                                         while (!((line = await sr.ReadLineAsync())?.Trim().StartsWith("class") ?? true))
@@ -297,9 +306,11 @@ namespace MissionGenerator
 
                                         if (TryGetVaraibleFromLine(name, out string? nameString))
                                         {
-                                            if (nameString.ToLower().Replace("_", " ").Equals(compName.ToLower()))
+                                            var compNameActual = Uri.UnescapeDataString(compName.ToLower()).Replace("%2e", ".");
+                                            if (nameString.ToLower().Replace("_", " ").Equals(compNameActual))
                                             {
                                                 found = true;
+                                                i += 1;
                                                 break;
                                             }
                                         }
@@ -501,10 +512,17 @@ namespace MissionGenerator
         {
             try
             {
-                // Get the value between the " " of the name variable.
-                data = line[(line.IndexOf('"') + 1)..(line.LastIndexOf('"'))];
-                // ArmA uses HTML encoding to preserve special chars in strings.
-                data = Uri.UnescapeDataString(data).Replace("%2e", ".");
+                if (line.Contains('"'))
+                {
+                    // Get the value between the " " of the name variable.
+                    data = line[(line.IndexOf('"') + 1)..(line.LastIndexOf('"'))];
+                    // ArmA uses HTML encoding to preserve special chars in strings.
+                    data = Uri.UnescapeDataString(data).Replace("%2e", ".");
+                }
+                else
+                {
+                    data = line[(line.IndexOf('=') + 1)..(line.LastIndexOf(';'))];
+                }
 
                 return true;
             }
