@@ -12,9 +12,12 @@ for name in files:
         file.seek(0)
         line = ""
 
+        while not "class Entities" in line:
+            line = file.readline()
+
         pos = file.tell()
         while not "items=" in line:
-            file.tell()
+            pos = file.tell()
             line = file.readline()
 
         try:
@@ -22,9 +25,25 @@ for name in files:
         except:
             continue
 
+        rest_of_file = ['\n']
+        while line != '':
+            line = file.readline()
+            rest_of_file.append(line)
+
         file.seek(pos)
 
-        file.write("items={};".format(count + 1))
+        file.write("        items={};".format(count + 1))
+
+        file.flush()
+
+        file.writelines(rest_of_file)
+
+    with open(name, "r+") as file:
+        file.seek(0)
+        line = ""
+
+        while not "class Entities" in line:
+            line = file.readline()
 
         while not "position[]={" in line:
             line = file.readline()
@@ -55,7 +74,7 @@ for name in files:
             rest_of_file.append(line)
 
         file.seek(pos)
-        
+
         file.write('''
         class Item{}
         {}
@@ -66,6 +85,8 @@ for name in files:
             id=0;
             atlOffset=717.84521;
         {};'''.format(count, "{", "{%0f,%0f,%0f}" % (one, two, three), "}"))
+
+        file.flush()
 
         file.writelines(rest_of_file)
 
