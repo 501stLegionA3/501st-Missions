@@ -187,46 +187,57 @@ namespace MultiPackPBOUtil
 
             foreach (var folder in missionFolders)
             {
-                Console.WriteLine($"Building PBO for {folder}");
-
-                if (addContent)
+                try
                 {
-                    await CopyFolderRecursively(ContentDirectoryPath, folder);
+                    Console.WriteLine($"Building PBO for {folder}");
+
+                    if (addContent)
+                    {
+                        await CopyFolderRecursively(ContentDirectoryPath, folder);
+                    }
+
+                    using var converting = Process.Start(new ProcessStartInfo()
+                    {
+                        Arguments = $"-P \"{folder}\"",
+                        FileName = toolPath,
+                        RedirectStandardError = true
+                    });
+
+                    if (converting is null)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Failed to lauch converter.");
+                        ResetConsoleColors();
+                        break;
+                    }
+
+                    await converting.WaitForExitAsync();
+
+                    string? errors;
+                    bool errored = false;
+                    if ((errors = await converting.StandardError.ReadLineAsync()) is not null)
+                    {
+                        // TODO log the errors.
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.WriteLine(errors);
+
+                        errored = true;
+                    }
+
+                    if (errored)
+                    {
+                        ResetConsoleColors();
+                    }
                 }
-
-                using var converting = Process.Start(new ProcessStartInfo()
-                {
-                    Arguments = $"-P \"{folder}\"",
-                    FileName = toolPath,
-                    RedirectStandardError = true
-                });
-
-                if (converting is null)
+                catch (Exception ex)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Failed to lauch converter.");
+                    Console.WriteLine($"An unkown error occoured: {ex.Message}\n\n{ex.StackTrace}");
                     ResetConsoleColors();
                     break;
-                }
-
-                await converting.WaitForExitAsync();
-
-                string? errors;
-                bool errored = false;
-                if ((errors = await converting.StandardError.ReadLineAsync()) is not null)
-                {
-                    // TODO log the errors.
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine(errors);
-
-                    errored = true;
-                }
-
-                if (errored)
-                {
-                    ResetConsoleColors();
                 }
             }
         }
