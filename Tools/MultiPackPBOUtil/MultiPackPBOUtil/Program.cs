@@ -175,7 +175,7 @@ namespace MultiPackPBOUtil
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                toolPath = Path.Join(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Utils", "depbo-tools-0.8.10", "bin", "makepbo");
+                toolPath = Path.Join(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Utils", "depbo-tools-0.8.60", "bin", "makepbo");
             }
             else
             {
