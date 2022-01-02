@@ -183,7 +183,18 @@ namespace MultiPackPBOUtil
                 return;
             };
 
-            Console.WriteLine($"Pulling tools from {toolPath}");
+            if (File.Exists(toolPath))
+            {
+                Console.WriteLine($"Pulling tools from {toolPath}");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.WriteLine("Failed to find a tool executable.");
+                ResetConsoleColors();
+                return;
+            }
 
             foreach (var folder in missionFolders)
             {
@@ -194,6 +205,7 @@ namespace MultiPackPBOUtil
                     if (addContent)
                     {
                         await CopyFolderRecursively(ContentDirectoryPath, folder);
+                        Console.WriteLine("... copied aditional contents ...");
                     }
 
                     using var converting = Process.Start(new ProcessStartInfo()
@@ -203,6 +215,8 @@ namespace MultiPackPBOUtil
                         RedirectStandardError = true,
                         RedirectStandardOutput = true
                     });
+
+                    Console.WriteLine("... created process handle ...");
 
                     if (converting is null)
                     {
@@ -214,6 +228,8 @@ namespace MultiPackPBOUtil
                     }
 
                     await converting.WaitForExitAsync();
+
+                    Console.WriteLine("... process execution finished, printing logs ...");
 
                     string? errors;
                     bool errored = false;
@@ -237,6 +253,8 @@ namespace MultiPackPBOUtil
                     {
                         Console.WriteLine(messages);
                     }
+
+                    Console.WriteLine("... Mission file built.");
                 }
                 catch (Exception ex)
                 {
