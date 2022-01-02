@@ -210,7 +210,7 @@ namespace MultiPackPBOUtil
 
                     using var converting = Process.Start(new ProcessStartInfo()
                     {
-                        Arguments = $"-P \"{folder}\"",
+                        Arguments = $"-A -X=\"thumbs.db,*.txt,*.h,*.dep,*.cpp,*.bak,*.png,*.log,*.pew,source,*.tga,*.bat\" -P \"{folder}\"",
                         FileName = toolPath,
                         RedirectStandardError = true,
                         RedirectStandardOutput = true
