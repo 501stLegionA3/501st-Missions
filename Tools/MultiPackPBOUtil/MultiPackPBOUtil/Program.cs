@@ -200,7 +200,8 @@ namespace MultiPackPBOUtil
                     {
                         Arguments = $"-P \"{folder}\"",
                         FileName = toolPath,
-                        RedirectStandardError = true
+                        RedirectStandardError = true,
+                        RedirectStandardOutput = true
                     });
 
                     if (converting is null)
@@ -216,7 +217,7 @@ namespace MultiPackPBOUtil
 
                     string? errors;
                     bool errored = false;
-                    if ((errors = await converting.StandardError.ReadLineAsync()) is not null)
+                    while ((errors = await converting.StandardError.ReadLineAsync()) is not null)
                     {
                         // TODO log the errors.
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -229,6 +230,12 @@ namespace MultiPackPBOUtil
                     if (errored)
                     {
                         ResetConsoleColors();
+                    }
+
+                    string? messages;
+                    while ((messages = await converting.StandardOutput.ReadLineAsync()) is not null)
+                    {
+                        Console.WriteLine(messages);
                     }
                 }
                 catch (Exception ex)
