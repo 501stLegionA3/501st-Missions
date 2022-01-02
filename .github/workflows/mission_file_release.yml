@@ -27,7 +27,7 @@ jobs:
         tar -xzvf depbo-tools.tgz
     - name: Run Multipack Util
       run: |
-        export LD_LIBRARY_PATH=$(pwd)/Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/Utils/depbo-tools-0.8.10/lib:$LD_LIBRARY_PATH
+        export LD_LIBRARY_PATH=$(pwd)/Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/Utils/depbo-tools-0.8.60/lib:$LD_LIBRARY_PATH
         dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "Missions/Live/PBO" --content "Scripts" --ignore "placeholder"
     - name: Update Repo
       if: ${{ !env.ACT }}
