@@ -1,19 +1,5 @@
-/*
-//  File created for the 501st
-//  This init file should be used for all 501st Missions
-//  Creation Date: 1-15-2018
-//	Change By: CC Cruisie
-//  Change Log:
-//	12-17-2020 - Reduced to just end loading 
-//  1-31-2018 - Added SCFramework support - CC Klein
-//  2-27-2018 - Fixed name of Cadet Loadout - CS Peterson
-//	7-05-2018 - 
-//
-//  ADD THIS INTO THE MISSION FOLDER, NEXT TO MISSION.SQM
-//      (GOING TO POINT OUT, SOME ONE USED MY LOADOUT SCRIPT)
-*/
-/////////////////////////////////////
-// Fix Loading Screen Issues - BDC //
+// START 501st INIT
+
 _EndSplashScreen = {
     for "_x" from 1 to 4 do {
         endLoadingScreen;
@@ -21,3 +7,18 @@ _EndSplashScreen = {
     };
 };
 [] spawn _EndSplashScreen;
+
+// END 501st INIT
+
+// Add catapults script.
+// [] call SLVN_fnc_loadMenuDefaults;
+
+// Fire Catapult Script.
+// if (!isNil 'global_catapults') then { 
+//     _index = lbSelection (displayCtrl 1515);
+//     {
+//         _cat = (global_catapults getOrDefault ['catapults', []]) select _x;
+//         [_cat select 0, parseNumber ctrlText 1512, parseNumber ctrlText 1501, parseNumber ctrlText 1502, parseNumber ctrlText 1503, parseNumber ctrlText 1511, parseNumber ctrlText 1504, parseNumber ctrlText 1513, parseNumber ctrlText 1514] remoteExec ['SVLN_fnc_launchCatapult', 0];
+//     } forEach _index;
+//     closeDialog 1;
+// };
