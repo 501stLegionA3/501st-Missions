@@ -1,0 +1,33 @@
+name: .NET
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore "Tools/MultiPackPBOUtil/MultiPackPBOUtil.sln"
+    - name: Publish
+      run: dotnet build --configuration Release --no-restore "Tools/MultiPackPBOUtil/MultiPackPBOUtil.sln"
+    - name: Run Multipack Util
+      run: |
+        export LD_LIBRARY_PATH=$(pwd)/Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/Utils/depbo-tools-0.8.10/lib:$LD_LIBRARY_PATH
+        dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "Missions/Live/PBO" --content "Scripts" --ignore "placeholder"
+    - name: Update Repo
+      if: ${{ !env.ACT }}
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Mission File Release
+        push_options: '--force'
