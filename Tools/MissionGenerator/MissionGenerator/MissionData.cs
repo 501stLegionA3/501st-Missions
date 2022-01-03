@@ -26,6 +26,7 @@ namespace FiveOhFirstMissionFileGenerator
         public List<string> GetOffsetObjectData()
         {
             List<string> offsetData = new();
+            var centerOffset = CompositionDetails.GetAdditionalOffset();
             foreach(var line in CompositionDetails.RawObjectData)
             {
                 string data = line;
@@ -45,6 +46,9 @@ namespace FiveOhFirstMissionFileGenerator
                             var objectOffset = new Vector3(one, two, three);
 
                             var objectActual = PresetCenter + objectOffset;
+
+                            // Add in the cetner offset, if there is any.
+                            objectActual -= centerOffset;
 
                             data = $"{data[..(line.IndexOf("{") + 1)]}{objectActual.X},{objectActual.Y},{objectActual.Z}}};";
                         }

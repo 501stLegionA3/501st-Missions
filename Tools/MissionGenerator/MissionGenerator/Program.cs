@@ -212,125 +212,140 @@ namespace MissionGenerator
         {
             List<MissionData> finalData = new();
 
+            List<Task<List<MissionData>>> runners = new();
             foreach (string map in Directory.GetDirectories(BasePath))
             {
-                // Check to make sure it has mission file structure.
-                var dirName = Path.GetFileName(map);
-                if (!dirName.Contains('.')) continue;
+                runners.Add(GetIndividualMissionDataAsync(missionNames, map));
+            }
 
-                // Get everything at the last dot and after.
-                var mapName = dirName[dirName.LastIndexOf('.')..];
+            await Task.WhenAll(runners);
 
-                // Make sure we have data beyond the dot.
-                if (mapName.Length <= 1) continue;
+            foreach (var task in runners)
+                finalData.AddRange(await task);
 
-                // Remove the dot.
-                mapName = mapName[1..];
+            return finalData;
+        }
 
-                // Get the mission name, or set the mission name to the map name if it is not in the dict.
-                if (!missionNames.TryGetValue(mapName, out string? missionName))
-                    missionName = mapName;
+        private async Task<List<MissionData>> GetIndividualMissionDataAsync(Dictionary<string, string> missionNames, string map)
+        {
+            List<MissionData> finalData = new();
 
-                foreach (string comp in Directory.GetDirectories(CompPath))
+            // Check to make sure it has mission file structure.
+            var dirName = Path.GetFileName(map);
+            if (!dirName.Contains('.')) return finalData;
+
+            // Get everything at the last dot and after.
+            var mapName = dirName[dirName.LastIndexOf('.')..];
+
+            // Make sure we have data beyond the dot.
+            if (mapName.Length <= 1) return finalData;
+
+            // Remove the dot.
+            mapName = mapName[1..];
+
+            // Get the mission name, or set the mission name to the map name if it is not in the dict.
+            if (!missionNames.TryGetValue(mapName, out string? missionName))
+                missionName = mapName;
+
+            foreach (string comp in Directory.GetDirectories(CompPath))
+            {
+                var compName = Path.GetFileName(comp);
+
+                if (IsValidComp(comp))
                 {
-                    var compName = Path.GetFileName(comp);
+                    var compData = await GetCompDetailsAsync(comp);
 
-                    if (IsValidComp(comp))
+                    // Bad comp data, go to the next comp.
+                    if (compData is null) continue;
+
+                    await using FileStream fs = new(Path.Combine(map, "mission.sqm"), FileMode.Open, FileAccess.Read, FileShare.Read);
+                    using StreamReader sr = new(fs);
+
+                    Vector3? offsetPos = null;
+                    bool found = false;
+
+                    while (!sr.EndOfStream && !found)
                     {
-                        var compData = await GetCompDetailsAsync(comp);
-
-                        // Bad comp data, go to the next comp.
-                        if (compData is null) continue;
-
-                        await using FileStream fs = new(Path.Combine(map, "mission.sqm"), FileMode.Open, FileAccess.Read, FileShare.Read);
-                        using StreamReader sr = new(fs);
-
-                        Vector3? offsetPos = null;
-                        bool found = false;
-
-                        while (!sr.EndOfStream && !found)
+                        string? line;
+                        if ((line = await sr.ReadLineAsync()) is not null)
                         {
-                            string? line;
-                            if ((line = await sr.ReadLineAsync()) is not null)
+                            var trimmed = line.Trim();
+
+                            if (trimmed.StartsWith("class Entities"))
                             {
-                                var trimmed = line.Trim();
+                                while (!((line = await sr.ReadLineAsync())?.Trim().StartsWith("items=") ?? true)) { }
 
-                                if (trimmed.StartsWith("class Entities"))
+                                var itemCount = 0;
+                                if (TryGetVaraibleFromLine(line ?? "", out var dat))
+                                    _ = int.TryParse(dat, out itemCount);
+
+                                if (itemCount <= 0) break;
+
+                                // Skip to the line that has position data within entities. Should be only one of these in the base file.
+                                while (!((line = await sr.ReadLineAsync())?.Trim().StartsWith("class") ?? true)) { }
+
+                                int i = 0;
+                                while (i < itemCount && !sr.EndOfStream)
                                 {
-                                    while (!((line = await sr.ReadLineAsync())?.Trim().StartsWith("items=") ?? true)) { }
+                                    List<string> markerLines = new();
 
-                                    var itemCount = 0;
-                                    if (TryGetVaraibleFromLine(line ?? "", out var dat))
-                                        _ = int.TryParse(dat, out itemCount);
-
-                                    if (itemCount <= 0) break;
-
-                                    // Skip to the line that has position data within entities. Should be only one of these in the base file.
-                                    while (!((line = await sr.ReadLineAsync())?.Trim().StartsWith("class") ?? true)) { }
-
-                                    int i = 0;
-                                    while (i < itemCount && !sr.EndOfStream)
+                                    while (!((line = await sr.ReadLineAsync())?.Trim().StartsWith("class") ?? true))
                                     {
-                                        List<string> markerLines = new();
+                                        markerLines.Add(line.Trim());
+                                    }
 
-                                        while (!((line = await sr.ReadLineAsync())?.Trim().StartsWith("class") ?? true))
+                                    if (markerLines.Count == 0) continue;
+
+                                    string? position = markerLines.FirstOrDefault(x => x.StartsWith("position[]="));
+
+                                    if (position is null) continue;
+
+                                    var rawData = position[(position.IndexOf("{") + 1)..^2];
+
+                                    var rawInts = rawData.Split(",", StringSplitOptions.RemoveEmptyEntries);
+
+                                    if (rawInts.Length == 3)
+                                    {
+                                        if (!float.TryParse(rawInts[0], out float one))
+                                            break;
+                                        if (!float.TryParse(rawInts[1], out float two))
+                                            break;
+                                        if (!float.TryParse(rawInts[2], out float three))
+                                            break;
+
+                                        offsetPos = new Vector3(one, two, three);
+                                    }
+
+                                    string? name = markerLines.FirstOrDefault(x => x.StartsWith("name="));
+
+                                    if (name is null) continue;
+
+                                    if (TryGetVaraibleFromLine(name, out string? nameString))
+                                    {
+                                        var compNameActual = Uri.UnescapeDataString(compName.ToLower()).Replace("%2e", ".");
+                                        if (nameString.ToLower().Replace("_", " ").Equals(compNameActual))
                                         {
-                                            markerLines.Add(line.Trim());
-                                        }
-
-                                        if (markerLines.Count == 0) continue;
-
-                                        string? position = markerLines.FirstOrDefault(x => x.StartsWith("position[]="));
-
-                                        if (position is null) continue;
-
-                                        var rawData = position[(position.IndexOf("{") + 1)..^2];
-
-                                        var rawInts = rawData.Split(",", StringSplitOptions.RemoveEmptyEntries);
-
-                                        if (rawInts.Length == 3)
-                                        {
-                                            if (!float.TryParse(rawInts[0], out float one))
-                                                break;
-                                            if (!float.TryParse(rawInts[1], out float two))
-                                                break;
-                                            if (!float.TryParse(rawInts[2], out float three))
-                                                break;
-
-                                            offsetPos = new Vector3(one, two, three);
-                                        }
-
-                                        string? name = markerLines.FirstOrDefault(x => x.StartsWith("name="));
-
-                                        if (name is null) continue;
-
-                                        if (TryGetVaraibleFromLine(name, out string? nameString))
-                                        {
-                                            var compNameActual = Uri.UnescapeDataString(compName.ToLower()).Replace("%2e", ".");
-                                            if (nameString.ToLower().Replace("_", " ").Equals(compNameActual))
-                                            {
-                                                found = true;
-                                                i += 1;
-                                                break;
-                                            }
+                                            found = true;
+                                            i += 1;
+                                            break;
                                         }
                                     }
                                 }
                             }
                         }
-
-                        // No offest means no proper map placement, skip.
-                        if (!found || offsetPos is null) continue;
-
-                        // Set the mission title.
-                        var title = string.Format(TitleOutline, compData.Title, missionName, compData.Version);
-                        // And description.
-                        var desc = string.Format(DescOutline, compData.Version);
-
-                        finalData.Add(new MissionData(title, desc, compData.Author, compData, map, mapName, offsetPos.Value));
-
-                        Console.WriteLine($"Built data for {missionName}");
                     }
+
+                    // No offest means no proper map placement, skip.
+                    if (!found || offsetPos is null) continue;
+
+                    // Set the mission title.
+                    var title = string.Format(TitleOutline, compData.Title, missionName, compData.Version);
+                    // And description.
+                    var desc = string.Format(DescOutline, compData.Version);
+
+                    finalData.Add(new MissionData(title, desc, compData.Author, compData, map, mapName, offsetPos.Value));
+
+                    Console.WriteLine($"Built data for {missionName}");
                 }
             }
 
