@@ -345,7 +345,7 @@ namespace MissionGenerator
 
                     finalData.Add(new MissionData(title, desc, compData.Author, compData, map, mapName, offsetPos.Value));
 
-                    Console.WriteLine($"Built data for {missionName}");
+                    Console.WriteLine($"Built data on {missionName} for {compData.Title}");
                 }
             }
 

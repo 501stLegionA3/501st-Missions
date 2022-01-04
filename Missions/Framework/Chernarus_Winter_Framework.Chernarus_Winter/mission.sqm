@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1;
+		nextID=2;
 	};
 	class MarkerIDProvider
 	{
@@ -75,7 +75,7 @@ class Mission
 	};
 	class Entities
 	{
-        items=2;
+		items=3;
 		class Item0
 		{
 			dataType="Marker";
@@ -85,15 +85,23 @@ class Mission
 			id=0;
 			atlOffset=581.24292;
 		};
-
-        class Item1
-        {
-            dataType="Marker";
-            position[]={298.433990,876.731020,8098.945800};
-            name="Venator%20V1%2e3%2e1-beta%20(NO%20MCC)";
-            type="Empty";
-            id=0;
-            atlOffset=717.84521;
-        };
+		class Item1
+		{
+			dataType="Marker";
+			position[]={298.43399,876.73102,8098.9458};
+			name="Venator%20V1%2e3%2e1-beta%20(NO%20MCC)";
+			type="Empty";
+			id=0;
+			atlOffset=581.24292;
+		};
+		class Item2
+		{
+			dataType="Marker";
+			position[]={48.018002,7.5919423,1511.713};
+			name="FOB%20Halki";
+			type="Empty";
+			id=1;
+			atlOffset=1.5876808;
+		};
 	};
 };
