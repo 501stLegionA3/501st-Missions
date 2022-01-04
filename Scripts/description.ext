@@ -1,3 +1,12 @@
+author = "501st Mission Builders";
+onLoadName = "501st Star Sim Mission";
+onLoadMission = "A 501st Star Sim Mission File";
+
+class Header
+{
+	gameType = Coop;
+};
+
 class CfgFunctions
 {
 	class SVLN
@@ -26,6 +35,31 @@ class CfgFunctions
 			class loadMenuDefaults
 			{
 				file = "catapult_menu_defaults.sqf";
+			};
+		};
+
+		class killTracker
+		{
+			class saveNewKill
+			{
+				preInit = 1;
+				file = "kill_tracker_save_new_kill.sqf";
+			};
+			class displayKillFeed
+			{
+				file = "kill_tracker_display_kill_info.sqf";
+			};
+			class enableKillFeed
+			{
+				file = "kill_tracker_enable_kill_feed.sqf";
+			};
+			class disableKillFeed
+			{
+				file = "kill_tracker_disable_kill_feed.sqf";
+			};
+			class registerZeusObject
+			{
+				file = "kill_tracker_register_zeus_object.sqf";
 			};
 		};
 	};

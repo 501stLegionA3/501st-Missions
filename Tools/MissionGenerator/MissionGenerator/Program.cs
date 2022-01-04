@@ -8,6 +8,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Numerics;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace MissionGenerator
@@ -204,6 +205,17 @@ namespace MissionGenerator
             Directory.CreateDirectory(fullPath);
 
             await File.WriteAllLinesAsync(Path.Combine(fullPath, "mission.sqm"), newMissionData);
+
+            // Leave a file that contains description.ext edit instructions.
+            var descData = new DescData()
+            {
+                Author = missionData.Author,
+                Description = missionData.Description,
+                Title = missionData.Title,
+            };
+
+            await using FileStream fs = new(Path.Combine(fullPath, "descdata.json"), FileMode.Create, FileAccess.Write, FileShare.Read);
+            await JsonSerializer.SerializeAsync(fs, descData);
 
             Console.WriteLine($"Created mission file for: {missionData.Title}");
         }

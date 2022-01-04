@@ -1,4 +1,7 @@
 ﻿using McMaster.Extensions.CommandLineUtils;
+
+using MissionGenerator;
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace MultiPackPBOUtil
@@ -206,6 +210,48 @@ namespace MultiPackPBOUtil
                     {
                         await CopyFolderRecursively(ContentDirectoryPath, folder);
                         Console.WriteLine("... copied aditional contents ...");
+
+                        if(File.Exists(Path.Join(folder, "description.ext"))
+                            && File.Exists(Path.Join(folder, "descdata.json")))
+                        {
+                            // Modify description.ext file.
+
+                            await using FileStream datafs = new(Path.Join(folder, "descdata.json"), FileMode.Open, FileAccess.Read, FileShare.Read);
+                            var data = await JsonSerializer.DeserializeAsync<DescData>(datafs);
+
+                            if(data is not null)
+                            {
+                                List<string> descData = new();
+                                await using (FileStream descfs = new(Path.Join(folder, "description.ext"), FileMode.Open, FileAccess.Read, FileShare.None))
+                                {
+                                    using StreamReader descsr = new(descfs);
+
+                                    string? line;
+                                    while ((line = await descsr.ReadLineAsync()) is not null)
+                                    {
+                                        if(line.StartsWith("author"))
+                                        {
+                                            var chars = line.TakeWhile(x => x != '"');
+                                            line = new string(chars.ToArray()) + @$"""{data.Author}"";";
+                                        }
+                                        else if (line.StartsWith("onLoadName"))
+                                        {
+                                            var chars = line.TakeWhile(x => x != '"');
+                                            line = new string(chars.ToArray()) + @$"""{data.Title}"";";
+                                        }
+                                        else if (line.StartsWith("onLoadMission"))
+                                        {
+                                            var chars = line.TakeWhile(x => x != '"');
+                                            line = new string(chars.ToArray()) + @$"""{data.Description}"";";
+                                        }
+
+                                        descData.Add(line);
+                                    }
+                                }
+
+                                await File.WriteAllLinesAsync(Path.Join(folder, "description.ext"), descData);
+                            }
+                        }
                     }
 
                     using var converting = Process.Start(new ProcessStartInfo()
