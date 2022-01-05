@@ -23,7 +23,9 @@ _EndSplashScreen = {
 //     closeDialog 1;
 // };
 
-addMissionEventHandler ["EntityKilled", {
-    params ["_a", "_b", "_c", "_d"];
-    [_a, _b, _c, _d, false] remoteExec ["SVLN_fnc_saveNewKill", 0];
-}];
+if(isServer) then {
+    addMissionEventHandler ["EntityKilled", {
+        params ["_a", "_b", "_c", "_d"];
+        [_a, _b, _c, _d, false] remoteExec ["SVLN_fnc_saveNewKill", 0];
+    }];
+};

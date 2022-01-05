@@ -3,7 +3,7 @@ params ["_unit", "_killer", "_instigator", "_useEffects", "_vic_dead"];
 // Data format = CSV
 // Name of Killed Entity, Class of killed entity, group, role, killed at position raw (x, y, z), killed at position grid (x, y), name of killer, class of killer, killed at time (y,m,d,h,m) relative to ingame time.
 
-private _killFeedStatus = profileNamespace getVariable ["SVLN_Kill_Feed_Active", true];
+private _killFeedStatus = profileNamespace getVariable ["SVLN_Kill_Feed_Active", false];
 
 diag_log (["[SVLN]", "[Kill Feed]", "TRACE:", "Save new kill dump:", _this]);
 
@@ -13,9 +13,13 @@ if(_killFeedStatus) then {
 		private _pos = getPos _unit;
 		private _screenPos = mapGridPosition _pos;
 		private _now = date;
+
+		private _userName = _unit getVariable ["SLVN_Kill_Tracker_Name", ""];
+
 		if(_vic_dead) then {
 
 			diag_log (["[SVLN]", "[Kill Feed]", "TRACE:", "runnig vic dead"]);
+			private _instName = _instigator getVariable ["SVLN_Kill_Tracker_Name", ""];
 
 			private _part = [
 					getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName"),
@@ -23,7 +27,7 @@ if(_killFeedStatus) then {
 					"n/a", "n/a",
 					_pos select 0, _pos select 1, _pos select 2,
 					_screenPos,
-					name _instigator,
+					_instName,
 					typeOf _instigator,
 					_now joinString ","]
 				joinString ",";
@@ -37,16 +41,17 @@ if(_killFeedStatus) then {
 
 			private _grp = _unit getVariable ["SLVN_Kill_Tracker_Group", "NA"];
 			private _role = _unit getVariable ["SLVN_Kill_Tracker_Desc", ""];
+			private _instName = _instigator getVariable ["SVLN_Kill_Tracker_Name", ""];
 
 			diag_log (["[SVLN]", "[Kill Feed]", "TRACE:", "runnig inf dead"]);
 
 			private _part = [
-					name _unit, 
+					_userName,
 					typeOf _unit,
 					_grp, _role,
 					_pos select 0, _pos select 1, _pos select 2,
 					_screenPos,
-					name _instigator,
+					_instName,
 					typeOf _instigator,
 					_now joinString ","]
 				joinString ",";

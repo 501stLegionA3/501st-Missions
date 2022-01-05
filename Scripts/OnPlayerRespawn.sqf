@@ -10,7 +10,7 @@ player addAction ["Clear Kill Feed", {
 	profileNamespace setVariable ["SVLN_Kill_Feed", ""];
 }];
 
-private _killFeedStatus = profileNamespace getVariable ["SVLN_Kill_Feed_Active", true];
+private _killFeedStatus = profileNamespace getVariable ["SVLN_Kill_Feed_Active", false];
 if(_killFeedStatus) then {
 	player addAction ["Stop Kill Feed", {
 		[(_this select 1)] call SVLN_fnc_disableKillFeed;
@@ -23,8 +23,9 @@ if(_killFeedStatus) then {
 	}];
 };
 
-private _grp = (group player) getVariable ["SLVN_Kill_Tracker_Group", "NA"];
-player setVariable ["SLVN_Kill_Tracker_Group", _grp, true];
-player setVariable ["SLVN_Kill_Tracker_Desc", roleDescription player, true];
+// private _grp = (group player) getVariable ["SLVN_Kill_Tracker_Group", "NA"];
+// player setVariable ["SLVN_Kill_Tracker_Group", _grp, true];
+// player setVariable ["SLVN_Kill_Tracker_Desc", roleDescription player, true];
+// player setVariable ["SLVN_Kill_Tracker_Name", name player, true];
 
 // END LOGGING INIT

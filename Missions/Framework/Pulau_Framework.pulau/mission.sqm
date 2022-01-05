@@ -5,25 +5,29 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=10;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=1;
+		nextID=1434;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=2;
+	};
+	class LayerIndexProvider
+	{
+		nextID=12;
 	};
 	class Camera
 	{
-		pos[]={1267.8246,174.42763,5433.4692};
-		dir[]={-0.66442251,0.29722449,0.68571442};
-		up[]={0.20682678,0.95480758,-0.21345466};
-		aside[]={0.71817005,4.8428774e-008,0.69587034};
+		pos[]={399.28528,5.5455709,6303.5669};
+		dir[]={0.073602192,-0.65112525,0.75545853};
+		up[]={0.063140146,0.75895315,0.64807045};
+		aside[]={0.99532712,1.4293619e-007,-0.096972883};
 	};
 };
 binarizationWanted=0;
@@ -74,7 +78,7 @@ class Mission
 	};
 	class Entities
 	{
-        items=2;
+		items=4;
 		class Item0
 		{
 			dataType="Marker";
@@ -84,15 +88,32 @@ class Mission
 			id=0;
 			atlOffset=707.56201;
 		};
-
-        class Item1
-        {
-            dataType="Marker";
-            position[]={399.291990,687.351010,6303.852100};
-            name="Venator%20V1%2e3%2e1-beta%20(NO%20MCC)";
-            type="Empty";
-            id=0;
-            atlOffset=717.84521;
-        };
+		class Item1
+		{
+			dataType="Marker";
+			position[]={399.29199,687.35101,6303.8521};
+			name="Venator%20V1%2e3%2e1-beta%20(NO%20MCC)";
+			type="Empty";
+			id=0;
+			atlOffset=707.56201;
+		};
+		class Item2
+		{
+			dataType="Marker";
+			position[]={399.36102,5.0610819,6304.0889};
+			name="FOB%20Halki";
+			type="Empty";
+			id=1433;
+			atlOffset=25.266891;
+		};
+		class Item3
+		{
+			dataType="Marker";
+			position[]={399.36102,5.0610819,6304.0889};
+			name="FOB%20Halki%20No%20MCC";
+			type="Empty";
+			id=1433;
+			atlOffset=25.266891;
+		};
 	};
 };
