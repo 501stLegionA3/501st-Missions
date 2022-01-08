@@ -24,8 +24,15 @@ _EndSplashScreen = {
 // };
 
 if(isServer) then {
-    addMissionEventHandler ["EntityKilled", {
-        params ["_a", "_b", "_c", "_d"];
-        [_a, _b, _c, _d, false] remoteExec ["SVLN_fnc_saveNewKill", 0];
-    }];
+    if(isDedicated) then {
+        addMissionEventHandler ["EntityKilled", {
+            params ["_a", "_b", "_c", "_d"];
+            [_a, _b, _c, _d, false] remoteExecCall ["SVLN_fnc_saveNewKill", -2];
+        }];
+    } else {
+        addMissionEventHandler ["EntityKilled", {
+            params ["_a", "_b", "_c", "_d"];
+            [_a, _b, _c, _d, false] remoteExecCall ["SVLN_fnc_saveNewKill", 0];
+        }];
+    };
 };

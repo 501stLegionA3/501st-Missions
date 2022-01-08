@@ -19,7 +19,7 @@ if(_killFeedStatus) then {
 		if(_vic_dead) then {
 
 			diag_log (["[SVLN]", "[Kill Feed]", "TRACE:", "runnig vic dead"]);
-			private _instName = _instigator getVariable ["SVLN_Kill_Tracker_Name", ""];
+			private _instName = _instigator getVariable ["SVLN_Kill_Tracker_Name", name _instigator];
 
 			private _part = [
 					getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName"),
@@ -41,7 +41,7 @@ if(_killFeedStatus) then {
 
 			private _grp = _unit getVariable ["SLVN_Kill_Tracker_Group", "NA"];
 			private _role = _unit getVariable ["SLVN_Kill_Tracker_Desc", ""];
-			private _instName = _instigator getVariable ["SVLN_Kill_Tracker_Name", ""];
+			private _instName = _instigator getVariable ["SVLN_Kill_Tracker_Name", name _instigator];
 
 			diag_log (["[SVLN]", "[Kill Feed]", "TRACE:", "runnig inf dead"]);
 
