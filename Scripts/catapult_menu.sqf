@@ -1,21 +1,21 @@
 createDialog "SVLN_CTPL_LaunchController";
 
-if(isNil 'first_menu_open') then {
-	[] call SVLN_fnc_loadMenuDefaults;
-	first_menu_open = true;
-	publicVariable 'firest_menu_open';
+if(isNil 'SVLN_CTPL_first_menu_open') then {
+	[] call SVLN_fnc_loadCatapultMenuDefaults;
+	SVLN_CTPL_first_menu_open = true;
+	publicVariable 'SVLN_CTPL_first_menu_open';
 } else {
-	if (isNil 'launch_settings') then {
-		[] call SVLN_fnc_loadMenuDefaults;
+	if (isNil 'SVLN_CTPL_launch_settings') then {
+		[] call SVLN_fnc_loadCatapultMenuDefaults;
 	} else {
 		lbClear 1515; 
-		if (!isNil 'global_catapults') then { 
+		if (!isNil 'SVLN_CTPL_global_catapults') then { 
 			{ 
 				lbAdd [1515, (_x select 1)];
-			} forEach (global_catapults getOrDefault ['catapults', []]);
+			} forEach (SVLN_CTPL_global_catapults getOrDefault ['catapults', []]);
 		};
 
-		item_list = launch_settings getOrDefault ["last_use", []];
+		item_list = SVLN_CTPL_launch_settings getOrDefault ["last_use", []];
 		private _vals = item_list select 0;
 
 		// Acceleration

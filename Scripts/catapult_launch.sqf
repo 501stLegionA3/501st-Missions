@@ -5,20 +5,20 @@ params ["_pad", "_dir", "_speed", "_launch_speed", "_launch_rot", "_launch_heigh
 
 diag_log text (["[SVLN]", "[CATAPULT]", "DEBUG:", "Attempting launch with params:", _pad, _dir, _speed, _launch_speed, _launch_rot, _launch_height] joinString " ");
 
-private _vic = [_pad] call SVLN_fnc_detectVic;
+private _vic = [_pad] call SVLN_fnc_detectCatapultVic;
 
 if (!(isNil "_vic")) then {
 	// [_vic, _dir] call BIS_fnc_aircraftCatapultLaunch;
 
 	// Save settings for next launch:
-	if (isNil 'launch_settings') then {
-		launch_settings = createHashMap;
-		publicVariable "launch_settings";
+	if (isNil 'SVLN_CTPL_launch_settings') then {
+		SVLN_CTPL_launch_settings = createHashMap;
+		publicVariable "SVLN_CTPL_launch_settings";
 	};
 
-	item_list = launch_settings getOrDefault ["last_use", []];
+	item_list = SVLN_CTPL_launch_settings getOrDefault ["last_use", []];
 	item_list set [0, _this];
-	launch_settings set ["last_use", item_list];
+	SVLN_CTPL_launch_settings set ["last_use", item_list];
 
 	// Start the launch process.
 

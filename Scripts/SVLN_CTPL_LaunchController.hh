@@ -22,7 +22,7 @@ class SVLN_CTPL_LaunchController
 			colorText[] = {1,1,1,1};
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
-			onMouseEnter = "lbClear 1515; if (!isNil 'global_catapults') then { { lbAdd [1515, (_x select 1)]; } forEach (global_catapults getOrDefault ['catapults', []]); };";
+			onMouseEnter = "lbClear 1515; if (!isNil 'SVLN_CTPL_global_catapults') then { { lbAdd [1515, (_x select 1)]; } forEach (SVLN_CTPL_global_catapults getOrDefault ['catapults', []]); };";
 			
 		};
 		class SVLN_CTPL_DangerBackground
@@ -122,7 +122,7 @@ class SVLN_CTPL_LaunchController
 			soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1.0};
 			soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1.0};
 			soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1.0};
-			onButtonClick = "if (!isNil 'global_catapults') then {     _index = lbSelection (displayCtrl 1515);    {        _cat = (global_catapults getOrDefault ['catapults', []]) select _x;        [_cat select 0, parseNumber ctrlText 1512, parseNumber ctrlText 1501, parseNumber ctrlText 1502, parseNumber ctrlText 1503, parseNumber ctrlText 1511, parseNumber ctrlText 1504, parseNumber ctrlText 1513, parseNumber ctrlText 1514] remoteExec ['SVLN_fnc_launchCatapult', 0];    } forEach _index;    closeDialog 1;};";
+			onButtonClick = "if (!isNil 'SVLN_CTPL_global_catapults') then {     _index = lbSelection (displayCtrl 1515);    {        _cat = (SVLN_CTPL_global_catapults getOrDefault ['catapults', []]) select _x;        [_cat select 0, parseNumber ctrlText 1512, parseNumber ctrlText 1501, parseNumber ctrlText 1502, parseNumber ctrlText 1503, parseNumber ctrlText 1511, parseNumber ctrlText 1504, parseNumber ctrlText 1513, parseNumber ctrlText 1514] remoteExec ['SVLN_fnc_launchCatapult', 0];    } forEach _index;    closeDialog 1;};";
 			
 		};
 		class SVLN_CTPL_LaunchSpeed
@@ -339,7 +339,7 @@ class SVLN_CTPL_LaunchController
 			soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1.0};
 			soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1.0};
 			soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1.0};
-			onButtonClick = "[] call SVLN_fnc_loadMenuDefaults;";
+			onButtonClick = "[] call SVLN_fnc_loadCatapultMenuDefaults;";
 			onMouseButtonClick = "";
 			
 		};

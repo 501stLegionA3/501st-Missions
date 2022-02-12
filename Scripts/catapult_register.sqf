@@ -1,10 +1,10 @@
 params ["_pad", "_disp"];
 
-if (isNil "global_catapults") then {
-	global_catapults = createHashMap;
-	publicVariable "global_catapults";
+if (isNil "SVLN_CTPL_global_catapults") then {
+	SVLN_CTPL_global_catapults = createHashMap;
+	publicVariable "SVLN_CTPL_global_catapults";
 };
 
-item_list = global_catapults getOrDefault ["catapults", []];
+item_list = SVLN_CTPL_global_catapults getOrDefault ["catapults", []];
 item_list append [[_pad, _disp]];
-global_catapults set ["catapults", item_list];
+SVLN_CTPL_global_catapults set ["catapults", item_list];

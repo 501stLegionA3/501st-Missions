@@ -20,19 +20,19 @@ class CfgFunctions
 			{
 				file = "catapult_launch.sqf";
 			};
-			class detectVic
+			class detectCatapultVic
 			{
 				file = "catapult_detect_vic.sqf";
 			};
-			class registerPad
+			class registerCatapultPad
 			{
 				file = "catapult_register.sqf";
 			};
-			class openMenu
+			class openCatapultMenu
 			{
 				file = "catapult_menu.sqf";
 			};
-			class loadMenuDefaults
+			class loadCatapultMenuDefaults
 			{
 				file = "catapult_menu_defaults.sqf";
 			};
@@ -62,7 +62,28 @@ class CfgFunctions
 				file = "kill_tracker_register_zeus_object.sqf";
 			};
 		};
+
+		class spawnMenu
+		{
+			class openVicSpawnMenu
+			{
+				file = "vicspawn_open_menu.sqf";
+			};
+			class spawnVic
+			{
+				file = "vicspawn_spawn_vic.sqf";
+			};
+			class registerVicSpawnpoint
+			{
+				file = "vicspawn_register_pad.sqf";
+			};
+			class registerVicSpawnOptions
+			{
+				file = "vicspawn_register_vics.sqf";
+			};
+		};
 	};
 };
 
 #include "SVLN_CTPL_LaunchController.hh"
+#include "SVLN_VSPW_SpawnMenu.hh"
