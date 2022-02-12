@@ -61,6 +61,10 @@ class CfgFunctions
 			{
 				file = "kill_tracker_register_zeus_object.sqf";
 			};
+			class localKillTrackerInit
+			{
+				file = "kill_tracker_local_init.sqf";
+			};
 		};
 
 		class spawnMenu
@@ -80,6 +84,34 @@ class CfgFunctions
 			class registerVicSpawnOptions
 			{
 				file = "vicspawn_register_vics.sqf";
+			};
+		};
+
+		class zeusLogin
+		{
+			class localZeusLoginInit
+			{
+				file = "zeuslogin_local_init.sqf";
+			};
+			class zeusLoginAttemptLogin
+			{
+				file = "zeuslogin_login.sqf";
+			};
+			class zeusLoginAttemptLogout
+			{
+				file = "zeuslogin_logout.sqf";
+			};
+			class zeusLoginGrantZeus
+			{
+				file = "zeuslogin_grant.sqf";
+			};
+			class zeusLoginRevokeZeus
+			{
+				file = "zeuslogin_revoke.sqf";
+			};
+			class zeusLoginGlobalMessage
+			{
+				file = "zeuslogin_global_message.sqf";
 			};
 		};
 	};
