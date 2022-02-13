@@ -12,3 +12,5 @@
     - `501st_Backup_Load_File.Altis.pbo`
 
 *Files not on this list are subject to be deleted. If you need something added to this list please contact Soyvolon.*
+
+Any Campaign related files will be pruned at the end of each cycle. If you have a campaign file that needs to be on the server for longer than a single cycle, make sure to notify Soyvolon or reupload the file after the purge.
