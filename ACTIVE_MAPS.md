@@ -6,6 +6,8 @@
     - `BCT_Kamino_Phase_white_V13.Kamino.pbo`
 - VR Training Facility V143
     - `VR_Training_Facility_v143_Pharmacy.VR.pbo`
+- VR BCT Training V10
+    - `VR_BCT_Training_V10.VR.pbo`
 - 501st Backup Load File
     - `501st_Backup_Load_File.Altis.pbo`
 
