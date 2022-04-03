@@ -28,7 +28,7 @@ jobs:
     - name: Run Multipack Util
       run: |
         export LD_LIBRARY_PATH=$(pwd)/Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/Utils/depbo-tools-0.8.60/lib:$LD_LIBRARY_PATH
-        dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "Missions/Live/PBO" --content "Scripts" --ignore "placeholder"
+        dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net5.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "mpmissions" --content "Scripts" --ignore "placeholder"
     - name: Update Repo
       if: ${{ !env.ACT }}
       uses: stefanzweifel/git-auto-commit-action@v4
