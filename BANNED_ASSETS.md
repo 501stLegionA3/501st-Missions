@@ -14,3 +14,6 @@ A general rule of thumb for banned objects: If you get an error when placing it,
 ## OPTRE
 - SOEIV Human Entry Vehicle
 - OPTRE Buildings
+
+# Notes
+If you place an object and it causes an error, delete it and restart ArmA. Never use objects that cause errors.
