@@ -147,7 +147,7 @@ namespace MissionGenerator
 
                     newMissionData.AddRange(new string[] {
                         @"{",
-                        @"	author=""Soyvolon"";",
+                        @"	author=""501st Mission Builders"";",
                         @"	briefing=0;",
                         @"	debriefing=0;",
                         @"	disabledAI=1;",
@@ -335,7 +335,8 @@ namespace MissionGenerator
                                     if (TryGetVaraibleFromLine(name, out string? nameString))
                                     {
                                         var compNameActual = Uri.UnescapeDataString(compName.ToLower()).Replace("%2e", ".");
-                                        if (nameString.Replace("_", " ").Equals(compNameActual.Replace("_", " "), StringComparison.OrdinalIgnoreCase))
+                                        if (nameString.Replace("_", " ")
+                                            .Equals(compNameActual.Replace("_", " "), StringComparison.OrdinalIgnoreCase))
                                         {
                                             found = true;
                                             i += 1;
