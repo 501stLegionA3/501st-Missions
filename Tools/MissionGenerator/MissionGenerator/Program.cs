@@ -335,7 +335,7 @@ namespace MissionGenerator
                                     if (TryGetVaraibleFromLine(name, out string? nameString))
                                     {
                                         var compNameActual = Uri.UnescapeDataString(compName.ToLower()).Replace("%2e", ".");
-                                        if (nameString.ToLower().Replace("_", " ").Equals(compNameActual))
+                                        if (nameString.Replace("_", " ").Equals(compNameActual.Replace("_", " "), StringComparison.OrdinalIgnoreCase))
                                         {
                                             found = true;
                                             i += 1;
