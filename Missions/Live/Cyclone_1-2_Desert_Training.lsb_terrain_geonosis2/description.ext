@@ -1,0 +1,121 @@
+author = "501st Mission Builders";
+onLoadName = "501st Star Sim Mission";
+onLoadMission = "A 501st Star Sim Mission File";
+
+class Header
+{
+	gameType = Coop;
+};
+
+class CfgFunctions
+{
+	class SVLN
+	{
+		tag = "SVLN";
+
+		class catapult
+		{
+			file = "catapult";
+			class launchCatapult
+			{
+				file = "catapult_launch.sqf";
+			};
+			class detectCatapultVic
+			{
+				file = "catapult_detect_vic.sqf";
+			};
+			class registerCatapultPad
+			{
+				file = "catapult_register.sqf";
+			};
+			class openCatapultMenu
+			{
+				file = "catapult_menu.sqf";
+			};
+			class loadCatapultMenuDefaults
+			{
+				file = "catapult_menu_defaults.sqf";
+			};
+		};
+
+		class killTracker
+		{
+			class saveNewKill
+			{
+				preInit = 1;
+				file = "kill_tracker_save_new_kill.sqf";
+			};
+			class displayKillFeed
+			{
+				file = "kill_tracker_display_kill_info.sqf";
+			};
+			class enableKillFeed
+			{
+				file = "kill_tracker_enable_kill_feed.sqf";
+			};
+			class disableKillFeed
+			{
+				file = "kill_tracker_disable_kill_feed.sqf";
+			};
+			class registerZeusObject
+			{
+				file = "kill_tracker_register_zeus_object.sqf";
+			};
+			class localKillTrackerInit
+			{
+				file = "kill_tracker_local_init.sqf";
+			};
+		};
+
+		class spawnMenu
+		{
+			class openVicSpawnMenu
+			{
+				file = "vicspawn_open_menu.sqf";
+			};
+			class spawnVic
+			{
+				file = "vicspawn_spawn_vic.sqf";
+			};
+			class registerVicSpawnpoint
+			{
+				file = "vicspawn_register_pad.sqf";
+			};
+			class registerVicSpawnOptions
+			{
+				file = "vicspawn_register_vics.sqf";
+			};
+		};
+
+		class zeusLogin
+		{
+			class localZeusLoginInit
+			{
+				file = "zeuslogin_local_init.sqf";
+			};
+			class zeusLoginAttemptLogin
+			{
+				file = "zeuslogin_login.sqf";
+			};
+			class zeusLoginAttemptLogout
+			{
+				file = "zeuslogin_logout.sqf";
+			};
+			class zeusLoginGrantZeus
+			{
+				file = "zeuslogin_grant.sqf";
+			};
+			class zeusLoginRevokeZeus
+			{
+				file = "zeuslogin_revoke.sqf";
+			};
+			class zeusLoginGlobalMessage
+			{
+				file = "zeuslogin_global_message.sqf";
+			};
+		};
+	};
+};
+
+#include "SVLN_CTPL_LaunchController.hh"
+#include "SVLN_VSPW_SpawnMenu.hh"
