@@ -10,6 +10,8 @@
     - `VR_BCT_Training_V10.VR.pbo`
 - 501st Backup Load File
     - `501st_Backup_Load_File.Altis.pbo`
+- Checkpoints RP
+    - `TatooineCheckpointsRPV2.lsb_terrain_geonosis.pbo`
 
 *Files not on this list are subject to be deleted. If you need something added to this list please contact Soyvolon.*
 
