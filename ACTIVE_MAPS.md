@@ -4,8 +4,8 @@
     - `501st_Legion_FunOp_Venator_%3A_<map name>_V<version number>.<map tag>.pbo`
 - BCT Phase White V13
     - `BCT_Kamino_Phase_white_V13.Kamino.pbo`
-- VR Training Facility V143
-    - `VR_Training_Facility_v143_Pharmacy.VR.pbo`
+- VR Training Facility V204
+    - `VR_Training_Facility_v204_Pharmacy.VR.pbo`
 - VR BCT Training V10
     - `VR_BCT_Training_V10.VR.pbo`
 - 501st Backup Load File
