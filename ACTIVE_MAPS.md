@@ -5,7 +5,7 @@
 - BCT Phase White V13
     - `BCT_Kamino_Phase_white_V14.Kamino.pbo`
 - VR Training Facility V204
-    - `VR_Training_Facility_v204_Pharmacy.VR.pbo`
+    - `VR_Training_Facility_v206_Pharmacy.VR.pbo`
 - VR BCT Training V10
     - `VR_BCT_Training_V10.VR.pbo`
 - 501st Backup Load File
