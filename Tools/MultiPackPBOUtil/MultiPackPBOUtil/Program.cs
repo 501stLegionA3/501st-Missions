@@ -3,6 +3,7 @@
 using MissionGenerator;
 
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -338,6 +339,7 @@ namespace MultiPackPBOUtil
         {
             var versionPath = Path.Combine(OutputDirectoryPath, "version_config.json");
 
+            ConcurrentDictionary<string, string> nameSet = new();
             if (File.Exists(versionPath))
             {
                 await using FileStream datafs = new(versionPath, FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -345,6 +347,8 @@ namespace MultiPackPBOUtil
 
                 if (data is not null)
                 {
+                    nameSet = new(data.Versions);
+
                     foreach (var file in data.Versions)
                     {
                         var filePath = Path.Combine(OutputDirectoryPath, file.Key + ".pbo");
@@ -369,14 +373,25 @@ namespace MultiPackPBOUtil
                             File.Delete(filePath);
 
                             Console.WriteLine($"Renamed {filePath} to {newFileName}.");
+
+                            if (newNames.TryGetValue(file.Key, out var newVer))
+                                nameSet[file.Key] = newVer;
                         }
                     }
                 }
             }
 
+            // Add new values ...
+            foreach (var pair in newNames)
+                if (!nameSet.TryGetValue(pair.Key, out _))
+                    nameSet[pair.Key] = pair.Value;
+
             var jsonData = JsonSerializer.Serialize(new VersionData()
             {
-                Versions = newNames
+                Versions = nameSet.ToDictionary(x => x.Key, x => x.Value)
+            }, new()
+            {
+                WriteIndented = true,
             });
 
             File.WriteAllText(versionPath, jsonData);
