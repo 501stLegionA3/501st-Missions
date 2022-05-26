@@ -38,6 +38,9 @@ namespace MissionGenerator
         [Option("-m|--missions", Description = "Location of the missions.cfg file. Will use the default file if none is provided.")]
         private string MissionCfgPath { get; } = "missions.cfg";
 
+        [Option("-l|--latest", Description = "The file will be generated with V-Latest instead of a version number.")]
+        private bool UseLatestMissionSystem { get; } = false;
+
         private async Task OnExecute()
         {
             Console.WriteLine("\nStarting File Generator\n");
@@ -90,7 +93,7 @@ namespace MissionGenerator
 
         private async Task BuildMissionFile(MissionData missionData)
         {
-            var rawFileName = Uri.EscapeDataString(missionData.Title).Replace(".", "%2e");
+            var rawFileName = Uri.EscapeDataString(missionData.FileName).Replace(".", "%2e");
             List<string> newMissionData = new();
             await using FileStream baseFile = new(Path.Combine(missionData.MapBasePath, "mission.sqm"), FileMode.Open, FileAccess.Read, FileShare.Read);
             using StreamReader baseReader = new(baseFile);
@@ -207,15 +210,16 @@ namespace MissionGenerator
             await File.WriteAllLinesAsync(Path.Combine(fullPath, "mission.sqm"), newMissionData);
 
             // Leave a file that contains description.ext edit instructions.
-            var descData = new DescData()
+            var missionCfg = new MissionConfig()
             {
                 Author = missionData.Author,
                 Description = missionData.Description,
                 Title = missionData.Title,
+                Version = missionData.Version
             };
 
-            await using FileStream fs = new(Path.Combine(fullPath, "descdata.json"), FileMode.Create, FileAccess.Write, FileShare.Read);
-            await JsonSerializer.SerializeAsync(fs, descData);
+            await using FileStream fs = new(Path.Combine(fullPath, "config.json"), FileMode.Create, FileAccess.Write, FileShare.Read);
+            await JsonSerializer.SerializeAsync(fs, missionCfg);
 
             Console.WriteLine($"Created mission file for: {missionData.Title}");
         }
@@ -353,10 +357,14 @@ namespace MissionGenerator
 
                     // Set the mission title.
                     var title = string.Format(TitleOutline, compData.Title, missionName, compData.Version);
+
+                    var fileName = string.Format(TitleOutline, compData.Title, missionName,
+                        UseLatestMissionSystem ? "V-Latest" : compData.Version);
                     // And description.
                     var desc = string.Format(DescOutline, compData.Version);
 
-                    finalData.Add(new MissionData(title, desc, compData.Author, compData, map, mapName, offsetPos.Value));
+                    finalData.Add(new MissionData(title, desc, compData.Author, compData.Version, fileName, 
+                        compData, map, mapName, offsetPos.Value));
 
                     Console.WriteLine($"Built data on {missionName} for {compData.Title}");
                 }

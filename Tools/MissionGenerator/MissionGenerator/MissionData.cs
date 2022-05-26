@@ -12,6 +12,8 @@ namespace FiveOhFirstMissionFileGenerator
         public string Title { get; set; }
         public string Description { get; set; }
         public string Author { get; set; }
+        public string Version { get; set; }
+        public string FileName { get; set; }
 
         public CompDetails CompositionDetails { get; set; }
 
@@ -19,9 +21,10 @@ namespace FiveOhFirstMissionFileGenerator
         public string MapId { get; set; }
         public Vector3 PresetCenter { get; set; }
 
-        public MissionData(string title, string desc, string author, CompDetails compDetails, string basePath, string mapId, Vector3 presetCenter)
-            => (Title, Description, Author, CompositionDetails, MapBasePath, MapId, PresetCenter) 
-                = (title, desc, author, compDetails, basePath, mapId, presetCenter);
+        public MissionData(string title, string desc, string author, string version, string fileName,
+            CompDetails compDetails, string basePath, string mapId, Vector3 presetCenter)
+            => (Title, Description, Author, Version, FileName, CompositionDetails, MapBasePath, MapId, PresetCenter) 
+                = (title, desc, author, version, fileName, compDetails, basePath, mapId, presetCenter);
 
         public List<string> GetOffsetObjectData()
         {

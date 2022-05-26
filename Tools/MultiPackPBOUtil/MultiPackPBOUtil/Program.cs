@@ -41,13 +41,16 @@ namespace MultiPackPBOUtil
         [Option("-i|--ignore", CommandOptionType.MultipleValue, Description = "File name(s) to ignore when running --delete and --move.")]
         public string[] FileNamesToIgnore { get; } = Array.Empty<string>();
 
+        [Option("-l|--latest", CommandOptionType.NoValue, Description = "The latest file will always have the same name. Previous versions of" +
+            "existing files will be renammed based upon the data in the generated version_config.json file.")]
+        public bool UseLatestMissionSystem { get; } = false;
+
         private ConsoleColor ForegroundColor { get; set; } = ConsoleColor.Black;
         private ConsoleColor BackgroundColor { get; set; } = ConsoleColor.White;
 
         private async Task OnExecute()
         {
-            ForegroundColor = Console.ForegroundColor;
-            BackgroundColor = Console.BackgroundColor;
+            ResetConsoleColors();
 
             if(!Directory.Exists(StartFolderPath))
             {
@@ -71,7 +74,7 @@ namespace MultiPackPBOUtil
                 return;
             }
 
-            await CreatePboFiles(missionFolders);
+            var versioning = await CreatePboFiles(missionFolders);
 
             var output = OutputDirectoryPath;
             bool tempFolderUsed = false;
@@ -79,6 +82,13 @@ namespace MultiPackPBOUtil
             {
                 output = Path.Join(Path.GetDirectoryName(StartFolderPath), "temp_pbo_output");
                 tempFolderUsed = true;
+            }
+
+            if (UseLatestMissionSystem)
+            {
+                Console.WriteLine($"Adjusting Existing File Names in {MoveToFolderPath}.");
+
+                await UpdateExistingNamesAsync(versioning);
             }
 
             Console.WriteLine($"PBO files built, moving files to {output}.");
@@ -168,10 +178,11 @@ namespace MultiPackPBOUtil
             }
         }
 
-        private async Task CreatePboFiles(string[] missionFolders)
+        private async Task<Dictionary<string, string>> CreatePboFiles(string[] missionFolders)
         {
             bool addContent = !string.IsNullOrWhiteSpace(ContentDirectoryPath);
 
+            Dictionary<string, string> versionInfo = new();
             string toolPath;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
@@ -184,7 +195,7 @@ namespace MultiPackPBOUtil
             else
             {
                 Console.WriteLine("Invalid runtime for mikero tools.");
-                return;
+                return new();
             };
 
             if (File.Exists(toolPath))
@@ -197,7 +208,7 @@ namespace MultiPackPBOUtil
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.WriteLine("Failed to find a tool executable.");
                 ResetConsoleColors();
-                return;
+                return new();
             }
 
             foreach (var folder in missionFolders)
@@ -211,45 +222,53 @@ namespace MultiPackPBOUtil
                         await CopyFolderRecursively(ContentDirectoryPath, folder);
                         Console.WriteLine("... copied aditional contents ...");
 
-                        if(File.Exists(Path.Join(folder, "description.ext"))
-                            && File.Exists(Path.Join(folder, "descdata.json")))
+                        if(File.Exists(Path.Join(folder, "config.json")))
                         {
                             // Modify description.ext file.
 
-                            await using FileStream datafs = new(Path.Join(folder, "descdata.json"), FileMode.Open, FileAccess.Read, FileShare.Read);
-                            var data = await JsonSerializer.DeserializeAsync<DescData>(datafs);
+                            await using FileStream datafs = new(Path.Join(folder, "config.json"), FileMode.Open, FileAccess.Read, FileShare.Read);
+                            var data = await JsonSerializer.DeserializeAsync<MissionConfig>(datafs);
 
                             if(data is not null)
                             {
-                                List<string> descData = new();
-                                await using (FileStream descfs = new(Path.Join(folder, "description.ext"), FileMode.Open, FileAccess.Read, FileShare.None))
+                                // If there is a description file then update it.
+                                if (File.Exists(Path.Join(folder, "description.ext")))
                                 {
-                                    using StreamReader descsr = new(descfs);
-
-                                    string? line;
-                                    while ((line = await descsr.ReadLineAsync()) is not null)
+                                    List<string> descData = new();
+                                    await using (FileStream descfs = new(Path.Join(folder, "description.ext"), FileMode.Open, FileAccess.Read, FileShare.None))
                                     {
-                                        if(line.StartsWith("author"))
-                                        {
-                                            var chars = line.TakeWhile(x => x != '"');
-                                            line = new string(chars.ToArray()) + @$"""{data.Author}"";";
-                                        }
-                                        else if (line.StartsWith("onLoadName"))
-                                        {
-                                            var chars = line.TakeWhile(x => x != '"');
-                                            line = new string(chars.ToArray()) + @$"""{data.Title}"";";
-                                        }
-                                        else if (line.StartsWith("onLoadMission"))
-                                        {
-                                            var chars = line.TakeWhile(x => x != '"');
-                                            line = new string(chars.ToArray()) + @$"""{data.Description}"";";
-                                        }
+                                        using StreamReader descsr = new(descfs);
 
-                                        descData.Add(line);
+                                        string? line;
+                                        while ((line = await descsr.ReadLineAsync()) is not null)
+                                        {
+                                            if (line.StartsWith("author"))
+                                            {
+                                                var chars = line.TakeWhile(x => x != '"');
+                                                line = new string(chars.ToArray()) + @$"""{data.Author}"";";
+                                            }
+                                            else if (line.StartsWith("onLoadName"))
+                                            {
+                                                var chars = line.TakeWhile(x => x != '"');
+                                                line = new string(chars.ToArray()) + @$"""{data.Title}"";";
+                                            }
+                                            else if (line.StartsWith("onLoadMission"))
+                                            {
+                                                var chars = line.TakeWhile(x => x != '"');
+                                                line = new string(chars.ToArray()) + @$"""{data.Description}"";";
+                                            }
+
+                                            descData.Add(line);
+                                        }
                                     }
+
+                                    await File.WriteAllLinesAsync(Path.Join(folder, "description.ext"), descData);
                                 }
 
-                                await File.WriteAllLinesAsync(Path.Join(folder, "description.ext"), descData);
+                                var dirname = Path.GetFileName(folder);
+                                // Update versioning info ...
+                                if (dirname is not null)
+                                    _ = versionInfo.TryAdd(dirname, data.Version);
                             }
                         }
                     }
@@ -311,6 +330,50 @@ namespace MultiPackPBOUtil
                     break;
                 }
             }
+
+            return versionInfo;
+        }
+
+        private async Task UpdateExistingNamesAsync(Dictionary<string, string> newNames)
+        {
+            var versionPath = Path.Combine(OutputDirectoryPath, "version_config.json");
+
+            if (File.Exists(versionPath))
+            {
+                await using FileStream datafs = new(versionPath, FileMode.Open, FileAccess.Read, FileShare.Read);
+                var data = await JsonSerializer.DeserializeAsync<VersionData>(datafs);
+
+                if (data is not null)
+                {
+                    foreach (var file in data.Versions)
+                    {
+                        var filePath = Path.Combine(OutputDirectoryPath, file.Key + ".pbo");
+
+                        if (File.Exists(filePath))
+                        {
+                            var newFileName = file.Key.Replace("V-Latest", file.Value);
+                            if (newFileName == file.Key)
+                                newFileName += Guid.NewGuid().ToString();
+                            newFileName += ".pbo";
+                            newFileName = Path.Combine(OutputDirectoryPath, newFileName);
+
+                            File.Copy(filePath, newFileName);
+                            File.Delete(filePath);
+
+                            Console.WriteLine($"Renamed {filePath} to {newFileName}.");
+                        }
+                    }
+                }
+            }
+
+            var jsonData = JsonSerializer.Serialize(new VersionData()
+            {
+                Versions = newNames
+            });
+
+            File.WriteAllText(versionPath, jsonData);
+
+            Console.WriteLine("Updated version_config.json.");
         }
 
         private void CopyPboFilesToOutput(string path, string copyTo)
