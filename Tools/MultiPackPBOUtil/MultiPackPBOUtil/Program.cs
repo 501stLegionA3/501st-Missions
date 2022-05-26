@@ -348,14 +348,22 @@ namespace MultiPackPBOUtil
                     foreach (var file in data.Versions)
                     {
                         var filePath = Path.Combine(OutputDirectoryPath, file.Key + ".pbo");
+                        var checkPath = Path.Combine(StartFolderPath, file.Key + ".pbo");
 
-                        if (File.Exists(filePath))
+                        if (File.Exists(filePath)
+                            && File.Exists(checkPath))
                         {
-                            var newFileName = file.Key.Replace("V-Latest", file.Value);
-                            if (newFileName == file.Key)
-                                newFileName += Guid.NewGuid().ToString();
-                            newFileName += ".pbo";
+                            var newFileNameBase = file.Key.Replace("V-Latest", file.Value);
+                            if (newFileNameBase == file.Key)
+                                newFileNameBase += Guid.NewGuid().ToString();
+                            var newFileName = newFileNameBase + ".pbo";
                             newFileName = Path.Combine(OutputDirectoryPath, newFileName);
+
+                            int counter = 1;
+                            while (File.Exists(newFileName))
+                            {
+                                newFileName = Path.Combine(OutputDirectoryPath, newFileNameBase + $"_V{counter++}.pbo");
+                            }
 
                             File.Copy(filePath, newFileName);
                             File.Delete(filePath);
