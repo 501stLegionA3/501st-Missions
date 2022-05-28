@@ -15,5 +15,8 @@ A general rule of thumb for banned objects: If you get an error when placing it,
 - SOEIV Human Entry Vehicle
 - OPTRE Buildings
 
+## 3AS
+- Square Landing pads. These cause problems (damage to vics, prevents uloading of patients) to razor assets.
+
 # Notes
 If you place an object and it causes an error, delete it and restart ArmA. Never use objects that cause errors.
