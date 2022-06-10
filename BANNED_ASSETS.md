@@ -17,7 +17,7 @@ A general rule of thumb for banned objects: If you get an error when placing it,
 
 ## 3AS
 - Square Landing pads. These cause problems (damage to vics, prevents uloading of patients) to razor assets.
-- Orto Plutonia Hangar Doors. These have a skeleton error.
+- Orto Ploutonia Hangar Doors. These have a skeleton error.
 
 # Notes
 If you place an object and it causes an error, delete it and restart ArmA. Never use objects that cause errors.
