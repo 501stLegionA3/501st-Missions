@@ -360,13 +360,15 @@ namespace MultiPackPBOUtil
                             var newFileNameBase = file.Key.Replace("V-Latest", file.Value);
                             if (newFileNameBase == file.Key)
                                 newFileNameBase += Guid.NewGuid().ToString();
-                            var newFileName = newFileNameBase + ".pbo";
+                            var newFileMap = Path.GetExtension(newFileNameBase);
+                            newFileNameBase = Path.GetFileNameWithoutExtension(newFileNameBase);
+                            var newFileName = newFileNameBase + newFileMap + ".pbo";
                             newFileName = Path.Combine(OutputDirectoryPath, newFileName);
 
                             int counter = 1;
                             while (File.Exists(newFileName))
                             {
-                                newFileName = Path.Combine(OutputDirectoryPath, newFileNameBase + $"_V{counter++}.pbo");
+                                newFileName = Path.Combine(OutputDirectoryPath, $"{newFileNameBase}_V{counter++}{newFileMap}.pbo");
                             }
 
                             File.Copy(filePath, newFileName);
@@ -389,7 +391,7 @@ namespace MultiPackPBOUtil
             var jsonData = JsonSerializer.Serialize(new VersionData()
             {
                 Versions = nameSet.ToDictionary(x => x.Key, x => x.Value)
-            }, new()
+            }, new JsonSerializerOptions()
             {
                 WriteIndented = true,
             });
@@ -411,11 +413,14 @@ namespace MultiPackPBOUtil
             {
                 var fileName = Path.GetFileNameWithoutExtension(file);
                 var extension = Path.GetExtension(file);
-                var dest = Path.Join(copyTo, $"{fileName}{extension}");
+                var mapExtension = Path.GetExtension(fileName);
+                fileName = Path.GetFileNameWithoutExtension(fileName);
+
+                var dest = Path.Join(copyTo, $"{fileName}{mapExtension}{extension}");
 
                 int c = 1;
                 while (File.Exists(dest))
-                    dest = Path.Join(copyTo, $"{fileName}_V{c++}{extension}");
+                    dest = Path.Join(copyTo, $"{fileName}_V{c++}{mapExtension}{extension}");
 
                 File.Copy(file, dest);
                 File.Delete(file);
