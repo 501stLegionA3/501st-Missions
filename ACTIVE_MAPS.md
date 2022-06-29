@@ -4,12 +4,11 @@
     - `510st_Legion_FunOp_FOB_Navtivity%3A_<map name>_V<version number>.<map tag>.pbo`
     - `501st_Legion_FunOp_Venator_%3A_<map name>_V-Latest.<map tag>.pbo`
     - `501st_Legion_FunOp_Venator_%3A_<map name>_V<version number>.<map tag>.pbo`
-- BCT Phase White V13
-    - `BCT_Kamino_Phase_white_V14.Kamino.pbo`
+- BCT Phase White
+    - `BCT_Kamino_Phase_white_V15.Kamino.pbo`
+    - `VR_BCT_Training_V13.VR.pbo`
 - VR Training Facility V210
     - `VR_Training_Facility_v213.VR.pbo`
-- VR BCT Training V10
-    - `VR_BCT_Training_V10.VR.pbo`
 - 501st Backup Load File
     - `501st_Backup_Load_File.Altis.pbo`
 - Checkpoints RP
