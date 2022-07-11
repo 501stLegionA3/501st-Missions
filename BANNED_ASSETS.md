@@ -17,7 +17,6 @@ A general rule of thumb for banned objects: If you get an error when placing it,
 
 ## 3AS
 - Square Landing pads. These cause problems (damage to vics, prevents uloading of patients) to razor assets.
-- Orto Ploutonia Hangar Doors. These have a skeleton error.
 
 ## Vanilla
 - Long Rock assets. These cause frame problems when there are any considerable number of them in a mission file. Should not be used for building.
