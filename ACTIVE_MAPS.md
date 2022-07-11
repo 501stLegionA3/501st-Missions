@@ -9,7 +9,7 @@
     - `VR_BCT_Training_V13.VR.pbo`
 - VR Training Facility V210
     - `VR_Training_Facility_v213.VR.pbo`
-    - `VR_Training_Facility_v220.VR.pbo` - testing this file
+    - `VR_Training_Facility_v221.VR.pbo` - testing this file
 - 501st Backup Load File
     - `501st_Backup_Load_File.Altis.pbo`
 - Checkpoints RP
