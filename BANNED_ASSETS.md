@@ -21,6 +21,7 @@ A general rule of thumb for banned objects: If you get an error when placing it,
 ## Vanilla
 - Long Rock assets. These cause frame problems when there are any considerable number of them in a mission file. Should not be used for building.
 - Cargo Net (All Variants). Contains weapons that have invalid configurations and will crash a mission file on load.
+- Huron Cargo Container (All Variants). Contains weapons that have invalid configurations and will crash a mission file on load.
 
 # Notes
 If you place an object and it causes an error, delete it, restart ArmA, and notify Mission Builder Leadership. Never use objects that cause errors.
