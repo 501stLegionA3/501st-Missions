@@ -8,7 +8,7 @@
     - `BCT_Kamino_Phase_white_V17.Kamino.pbo`
     - `VR_BCT_Training_V13.VR.pbo`
 - VR Training Facility V210
-    - `VR_Training_Facility_v215.VR.pbo`
+    - `VR_Training_Facility_v223.VR.pbo`
 - 501st Backup Load File
     - `501st_Backup_Load_File.Altis.pbo`
 - Checkpoints RP
