@@ -14,6 +14,7 @@ A general rule of thumb for banned objects: If you get an error when placing it,
 ## OPTRE
 - SOEIV Human Entry Vehicle
 - OPTRE Two (or more) part buildings
+- land_skyhouse4
 
 ## 3AS
 - Square Landing pads. These cause problems (damage to vics, prevents uloading of patients) to razor assets.
