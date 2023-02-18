@@ -7,6 +7,7 @@ A general rule of thumb for banned objects: If you get an error when placing it,
 
 ## Multi-Mod (Misc)
 - Any Weapons Crate with loaded objects
+- Whiteboard (empty, Wall)/land_mapboard_01_wall_f
 
 ## Kobra
 - Porg
