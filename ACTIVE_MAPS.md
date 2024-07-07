@@ -5,10 +5,10 @@
     - `501st_Legion_FunOp_Venator_%3A_<map name>_V-Latest.<map tag>.pbo`
     - `501st_Legion_FunOp_Venator_%3A_<map name>_V<version number>.<map tag>.pbo`
 - UTC Maps
-    - `BCT_Kamino_Phase_white_V20.Kamino.pbo`
+    - `BCT_Kamino_Phase_white_V24.Kamino.pbo`
     - `UTC_Main_Latest.Altis.Altis.pbo`
 - VR Training Facility V210
-    - `VR_Training_Facility_v232.VR.pbo`
+    - `VR_Training_Facility_v249.VR.pbo`
 - 501st Backup Load File
     - `501st_Backup_Load_File.Altis.pbo`
 - Checkpoints RP
