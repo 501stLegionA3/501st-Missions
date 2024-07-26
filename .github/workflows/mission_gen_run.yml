@@ -19,7 +19,7 @@ jobs:
     - name: Build Mission Generator
       run: dotnet build --no-restore --configuration Release "Tools/MissionGenerator/MissionGenerator.sln"
     - name: Run Mission Generator
-      run: 'dotnet Tools/MissionGenerator/MissionGenerator/bin/Release/net6.0/MissionGenerator.dll "Missions/Framework/" "Compositions/Generator/" "Missions/Pending/" --title "501st Legion FunOp {0}: {1} {2}" --desc "Official 501st Legion FunOP | All 501st, 212th, 91st, 101st, and 327th slots! | {0}" --missions "Missions/missions.cfg" --latest'
+      run: 'dotnet Tools/MissionGenerator/MissionGenerator/bin/Release/net8.0/MissionGenerator.dll "Missions/Framework/" "Compositions/Generator/" "Missions/Pending/" --title "501st Legion FunOp {0}: {1} {2}" --desc "Official 501st Legion FunOP | All 501st, 212th, 91st, 101st, and 327th slots! | {0}" --missions "Missions/missions.cfg" --latest'
     - name: Git commit, pull & push action
       # You may pin to the exact commit or the version.
       # uses: mgrybyk-org/git-commit-pull-push-action@b8a0f79952cbb2a10089ef6d0a132d0f8a52fa8e
