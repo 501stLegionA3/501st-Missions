@@ -29,9 +29,18 @@ jobs:
       run: |
         export LD_LIBRARY_PATH=$(pwd)/Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net6.0/Utils/depbo-tools-0.8.60/lib:$LD_LIBRARY_PATH
         dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net6.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "mpmissions" --content "Scripts" --ignore "placeholder" --latest
-    - name: Update Repo
-      if: ${{ !env.ACT }}
-      uses: stefanzweifel/git-auto-commit-action@v5.0.1
+    - name: Git commit, pull & push action
+      # You may pin to the exact commit or the version.
+      # uses: mgrybyk-org/git-commit-pull-push-action@b8a0f79952cbb2a10089ef6d0a132d0f8a52fa8e
+      uses: mgrybyk-org/git-commit-pull-push-action@v1.2.4
       with:
-        commit_message: Mission File Release
-        push_options: '--force'
+        # Local file path to the git repository. Defaults to the current directory '.'
+        # repository: # default is .
+        # Git branch name, where changes should be pushed to.
+        branch: ${{ github.head_ref || github.ref_name }}
+        # Commit message
+        commit_message: Mission Generator Run
+        # git pull arguments
+        # pull_args: # optional, default is --rebase
+        # git add arguments (eg. -u) or 'src/*.js'
+        # add_args: # optional, default is .
