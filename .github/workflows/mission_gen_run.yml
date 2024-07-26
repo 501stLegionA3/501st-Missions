@@ -13,8 +13,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 6.0.x
-        include-prerelease: true
+        dotnet-version: 8.0.x
     - name: Restore Mission Generator dependencies
       run: dotnet restore "Tools/MissionGenerator/MissionGenerator.sln"
     - name: Build Mission Generator
