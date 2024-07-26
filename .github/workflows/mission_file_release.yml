@@ -27,7 +27,7 @@ jobs:
         tar -xzvf depbo-tools.tgz
     - name: Run Multipack Util
       run: |
-        export LD_LIBRARY_PATH=$(pwd)/Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net6.0/Utils/depbo-tools-0.8.60/lib:$LD_LIBRARY_PATH
+        export LD_LIBRARY_PATH=$(pwd)/Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net8.0/Utils/depbo-tools-0.8.60/lib:$LD_LIBRARY_PATH
         dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net8.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "mpmissions" --content "Scripts" --ignore "placeholder" --latest
     - name: Git commit, pull & push action
       # You may pin to the exact commit or the version.
