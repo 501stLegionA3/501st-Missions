@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4.1.7
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
@@ -31,7 +31,7 @@ jobs:
         dotnet Tools/MultiPackPBOUtil/MultiPackPBOUtil/bin/Release/net6.0/MultiPackPBOUtil.dll "Missions/Pending/" --delete --move "Missions/Live" --output "mpmissions" --content "Scripts" --ignore "placeholder" --latest
     - name: Update Repo
       if: ${{ !env.ACT }}
-      uses: stefanzweifel/git-auto-commit-action@v4
+      uses: stefanzweifel/git-auto-commit-action@v5.0.1
       with:
         commit_message: Mission File Release
         push_options: '--force'
