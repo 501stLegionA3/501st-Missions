@@ -1,0 +1,142 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=10;
+	mods[]=
+	{
+		"RD501_patch_3den_core",
+		"3denEnhanced"
+	};
+	class ItemIDProvider
+	{
+		nextID=1118;
+	};
+	class LayerIndexProvider
+	{
+		nextID=11;
+	};
+	class Camera
+	{
+		pos[]={329.35873,445.81436,4376.6191};
+		dir[]={0.24230099,-0.60749471,0.75650054};
+		up[]={0.18530685,0.79431766,0.57855004};
+		aside[]={0.95236611,-1.9998988e-06,-0.30503476};
+	};
+};
+binarizationWanted=0;
+sourceName="Sullust_Framework";
+addons[]=
+{
+	"A3_Ui_F",
+	"More_Colors"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=2;
+		class Item0
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="More_Colors";
+			name="More_Colors";
+			author="ItsYurzawYT";
+		};
+	};
+};
+randomSeed=12531664;
+class ScenarioData
+{
+	author="KillAMan_Jr";
+	briefing=0;
+	debriefing=0;
+	disabledAI=1;
+	respawn=3;
+	class Header
+	{
+		gameType="Coop";
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	assetType="Free";
+	class Intel
+	{
+		resistanceWest=0;
+		timeOfChanges=1800.0002;
+		startWeather=0.87;
+		startWind=0.2;
+		startLightnings=1;
+		startWaves=0.1;
+		forecastWeather=0.87;
+		forecastWind=0.2;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
+		year=2030;
+		month=7;
+		day=18;
+		hour=4;
+		minute=50;
+		startFogBase=250;
+		forecastFogBase=250;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=2;
+		class Item0
+		{
+			dataType="Marker";
+			position[]={135.25671,75.243614,4778.749};
+			name="FOB_Nativity";
+			type="Empty";
+			angle=7.5100002;
+			id=0;
+			atlOffset=23.65192;
+		};
+		class Item1
+		{
+			dataType="Marker";
+			position[]={333.76129,477.12726,4697.5576};
+			name="venator";
+			type="Empty";
+			id=1;
+			atlOffset=423.09134;
+		};
+	};
+};
