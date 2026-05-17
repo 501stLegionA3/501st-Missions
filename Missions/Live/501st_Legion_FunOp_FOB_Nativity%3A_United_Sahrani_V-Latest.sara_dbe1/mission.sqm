@@ -34,8 +34,6 @@ binarizationWanted=1;
 sourceName="501st%20Legion%20FunOp%20FOB%20Nativity%3A%20United%20Sahrani%20V-Latest";
 addons[]=
 {
-  "A3_Characters_F",
-  "RD501_patch_VLS",
   "3AS_Prop_Terminals",
   "A3_Structures_F_Bootcamp_VR_Helpers",
   "3AS_Structures_FOB",
@@ -83,13 +81,16 @@ addons[]=
   "Aux501_Patch_Units_Republic_101st",
   "Aux501_Patch_Units_Republic_327th",
   "Aux501_Patch_Units_Republic_501_Razor",
+  "A3_Characters_F",
   "ace_fortify",
   "A3_Modules_F_Curator_Curator",
   "ace_headless",
   "ace_respawn",
   "ace_zeus",
   "OPTRE_Vehicles_HEV",
-  "OPTRE_ACE_Compat"
+  "OPTRE_ACE_Compat",
+  "A3_Characters_F_Orange",
+  "Aux501_Patch_Scripts_CruiseMissile_Vehicles_VLS"
 };
 class AddonsMetaData
 {
@@ -123,13 +124,13 @@ class Mission
 	assetType="Free";
 	class Intel
 	{
-		briefingName="501st Legion FunOp FOB Nativity: United Sahrani V1.3.5";
-		overviewText="Official 501st Legion FunOP | All 501st, 212th, 91st, 101st, and 327th slots! | V1.3.5";
+		briefingName="501st Legion FunOp FOB Nativity: United Sahrani V1.3.6";
+		overviewText="Official 501st Legion FunOP | All 501st, 212th, 91st, 101st, and 327th slots! | V1.3.6";
 		resistanceWest=0;
   };
 	class Entities
 	{
-	items=26;
+	items=38;
 	class Item0
 	{
 		dataType="Layer";
@@ -150,645 +151,184 @@ class Mission
 						name="FOB Nativity V1.2.3_4";
 						class Entities
 						{
-							items=39;
+							items=27;
 							class Item0
 							{
-								dataType="Group";
-								side="Civilian";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-2703.7883,26.88596,10386.124};
-											angles[]={0,1.5707964,0};
-										};
-										side="Civilian";
-										flags=7;
-										class Attributes
-										{
-										};
-										id=9992;
-										type="C_man_polo_1_F";
-										atlOffset=-36.417217;
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="speaker";
-												expression="_this setspeaker _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="Male02GRE";
-													};
-												};
-											};
-											class Attribute1
-											{
-												property="pitch";
-												expression="_this setpitch _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1.04;
-													};
-												};
-											};
-											nAttributes=2;
-										};
-									};
-								};
-								class Attributes
-								{
-								};
-								class CrewLinks
-								{
-									class LinkIDProvider
-									{
-										nextID=1;
-									};
-									class Links
-									{
-										items=1;
-										class Item0
-										{
-											linkID=0;
-											item0=9992;
-											item1=10003;
-											class CustomData
-											{
-												role=2;
-												turretPath[]={0};
-											};
-										};
-									};
-								};
-								id=9991;
-								atlOffset=0.04360199;
-							};
-							class Item1
-							{
-								dataType="Group";
-								side="Civilian";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-2687.7864,26.88596,10386.124};
-											angles[]={0,1.5707964,0};
-										};
-										side="Civilian";
-										flags=7;
-										class Attributes
-										{
-										};
-										id=9994;
-										type="C_man_polo_1_F";
-										atlOffset=-34.859127;
-									};
-								};
-								class Attributes
-								{
-								};
-								class CrewLinks
-								{
-									class LinkIDProvider
-									{
-										nextID=1;
-									};
-									class Links
-									{
-										items=1;
-										class Item0
-										{
-											linkID=0;
-											item0=9994;
-											item1=10006;
-											class CustomData
-											{
-												role=2;
-												turretPath[]={0};
-											};
-										};
-									};
-								};
-								id=9993;
-								atlOffset=0.04360199;
-							};
-							class Item2
-							{
-								dataType="Group";
-								side="Civilian";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-2671.7864,26.88596,10386.124};
-											angles[]={0,1.5707964,0};
-										};
-										side="Civilian";
-										flags=7;
-										class Attributes
-										{
-										};
-										id=9996;
-										type="C_man_polo_1_F";
-										atlOffset=-33.875744;
-									};
-								};
-								class Attributes
-								{
-								};
-								class CrewLinks
-								{
-									class LinkIDProvider
-									{
-										nextID=1;
-									};
-									class Links
-									{
-										items=1;
-										class Item0
-										{
-											linkID=0;
-											item0=9996;
-											item1=10007;
-											class CustomData
-											{
-												role=2;
-												turretPath[]={0};
-											};
-										};
-									};
-								};
-								id=9995;
-								atlOffset=0.04360199;
-							};
-							class Item3
-							{
-								dataType="Group";
-								side="Civilian";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-2703.7883,26.88596,10410.124};
-											angles[]={0,1.5707964,0};
-										};
-										side="Civilian";
-										flags=7;
-										class Attributes
-										{
-										};
-										id=9998;
-										type="C_man_polo_1_F";
-										atlOffset=-34.091618;
-									};
-								};
-								class Attributes
-								{
-								};
-								class CrewLinks
-								{
-									class LinkIDProvider
-									{
-										nextID=1;
-									};
-									class Links
-									{
-										items=1;
-										class Item0
-										{
-											linkID=0;
-											item0=9998;
-											item1=10004;
-											class CustomData
-											{
-												role=2;
-												turretPath[]={0};
-											};
-										};
-									};
-								};
-								id=9997;
-								atlOffset=0.04360199;
-							};
-							class Item4
-							{
-								dataType="Group";
-								side="Civilian";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-2687.7864,26.88596,10410.124};
-											angles[]={0,1.5707964,0};
-										};
-										side="Civilian";
-										flags=7;
-										class Attributes
-										{
-										};
-										id=10000;
-										type="C_man_polo_1_F";
-										atlOffset=-33.562107;
-									};
-								};
-								class Attributes
-								{
-								};
-								class CrewLinks
-								{
-									class LinkIDProvider
-									{
-										nextID=1;
-									};
-									class Links
-									{
-										items=1;
-										class Item0
-										{
-											linkID=0;
-											item0=10000;
-											item1=10005;
-											class CustomData
-											{
-												role=2;
-												turretPath[]={0};
-											};
-										};
-									};
-								};
-								id=9999;
-								atlOffset=0.04360199;
-							};
-							class Item5
-							{
-								dataType="Group";
-								side="Civilian";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-2671.7864,26.88596,10410.124};
-											angles[]={0,1.5707964,0};
-										};
-										side="Civilian";
-										flags=7;
-										class Attributes
-										{
-										};
-										id=10002;
-										type="C_man_polo_1_F";
-										atlOffset=-32.625652;
-									};
-								};
-								class Attributes
-								{
-								};
-								class CrewLinks
-								{
-									class LinkIDProvider
-									{
-										nextID=1;
-									};
-									class Links
-									{
-										items=1;
-										class Item0
-										{
-											linkID=0;
-											item0=10002;
-											item1=10008;
-											class CustomData
-											{
-												role=2;
-												turretPath[]={0};
-											};
-										};
-									};
-								};
-								id=10001;
-								atlOffset=0.04360199;
-							};
-							class Item6
-							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={383.9811,28.25848,10362.161};
-									angles[]={0,1.5707964,0};
-								};
-								side="Civilian";
-								flags=6;
-								class Attributes
-								{
-									init="[this, true, 60] call RD501_fnc_init_CRML_registerLauncher;";
-									receiveRemoteTargets=1;
-								};
-								id=10003;
-								type="RD501_VLS_MASH_System";
-								atlOffset=0.04360199;
-							};
-							class Item7
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={383.9811,28.25848,10386.161};
-									angles[]={0,1.5707964,0};
-								};
-								side="Civilian";
-								flags=6;
-								class Attributes
-								{
-									init="[this, true, 60] call RD501_fnc_init_CRML_registerLauncher;";
-									receiveRemoteTargets=1;
-								};
-								id=10004;
-								type="RD501_VLS_MASH_System";
-								atlOffset=0.04360199;
-							};
-							class Item8
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={399.98306,28.25848,10386.161};
-									angles[]={0,1.5707964,0};
-								};
-								side="Civilian";
-								flags=6;
-								class Attributes
-								{
-									init="[this, true, 60] call RD501_fnc_init_CRML_registerLauncher;";
-									receiveRemoteTargets=1;
-								};
-								id=10005;
-								type="RD501_VLS_System";
-								atlOffset=0.04360199;
-							};
-							class Item9
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={399.98306,28.25848,10362.161};
-									angles[]={0,1.5707964,0};
-								};
-								side="Civilian";
-								flags=6;
-								class Attributes
-								{
-									init="[this, true, 60] call RD501_fnc_init_CRML_registerLauncher;";
-									receiveRemoteTargets=1;
-								};
-								id=10006;
-								type="RD501_VLS_System";
-								atlOffset=0.04360199;
-							};
-							class Item10
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={415.98306,28.25848,10362.161};
-									angles[]={0,1.5707964,0};
-								};
-								side="Civilian";
-								flags=6;
-								class Attributes
-								{
-									init="[this, true, 60] call RD501_fnc_init_CRML_registerLauncher;";
-									receiveRemoteTargets=1;
-								};
-								id=10007;
-								type="RD501_VLS_System";
-								atlOffset=0.04360199;
-							};
-							class Item11
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={415.98306,28.25848,10386.161};
-									angles[]={0,1.5707964,0};
-								};
-								side="Civilian";
-								flags=6;
-								class Attributes
-								{
-									init="[this, true, 60] call RD501_fnc_init_CRML_registerLauncher;";
-									receiveRemoteTargets=1;
-								};
-								id=10008;
-								type="RD501_VLS_System";
-								atlOffset=0.04360199;
-							};
-							class Item12
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={474.94986,33.123463,10279.462};
+									position[]={474.94986,33.12324,10279.464};
 									angles[]={0,1.5707964,0};
 								};
 								side="Empty";
 								class Attributes
 								{
-									init="[uav_net, this, [uav_net_1, uav_net_2, uav_net_3, uav_net_4]] call RD501_fnc_init_UAVNET_register;" \n "this addAction [""Vehicle Spawn Menu"", {" \n "    [9] call RD501_fnc_VSM_openMenu;" \n "}];" \n "this addAction [""Catapult Controller"", {" \n "    [] call RD501_fnc_CAT_openMenu;" \n "}];";
+									init="[uav_net, this, [uav_net_1, uav_net_2, uav_net_3, uav_net_4]] call Aux501_fnc_init_UAVNET_register;" \n "this addAction [""Vehicle Spawn Menu"", {" \n "    [9] call Aux501_fnc_VSM_openMenu;" \n "}];" \n "this addAction [""Catapult Controller"", {" \n "    [] call Aux501_fnc_CAT_openMenu;" \n "}];";
 								};
 								id=10009;
 								type="3AS_Terminal_Console_Prop";
-								atlOffset=1.0195313;
+								atlOffset=1.0193062;
 							};
-							class Item13
+							class Item1
 							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={511.73694,28.521229,10366.419};
+									position[]={511.73694,28.521236,10366.419};
 									angles[]={0,1.5707964,0};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [0] call RD501_fnc_VSM_openMenu;" \n "}];";
+									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [0] call Aux501_fnc_VSM_openMenu;" \n "}];";
 								};
 								id=10010;
 								type="3AS_Terminal_Console_Prop";
-								atlOffset=0.00038528442;
+								atlOffset=0.00039291382;
 							};
-							class Item14
+							class Item2
 							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={533.39514,28.520618,10366.657};
+									position[]={533.3932,28.520237,10366.657};
 									angles[]={0,4.7123895,0};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [1] call RD501_fnc_VSM_openMenu;" \n "}];";
+									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [1] call Aux501_fnc_VSM_openMenu;" \n "}];";
 								};
 								id=10011;
 								type="3AS_Terminal_Console_Prop";
-								atlOffset=0.15355682;
+								atlOffset=0.15317535;
 							};
-							class Item15
+							class Item3
 							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={522.9752,28.410282,10334.165};
+									position[]={522.9752,28.410236,10334.165};
 									angles[]={0,1.5707964,0};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [7] call RD501_fnc_VSM_openMenu;" \n "}];";
+									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [7] call Aux501_fnc_VSM_openMenu;" \n "}];";
 								};
 								id=10012;
 								type="3AS_Terminal_Console_Prop";
-								atlOffset=0.040798187;
+								atlOffset=0.040752411;
 							};
-							class Item16
+							class Item4
 							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={523.3131,28.410587,10315.2};
+									position[]={523.3131,28.410236,10315.2};
 									angles[]={0,1.5707964,0};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [7] call RD501_fnc_VSM_openMenu;" \n "}];";
+									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [7] call Aux501_fnc_VSM_openMenu;" \n "}];";
 								};
 								id=10013;
 								type="3AS_Terminal_Console_Prop";
-								atlOffset=0.041103363;
+								atlOffset=0.040752411;
 							};
-							class Item17
+							class Item5
 							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={531.24475,28.363087,10294.06};
+									position[]={531.2428,28.36324,10294.06};
 									angles[]={0,3.1415927,0};
 								};
 								side="Empty";
 								class Attributes
 								{
-									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [8] call RD501_fnc_VSM_openMenu;" \n "}];";
+									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [8] call Aux501_fnc_VSM_openMenu;" \n "}];";
 								};
 								id=10014;
 								type="3AS_Terminal_Console_Prop";
-								atlOffset=35.635849;
+								atlOffset=35.636002;
 							};
-							class Item18
+							class Item6
 							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={515.6686,28.410252,10294.509};
+									position[]={515.6686,28.410236,10294.509};
 									angles[]={0,3.1415927,0};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [8] call RD501_fnc_VSM_openMenu;" \n "}];";
+									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [8] call Aux501_fnc_VSM_openMenu;" \n "}];";
 								};
 								id=10015;
 								type="3AS_Terminal_Console_Prop";
-								atlOffset=0.040168762;
+								atlOffset=0.040153503;
 							};
-							class Item19
+							class Item7
 							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={552.0885,31.809696,10257.665};
+									position[]={552.0885,31.809238,10257.665};
 									angles[]={0,3.1415927,0};
 								};
 								side="Empty";
 								class Attributes
 								{
-									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [2] call RD501_fnc_VSM_openMenu;" \n "}];";
+									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [2] call Aux501_fnc_VSM_openMenu;" \n "}];";
 								};
 								id=10016;
 								type="3AS_Terminal_Console_Prop";
-								atlOffset=3.4396133;
+								atlOffset=3.4391556;
 							};
-							class Item20
+							class Item8
 							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={523.1959,31.809849,10237.7};
+									position[]={523.1959,31.810238,10237.7};
 								};
 								side="Empty";
+								flags=4;
 								class Attributes
 								{
-									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [3] call RD501_fnc_VSM_openMenu;" \n "}];";
+									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [3] call Aux501_fnc_VSM_openMenu;" \n "}];";
 								};
 								id=10017;
 								type="3AS_Terminal_Console_Prop";
-								atlOffset=3.4397697;
+								atlOffset=0.00022506714;
 							};
-							class Item21
+							class Item9
 							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={481.14127,31.810154,10257.884};
+									position[]={481.14127,31.810238,10257.884};
 									angles[]={0,3.1415927,0};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [4] call RD501_fnc_VSM_openMenu;" \n "}];";
+									init="this addAction [""Vehicle Spawn Menu"", {" \n "    [4] call Aux501_fnc_VSM_openMenu;" \n "}];";
 								};
 								id=10018;
 								type="3AS_Terminal_Console_Prop";
-								atlOffset=0.0001411438;
+								atlOffset=0.00022506714;
 							};
-							class Item22
+							class Item10
 							{
 								dataType="Layer";
 								name="Razor FARP (Large)_4";
@@ -807,18 +347,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={497.65494,28.147976,10375.185};
+													position[]={497.65298,28.147533,10375.185};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=5;
 												class Attributes
 												{
-													init="[this, ""Red Pad"", 0, 0] call RD501_fnc_VSM_registerSpawnpoint;" \n "";
+													init="[this, ""Red Pad"", 0, 0] call Aux501_fnc_VSM_registerSpawnpoint;" \n "";
 												};
 												id=10025;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=0.043617249;
+												atlOffset=0.043174744;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -842,18 +382,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={514.60803,28.147976,10375.415};
+													position[]={514.60803,28.147533,10375.415};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=5;
 												class Attributes
 												{
-													init="[this, ""Service Pad (Red)"", 270, 0] call RD501_fnc_VSM_registerSpawnpoint;";
+													init="[this, ""Service Pad (Red)"", 270, 0] call Aux501_fnc_VSM_registerSpawnpoint;";
 												};
 												id=10026;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=0.043617249;
+												atlOffset=0.043174744;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -877,18 +417,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={547.60803,28.147976,10375.165};
+													position[]={547.60803,28.147533,10375.165};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=5;
 												class Attributes
 												{
-													init="[this, ""Blue Pad"", 0, 1] call RD501_fnc_VSM_registerSpawnpoint;" \n "";
+													init="[this, ""Blue Pad"", 0, 1] call Aux501_fnc_VSM_registerSpawnpoint;" \n "";
 												};
 												id=10027;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=0.043617249;
+												atlOffset=0.043174744;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -912,18 +452,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={531.35803,28.147976,10373.29};
+													position[]={531.35803,28.147533,10373.29};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=5;
 												class Attributes
 												{
-													init="[this, ""Service Pad (Blue)"", 90, 1] call RD501_fnc_VSM_registerSpawnpoint;";
+													init="[this, ""Service Pad (Blue)"", 90, 1] call Aux501_fnc_VSM_registerSpawnpoint;";
 												};
 												id=10028;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=0.043617249;
+												atlOffset=0.043174744;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -947,18 +487,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={556.651,31.591976,10272.142};
+													position[]={556.651,31.591534,10272.142};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=5;
 												class Attributes
 												{
-													init="[this, ""White Pad"", 180, 2] call RD501_fnc_VSM_registerSpawnpoint;" \n "";
+													init="[this, ""White Pad"", 180, 2] call Aux501_fnc_VSM_registerSpawnpoint;" \n "";
 												};
 												id=10029;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=0.00049209595;
+												atlOffset=4.9591064e-05;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -982,18 +522,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={559.68225,31.546978,10255.228};
+													position[]={559.6842,31.546535,10255.228};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=1;
 												class Attributes
 												{
-													init="[this, ""Service Pad (White)"", 0, 2] call RD501_fnc_VSM_registerSpawnpoint;";
+													init="[this, ""Service Pad (White)"", 0, 2] call Aux501_fnc_VSM_registerSpawnpoint;";
 												};
 												id=10030;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=3.4395981;
+												atlOffset=3.4391556;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -1017,18 +557,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={540.0729,31.56097,10229.614};
+													position[]={540.0729,31.560535,10229.614};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=1;
 												class Attributes
 												{
-													init="[this, ""Purple Pad"", 0, 3] call RD501_fnc_VSM_registerSpawnpoint;" \n "";
+													init="[this, ""Purple Pad"", 0, 3] call Aux501_fnc_VSM_registerSpawnpoint;" \n "";
 												};
 												id=10031;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=3.4535904;
+												atlOffset=3.4531555;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -1052,18 +592,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={508.04166,31.56097,10229.821};
+													position[]={508.04166,31.560535,10229.821};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=1;
 												class Attributes
 												{
-													init="[this, ""Pink Pad"", 90, 3] call RD501_fnc_VSM_registerSpawnpoint;" \n "";
+													init="[this, ""Pink Pad"", 90, 3] call Aux501_fnc_VSM_registerSpawnpoint;" \n "";
 												};
 												id=10032;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=3.4535904;
+												atlOffset=3.4531555;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -1087,18 +627,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={524.05725,31.546978,10231.88};
+													position[]={524.05725,31.546535,10231.88};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=1;
 												class Attributes
 												{
-													init="[this, ""Service Pad (Purple/Pink)"", 90, 3] call RD501_fnc_VSM_registerSpawnpoint;";
+													init="[this, ""Service Pad (Purple/Pink)"", 90, 3] call Aux501_fnc_VSM_registerSpawnpoint;";
 												};
 												id=10033;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=3.4395981;
+												atlOffset=3.4391556;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -1122,18 +662,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={489.58853,31.591976,10272.149};
+													position[]={489.58853,31.591534,10272.149};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=5;
 												class Attributes
 												{
-													init="[this, ""Green Pad"", 180, 4] call RD501_fnc_VSM_registerSpawnpoint;";
+													init="[this, ""Green Pad"", 180, 4] call Aux501_fnc_VSM_registerSpawnpoint;";
 												};
 												id=10034;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=0.00049209595;
+												atlOffset=4.9591064e-05;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -1157,18 +697,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={489.2565,31.546978,10255.079};
+													position[]={489.2565,31.546535,10255.079};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=1;
 												class Attributes
 												{
-													init="[this, ""Service Pad (Green)"", 0, 4] call RD501_fnc_VSM_registerSpawnpoint;";
+													init="[this, ""Service Pad (Green)"", 0, 4] call Aux501_fnc_VSM_registerSpawnpoint;";
 												};
 												id=10035;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=3.4395981;
+												atlOffset=3.4391556;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -1192,18 +732,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={533.73303,28.147976,10334.415};
+													position[]={533.73303,28.147533,10334.415};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=5;
 												class Attributes
 												{
-													init="[this, ""Vehicle Point North"", 90, 7] call RD501_fnc_VSM_registerSpawnpoint;";
+													init="[this, ""Vehicle Point North"", 90, 7] call Aux501_fnc_VSM_registerSpawnpoint;";
 												};
 												id=10036;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=0.040763855;
+												atlOffset=0.04032135;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -1227,18 +767,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={533.73303,28.147976,10315.04};
+													position[]={533.73303,28.147533,10315.04};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=5;
 												class Attributes
 												{
-													init="[this, ""Vehicle Point South"", 90, 7] call RD501_fnc_VSM_registerSpawnpoint;";
+													init="[this, ""Vehicle Point South"", 90, 7] call Aux501_fnc_VSM_registerSpawnpoint;";
 												};
 												id=10037;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=0.040763855;
+												atlOffset=0.04032135;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -1262,18 +802,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={523.8268,28.147976,10273.431};
+													position[]={523.8268,28.147533,10273.431};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=5;
 												class Attributes
 												{
-													init="[this, ""Vehicle Point Large"", 90, 8] call RD501_fnc_VSM_registerSpawnpoint;";
+													init="[this, ""Vehicle Point Large"", 90, 8] call Aux501_fnc_VSM_registerSpawnpoint;";
 												};
 												id=10038;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=0.040596008;
+												atlOffset=0.040153503;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -1294,7 +834,7 @@ class Mission
 											};
 										};
 										id=10024;
-										atlOffset=0.46376419;
+										atlOffset=0.46332169;
 									};
 									class Item1
 									{
@@ -3431,14 +2971,13 @@ class Mission
 											angles[]={0,4.7309065,0};
 										};
 										side="Empty";
-										flags=4;
 										class Attributes
 										{
 											init="call{[this, true] call ace_arsenal_fnc_initBox;   " \n "this addAction [""<t color='#db040c'>Grab Pharmacy Medic Kit</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_backpack_medic"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_plasmaIV"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_plasmaIV_250"";}; " \n "for ""_i"" from 1 to 16 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "_caller addItemToBackpack ""ACE_surgicalKit""; " \n "for ""_i"" from 1 to 16 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IO_FAST"";}; " \n "_caller addItemToBackpack ""kat_X_AED""; " \n "for ""_i"" from 1 to 8 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_TXA"";}; " \n "_caller addItemToBackpack ""ACE_personalAidKit""; " \n "for ""_i"" from 1 to 30 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 60 do {_caller addItemToBackpack ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""dev_enzymeCapsule_refined"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""ACE_plasmaIV_500"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""3AS_SmokePurple"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""3AS_SmokeWhite"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""DBA_HandFlare_Purple"";};   " \n "    " \n "}];   " \n " " \n "this addAction [""<t color='#13cf13'>Grab Trooper:Phase Green Kit</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_jumppack_mc_2"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 20 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "_caller addItemToBackpack ""ACE_plasmaIV""; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""dev_enzymeCapsule"";};  " \n "      " \n "}];   " \n " " \n "this addAction [""<t color='#13c2cf'>Grab ARC Kit</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_ARC_backpack"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 20 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_plasmaIV"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""dev_enzymeCapsule"";}; " \n "    " \n "}];   " \n " " \n "this addAction [""<t color='#1358cf'>Grab ARC Kit medical(detached)</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_ARC_backpack"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 20 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_plasmaIV"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""dev_enzymeCapsule_refined"";}; " \n "_caller addItemToBackpack ""ACE_surgicalKit""; " \n "_caller addItemToBackpack ""kat_X_AED""; " \n "    " \n "}];   " \n "   " \n "}";
 										};
 										id=10147;
 										type="Land_OPTRE_MedCab";
-										atlOffset=0.1230545;
+										atlOffset=0.5147934;
 										class CustomAttributes
 										{
 											class Attribute0
@@ -3492,14 +3031,13 @@ class Mission
 											angles[]={0,1.5796936,0};
 										};
 										side="Empty";
-										flags=4;
 										class Attributes
 										{
 											init="call{[this, true] call ace_arsenal_fnc_initBox;   " \n "this addAction [""<t color='#db040c'>Grab Pharmacy Medic Kit</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_backpack_medic"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_plasmaIV"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_plasmaIV_250"";}; " \n "for ""_i"" from 1 to 16 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "_caller addItemToBackpack ""ACE_surgicalKit""; " \n "for ""_i"" from 1 to 16 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IO_FAST"";}; " \n "_caller addItemToBackpack ""kat_X_AED""; " \n "for ""_i"" from 1 to 8 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_TXA"";}; " \n "_caller addItemToBackpack ""ACE_personalAidKit""; " \n "for ""_i"" from 1 to 30 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 60 do {_caller addItemToBackpack ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""dev_enzymeCapsule_refined"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""ACE_plasmaIV_500"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""3AS_SmokePurple"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""3AS_SmokeWhite"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""DBA_HandFlare_Purple"";};   " \n "    " \n "}];   " \n " " \n "this addAction [""<t color='#13cf13'>Grab Trooper:Phase Green Kit</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_jumppack_mc_2"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 20 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "_caller addItemToBackpack ""ACE_plasmaIV""; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""dev_enzymeCapsule"";};  " \n "      " \n "}];   " \n " " \n "this addAction [""<t color='#13c2cf'>Grab ARC Kit</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_ARC_backpack"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 20 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_plasmaIV"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""dev_enzymeCapsule"";}; " \n "    " \n "}];   " \n " " \n "this addAction [""<t color='#1358cf'>Grab ARC Kit medical(detached)</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_ARC_backpack"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 20 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_plasmaIV"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""dev_enzymeCapsule_refined"";}; " \n "_caller addItemToBackpack ""ACE_surgicalKit""; " \n "_caller addItemToBackpack ""kat_X_AED""; " \n "    " \n "}];   " \n "   " \n "}";
 										};
 										id=10148;
 										type="Land_OPTRE_MedCab";
-										atlOffset=0.011604309;
+										atlOffset=0.5266037;
 										class CustomAttributes
 										{
 											class Attribute0
@@ -3549,18 +3087,16 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={478.84244,27.635166,10327.2};
-											angles[]={0,4.7309065,0};
+											position[]={478.84244,27.63522,10327.2};
+											angles[]={0,4.730907,0};
 										};
 										side="Empty";
-										flags=4;
 										class Attributes
 										{
-											init="call{[this, true] call ace_arsenal_fnc_initBox;   " \n "this addAction [""<t color='#db040c'>Grab Pharmacy Medic Kit</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_backpack_medic"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_plasmaIV"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_plasmaIV_250"";}; " \n "for ""_i"" from 1 to 16 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "_caller addItemToBackpack ""ACE_surgicalKit""; " \n "for ""_i"" from 1 to 16 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IO_FAST"";}; " \n "_caller addItemToBackpack ""kat_X_AED""; " \n "for ""_i"" from 1 to 8 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_TXA"";}; " \n "_caller addItemToBackpack ""ACE_personalAidKit""; " \n "for ""_i"" from 1 to 30 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 60 do {_caller addItemToBackpack ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""dev_enzymeCapsule_refined"";}; " \n "for ""_i"" from 1 to 10 do {_caller addItemToBackpack ""ACE_plasmaIV_500"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""3AS_SmokePurple"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""3AS_SmokeWhite"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""DBA_HandFlare_Purple"";};   " \n "    " \n "}];   " \n " " \n "this addAction [""<t color='#13cf13'>Grab Trooper:Phase Green Kit</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_jumppack_mc_2"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 20 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "_caller addItemToBackpack ""ACE_plasmaIV""; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""dev_enzymeCapsule"";};  " \n "      " \n "}];   " \n " " \n "this addAction [""<t color='#13c2cf'>Grab ARC Kit</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_ARC_backpack"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 20 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_plasmaIV"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""dev_enzymeCapsule"";}; " \n "    " \n "}];   " \n " " \n "this addAction [""<t color='#1358cf'>Grab ARC Kit medical(detached)</t>"", {    " \n "params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];    " \n "removebackpack _caller;    " \n "    " \n "_caller addBackPack ""RD501_JLTS_Clone_ARC_backpack"";    " \n "    " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""kat_IV_16"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""RD501_Painkiller"";}; " \n "for ""_i"" from 1 to 3 do {_caller addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 20 do {_caller addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_quikclot"";}; " \n "for ""_i"" from 1 to 5 do {_caller addItemToBackpack ""ACE_CableTie"";}; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_IR_Strobe_Item"";}; " \n "_caller addItemToBackpack ""ItemcTabHCam""; " \n "_caller addItemToBackpack ""ACE_EarPlugs""; " \n "for ""_i"" from 1 to 2 do {_caller addItemToBackpack ""ACE_plasmaIV"";}; " \n "for ""_i"" from 1 to 4 do {_caller addItemToBackpack ""dev_enzymeCapsule_refined"";}; " \n "_caller addItemToBackpack ""ACE_surgicalKit""; " \n "_caller addItemToBackpack ""kat_X_AED""; " \n "    " \n "}];   " \n "   " \n "}";
 										};
 										id=10149;
 										type="Land_OPTRE_MedCab";
-										atlOffset=0.04070282;
+										atlOffset=0.5557518;
 										class CustomAttributes
 										{
 											class Attribute0
@@ -3602,7 +3138,38 @@ class Mission
 													};
 												};
 											};
-											nAttributes=3;
+											class Attribute3
+											{
+												property="ace_arsenal_attribute";
+												expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+												class Value
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=2;
+															class Item0
+															{
+																class data
+																{
+																	singleType="ARRAY";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=1;
+																};
+															};
+														};
+													};
+												};
+											};
+											nAttributes=4;
 										};
 									};
 									class Item13
@@ -4716,7 +4283,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={553.73303,27.017216,10381.665};
+											position[]={553.6549,27.017216,10381.665};
 											angles[]={0,3.1415925,0};
 										};
 										side="Empty";
@@ -4734,7 +4301,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={491.60806,27.017216,10368.665};
+											position[]={491.68228,27.017216,10368.665};
 											angles[]={0,6.283185,0};
 										};
 										side="Empty";
@@ -4788,7 +4355,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={553.73303,27.017216,10368.665};
+											position[]={553.6549,27.017216,10368.665};
 										};
 										side="Empty";
 										flags=1;
@@ -4805,7 +4372,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={491.60806,27.017216,10381.665};
+											position[]={491.68228,27.017216,10381.665};
 											angles[]={0,3.1415935,0};
 										};
 										side="Empty";
@@ -6466,19 +6033,19 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={462.61588,58.70898,10318.614};
+											position[]={462.61588,58.708538,10318.614};
 											angles[]={0,1.9759047,0};
 										};
 										side="Empty";
-										flags=5;
+										flags=1;
 										class Attributes
 										{
-											init="[this] call RD501_fnc_CRML_addCruiseMissileSupportRegistrationActions;";
+											init="[this] call Aux501_fnc_CRML_addCruiseMissileSupportRegistrationActions;";
 											name="tower_terminal";
 										};
 										id=10300;
 										type="442_terminal2";
-										atlOffset=0.00032806396;
+										atlOffset=17.382816;
 									};
 									class Item163
 									{
@@ -6792,7 +6359,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={562.73303,30.327885,10278.665};
+											position[]={562.6393,30.327885,10278.665};
 											angles[]={0,3.1415925,0};
 										};
 										side="Empty";
@@ -6828,7 +6395,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={562.73303,30.327885,10265.665};
+											position[]={562.6393,30.327885,10265.665};
 										};
 										side="Empty";
 										flags=1;
@@ -6845,7 +6412,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={483.49088,30.327885,10265.665};
+											position[]={483.5358,30.327885,10265.665};
 											angles[]={0,6.283185,0};
 										};
 										side="Empty";
@@ -6881,7 +6448,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={483.49088,30.327885,10278.665};
+											position[]={483.5358,30.327885,10278.665};
 											angles[]={0,3.1415935,0};
 										};
 										side="Empty";
@@ -6934,7 +6501,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={546.55334,30.327885,10236.372};
+											position[]={546.49475,30.327885,10236.372};
 											angles[]={0,3.1415925,0};
 										};
 										side="Empty";
@@ -6970,7 +6537,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={546.55334,30.327885,10223.372};
+											position[]={546.49475,30.327885,10223.372};
 										};
 										side="Empty";
 										flags=1;
@@ -6987,7 +6554,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={501.6393,30.327885,10223.372};
+											position[]={501.68814,30.327885,10223.372};
 											angles[]={0,6.283185,0};
 										};
 										side="Empty";
@@ -7023,7 +6590,7 @@ class Mission
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={501.6393,30.327885,10236.372};
+											position[]={501.68814,30.327885,10236.372};
 											angles[]={0,3.1415935,0};
 										};
 										side="Empty";
@@ -7340,7 +6907,7 @@ class Mission
 												{
 													name="uav_net";
 													condition="thisList findIf { unitIsUAV _x } != -1;";
-													onActivation="[thisList, thisTrigger] call RD501_fnc_UAVNET_onActivation;";
+													onActivation="[thisList, thisTrigger] call Aux501_fnc_UAVNET_onActivation;";
 													sizeA=25;
 													sizeB=25;
 													sizeC=25;
@@ -8254,18 +7821,18 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={448.194,33.093166,10221.185};
+													position[]={448.194,33.09354,10221.185};
 													angles[]={0,3.1415927,0};
 												};
 												side="Empty";
 												flags=5;
 												class Attributes
 												{
-													init="[this, ""Drone Catapult"", 180, 9] call RD501_fnc_VSM_registerSpawnpoint;" \n "[this, ""Drone Catapult""] call RD501_fnc_init_CAT_register;";
+													init="[this, ""Drone Catapult"", 180, 9] call Aux501_fnc_VSM_registerSpawnpoint;" \n "[this, ""Drone Catapult""] call Aux501_fnc_init_CAT_register;";
 												};
 												id=10393;
 												type="VR_3DSelector_01_default_F";
-												atlOffset=3.8146973e-06;
+												atlOffset=0.00037384033;
 												class CustomAttributes
 												{
 													class Attribute0
@@ -8362,7 +7929,7 @@ class Mission
 											};
 										};
 										id=10371;
-										atlOffset=7.6293945e-06;
+										atlOffset=1.5258789e-05;
 									};
 									class Item227
 									{
@@ -8655,7 +8222,7 @@ class Mission
 								id=10023;
 								atlOffset=35.513714;
 							};
-							class Item23
+							class Item11
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8671,7 +8238,7 @@ class Mission
 								type="Sign_Arrow_Large_Pink_F";
 								atlOffset=1.0640526;
 							};
-							class Item24
+							class Item12
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8687,7 +8254,7 @@ class Mission
 								type="Sign_Arrow_Large_Pink_F";
 								atlOffset=0.84205246;
 							};
-							class Item25
+							class Item13
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8703,7 +8270,7 @@ class Mission
 								type="Flag_Blue_F";
 								atlOffset=0.13146591;
 							};
-							class Item26
+							class Item14
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8719,7 +8286,7 @@ class Mission
 								type="Flag_Blue_F";
 								atlOffset=0.10763168;
 							};
-							class Item27
+							class Item15
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8734,7 +8301,7 @@ class Mission
 								id=10416;
 								type="Flag_Green_F";
 							};
-							class Item28
+							class Item16
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8749,7 +8316,7 @@ class Mission
 								id=10417;
 								type="Flag_Green_F";
 							};
-							class Item29
+							class Item17
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8765,7 +8332,7 @@ class Mission
 								type="Flag_Red_F";
 								atlOffset=0.13204575;
 							};
-							class Item30
+							class Item18
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8781,7 +8348,7 @@ class Mission
 								type="Flag_Red_F";
 								atlOffset=0.14415359;
 							};
-							class Item31
+							class Item19
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8797,7 +8364,7 @@ class Mission
 								type="Flag_White_F";
 								atlOffset=3.4840965;
 							};
-							class Item32
+							class Item20
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8812,7 +8379,7 @@ class Mission
 								id=10421;
 								type="Flag_White_F";
 							};
-							class Item33
+							class Item21
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8828,7 +8395,7 @@ class Mission
 								type="3AS_Crystal_1_purple";
 								atlOffset=1.4990501;
 							};
-							class Item34
+							class Item22
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8844,7 +8411,7 @@ class Mission
 								type="3AS_Crystal_4_Purple";
 								atlOffset=1.4010506;
 							};
-							class Item35
+							class Item23
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8908,7 +8475,7 @@ class Mission
 									nAttributes=2;
 								};
 							};
-							class Item36
+							class Item24
 							{
 								dataType="Object";
 								class PositionInfo
@@ -8972,7 +8539,7 @@ class Mission
 									nAttributes=2;
 								};
 							};
-							class Item37
+							class Item25
 							{
 								dataType="Object";
 								class PositionInfo
@@ -9037,7 +8604,7 @@ class Mission
 									nAttributes=2;
 								};
 							};
-							class Item38
+							class Item26
 							{
 								dataType="Object";
 								class PositionInfo
@@ -14157,7 +13724,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={509.42834,27.137173,10330.304};
+													position[]={509.42838,27.137173,10330.304};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -14497,7 +14064,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={510.10608,27.14117,10322.349};
+													position[]={510.10614,27.14117,10322.349};
 													angles[]={0,1.5707974,-0};
 												};
 												side="West";
@@ -14660,7 +14227,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={510.10608,27.141178,10324.345};
+													position[]={510.10614,27.141178,10324.345};
 													angles[]={0,1.5707974,-0};
 												};
 												side="West";
@@ -14987,7 +14554,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.10608,27.14117,10323.341};
+													position[]={511.10614,27.14117,10323.341};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -15212,7 +14779,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.1081,27.14117,10326.349};
+													position[]={511.10803,27.14117,10326.349};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -15274,7 +14841,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.10608,27.14117,10327.345};
+													position[]={511.10614,27.14117,10327.345};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -15574,7 +15141,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.10608,27.14117,10331.206};
+													position[]={511.10614,27.14117,10331.206};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -15764,7 +15331,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={512.0456,27.101177,10321.374};
+													position[]={512.04553,27.101177,10321.374};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -15839,7 +15406,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={512.0436,27.101177,10322.38};
+													position[]={512.04364,27.101177,10322.38};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -15914,7 +15481,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={512.0456,27.101177,10323.378};
+													position[]={512.04553,27.101177,10323.378};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -16002,7 +15569,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={512.0456,27.101177,10324.378};
+													position[]={512.04553,27.101177,10324.378};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -16077,7 +15644,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={512.0456,27.101177,10325.378};
+													position[]={512.04553,27.101177,10325.378};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -16165,7 +15732,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={512.0436,27.101177,10326.38};
+													position[]={512.04364,27.101177,10326.38};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -16240,7 +15807,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={512.0456,27.101177,10327.378};
+													position[]={512.04553,27.101177,10327.378};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -16328,7 +15895,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={512.0456,27.101177,10328.382};
+													position[]={512.04553,27.101177,10328.382};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -26025,7 +25592,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={510.94983,27.181171,10314.835};
+													position[]={510.9499,27.181171,10314.835};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -26440,7 +26007,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.88934,27.14117,10307.866};
+													position[]={511.88928,27.14117,10307.866};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -26515,7 +26082,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.88733,27.14117,10308.87};
+													position[]={511.8874,27.14117,10308.87};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -26665,7 +26232,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.88733,27.14117,10310.87};
+													position[]={511.8874,27.14117,10310.87};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -26753,7 +26320,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.88934,27.14117,10311.866};
+													position[]={511.88928,27.14117,10311.866};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -26828,7 +26395,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.88934,27.14117,10312.876};
+													position[]={511.88928,27.14117,10312.876};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -26916,7 +26483,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.88733,27.14117,10313.87};
+													position[]={511.8874,27.14117,10313.87};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -27079,7 +26646,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.88733,27.14117,10315.866};
+													position[]={511.8874,27.14117,10315.866};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -27330,7 +26897,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.88733,27.14117,10318.733};
+													position[]={511.8874,27.14117,10318.733};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -31789,7 +31356,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={510.01434,27.181164,10333.298};
+													position[]={510.01428,27.181164,10333.298};
 													angles[]={0,1.5707974,-0};
 												};
 												side="West";
@@ -31939,7 +31506,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={510.09247,27.181171,10335.261};
+													position[]={510.0924,27.181171,10335.261};
 													angles[]={0,1.5707974,-0};
 												};
 												side="West";
@@ -32102,7 +31669,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={510.09247,27.178165,10337.259};
+													position[]={510.0924,27.178165,10337.259};
 													angles[]={0,1.5707974,-0};
 												};
 												side="West";
@@ -32305,7 +31872,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={511.7331,27.181171,10333.005};
+													position[]={511.73303,27.181171,10333.005};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -33073,7 +32640,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={512.7936,27.181171,10335.538};
+													position[]={512.79364,27.181171,10335.538};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -33122,7 +32689,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={512.90295,27.181171,10336.728};
+													position[]={512.903,27.181171,10336.728};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -33269,7 +32836,7 @@ class Mission
 												dataType="Object";
 												class PositionInfo
 												{
-													position[]={512.88934,27.181171,10339.647};
+													position[]={512.8893,27.181171,10339.647};
 													angles[]={0,4.7123895,-0};
 												};
 												side="West";
@@ -62870,6 +62437,438 @@ class Mission
 		id=11865;
 		type="OPTRE_HEV";
 		atlOffset=0.15066147;
+	};
+	class Item26
+	{
+		dataType="Group";
+		side="Civilian";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={385.36978,28.216312,10362.849};
+					angles[]={0,1.5707964,-0};
+				};
+				side="Civilian";
+				flags=2;
+				class Attributes
+				{
+				};
+				id=11889;
+				type="C_UAV_AI_F";
+				atlOffset=0.97416687;
+			};
+		};
+		class Attributes
+		{
+		};
+		class CrewLinks
+		{
+			class LinkIDProvider
+			{
+				nextID=1;
+			};
+			class Links
+			{
+				items=1;
+				class Item0
+				{
+					linkID=0;
+					item0=11889;
+					item1=11888;
+					class CustomData
+					{
+						role=2;
+						turretPath[]={0};
+					};
+				};
+			};
+		};
+		id=11887;
+		atlOffset=0.00016403198;
+	};
+	class Item27
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={385.36978,28.215038,10362.798};
+			angles[]={0,1.5707964,-0};
+		};
+		side="Civilian";
+		flags=6;
+		class Attributes
+		{
+			init="[this, true, 60] call Aux501_fnc_init_CRML_registerLauncher;";
+			receiveRemoteTargets=1;
+		};
+		id=11888;
+		type="Aux501_VLS_Support_System";
+		atlOffset=0.00016403198;
+	};
+	class Item28
+	{
+		dataType="Group";
+		side="Civilian";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={386.32486,28.216312,10383.81};
+					angles[]={0,1.5707964,-0};
+				};
+				side="Civilian";
+				flags=2;
+				class Attributes
+				{
+				};
+				id=11892;
+				type="C_UAV_AI_F";
+				atlOffset=0.97416687;
+			};
+		};
+		class Attributes
+		{
+		};
+		class CrewLinks
+		{
+			class LinkIDProvider
+			{
+				nextID=1;
+			};
+			class Links
+			{
+				items=1;
+				class Item0
+				{
+					linkID=0;
+					item0=11892;
+					item1=11891;
+					class CustomData
+					{
+						role=2;
+						turretPath[]={0};
+					};
+				};
+			};
+		};
+		id=11890;
+		atlOffset=0.00016403198;
+	};
+	class Item29
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={384.96158,28.215038,10384.608};
+			angles[]={0,1.5707964,-0};
+		};
+		side="Civilian";
+		flags=6;
+		class Attributes
+		{
+			init="[this, true, 60] call Aux501_fnc_init_CRML_registerLauncher;";
+			receiveRemoteTargets=1;
+		};
+		id=11891;
+		type="Aux501_VLS_Support_System";
+		atlOffset=0.00016403198;
+	};
+	class Item30
+	{
+		dataType="Group";
+		side="Civilian";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={399.069,28.216312,10362.454};
+					angles[]={0,1.5707964,0};
+				};
+				side="Civilian";
+				flags=2;
+				class Attributes
+				{
+				};
+				id=11895;
+				type="C_UAV_AI_F";
+				atlOffset=0.97416687;
+			};
+		};
+		class Attributes
+		{
+		};
+		class CrewLinks
+		{
+			class LinkIDProvider
+			{
+				nextID=1;
+			};
+			class Links
+			{
+				items=1;
+				class Item0
+				{
+					linkID=0;
+					item0=11895;
+					item1=11894;
+					class CustomData
+					{
+						role=2;
+						turretPath[]={0};
+					};
+				};
+			};
+		};
+		id=11893;
+		atlOffset=0.00016403198;
+	};
+	class Item31
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={400.62955,28.215038,10362.556};
+			angles[]={0,1.5707964,0};
+		};
+		side="Civilian";
+		flags=6;
+		class Attributes
+		{
+			init="[this, true, 60] call Aux501_fnc_init_CRML_registerLauncher;";
+			receiveRemoteTargets=1;
+		};
+		id=11894;
+		type="Aux501_VLS_Combat_System";
+		atlOffset=0.00016403198;
+	};
+	class Item32
+	{
+		dataType="Group";
+		side="Civilian";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={399.24478,28.216312,10384.3};
+					angles[]={0,1.5707964,-0};
+				};
+				side="Civilian";
+				flags=2;
+				class Attributes
+				{
+				};
+				id=11898;
+				type="C_UAV_AI_F";
+				atlOffset=0.97416687;
+			};
+		};
+		class Attributes
+		{
+		};
+		class CrewLinks
+		{
+			class LinkIDProvider
+			{
+				nextID=1;
+			};
+			class Links
+			{
+				items=1;
+				class Item0
+				{
+					linkID=0;
+					item0=11898;
+					item1=11897;
+					class CustomData
+					{
+						role=2;
+						turretPath[]={0};
+					};
+				};
+			};
+		};
+		id=11896;
+		atlOffset=0.00016403198;
+	};
+	class Item33
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={400.8815,28.215038,10385.325};
+			angles[]={0,1.5707964,-0};
+		};
+		side="Civilian";
+		flags=6;
+		class Attributes
+		{
+			init="[this, true, 60] call Aux501_fnc_init_CRML_registerLauncher;";
+			receiveRemoteTargets=1;
+		};
+		id=11897;
+		type="Aux501_VLS_Combat_System";
+		atlOffset=0.00016403198;
+	};
+	class Item34
+	{
+		dataType="Group";
+		side="Civilian";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={413.78384,28.216312,10363.065};
+					angles[]={0,1.5707964,-0};
+				};
+				side="Civilian";
+				flags=2;
+				class Attributes
+				{
+				};
+				id=11901;
+				type="C_UAV_AI_F";
+				atlOffset=0.97416306;
+			};
+		};
+		class Attributes
+		{
+		};
+		class CrewLinks
+		{
+			class LinkIDProvider
+			{
+				nextID=1;
+			};
+			class Links
+			{
+				items=1;
+				class Item0
+				{
+					linkID=0;
+					item0=11901;
+					item1=11900;
+					class CustomData
+					{
+						role=2;
+						turretPath[]={0};
+					};
+				};
+			};
+		};
+		id=11899;
+		atlOffset=0.00016403198;
+	};
+	class Item35
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={412.48697,28.215038,10362.419};
+			angles[]={0,1.5707964,-0};
+		};
+		side="Civilian";
+		flags=6;
+		class Attributes
+		{
+			init="[this, true, 60] call Aux501_fnc_init_CRML_registerLauncher;";
+			receiveRemoteTargets=1;
+		};
+		id=11900;
+		type="Aux501_VLS_Combat_System";
+		atlOffset=0.00016403198;
+	};
+	class Item36
+	{
+		dataType="Group";
+		side="Civilian";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={413.96158,28.216312,10384.177};
+					angles[]={0,1.5707964,-0};
+				};
+				side="Civilian";
+				flags=2;
+				class Attributes
+				{
+				};
+				id=11904;
+				type="C_UAV_AI_F";
+				atlOffset=0.97416306;
+			};
+		};
+		class Attributes
+		{
+		};
+		class CrewLinks
+		{
+			class LinkIDProvider
+			{
+				nextID=1;
+			};
+			class Links
+			{
+				items=1;
+				class Item0
+				{
+					linkID=0;
+					item0=11904;
+					item1=11903;
+					class CustomData
+					{
+						role=2;
+						turretPath[]={0};
+					};
+				};
+			};
+		};
+		id=11902;
+		atlOffset=0.00016403198;
+	};
+	class Item37
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={412.63345,28.215038,10385.0205};
+			angles[]={0,1.5707964,-0};
+		};
+		side="Civilian";
+		flags=6;
+		class Attributes
+		{
+			init="[this, true, 60] call Aux501_fnc_init_CRML_registerLauncher;";
+			receiveRemoteTargets=1;
+		};
+		id=11903;
+		type="Aux501_VLS_Combat_System";
+		atlOffset=0.00016403198;
 	};
    };
     class Connections
