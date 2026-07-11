@@ -17,6 +17,7 @@ A general rule of thumb for banned objects: If you get an error when placing it,
 - SOEIV Human Entry Vehicle
 - OPTRE Two (or more) part buildings
 - land_skyhouse4
+- Main Building (from camp section)
 
 ## Vanilla
 - Long Rock assets. These cause frame problems when there are any considerable number of them in a mission file. Should not be used for building.
